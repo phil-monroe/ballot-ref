@@ -2,6 +2,7 @@
 import { ballotUrl } from '../../../../src/ingest/fetch-ballot.ts';
 import Base from '../../layouts/Base.astro';
 import Contest from '../../components/Contest.astro';
+import Footer from '../../components/Footer.astro';
 import { ballotView, ballots, config } from '../../lib/data';
 
 export function getStaticPaths() {
@@ -43,10 +44,6 @@ const issues = view.contests.filter((c) => c.contest.kind === 'levy' || c.contes
   ))}
 
   <Fragment slot="footer">
-    <p>
-      <a href={config.links.vote411} rel="noopener noreferrer">Vote411</a> ·
-      <a href={boe} rel="noopener noreferrer"> County board of elections ballot viewer</a> ·
-      <a href={config.links.sos_elections} rel="noopener noreferrer"> Ohio Secretary of State</a>
-    </p>
+    <Footer boeUrl={boe} vote411={config.links.vote411} sosUrl={config.links.sos_elections} />
   </Fragment>
 </Base>

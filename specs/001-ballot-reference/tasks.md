@@ -209,10 +209,10 @@ description: "Task list for Ballot Reference (Sourced Voter Reference)"
 
 **Independent Test**: Methodology page reachable from every page and covers every listed topic; each footer link and "Report an error" link resolves as specified.
 
-- [ ] T085 [P] [US7] Test `tests/integration/methodology.test.ts`: page contains what the tool does and does not do, tier definitions, whitelist rules, review process, key-vote rule and N, symmetry threshold, known gaps, correction method (GitHub Issues); does not contain the phrase "nonpartisan guide" except in a negation; labeled a "sourced reference" (FR-046)
-- [ ] T086 [US7] Create `site/src/pages/methodology.astro` (served at `/methodology/`) with all topics; values for N, quote cap, staleness, and symmetry threshold read from `site.config.yaml`; known gaps generated from unpublished contests
-- [ ] T087 [P] [US7] Create `site/src/components/Footer.astro` with links to Vote411, the county BOE ballot viewer (from the ballot config), and the SOS issue report for each issue; add the prominent methodology link to the base layout
-- [ ] T088 [P] [US7] Set the real `repo_url` in `site.config.yaml` once the GitHub repository exists and test the pre-filled new-issue URL encoding in `tests/unit/issue-url.test.ts`
+- [X] T085 [P] [US7] Test `tests/integration/methodology.test.ts`: page contains what the tool does and does not do, tier definitions, whitelist rules, review process, key-vote rule and N, symmetry threshold, known gaps, correction method (GitHub Issues); does not contain the phrase "nonpartisan guide" except in a negation; labeled a "sourced reference" (FR-046)
+- [X] T086 [US7] Create `site/src/pages/methodology.astro` (served at `/methodology/`) with all topics; values for N, quote cap, staleness, and symmetry threshold read from `site.config.yaml`; known gaps generated from unpublished contests
+- [X] T087 [P] [US7] Create `site/src/components/Footer.astro` with links to Vote411, the county BOE ballot viewer (from the ballot config), and the SOS issue report for each issue; add the prominent methodology link to the base layout
+- [ ] T088 [P] [US7] (URL encoding test done in `tests/unit/issue-url.test.ts`; real `repo_url` still a placeholder until the GitHub repository exists) Set the real `repo_url` in `site.config.yaml` once the GitHub repository exists and test the pre-filled new-issue URL encoding in `tests/unit/issue-url.test.ts`
 
 **Checkpoint**: Methodology and corrections path complete
 
@@ -222,9 +222,9 @@ description: "Task list for Ballot Reference (Sourced Voter Reference)"
 
 **Purpose**: Widen coverage per the delivery order after the first slice ships. Each task reuses the pipeline; no new code expected beyond sources and the schema for incumbents and judicial.
 
-- [ ] T089 [P] Implement the key-vote rule in `src/extract/key-votes.ts`: final-passage roll-call votes on the N most recent bills (N from config, default 10), same bill set for every candidate with a record, never hand-picked per candidate (FR-030); add `tests/unit/key-votes.test.ts`
-- [ ] T090 [P] Implement the judicial reduced schema path in `src/schemas/field-keys.ts` and `prompts/judicial.v1.md`: `ballot_name, current_office, bar_admission` (official only), `campaign_website`; no issue-position fields (FR-031); add `tests/unit/judicial-schema.test.ts`
-- [ ] T091 [P] Implement joint-ticket handling for Governor/Lt. Governor in `src/extract/run-extract.ts`: two entity field sets per ticket, each with its own sources, 3 priorities, and finance; symmetry across all persons (FR-029a)
+- [X] T089 [P] Implement the key-vote rule in `src/extract/key-votes.ts`: final-passage roll-call votes on the N most recent bills (N from config, default 10), same bill set for every candidate with a record, never hand-picked per candidate (FR-030); add `tests/unit/key-votes.test.ts`
+- [X] T090 [P] Implement the judicial reduced schema path in `src/schemas/field-keys.ts` and `prompts/judicial.v1.md`: `ballot_name, current_office, bar_admission` (official only), `campaign_website`; no issue-position fields (FR-031); add `tests/unit/judicial-schema.test.ts`
+- [X] T091 [P] Implement joint-ticket handling for Governor/Lt. Governor in `src/extract/run-extract.ts`: two entity field sets per ticket, each with its own sources, 3 priorities, and finance; symmetry across all persons (FR-029a)
 - [ ] T092 Register sources, run the pipeline, and review Governor/Lt. Governor (priority 2)
 - [ ] T093 Repeat the pipeline for remaining statewide contests (AG, Auditor of State, Secretary of State, Treasurer, two Supreme Court seats)
 - [ ] T094 Repeat for U.S. House OH-12, State Senate 19, State House 60, County Commissioner, County Auditor

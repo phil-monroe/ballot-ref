@@ -221,3 +221,54 @@ describe('issue contests', () => {
     expect(calls[0]!.entity.id).toBe('issue');
   });
 });
+
+describe('joint tickets (FR-029a)', () => {
+  const gov = {
+    ...contest,
+    id: '2026-11-03:governor-lt-governor:oh:unspecified',
+    candidates: [
+      {
+        id: 'gov-one',
+        ballot_name: 'Gov One',
+        party_label: 'Democratic',
+        order: 0,
+        write_in: false,
+        incumbent: null,
+        ticket_id: 'ticket-1',
+        role: 'governor' as const,
+      },
+      {
+        id: 'lg-one',
+        ballot_name: 'Lg One',
+        party_label: 'Democratic',
+        order: 0,
+        write_in: false,
+        incumbent: null,
+        ticket_id: 'ticket-1',
+        role: 'lieutenant-governor' as const,
+      },
+    ],
+  };
+  it('runs one extraction per person, each against its own sources, with the person as the only target', async () => {
+    data.saveContest(gov);
+    const src = (entity: string, url: string) => ({ ...sources[0]!, url, entity_id: entity });
+    writeFileSync(
+      join(dir, 'data/sources/2026-11-03__governor-lt-governor__oh__unspecified.yaml'),
+      stringify([src('gov-one', 'https://gov.example/'), src('lg-one', 'https://lg.example/')]),
+    );
+    seed('fixtures/synthetic/injection-page.html', 'https://gov.example/');
+    seed('fixtures/synthetic/namesake-page.html', 'https://lg.example/');
+    await runExtract({
+      contestId: gov.id,
+      data,
+      store,
+      extractor: stub({ subject_name: null }),
+      config,
+      logs: { drops: join(dir, 'drops.jsonl'), extractionRuns: join(dir, 'runs.jsonl') },
+    });
+    expect(calls.map((c) => [c.entity.id, c.entity.role, c.snapshot.url])).toEqual([
+      ['gov-one', 'governor', 'https://gov.example/'],
+      ['lg-one', 'lieutenant-governor', 'https://lg.example/'],
+    ]);
+  });
+});

@@ -1,7 +1,99 @@
 ---
 import Base from '../layouts/Base.astro';
+import { ballotView, ballots, config } from '../lib/data';
+
+const views = ballots().map(ballotView);
+const gaps = views.flatMap((v) => v.contests.filter((c) => !c.ready).map((c) => ({ ballot: v.ballot, view: c })));
 ---
-<Base title="Methodology">
+<Base title="Methodology" description="What this reference does and does not do, and how it is made.">
   <h1>Methodology</h1>
-  <p>Methodology page: full text lands with the methodology task.</p>
+  <p>
+    Ballot Reference is a <strong>sourced reference</strong> for specific Ohio ballots. It is not
+    endorsed by, or affiliated with, any candidate, campaign, party, or government office, and it is
+    not a “nonpartisan guide.” It does not tell you how to vote.
+  </p>
+
+  <h2 id="does">What this does</h2>
+  <ul>
+    <li>Lists every contest and issue on a precinct’s official ballot, in the official order.</li>
+    <li>For each, shows short quotes from pre-approved sources, each with a link to the source, the date it was retrieved, the date a person reviewed it, and a label for the kind of evidence.</li>
+    <li>Shows every candidate in a contest the same way, with the same slots. A gap is shown as a gap.</li>
+  </ul>
+
+  <h2 id="doesnt">What this does not do</h2>
+  <ul>
+    <li>No endorsements, recommendations, ratings, scores, predictions, or “who is better on X.”</li>
+    <li>No summaries of news or opinion. Where such material exists it is only linked.</li>
+    <li>No accounts, no analytics, no tracking, and no third-party scripts. Pages are not indexed by search engines.</li>
+    <li>Ballotpedia and Vote411 are not copied or quoted; Vote411 is linked for more information.</li>
+  </ul>
+
+  <h2 id="tiers">Evidence tiers</h2>
+  <dl class="plain">
+    <dt><span class="badge badge--official">Official</span></dt>
+    <dd>Government or ballot record: the board of elections ballot text, Secretary of State issue reports, county auditor estimates, filings.</dd>
+    <dt><span class="badge badge--says">Says</span></dt>
+    <dd>The candidate’s or sponsor’s own statements, for example a campaign website or a levy sponsor’s materials.</dd>
+    <dt><span class="badge badge--done">Done</span></dt>
+    <dd>Verifiable record: roll-call votes, filed bills, campaign finance reports. What a candidate says and what a candidate has done are never combined in one field.</dd>
+    <dt>Context</dt>
+    <dd>News, Vote411, Ballotpedia, and similar. Link only; never quoted or summarized here.</dd>
+  </dl>
+
+  <h2 id="process">How each fact gets here</h2>
+  <ol>
+    <li><strong>Fixed source list.</strong> A person registers the sources for each contest before anything is retrieved. A language model never browses and never picks sources. A candidate’s own website is added only after a person confirms it is theirs.</li>
+    <li><strong>Extraction, not writing.</strong> A language model may only pull structured facts out of one stored source at a time. It never writes descriptions, and it sees nothing about the other candidates. Levy and issue wording comes straight from the official ballot, not from a model.</li>
+    <li><strong>Verbatim quotes.</strong> Every fact carries a quote of at most {config.quote_max_words} words that must appear, character for character, in the stored copy of the source. A fact without a valid quote is dropped, not paraphrased.</li>
+    <li><strong>Symmetry check.</strong> Each contest gets a coverage report. It is flagged if any candidate has no fields, or if candidates’ counts differ by more than {config.symmetry_threshold}. Gaps are shown, never filled with generated text.</li>
+    <li><strong>Human review.</strong> A person approves every field before it appears. Source copies older than {config.stale_days} days block publication until refreshed.</li>
+  </ol>
+  <p class="small">Stated priorities: {config.priorities_per_candidate} per candidate, in the order the source gives them. A source that lists more is not used for the extra items.</p>
+
+  <h2 id="votes">Key votes</h2>
+  <p>
+    For candidates who have a voting record, the key votes are chosen by one rule applied to everyone:
+    the final-passage roll-call votes on the {config.key_vote_count} most recent bills. They are not
+    hand-picked for any candidate.
+  </p>
+
+  <h2 id="finance">Campaign finance</h2>
+  <p>Total raised and total spent from each candidate’s most recent filed report, with the report’s coverage end date shown.</p>
+
+  <h2 id="gaps">Known gaps</h2>
+  {gaps.length === 0 ? (
+    <p>Every contest on the published ballots has been reviewed.</p>
+  ) : (
+    <>
+      <p>
+        These contests are listed on the ballot but have not been researched and reviewed yet, so no
+        facts are shown for them. “Not yet reviewed” does not mean nothing exists.
+      </p>
+      <ul>
+        {gaps.map((g) => (
+          <li>
+            <a href={`/b/${views.find((v) => v.ballot === g.ballot)!.slug}/#${g.view.anchor}`}>{g.view.contest.title}</a>
+            {g.view.contest.term && <span class="small"> ({g.view.contest.term})</span>}
+          </li>
+        ))}
+      </ul>
+    </>
+  )}
+  <p>Where a slot reads “Not found in whitelisted sources,” none of the registered sources states it. It does not mean the information does not exist elsewhere.</p>
+
+  <h2 id="corrections">Corrections</h2>
+  <p>
+    Every field has a “Report an error” link. It opens a new issue in this project’s public
+    repository on GitHub, pre-filled with the contest, candidate, field, and page. Submitting an
+    issue needs a GitHub account and is entirely your choice. Corrections are tracked in the open.
+  </p>
+  <p>
+    <a href={`${config.repo_url.replace(/\/+$/, '')}/issues`} rel="noopener noreferrer">Project issues on GitHub</a>
+  </p>
+
+  <h2 id="more">More information</h2>
+  <p>
+    <a href={config.links.vote411} rel="noopener noreferrer">Vote411</a> ·
+    <a href={config.links.sos_elections} rel="noopener noreferrer">Ohio Secretary of State</a>
+  </p>
 </Base>

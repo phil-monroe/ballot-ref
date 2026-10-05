@@ -1,0 +1,14 @@
+---
+interface Props {
+  boeUrl: string;
+  vote411: string;
+  sosUrl: string;
+}
+const { boeUrl, vote411, sosUrl } = Astro.props;
+---
+<p>
+  <a href={vote411} rel="noopener noreferrer">Vote411</a> ·
+  <a href={boeUrl} rel="noopener noreferrer">County board of elections ballot viewer</a> ·
+  <a href={sosUrl} rel="noopener noreferrer">Ohio Secretary of State: elections and ballot issues</a> ·
+  <a href="/methodology/">Methodology</a>
+</p>
