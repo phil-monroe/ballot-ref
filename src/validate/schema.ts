@@ -1,6 +1,12 @@
 import { z } from 'zod';
 import type { Contest } from '../schemas/contest.ts';
-import { LevyType, REQUIRED_TIER, SLOTTED_KEYS, isAllowedKey } from '../schemas/field-keys.ts';
+import {
+  LevyType,
+  MAX_EXPLANATION_ITEMS,
+  REQUIRED_TIER,
+  SLOTTED_KEYS,
+  isAllowedKey,
+} from '../schemas/field-keys.ts';
 import type { Tier } from '../schemas/shared.ts';
 import type { RawField } from './types.ts';
 import type { GateResult } from './types.ts';
@@ -36,6 +42,9 @@ export function checkSchema(
     return fail(`priority slot ${f.slot} > ${limits.priorities}`);
   if (f.field_key === 'key_vote' && f.slot! > limits.keyVotes)
     return fail(`key_vote slot ${f.slot} > ${limits.keyVotes}`);
+
+  if (f.field_key === 'official_explanation' && f.slot! > MAX_EXPLANATION_ITEMS)
+    return fail(`official_explanation slot ${f.slot} > ${MAX_EXPLANATION_ITEMS}`);
 
   const need = REQUIRED_TIER[f.field_key];
   if (need && sourceTier !== need)

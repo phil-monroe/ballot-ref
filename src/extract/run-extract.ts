@@ -12,6 +12,7 @@ import { fetchable } from '../sources/registry.ts';
 import { runGates } from '../validate/run-gates.ts';
 import type { LlmExtractor } from './extractor.ts';
 import { promptFamily } from './prompts.ts';
+import { ISSUE_ENTITY } from '../ingest/propose-official.ts';
 
 /** Keys the ballot parser or the registry supplies; the model is never asked for them. */
 const NOT_FROM_MODEL = new Set([
@@ -19,7 +20,18 @@ const NOT_FROM_MODEL = new Set([
   'party_label',
   'campaign_website',
   'official_text_link',
+  // Parsed deterministically from the official ballot text (FR-022): never model-extracted.
   'taxing_entity',
+  'levy_type',
+  'millage',
+  'duration',
+  'purpose',
+  'auditor_estimated_cost_per_100k',
+  'auditor_estimated_annual_collection',
+  'ballot_language',
+  'official_explanation',
+  'effect_yes',
+  'effect_no',
 ]);
 
 /** Keys a model may return from a source of this tier. Never lets a source supply a key of another tier. */
@@ -64,10 +76,10 @@ export async function runExtract(opts: {
   const promptVersion = config.prompt_versions[family];
   if (!promptVersion) throw new Error(`No prompt version configured for "${family}"`);
 
-  const entities =
-    contest.kind === 'candidate' || contest.kind === 'judicial'
-      ? contest.candidates.filter((c) => !c.write_in && (!opts.entityId || c.id === opts.entityId))
-      : [];
+  const isIssue = contest.kind === 'levy' || contest.kind === 'constitutional-issue';
+  const entities: { id: string; ballot_name: string; role?: string }[] = isIssue
+    ? [{ id: ISSUE_ENTITY, ballot_name: contest.title }]
+    : contest.candidates.filter((c) => !c.write_in && (!opts.entityId || c.id === opts.entityId));
   const logs = opts.logs ?? { drops: LOGS.drops, extractionRuns: LOGS.extractionRuns };
 
   for (const entity of entities) {
@@ -78,6 +90,12 @@ export async function runExtract(opts: {
       const text = meta ? store.getText(meta.sha256) : null;
       if (!meta || text === null) {
         summary.skipped.push(`${entity.id}: no local snapshot for ${source.url}`);
+        continue;
+      }
+      if (meta.sha256 === contest.ballot_snapshot_hash) {
+        summary.skipped.push(
+          `${entity.id}: ${source.url} is the official ballot, parsed deterministically`,
+        );
         continue;
       }
       const keys = offeredKeys(contest.kind, source.tier);

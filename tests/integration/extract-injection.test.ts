@@ -184,3 +184,40 @@ describe('namesake page', () => {
     expect(summary.drops[0]).toMatchObject({ reason: 'entity-mismatch' });
   });
 });
+
+describe('issue contests', () => {
+  const levy = {
+    ...contest,
+    id: '2026-11-03:levy:test-district:additional',
+    kind: 'levy' as const,
+    title: 'Proposed Tax Levy (Additional) Test District',
+    candidates: [],
+    issue_options: [],
+  };
+  const sponsorSource = {
+    ...sources[0]!,
+    url: 'https://district.example/levy',
+    entity_id: undefined,
+    tier: 'says' as const,
+  };
+
+  it('offers only sponsor_materials for a levy (everything else is parsed from the ballot, never model-extracted)', async () => {
+    data.saveContest(levy);
+    writeFileSync(
+      join(dir, 'data/sources/2026-11-03__levy__test-district__additional.yaml'),
+      stringify([sponsorSource]),
+    );
+    seed('fixtures/synthetic/injection-page.html', 'https://district.example/levy');
+    await runExtract({
+      contestId: levy.id,
+      data,
+      store,
+      extractor: stub({ subject_name: null }),
+      config,
+      logs: { drops: join(dir, 'drops.jsonl'), extractionRuns: join(dir, 'runs.jsonl') },
+    });
+    expect(calls).toHaveLength(1);
+    expect(calls[0]!.fieldKeys).toEqual(['sponsor_materials']);
+    expect(calls[0]!.entity.id).toBe('issue');
+  });
+});

@@ -187,16 +187,16 @@ description: "Task list for Ballot Reference (Sourced Voter Reference)"
 
 ### Tests for User Story 5
 
-- [ ] T077 [P] [US5] Unit tests `tests/unit/levy-parser.test.ts` against the fixture ballot text: Career Center (renewal and decrease, 0.75 mill, $18/$100k, 10 yrs, est. $5,773,576/yr), RTA (sales and use tax, up to 0.2%, continuing), DD (additional, 1.8 mills, $63/$100k, 5 yrs, est. $25,448,490/yr), Mental Health & Recovery (renewal and increase, 2 mills, $50/$100k, 5 yrs, est. $23,005,505/yr)
-- [ ] T078 [P] [US5] Unit test `tests/unit/issue-guard.test.ts`: no tool-authored effect/current-law text can be stored; `effect_yes`, `effect_no`, and `current_law` require an official-source quote; State Issue 3 is never characterized as broader than the photo-ID amendment (FR-034)
+- [X] T077 [P] [US5] Unit tests `tests/unit/levy-parser.test.ts` against the fixture ballot text: Career Center (renewal and decrease, 0.75 mill, $18/$100k, 10 yrs, est. $5,773,576/yr), RTA (sales and use tax, up to 0.2%, continuing), DD (additional, 1.8 mills, $63/$100k, 5 yrs, est. $25,448,490/yr), Mental Health & Recovery (renewal and increase, 2 mills, $50/$100k, 5 yrs, est. $23,005,505/yr)
+- [X] T078 [P] [US5] Unit test `tests/unit/issue-guard.test.ts`: no tool-authored effect/current-law text can be stored; `effect_yes`, `effect_no`, and `current_law` require an official-source quote; State Issue 3 is never characterized as broader than the photo-ID amendment (FR-034)
 
 ### Implementation for User Story 5
 
-- [ ] T079 [P] [US5] Implement deterministic levy field parsing in `src/ingest/levy-fields.ts`: taxing entity, `levy_type`, millage, duration, auditor estimate per $100k and annual collection, each emitted as an `official` Field with `extractor {kind:"parser", name, version}` and the printed sentence as quote (quote 25-word cap applies; longer passages are linked, not reproduced)
-- [ ] T080 [P] [US5] Implement deterministic constitutional-issue field parsing in `src/ingest/issue-fields.ts`: `ballot_language` and the official explanation as capped quotes with source link
-- [ ] T081 [US5] Register sources for State Issue 3 and the four levies in `data/sources/` (Ohio SOS issue report for Issue 3 arguments with authors, county auditor material, sponsor sites marked `says`, official ballot as `official`)
-- [ ] T082 [US5] Add the issue extraction prompt `prompts/issue.v1.md` and a schema-constrained path in `src/extract/run-extract.ts` for `argument_for` / `argument_against` (+`author`), `sponsor_materials` (`says`), and `effect_*` only where quotable from the official explanation
-- [ ] T083 [P] [US5] Add issue and levy rendering in `site/src/components/IssueBlock.astro` and `site/src/components/LevyBlock.astro` using the same FieldRow; levy cost per $100k shows "Not found in whitelisted sources." when absent
+- [X] T079 [P] [US5] Implement deterministic levy field parsing (in `src/ingest/official-fields.ts`, shared with T080; proposals are written by `src/ingest/propose-official.ts` during `ingest`): taxing entity, `levy_type`, millage, duration, auditor estimate per $100k and annual collection, each emitted as an `official` Field with `extractor {kind:"parser", name, version}` and the printed sentence as quote (quote 25-word cap applies; longer passages are linked, not reproduced)
+- [X] T080 [P] [US5] Implement deterministic constitutional-issue field parsing in `src/ingest/official-fields.ts`: `ballot_language` and the official explanation as capped quotes with source link
+- [ ] T081 [US5] (official ballot auto-registered as `official` source by `ingest`; SOS issue report, auditor, and sponsor sites still need the maintainer to whitelist them) Register sources for State Issue 3 and the four levies in `data/sources/` (Ohio SOS issue report for Issue 3 arguments with authors, county auditor material, sponsor sites marked `says`, official ballot as `official`)
+- [X] T082 [US5] Add the issue extraction prompt `prompts/issue.v1.md` and a schema-constrained path in `src/extract/run-extract.ts` for `argument_for` / `argument_against` (+`author`), `sponsor_materials` (`says`), and `effect_*` only where quotable from the official explanation
+- [X] T083 [P] [US5] Add issue and levy rendering in `site/src/components/IssueBlock.astro` (one component for both kinds) using the same FieldRow; levy cost per $100k shows "Not found in whitelisted sources." when absent
 - [ ] T084 [US5] Run parse, fetch, extract, validate, review for State Issue 3 and the four levies; build and check the published issue pages
 
 **Checkpoint**: Issues and levies published with official language only

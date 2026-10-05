@@ -1,0 +1,151 @@
+{
+  "fields": [
+    {
+      "contest_id": "2026-11-03:state-issue-3:oh:constitutional-amendment",
+      "entity_id": "issue",
+      "field_key": "ballot_language",
+      "slot": null,
+      "value": "TO REQUIRE VOTERS TO PRESENT PHOTO IDENTIFICATION IN ORDER TO VOTE",
+      "quote": "TO REQUIRE VOTERS TO PRESENT PHOTO IDENTIFICATION IN ORDER TO VOTE",
+      "source_url": "https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X",
+      "source_hash": "5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf",
+      "retrieved_at": "2026-10-05T02:57:26.959Z",
+      "tier": "official",
+      "status": "proposed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "extractor": {
+        "kind": "parser",
+        "name": "official-ballot-text",
+        "version": "1"
+      },
+      "needs_rereview": false
+    },
+    {
+      "contest_id": "2026-11-03:state-issue-3:oh:constitutional-amendment",
+      "entity_id": "issue",
+      "field_key": "official_explanation",
+      "slot": 1,
+      "value": "Require voters to present an approved form of government-issued photo identification in order to vote.",
+      "quote": "Require voters to present an approved form of government-issued photo identification in order to vote.",
+      "source_url": "https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X",
+      "source_hash": "5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf",
+      "retrieved_at": "2026-10-05T02:57:26.959Z",
+      "tier": "official",
+      "status": "proposed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "extractor": {
+        "kind": "parser",
+        "name": "official-ballot-text",
+        "version": "1"
+      },
+      "needs_rereview": false
+    },
+    {
+      "contest_id": "2026-11-03:state-issue-3:oh:constitutional-amendment",
+      "entity_id": "issue",
+      "field_key": "official_explanation",
+      "slot": 2,
+      "value": "Excerpt: first 25 of 38 words of the printed passage (see the official text)",
+      "quote": "Allow state law to provide for an alternative method of verifying a voter’s identity for a voter who has a sincere religious objection to being",
+      "source_url": "https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X",
+      "source_hash": "5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf",
+      "retrieved_at": "2026-10-05T02:57:26.959Z",
+      "tier": "official",
+      "status": "proposed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "extractor": {
+        "kind": "parser",
+        "name": "official-ballot-text",
+        "version": "1"
+      },
+      "needs_rereview": false
+    },
+    {
+      "contest_id": "2026-11-03:state-issue-3:oh:constitutional-amendment",
+      "entity_id": "issue",
+      "field_key": "official_explanation",
+      "slot": 3,
+      "value": "Excerpt: first 25 of 37 words of the printed passage (see the official text)",
+      "quote": "Require that voters who do not vote in person provide an approved form of government-issued photo identification, unless the law authorizes those persons to vote",
+      "source_url": "https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X",
+      "source_hash": "5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf",
+      "retrieved_at": "2026-10-05T02:57:26.959Z",
+      "tier": "official",
+      "status": "proposed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "extractor": {
+        "kind": "parser",
+        "name": "official-ballot-text",
+        "version": "1"
+      },
+      "needs_rereview": false
+    },
+    {
+      "contest_id": "2026-11-03:state-issue-3:oh:constitutional-amendment",
+      "entity_id": "issue",
+      "field_key": "official_explanation",
+      "slot": 4,
+      "value": "Excerpt: first 25 of 45 words of the printed passage (see the official text)",
+      "quote": "Define approved forms of government-issued photo identification as an unexpired Ohio driver license or state identification card; a United States passport or passport card; or",
+      "source_url": "https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X",
+      "source_hash": "5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf",
+      "retrieved_at": "2026-10-05T02:57:26.959Z",
+      "tier": "official",
+      "status": "proposed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "extractor": {
+        "kind": "parser",
+        "name": "official-ballot-text",
+        "version": "1"
+      },
+      "needs_rereview": false
+    },
+    {
+      "contest_id": "2026-11-03:state-issue-3:oh:constitutional-amendment",
+      "entity_id": "issue",
+      "field_key": "effect_yes",
+      "slot": null,
+      "value": "A \"YES\" vote means approval of the amendment.",
+      "quote": "A \"YES\" vote means approval of the amendment.",
+      "source_url": "https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X",
+      "source_hash": "5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf",
+      "retrieved_at": "2026-10-05T02:57:26.959Z",
+      "tier": "official",
+      "status": "proposed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "extractor": {
+        "kind": "parser",
+        "name": "official-ballot-text",
+        "version": "1"
+      },
+      "needs_rereview": false
+    },
+    {
+      "contest_id": "2026-11-03:state-issue-3:oh:constitutional-amendment",
+      "entity_id": "issue",
+      "field_key": "effect_no",
+      "slot": null,
+      "value": "A \"NO\" vote means disapproval of the amendment.",
+      "quote": "A \"NO\" vote means disapproval of the amendment.",
+      "source_url": "https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X",
+      "source_hash": "5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf",
+      "retrieved_at": "2026-10-05T02:57:26.959Z",
+      "tier": "official",
+      "status": "proposed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "extractor": {
+        "kind": "parser",
+        "name": "official-ballot-text",
+        "version": "1"
+      },
+      "needs_rereview": false
+    }
+  ]
+}

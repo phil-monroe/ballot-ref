@@ -1,0 +1,88 @@
+{
+  "fields": [
+    {
+      "contest_id": "2026-11-03:levy:delaware-county-regional-transit-authority:sales-use-tax",
+      "entity_id": "issue",
+      "field_key": "taxing_entity",
+      "slot": null,
+      "value": "Delaware County Regional Transit Authority",
+      "quote": "Delaware County Regional Transit Authority",
+      "source_url": "https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X",
+      "source_hash": "5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf",
+      "retrieved_at": "2026-10-05T02:57:26.959Z",
+      "tier": "official",
+      "status": "proposed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "extractor": {
+        "kind": "parser",
+        "name": "official-ballot-text",
+        "version": "1"
+      },
+      "needs_rereview": false
+    },
+    {
+      "contest_id": "2026-11-03:levy:delaware-county-regional-transit-authority:sales-use-tax",
+      "entity_id": "issue",
+      "field_key": "levy_type",
+      "slot": null,
+      "value": "sales-use-tax",
+      "quote": "Proposed Sales and Use Tax",
+      "source_url": "https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X",
+      "source_hash": "5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf",
+      "retrieved_at": "2026-10-05T02:57:26.959Z",
+      "tier": "official",
+      "status": "proposed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "extractor": {
+        "kind": "parser",
+        "name": "official-ballot-text",
+        "version": "1"
+      },
+      "needs_rereview": false
+    },
+    {
+      "contest_id": "2026-11-03:levy:delaware-county-regional-transit-authority:sales-use-tax",
+      "entity_id": "issue",
+      "field_key": "duration",
+      "slot": null,
+      "value": "continuing",
+      "quote": "for a continuing period of time",
+      "source_url": "https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X",
+      "source_hash": "5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf",
+      "retrieved_at": "2026-10-05T02:57:26.959Z",
+      "tier": "official",
+      "status": "proposed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "extractor": {
+        "kind": "parser",
+        "name": "official-ballot-text",
+        "version": "1"
+      },
+      "needs_rereview": false
+    },
+    {
+      "contest_id": "2026-11-03:levy:delaware-county-regional-transit-authority:sales-use-tax",
+      "entity_id": "issue",
+      "field_key": "purpose",
+      "slot": null,
+      "value": "Excerpt: first 25 of 48 words of the printed passage (see the official text)",
+      "quote": "for the purpose of providing additional general revenues for a transit authority, funding a regional transportation improvement project under section 5595.06 of the Revised Code,",
+      "source_url": "https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X",
+      "source_hash": "5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf",
+      "retrieved_at": "2026-10-05T02:57:26.959Z",
+      "tier": "official",
+      "status": "proposed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "extractor": {
+        "kind": "parser",
+        "name": "official-ballot-text",
+        "version": "1"
+      },
+      "needs_rereview": false
+    }
+  ]
+}

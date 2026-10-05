@@ -40,8 +40,12 @@ const LABELS: Record<string, string> = {
 export function slotLabel(slot: string): string {
   const [key, n] = slot.split('#');
   if (key === 'priority') return `Stated priority ${n}`;
+  if (key === 'official_explanation') return `Official explanation, item ${n}`;
   return LABELS[key!] ?? key!;
 }
+
+/** Issue keys that expand into one slot per stored item (e.g. each bullet of the official explanation). */
+const EXPANDING = new Set(['official_explanation']);
 
 const ISSUE_SLOTS: Record<'constitutional-issue' | 'levy', string[]> = {
   'constitutional-issue': [
@@ -111,8 +115,17 @@ export const contestAnchor = (id: string): string =>
     .replace(/[^a-z0-9-]+/gi, '-');
 
 function slotsFrom(keys: string[], fields: Field[]): SlotView[] {
-  const byId = new Map(publishableFields(fields).map((f) => [slotId(f), f]));
-  return keys.map((slot) => ({ slot, label: slotLabel(slot), field: byId.get(slot) ?? null }));
+  const shown = publishableFields(fields);
+  const byId = new Map(shown.map((f) => [slotId(f), f]));
+  const expanded = keys.flatMap((k) => {
+    if (!EXPANDING.has(k)) return [k];
+    const slots = shown
+      .filter((f) => f.field_key === k)
+      .map((f) => f.slot ?? 1)
+      .sort((a, b) => a - b);
+    return (slots.length ? slots : [1]).map((n) => `${k}#${n}`);
+  });
+  return expanded.map((slot) => ({ slot, label: slotLabel(slot), field: byId.get(slot) ?? null }));
 }
 
 /**

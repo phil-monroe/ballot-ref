@@ -2,6 +2,8 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { DataStore } from '../data.ts';
 import { SnapshotStore } from '../fetch/snapshot-store.ts';
 import type { Contest } from '../schemas/contest.ts';
+import { loadConfig } from '../config.ts';
+import { proposeOfficialFields } from './propose-official.ts';
 import { buildContests } from './build-contests.ts';
 import { dateFromElectionCode } from './contest-id.ts';
 import { diffBallots } from './diff.ts';
@@ -16,6 +18,7 @@ export interface IngestResult {
   snapshotHash: string;
   diff: ReturnType<typeof diffBallots>;
   mismatches: string[];
+  officialFields: { proposed: number; dropped: number };
 }
 
 /** Idempotent: re-running with the same ballot yields the same files and an empty diff. */
@@ -64,5 +67,13 @@ export async function runIngest(opts: {
     const expected = Expected.parse(JSON.parse(readFileSync(ballot.fixture, 'utf8')));
     mismatches = compareToExpected(contests, expected);
   }
-  return { contests, snapshotHash: meta.sha256, diff, mismatches };
+  const officialFields = proposeOfficialFields({
+    ballot: data.loadBallot(opts.ballotFile),
+    ballotFile: opts.ballotFile,
+    snapshotHash: meta.sha256,
+    data,
+    store: snapshots,
+    config: loadConfig(),
+  });
+  return { contests, snapshotHash: meta.sha256, diff, mismatches, officialFields };
 }

@@ -1,0 +1,151 @@
+{
+  "fields": [
+    {
+      "contest_id": "2026-11-03:levy:delaware-county-board-of-developmental-disabilities:additional",
+      "entity_id": "issue",
+      "field_key": "taxing_entity",
+      "slot": null,
+      "value": "Delaware County Board of Developmental Disabilities",
+      "quote": "Delaware County Board of Developmental Disabilities",
+      "source_url": "https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X",
+      "source_hash": "5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf",
+      "retrieved_at": "2026-10-05T02:57:26.959Z",
+      "tier": "official",
+      "status": "proposed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "extractor": {
+        "kind": "parser",
+        "name": "official-ballot-text",
+        "version": "1"
+      },
+      "needs_rereview": false
+    },
+    {
+      "contest_id": "2026-11-03:levy:delaware-county-board-of-developmental-disabilities:additional",
+      "entity_id": "issue",
+      "field_key": "levy_type",
+      "slot": null,
+      "value": "additional",
+      "quote": "Proposed Tax Levy (Additional)",
+      "source_url": "https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X",
+      "source_hash": "5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf",
+      "retrieved_at": "2026-10-05T02:57:26.959Z",
+      "tier": "official",
+      "status": "proposed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "extractor": {
+        "kind": "parser",
+        "name": "official-ballot-text",
+        "version": "1"
+      },
+      "needs_rereview": false
+    },
+    {
+      "contest_id": "2026-11-03:levy:delaware-county-board-of-developmental-disabilities:additional",
+      "entity_id": "issue",
+      "field_key": "millage",
+      "slot": null,
+      "value": "1.8 mills",
+      "quote": "at a rate not exceeding 1.8 mills for each $1 of taxable value",
+      "source_url": "https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X",
+      "source_hash": "5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf",
+      "retrieved_at": "2026-10-05T02:57:26.959Z",
+      "tier": "official",
+      "status": "proposed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "extractor": {
+        "kind": "parser",
+        "name": "official-ballot-text",
+        "version": "1"
+      },
+      "needs_rereview": false
+    },
+    {
+      "contest_id": "2026-11-03:levy:delaware-county-board-of-developmental-disabilities:additional",
+      "entity_id": "issue",
+      "field_key": "duration",
+      "slot": null,
+      "value": "5 years",
+      "quote": "for 5 years, commencing in 2026, first due in calendar year 2027",
+      "source_url": "https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X",
+      "source_hash": "5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf",
+      "retrieved_at": "2026-10-05T02:57:26.959Z",
+      "tier": "official",
+      "status": "proposed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "extractor": {
+        "kind": "parser",
+        "name": "official-ballot-text",
+        "version": "1"
+      },
+      "needs_rereview": false
+    },
+    {
+      "contest_id": "2026-11-03:levy:delaware-county-board-of-developmental-disabilities:additional",
+      "entity_id": "issue",
+      "field_key": "auditor_estimated_cost_per_100k",
+      "slot": null,
+      "value": "$63",
+      "quote": "which amounts to $63 for each $100,000 of the county auditor's market value",
+      "source_url": "https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X",
+      "source_hash": "5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf",
+      "retrieved_at": "2026-10-05T02:57:26.959Z",
+      "tier": "official",
+      "status": "proposed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "extractor": {
+        "kind": "parser",
+        "name": "official-ballot-text",
+        "version": "1"
+      },
+      "needs_rereview": false
+    },
+    {
+      "contest_id": "2026-11-03:levy:delaware-county-board-of-developmental-disabilities:additional",
+      "entity_id": "issue",
+      "field_key": "auditor_estimated_annual_collection",
+      "slot": null,
+      "value": "$25,448,490",
+      "quote": "the county auditor estimates will collect $25,448,490 annually",
+      "source_url": "https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X",
+      "source_hash": "5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf",
+      "retrieved_at": "2026-10-05T02:57:26.959Z",
+      "tier": "official",
+      "status": "proposed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "extractor": {
+        "kind": "parser",
+        "name": "official-ballot-text",
+        "version": "1"
+      },
+      "needs_rereview": false
+    },
+    {
+      "contest_id": "2026-11-03:levy:delaware-county-board-of-developmental-disabilities:additional",
+      "entity_id": "issue",
+      "field_key": "purpose",
+      "slot": null,
+      "value": "for the purpose of community developmental disabilities programs and services pursuant to Chapter 5126. of the Revised Code",
+      "quote": "for the purpose of community developmental disabilities programs and services pursuant to Chapter 5126. of the Revised Code",
+      "source_url": "https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X",
+      "source_hash": "5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf",
+      "retrieved_at": "2026-10-05T02:57:26.959Z",
+      "tier": "official",
+      "status": "proposed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "extractor": {
+        "kind": "parser",
+        "name": "official-ballot-text",
+        "version": "1"
+      },
+      "needs_rereview": false
+    }
+  ]
+}

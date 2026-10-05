@@ -1,0 +1,151 @@
+{
+  "fields": [
+    {
+      "contest_id": "2026-11-03:levy:delaware-area-career-center:renewal-and-decrease",
+      "entity_id": "issue",
+      "field_key": "taxing_entity",
+      "slot": null,
+      "value": "Delaware Area Career Center",
+      "quote": "Delaware Area Career Center",
+      "source_url": "https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X",
+      "source_hash": "5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf",
+      "retrieved_at": "2026-10-05T02:57:26.959Z",
+      "tier": "official",
+      "status": "proposed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "extractor": {
+        "kind": "parser",
+        "name": "official-ballot-text",
+        "version": "1"
+      },
+      "needs_rereview": false
+    },
+    {
+      "contest_id": "2026-11-03:levy:delaware-area-career-center:renewal-and-decrease",
+      "entity_id": "issue",
+      "field_key": "levy_type",
+      "slot": null,
+      "value": "renewal-and-decrease",
+      "quote": "Proposed Tax Levy (Renewal and Decrease)",
+      "source_url": "https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X",
+      "source_hash": "5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf",
+      "retrieved_at": "2026-10-05T02:57:26.959Z",
+      "tier": "official",
+      "status": "proposed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "extractor": {
+        "kind": "parser",
+        "name": "official-ballot-text",
+        "version": "1"
+      },
+      "needs_rereview": false
+    },
+    {
+      "contest_id": "2026-11-03:levy:delaware-area-career-center:renewal-and-decrease",
+      "entity_id": "issue",
+      "field_key": "millage",
+      "slot": null,
+      "value": "0.75 mill",
+      "quote": "at a combined rate not exceeding 0.75 mill for each $1 of taxable value",
+      "source_url": "https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X",
+      "source_hash": "5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf",
+      "retrieved_at": "2026-10-05T02:57:26.959Z",
+      "tier": "official",
+      "status": "proposed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "extractor": {
+        "kind": "parser",
+        "name": "official-ballot-text",
+        "version": "1"
+      },
+      "needs_rereview": false
+    },
+    {
+      "contest_id": "2026-11-03:levy:delaware-area-career-center:renewal-and-decrease",
+      "entity_id": "issue",
+      "field_key": "duration",
+      "slot": null,
+      "value": "10 years",
+      "quote": "for 10 years, commencing in 2026, first due in calendar year 2027",
+      "source_url": "https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X",
+      "source_hash": "5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf",
+      "retrieved_at": "2026-10-05T02:57:26.959Z",
+      "tier": "official",
+      "status": "proposed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "extractor": {
+        "kind": "parser",
+        "name": "official-ballot-text",
+        "version": "1"
+      },
+      "needs_rereview": false
+    },
+    {
+      "contest_id": "2026-11-03:levy:delaware-area-career-center:renewal-and-decrease",
+      "entity_id": "issue",
+      "field_key": "auditor_estimated_cost_per_100k",
+      "slot": null,
+      "value": "$18",
+      "quote": "which amounts to $18 for each $100,000 of the county auditor's market value",
+      "source_url": "https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X",
+      "source_hash": "5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf",
+      "retrieved_at": "2026-10-05T02:57:26.959Z",
+      "tier": "official",
+      "status": "proposed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "extractor": {
+        "kind": "parser",
+        "name": "official-ballot-text",
+        "version": "1"
+      },
+      "needs_rereview": false
+    },
+    {
+      "contest_id": "2026-11-03:levy:delaware-area-career-center:renewal-and-decrease",
+      "entity_id": "issue",
+      "field_key": "auditor_estimated_annual_collection",
+      "slot": null,
+      "value": "$5,773,576",
+      "quote": "the county auditor estimates will collect $5,773,576 annually",
+      "source_url": "https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X",
+      "source_hash": "5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf",
+      "retrieved_at": "2026-10-05T02:57:26.959Z",
+      "tier": "official",
+      "status": "proposed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "extractor": {
+        "kind": "parser",
+        "name": "official-ballot-text",
+        "version": "1"
+      },
+      "needs_rereview": false
+    },
+    {
+      "contest_id": "2026-11-03:levy:delaware-area-career-center:renewal-and-decrease",
+      "entity_id": "issue",
+      "field_key": "purpose",
+      "slot": null,
+      "value": "for the purpose of improving, renovating, remodeling, enlarging, furnishing and equipping school buildings and facilities",
+      "quote": "for the purpose of improving, renovating, remodeling, enlarging, furnishing and equipping school buildings and facilities",
+      "source_url": "https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X",
+      "source_hash": "5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf",
+      "retrieved_at": "2026-10-05T02:57:26.959Z",
+      "tier": "official",
+      "status": "proposed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "extractor": {
+        "kind": "parser",
+        "name": "official-ballot-text",
+        "version": "1"
+      },
+      "needs_rereview": false
+    }
+  ]
+}

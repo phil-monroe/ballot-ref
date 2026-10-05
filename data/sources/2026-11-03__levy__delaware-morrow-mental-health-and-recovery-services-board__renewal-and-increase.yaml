@@ -1,0 +1,7 @@
+- url: https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X
+  domain_class: ohio-boe
+  tier: official
+  redistributable: true
+  whitelisted_by: ballot-config:data/ballots/delaware-154-1.yaml
+  whitelisted_at: 2026-10-05T03:10:11.920Z
+  notes: Official sample ballot supplied as the ballot configuration

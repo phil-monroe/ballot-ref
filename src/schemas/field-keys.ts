@@ -50,7 +50,10 @@ export const FIELD_KEYS = {
 export type ContestKindKey = keyof typeof FIELD_KEYS;
 
 /** Keys with repeated slots: key -> slot count source. */
-export const SLOTTED_KEYS = new Set(['priority', 'key_vote']);
+export const SLOTTED_KEYS = new Set(['priority', 'key_vote', 'official_explanation']);
+
+/** Maximum slot for keys whose count is not set by config (official explanation items). */
+export const MAX_EXPLANATION_ITEMS = 12;
 
 /** Keys that must carry the given tier regardless of source registry entry. */
 export const REQUIRED_TIER: Record<string, 'says' | 'done' | 'official'> = {
