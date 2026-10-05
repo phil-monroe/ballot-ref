@@ -1,0 +1,11 @@
+node_modules/
+site/dist/
+site/.astro/
+coverage/
+.env
+.env.*
+!.env.example
+data/snapshots/private/*
+!data/snapshots/private/.gitkeep
+.DS_Store
+*.log

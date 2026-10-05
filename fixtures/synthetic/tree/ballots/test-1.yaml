@@ -1,0 +1,6 @@
+county: test
+precinct_code: "1"
+precinct_name: TEST 1
+election: 2026-11-03-general
+ballot_source: { county_slug: test, election_code: x, precinct_code: "1" }
+contests: ["2026-11-03:test-office:oh:2027"]

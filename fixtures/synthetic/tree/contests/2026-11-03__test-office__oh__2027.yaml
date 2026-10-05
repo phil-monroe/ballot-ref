@@ -1,0 +1,11 @@
+id: "2026-11-03:test-office:oh:2027"
+kind: candidate
+title: Test Office
+jurisdiction: oh
+term: full term from 1-1-2027
+vote_for: 1
+candidates:
+  - { id: alpha, ballot_name: Alpha A. Person, party_label: Democratic, order: 0, write_in: false, incumbent: null, ticket_id: null }
+  - { id: beta, ballot_name: Beta B. Person, party_label: null, order: 1, write_in: false, incumbent: null, ticket_id: null }
+ballot_snapshot_hash: "0000000000000000000000000000000000000000000000000000000000000000"
+ballot_page: 1

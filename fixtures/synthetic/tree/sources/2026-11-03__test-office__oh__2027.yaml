@@ -1,0 +1,6 @@
+- url: https://example.gov/page
+  domain_class: ohio-sos
+  tier: official
+  redistributable: true
+  whitelisted_by: tester
+  whitelisted_at: "2026-10-01T00:00:00Z"
