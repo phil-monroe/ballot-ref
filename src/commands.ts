@@ -9,6 +9,7 @@ import { importManual } from './fetch/manual-import.ts';
 import { playwrightFallback } from './fetch/playwright-fallback.ts';
 import { runFetch } from './fetch/run-fetch.ts';
 import { SnapshotStore } from './fetch/snapshot-store.ts';
+import { verifySite } from './verify/verify.ts';
 import { collectStatus, formatStatus } from './report/status.ts';
 import { reviewLoop } from './review/cli.ts';
 import { acknowledgeSymmetry, formatSymmetry } from './review/symmetry.ts';
@@ -218,4 +219,20 @@ export function buildCommand(o: Out): number {
       }),
     );
   return EXIT.ok;
+}
+
+/** Exit 0 unless a PRESENT snapshot does not contain its quote; absent snapshots are only listed. */
+export function verifyCommand(o: Out): number {
+  const r = verifySite(new DataStore(), new SnapshotStore());
+  const human = [
+    `${r.checked} quote(s) verified, ${r.mismatches.length} mismatch(es), ${r.unverifiable.length} unverifiable here`,
+    ...r.mismatches.map(
+      (m) => `  MISMATCH ${m.contest_id} ${m.entity_id}/${m.field_key}  ${m.source_url}`,
+    ),
+    ...r.unverifiable.map(
+      (m) => `  unverifiable here: ${m.contest_id} ${m.entity_id}/${m.field_key}  ${m.source_url}`,
+    ),
+  ].join('\n');
+  print(o, human, r);
+  return r.mismatches.length ? EXIT.validation : EXIT.ok;
 }

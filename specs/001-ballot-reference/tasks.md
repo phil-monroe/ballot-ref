@@ -247,12 +247,12 @@ description: "Task list for Ballot Reference (Sourced Voter Reference)"
 
 ## Phase 11: Polish & Cross-Cutting Concerns
 
-- [ ] T100 Implement `verify` in `src/verify/verify.ts`: best-effort whole-site quote re-verification; verify every quote whose snapshot body is present; exit 0 unless a present snapshot mismatches; write `data/reports/unverifiable-here.json` listing each field and source without an available snapshot (FR-018c, SC-002); add `tests/integration/verify.test.ts` covering present-and-matching, present-and-mismatching (fails), and absent (reported, not failing)
-- [ ] T101 [P] Add CI invariant checks in `tests/contract/invariants.test.ts` per contracts/data-files.md: every ballot contest ref resolves; every committed `approved|edited` field has a `source_hash` with metadata present; no non-redistributable snapshot body is tracked; no `proposed` field is referenced by the build
-- [ ] T102 [P] Add a pre-commit guard script `scripts/check-private-snapshots.sh` (and CI step) that blocks files under `data/snapshots/private/` or any body marked non-redistributable from being committed
-- [ ] T103 [P] Add status/reporting checks `tests/integration/reports.test.ts`: every retrieval failure and validation drop appears in a report (SC-012)
-- [ ] T104 [P] Write `README.md` with setup, the pipeline commands from contracts/cli.md, the snapshot policy, and the unlisted/noindex note; add `CONTRIBUTING.md` pointing error reports to GitHub Issues
-- [ ] T105 Run every scenario in `specs/001-ballot-reference/quickstart.md` end to end and record deviations
+- [X] T100 Implement `verify` in `src/verify/verify.ts`: best-effort whole-site quote re-verification; verify every quote whose snapshot body is present; exit 0 unless a present snapshot mismatches; write `data/reports/unverifiable-here.json` listing each field and source without an available snapshot (FR-018c, SC-002); add `tests/integration/verify.test.ts` covering present-and-matching, present-and-mismatching (fails), and absent (reported, not failing)
+- [X] T101 [P] Add CI invariant checks in `tests/contract/invariants.test.ts` per contracts/data-files.md: every ballot contest ref resolves; every committed `approved|edited` field has a `source_hash` with metadata present; no non-redistributable snapshot body is tracked; no `proposed` field is referenced by the build
+- [X] T102 [P] Add a pre-commit guard script `scripts/check-private-snapshots.sh` (and CI step) that blocks files under `data/snapshots/private/` or any body marked non-redistributable from being committed
+- [X] T103 [P] Add status/reporting checks `tests/integration/reports.test.ts`: every retrieval failure and validation drop appears in a report (SC-012)
+- [X] T104 [P] Write `README.md` with setup, the pipeline commands from contracts/cli.md, the snapshot policy, and the unlisted/noindex note; add `CONTRIBUTING.md` pointing error reports to GitHub Issues
+- [X] T105 Run every scenario in `specs/001-ballot-reference/quickstart.md` end to end and record deviations (steps 3 needs sources, an API key and a reviewer; see `quickstart-run.md`)
 - [ ] T106 Deploy to Cloudflare Pages (unlisted), confirm `X-Robots-Tag` and `robots.txt` in the deployed output, and confirm no third-party requests in the browser network panel
 - [ ] T107 Before sharing beyond the small private circle, review Ohio political-communication disclaimer rules (constitution; this is not legal advice) and record the outcome in `docs/legal-note.md`
 

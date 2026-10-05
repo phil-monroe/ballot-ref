@@ -14,6 +14,7 @@ import {
   sourcesCheck,
   statusCommand,
   validateCommand,
+  verifyCommand,
 } from './commands.ts';
 
 export { EXIT };
@@ -24,16 +25,6 @@ const program = new Command('ballot-ref')
   .description('Sourced, symmetric reference for Ohio precinct ballots')
   .option('--json', 'machine-readable output')
   .option('--reviewer <id>', 'reviewer id (or BALLOT_REF_REVIEWER)');
-
-const stub = (name: string, args: string, desc: string) =>
-  program
-    .command(`${name}${args ? ' ' + args : ''}`)
-    .description(desc)
-    .allowUnknownOption()
-    .action(() => {
-      console.error(`${name}: not implemented yet`);
-      process.exitCode = EXIT.usage;
-    });
 
 program
   .command('ingest <ballot-config>')
@@ -113,7 +104,12 @@ program
   .option('--contest <id>')
   .description('Readiness, stale snapshots, unverifiable sources, retrieval failures')
   .action((o: { contest?: string }) => void (process.exitCode = statusCommand(o.contest, out())));
-stub('verify', '', 'Best-effort whole-site quote re-verification');
+program
+  .command('verify')
+  .description(
+    'Best-effort whole-site quote re-verification (absent snapshots are reported, not failed)',
+  )
+  .action(() => void (process.exitCode = verifyCommand(out())));
 program
   .command('build')
   .description('Build the static site from data/ (no network)')

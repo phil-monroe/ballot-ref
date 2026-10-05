@@ -11,5 +11,6 @@ jobs:
       - run: npm run lint
       - run: npm run typecheck
       - run: npm test
+      - run: sh scripts/check-private-snapshots.sh
       # Best-effort: exits 0 when snapshots are unavailable ("unverifiable here")
       - run: npx tsx src/cli.ts verify
