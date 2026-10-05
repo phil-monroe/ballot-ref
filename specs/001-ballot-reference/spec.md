@@ -31,6 +31,25 @@ The election is Nov 3, 2026. A usable partial version is more valuable than a co
 | `done` | Verifiable record | Roll-call votes, filed bills, campaign finance, court/office history on official sites |
 | `context` | Link-only, never summarized or quoted | News, Vote411, Ballotpedia, bar association ratings |
 
+## Clarifications
+
+### Session 2026-10-04 (second pass)
+
+- Q: For the Governor/Lt. Governor race, one set of fields per joint ticket or separate sets per person? → A: Two sets per ticket (governor candidate and lieutenant governor candidate), each with its own sources, 3 priorities, and finance, shown side by side under the one ticket on the ballot.
+- Q: Should write-in lines and candidates labeled "Other-party candidate" get full slots and count in symmetry? → A: Named candidates always get full slots and count in symmetry, whatever their printed label; write-in lines are shown as printed with no slots and are excluded from symmetry.
+- Q: What happens to approved fields when a source changes after approval? → A: Sources are re-fetched on demand or schedule; if content changed, approved quotes keep showing from their stored copy (with its retrieved date), the contest is flagged for re-review, and "ready to publish" is blocked until cleared.
+- Q: What should the "Report an error" link do? → A: Open a new issue in the project's public GitHub repository, pre-filled with the contest, candidate, field, and page URL (project will be open source; corrections are tracked in GitHub Issues).
+- Q: Should stored source copies (snapshots) be committed to the public repository? → A: Commit approved fields, quotes, and snapshot fingerprints, plus snapshots of government/public-record sources; keep copies of candidate sites and other third-party pages out of the public repo (local and private backup only).
+- Q: Where should the whole-site quote re-check run, given third-party copies stay out of the public repo? → A: Re-verification is best-effort: it checks every quote whose snapshot is available in the current environment and reports each source without an available snapshot as "unverifiable here" instead of failing. The quote gate at extraction, validation, and review is unchanged and still requires the local snapshot.
+
+### Session 2026-10-04
+
+- Q: How many stated priorities should the reference show for each candidate? → A: 3 priorities per candidate (same number for every candidate in a contest).
+- Q: Who chooses the set of key votes shown for incumbents? → A: A published neutral rule (e.g., final-passage votes on the most recent N bills), applied identically to everyone with a record; no hand-picking.
+- Q: What counts as lopsided coverage in the symmetry report? → A: Flag a contest if any candidate has zero fields, or if candidates' filled-field counts differ by more than 2 (threshold configurable).
+- Q: Which campaign finance figure should be shown, and as of when? → A: Total raised and total spent from each candidate's most recent filed report, with the report's coverage end date shown.
+- Q: What should the published page show for a contest that isn't fully reviewed yet? → A: Every contest appears in official ballot order with candidate names as printed; contests not yet ready to publish carry a clear "Not yet reviewed" label and show no fields.
+
 ## User Scenarios & Testing *(mandatory)*
 
 ### User Story 1 - Read a sourced reference for my ballot (Priority: P1)
@@ -187,7 +206,7 @@ Any reader can open a prominent methodology page that explains what the tool doe
 - **FR-006**: Field values MUST conform to the schema for their contest type; unknown fields and mistyped values are rejected.
 - **FR-007**: The extracted subject MUST match the target candidate; mismatches (e.g., namesakes) are dropped and logged.
 - **FR-008**: Self-description (`says`) and record (`done`) MUST be kept in separate tiers and never combined in one field.
-- **FR-009**: Each contest MUST receive the same schema and the same source classes for every candidate; the number of "stated priorities" shown MUST be the same for all candidates in a contest.
+- **FR-009**: Each contest MUST receive the same schema and the same source classes for every candidate; each candidate MUST have exactly 3 stated-priority slots (filled from sources or shown as "Not found in whitelisted sources."), the same for all candidates in a contest.
 - **FR-010**: Extraction MUST be isolated: one source document per request, no access to other candidates' data, no ability to browse or take actions, output constrained to the schema, and fetched text treated strictly as untrusted data.
 - **FR-011**: Each field MUST record which model and instruction version produced it; token usage and failures per extraction run MUST be logged.
 - **FR-012**: The reference MUST NOT include endorsements, recommendations, ratings, scores, predictions, sentiment analysis, or summaries of news or opinion.
@@ -200,6 +219,9 @@ Any reader can open a prominent methodology page that explains what the tool doe
 - **FR-016**: On retrieval failure, the system MUST retry with backoff, then try a fallback retrieval approach, then record the failure in a status report; failures MUST NOT be silent.
 - **FR-017**: The system MUST support manual import (pasted text or uploaded PDF) for sources that cannot be retrieved automatically.
 - **FR-018**: Every retrieved or imported source MUST be stored so any displayed quote can be re-verified later.
+- **FR-018a**: Sources MUST be re-retrievable on demand or on a schedule. When re-retrieved content differs from the stored copy, previously approved fields MUST continue to display from their original stored copy with its original retrieved date, the affected contest MUST be flagged for re-review, and "ready to publish" MUST be blocked until the reviewer clears the flag.
+- **FR-018b**: The project will be published as an open-source public repository. Approved fields, quotes, and snapshot fingerprints, and snapshots of government or public-record sources (e.g., the official ballot), MAY be committed publicly; snapshots of candidate sites and other third-party pages MUST NOT be committed to the public repository and MUST be retained locally and in private backup so quotes remain verifiable by the maintainer.
+- **FR-018c**: Whole-site quote re-verification (e.g., in CI or on a fresh clone) MUST be best-effort: it MUST verify every quote whose snapshot is available, MUST NOT fail solely because a snapshot is unavailable, and MUST list each field and source whose snapshot is unavailable in a report as "unverifiable here." This does not relax FR-002 or the validation gates, which MUST still fail when the snapshot is present locally and the quote does not match, and MUST still require the local snapshot at extraction, validation, and review time.
 - **FR-019**: Ballotpedia and Vote411 content MUST NOT be scraped or republished; they appear only as links at `context` tier.
 
 **Ballot ingestion**
@@ -219,8 +241,10 @@ Any reader can open a prominent methodology page that explains what the tool doe
 
 **Contest-type content**
 
-- **FR-029**: Candidate contests (federal, statewide, legislative, county) MUST support: official ballot name, party label, campaign website, a fixed small number of stated priorities (quoted), current/prior offices from official sources, and campaign finance totals from official finance sources (`done`).
-- **FR-030**: Incumbent candidates MUST additionally support key votes from official roll-call records (`done`), using the same chosen set of votes for every candidate who has a voting record on them.
+- **FR-029**: Candidate contests (federal, statewide, legislative, county) MUST support: official ballot name, party label, campaign website, 3 stated priorities (quoted), current/prior offices from official sources, and campaign finance (`done`) as total raised and total spent from each candidate's most recent filed report on an official finance source, with the report's coverage end date shown.
+- **FR-029a**: For joint-ticket contests (Governor and Lieutenant Governor), each ticket MUST be shown as one ballot choice containing two candidate field sets (one per person) using the same schema and slots, each with its own sources; symmetry is evaluated across all persons in the contest.
+- **FR-029b**: Every named candidate MUST receive the full field slots and be counted in the symmetry report regardless of printed party label (including "Other-party candidate" or no label); write-in lines MUST be shown as printed, with no field slots, and excluded from the symmetry report.
+- **FR-030**: Incumbent candidates MUST additionally support key votes from official roll-call records (`done`), selected by a published neutral rule (e.g., final-passage votes on the most recent N bills, with N and the rule stated on the methodology page) applied identically to every candidate who has a voting record; votes MUST NOT be hand-picked per candidate.
 - **FR-031**: Judicial contests MUST use a reduced schema: official ballot name, current judicial/legal office, bar admission/years if on an official source, and campaign site link; no issue-position fields.
 - **FR-032**: Constitutional issues MUST support official ballot language, official explanation, argument-for and argument-against quotes with the author of each recorded, effect-of-YES/NO only if quotable from the official explanation, and current-law comparison only with an official source.
 - **FR-033**: Local levies MUST support taxing entity, type (renewal/additional/replacement/decrease), millage, duration, purpose as stated, county auditor's estimated cost per $100k of valuation, sponsor materials (`says`), and a link to the official text.
@@ -228,7 +252,7 @@ Any reader can open a prominent methodology page that explains what the tool doe
 
 **Validation and symmetry**
 
-- **FR-035**: The system MUST generate a per-contest symmetry report showing field coverage per candidate, flag contests where coverage differs beyond a configurable threshold or any candidate has zero fields, and require the report be viewed before approval.
+- **FR-035**: The system MUST generate a per-contest symmetry report showing field coverage per candidate, flag a contest when any candidate has zero filled fields or when candidates' filled-field counts differ by more than a configurable threshold (default 2), and require the report be viewed before approval.
 - **FR-036**: The system MUST warn when any source copy is older than a configurable limit (default 7 days) at build time.
 - **FR-037**: The quote-matching validation MUST be covered by automated tests including negative cases (paraphrase, altered word, wrong source), and the symmetry check MUST be demonstrably failing on a deliberately lopsided test contest.
 
@@ -241,8 +265,9 @@ Any reader can open a prominent methodology page that explains what the tool doe
 **Published site**
 
 - **FR-041**: The system MUST produce a static, mobile-friendly, print-friendly site with one page per ballot listing contests in official ballot order, with deep links per contest.
+- **FR-041a**: Contests that are not yet ready to publish MUST still appear in official ballot order with candidate names as printed and a clear "Not yet reviewed" label, and MUST show no fields, so readers can distinguish "not researched yet" from "Not found in whitelisted sources."
 - **FR-042**: Each contest MUST show candidates in ballot order in an identical layout; each field shows value, quote, source link, tier badge, retrieved date, and last-reviewed date; absent fields show an explicit "not found" state.
-- **FR-043**: The site MUST include a prominent methodology page (what it does and does not do, tier definitions, whitelist rules, review process, known gaps, correction contact), a "Report an error" link on every field, and footer links to Vote411, the county board's ballot viewer, and the Secretary of State issue report for each issue.
+- **FR-043**: The site MUST include a prominent methodology page (what it does and does not do, tier definitions, whitelist rules, review process, known gaps, correction contact), a "Report an error" link on every field (a link that opens a new issue in the project's public GitHub repository, pre-filled with the contest, candidate, field, and page URL), and footer links to Vote411, the county board's ballot viewer, and the Secretary of State issue report for each issue.
 - **FR-044**: The site MUST be unlisted and signal non-indexing by default, include no analytics, no third-party scripts, and collect no reader data.
 - **FR-045**: The site MUST build completely from stored data with no network access.
 - **FR-046**: The site MUST NOT describe itself as a "nonpartisan guide"; it MUST label itself a sourced reference with a published methodology.
@@ -269,7 +294,7 @@ Any reader can open a prominent methodology page that explains what the tool doe
 ### Measurable Outcomes
 
 - **SC-001**: Ingestion of the Powell J ballot reproduces the official contest and issue list (17 contests and 5 issues, or the corrected official list) with 100% of items matching and zero manual edits.
-- **SC-002**: 100% of fields shown on the published site have a quote that appears verbatim in the stored copy of the cited source, verified by an automated re-check of the whole site.
+- **SC-002**: 100% of fields shown on the published site have a quote that appears verbatim in the stored copy of the cited source, verified by an automated re-check of the whole site wherever the stored copy is available; fields whose copy is unavailable in the checking environment are listed in a report, never silently skipped. On the maintainer's machine, where all copies are present, the re-check finds zero mismatches and zero unverifiable fields.
 - **SC-003**: 0 fields appear on the published site that were not approved or edited by a human reviewer.
 - **SC-004**: The U.S. Senate contest runs end to end (sources → stored copies → proposed fields → validation → review → published page) and is viewable by a voter before any other contest is completed.
 - **SC-005**: For every published contest, all candidates show the same field slots in identical layout; 100% of published contests have an acknowledged symmetry report.
@@ -291,6 +316,7 @@ Any reader can open a prominent methodology page that explains what the tool doe
 - **Source whitelist is human-seeded** before looking at results; per-candidate websites are added only after the maintainer confirms the site belongs to that candidate.
 - **Defaults carried from the brief**: unlisted + noindex; static hosting; Vote411 and Ballotpedia link-only; quote limit 25 words; staleness limit 7 days; all configurable.
 - **Language model use** is limited to extraction; a single provider/model is pinned at first and made swappable. Specific technology choices (languages, frameworks, hosting) are deferred to planning; the brief's recommended stack is a suggestion, not a requirement of this spec.
-- **Reader privacy**: Readers need no accounts; the only reader-initiated contact is a mailto-style error report.
+- **Reader privacy**: Readers need no accounts to read the site; the only reader-initiated contact is an error report filed on GitHub. Error reports go to the public GitHub Issues of the project's repository (the repository URL is a configuration value); submitting one requires a GitHub account and is the reader's choice.
 - **Dependencies**: Availability of the county board of elections' ballot viewer and official/government sources; if blocked, manual import is the fallback. Official sites may be intermittently unavailable.
+- **Open source**: The repository is public on GitHub; no credentials, private source copies, or reviewer personal data may be committed.
 - **Out of scope**: endorsements, ratings, news summaries, accounts, analytics, polling-place and registration help, and non-Ohio ballots.
