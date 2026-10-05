@@ -1,0 +1,24 @@
+id: 2026-11-03:supreme-court-justice:oh:full-2027-01-01
+kind: judicial
+title: Justice of the Supreme Court
+jurisdiction: oh
+term: Full term commencing 1-1-2027
+vote_for: 1
+candidates:
+  - id: marilyn-zayas
+    ballot_name: Marilyn Zayas
+    party_label: Democratic
+    order: 0
+    write_in: false
+    incumbent: null
+    ticket_id: null
+  - id: daniel-r-hawkins
+    ballot_name: Daniel R. Hawkins
+    party_label: Republican
+    order: 1
+    write_in: false
+    incumbent: null
+    ticket_id: null
+issue_options: []
+ballot_snapshot_hash: 5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf
+ballot_page: 1

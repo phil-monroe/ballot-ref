@@ -1,0 +1,24 @@
+id: 2026-11-03:state-house:oh-60:unspecified
+kind: candidate
+title: State Representative (60th District)
+jurisdiction: oh-60
+term: null
+vote_for: 1
+candidates:
+  - id: shelby-kimball
+    ballot_name: Shelby Kimball
+    party_label: Democratic
+    order: 0
+    write_in: false
+    incumbent: null
+    ticket_id: null
+  - id: brian-lorenz
+    ballot_name: Brian Lorenz
+    party_label: Republican
+    order: 1
+    write_in: false
+    incumbent: null
+    ticket_id: null
+issue_options: []
+ballot_snapshot_hash: 5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf
+ballot_page: 1

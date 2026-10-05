@@ -1,0 +1,29 @@
+id: 2026-11-03:levy:delaware-morrow-mental-health-and-recovery-services-board:renewal-and-increase
+kind: levy
+title: Proposed Tax Levy (Renewal and Increase) Delaware-Morrow Mental Health &
+  Recovery Services Board Delaware and Morrow Counties
+jurisdiction: delaware-morrow-mental-health-and-recovery-services-board
+term: null
+vote_for: 1
+candidates: []
+issue_options:
+  - id: for-the-tax-levy
+    label: For the Tax Levy
+    order: 0
+  - id: against-the-tax-levy
+    label: Against the Tax Levy
+    order: 1
+ballot_text:
+  title: Proposed Tax Levy (Renewal and Increase) Delaware-Morrow Mental Health &
+    Recovery Services Board Delaware and Morrow Counties
+  entity: Delaware-Morrow Mental Health & Recovery Services Board
+  text: A majority affirmative vote is necessary for passage. A renewal of 1.5
+    mills and an increase of 0.5 mill for each $1 of taxable value to constitute
+    a tax for the benefit of Delaware-Morrow Mental Health & Recovery Services
+    Board for the purpose of current expenses that the county auditor estimates
+    will collect $23,005,505 annually, at a rate not exceeding 2 mills for each
+    $1 of taxable value, which amounts to $50 for each $100,000 of the county
+    auditor's market value, for 5 years, commencing in 2027, first due in
+    calendar year 2028.
+ballot_snapshot_hash: 5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf
+ballot_page: 2

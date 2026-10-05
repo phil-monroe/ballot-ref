@@ -1,0 +1,17 @@
+id: 2026-11-03:court-of-appeals:oh-5:full-2027-02-09
+kind: judicial
+title: Judge of the Court of Appeals (5th District)
+jurisdiction: oh-5
+term: Full term commencing 2-9-2027
+vote_for: 1
+candidates:
+  - id: matthew-george
+    ballot_name: Matthew George
+    party_label: Republican
+    order: 0
+    write_in: false
+    incumbent: null
+    ticket_id: null
+issue_options: []
+ballot_snapshot_hash: 5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf
+ballot_page: 1

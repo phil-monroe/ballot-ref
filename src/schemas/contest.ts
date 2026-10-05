@@ -61,5 +61,7 @@ export const Ballot = z.strictObject({
   election: z.string().min(1),
   ballot_source: BallotSource,
   contests: z.array(z.string().min(1)).default([]),
+  /** Optional path to an expected-contests fixture; ingest exits non-zero on mismatch. */
+  fixture: z.string().optional(),
 });
 export type Ballot = z.infer<typeof Ballot>;

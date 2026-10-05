@@ -67,21 +67,21 @@ description: "Task list for Ballot Reference (Sourced Voter Reference)"
 
 ### Tests for User Story 2
 
-- [ ] T021 [P] [US2] Copy `specs/001-ballot-reference/reference/powell-j-ballot-2026-11-03.pdf` to `fixtures/powell-j/ballot.pdf` and hand-author `fixtures/powell-j/expected.json` from `reference/powell-j-fixture-notes.md` (17 contests and 5 issues in printed order, party labels as printed incl. "Other-party candidate", write-in lines, vote-for-N, terms); verify column order against the rendered PDF
-- [ ] T022 [P] [US2] Integration test `tests/integration/ingest-powell-j.test.ts`: parsing the fixture PDF equals `expected.json` (SC-001), no manual edits, official order preserved
-- [ ] T023 [P] [US2] Unit tests `tests/unit/ballot-diff.test.ts` for additions, removals, and edits (withdrawn candidate) in the ballot diff
+- [X] T021 [P] [US2] Copy `specs/001-ballot-reference/reference/powell-j-ballot-2026-11-03.pdf` to `fixtures/powell-j/ballot.pdf` and hand-author `fixtures/powell-j/expected.json` from `reference/powell-j-fixture-notes.md` (17 contests and 5 issues in printed order, party labels as printed incl. "Other-party candidate", write-in lines, vote-for-N, terms); verify column order against the rendered PDF
+- [X] T022 [P] [US2] Integration test `tests/integration/ingest-powell-j.test.ts`: parsing the fixture PDF equals `expected.json` (SC-001), no manual edits, official order preserved
+- [X] T023 [P] [US2] Unit tests `tests/unit/ballot-diff.test.ts` for additions, removals, and edits (withdrawn candidate) in the ballot diff
 
 ### Implementation for User Story 2
 
-- [ ] T024 [P] [US2] Create `data/ballots/delaware-154-1.yaml` with `county`, `precinct_code`, `precinct_name`, `election`, `ballot_source {county_slug: delaware, election_code: 20261103g_webeix0, precinct_code: 154___1}`; contest refs filled by ingest
-- [ ] T025 [US2] Implement PDF positioned-text extraction in `src/ingest/pdf-items.ts` using `pdfjs-dist`: return items with x, y, font size, rotation per page
-- [ ] T026 [US2] Implement watermark removal and column assignment in `src/ingest/layout.ts`: drop "Sample" watermark items by identity (rotation/size/text), assign remaining items to 3 columns by x-range, order within a column by y (depends on T025)
-- [ ] T027 [US2] Implement contest/issue parsing in `src/ingest/parse-ballot.ts`: group by "For ..." / issue-title anchors; capture office, term, vote-for-N, candidates as printed with party labels, write-in lines, joint Governor/Lt. Governor tickets as one option with two persons, and issue title plus full official text; no LLM involved (FR-022) (depends on T026)
-- [ ] T028 [US2] Implement canonical contest id generation in `src/ingest/contest-id.ts` (`<election>:<office>:<jurisdiction/district>:<term>`, e.g. `2026-11-03:us-senate:oh:special-2029`) and write `data/contests/*.yaml` and update the ballot file (depends on T027)
-- [ ] T029 [P] [US2] Implement ballot retrieval in `src/ingest/fetch-ballot.ts`: direct HTTP (county slug, election code, precinct code from config), then Playwright fallback (optional dependency), then manual (`--from file.pdf` / `--paste file.txt`); store the raw ballot via the snapshot store as `redistributable: true`
-- [ ] T030 [US2] Implement ballot diff in `src/ingest/diff.ts` against the previous snapshot, writing `data/reports/ballot-diff.json` (FR-024) (depends on T028)
-- [ ] T031 [US2] Wire the `ingest` command in `src/cli.ts`: exit non-zero if parsed output mismatches `expected` when a fixture is configured; print ballot diff; idempotent re-runs produce no duplicates
-- [ ] T032 [US2] Run ingest on the Powell J fixture, commit the generated `data/contests/*.yaml`, `data/ballots/delaware-154-1.yaml`, and the public ballot snapshot
+- [X] T024 [P] [US2] Create `data/ballots/delaware-154-1.yaml` with `county`, `precinct_code`, `precinct_name`, `election`, `ballot_source {county_slug: delaware, election_code: 20261103g_webeix0, precinct_code: 154___1}`; contest refs filled by ingest
+- [X] T025 [US2] Implement PDF positioned-text extraction in `src/ingest/pdf-items.ts` using `pdfjs-dist`: return items with x, y, font size, rotation per page
+- [X] T026 [US2] Implement watermark removal and column assignment in `src/ingest/layout.ts`: drop "Sample" watermark items by identity (rotation/size/text), assign remaining items to 3 columns by x-range, order within a column by y (depends on T025)
+- [X] T027 [US2] Implement contest/issue parsing in `src/ingest/parse-ballot.ts`: group by "For ..." / issue-title anchors; capture office, term, vote-for-N, candidates as printed with party labels, write-in lines, joint Governor/Lt. Governor tickets as one option with two persons, and issue title plus full official text; no LLM involved (FR-022) (depends on T026)
+- [X] T028 [US2] Implement canonical contest id generation in `src/ingest/contest-id.ts` (`<election>:<office>:<jurisdiction/district>:<term>`, e.g. `2026-11-03:us-senate:oh:special-2029`) and write `data/contests/*.yaml` and update the ballot file (depends on T027)
+- [X] T029 [P] [US2] Implement ballot retrieval in `src/ingest/fetch-ballot.ts`: direct HTTP (county slug, election code, precinct code from config), then Playwright fallback (optional dependency), then manual (`--from file.pdf`; **`--paste` deferred**: geometry-based parsing needs the PDF, so pasted text cannot yet be parsed); store the raw ballot via the snapshot store as `redistributable: true`
+- [X] T030 [US2] Implement ballot diff in `src/ingest/diff.ts` against the previous snapshot, writing `data/reports/ballot-diff.json` (FR-024) (depends on T028)
+- [X] T031 [US2] Wire the `ingest` command in `src/cli.ts`: exit non-zero if parsed output mismatches `expected` when a fixture is configured; print ballot diff; idempotent re-runs produce no duplicates
+- [X] T032 [US2] Run ingest on the Powell J fixture, commit the generated `data/contests/*.yaml`, `data/ballots/delaware-154-1.yaml`, and the public ballot snapshot
 
 **Checkpoint**: Ballot ingest reproduces 17 + 5 with zero manual edits
 

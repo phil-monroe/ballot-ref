@@ -1,0 +1,10 @@
+{
+  "sha256": "5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf",
+  "url": "file:fixtures/powell-j/ballot.pdf",
+  "retrieved_at": "2026-10-05T02:54:51.064Z",
+  "content_type": "application/pdf",
+  "method": "manual",
+  "redistributable": true,
+  "body_path": "public/5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf.pdf",
+  "text_path": "public/5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf.txt"
+}

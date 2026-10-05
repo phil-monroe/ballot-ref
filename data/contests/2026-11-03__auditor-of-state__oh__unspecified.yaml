@@ -1,0 +1,24 @@
+id: 2026-11-03:auditor-of-state:oh:unspecified
+kind: candidate
+title: Auditor of State
+jurisdiction: oh
+term: null
+vote_for: 1
+candidates:
+  - id: frank-larose
+    ballot_name: Frank LaRose
+    party_label: Republican
+    order: 0
+    write_in: false
+    incumbent: null
+    ticket_id: null
+  - id: annette-blackwell
+    ballot_name: Annette Blackwell
+    party_label: Democratic
+    order: 1
+    write_in: false
+    incumbent: null
+    ticket_id: null
+issue_options: []
+ballot_snapshot_hash: 5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf
+ballot_page: 1

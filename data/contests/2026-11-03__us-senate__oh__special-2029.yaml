@@ -1,0 +1,45 @@
+id: 2026-11-03:us-senate:oh:special-2029
+kind: candidate
+title: U.S. Senator
+jurisdiction: oh
+term: Unexpired term ending 1-3-2029
+vote_for: 1
+candidates:
+  - id: jon-husted
+    ballot_name: Jon Husted
+    party_label: Republican
+    order: 0
+    write_in: false
+    incumbent: null
+    ticket_id: null
+  - id: greg-levy
+    ballot_name: Greg Levy
+    party_label: Other-party candidate
+    order: 1
+    write_in: false
+    incumbent: null
+    ticket_id: null
+  - id: william-b-redpath
+    ballot_name: William B. Redpath
+    party_label: Libertarian
+    order: 2
+    write_in: false
+    incumbent: null
+    ticket_id: null
+  - id: sherrod-brown
+    ballot_name: Sherrod Brown
+    party_label: Democratic
+    order: 3
+    write_in: false
+    incumbent: null
+    ticket_id: null
+  - id: write-in
+    ballot_name: Write-in
+    party_label: null
+    order: 4
+    write_in: true
+    incumbent: null
+    ticket_id: null
+issue_options: []
+ballot_snapshot_hash: 5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf
+ballot_page: 1

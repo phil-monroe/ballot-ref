@@ -1,0 +1,30 @@
+id: 2026-11-03:levy:delaware-county-board-of-developmental-disabilities:additional
+kind: levy
+title: Proposed Tax Levy (Additional) Delaware County Board of Developmental
+  Disabilities
+jurisdiction: delaware-county-board-of-developmental-disabilities
+term: null
+vote_for: 1
+candidates: []
+issue_options:
+  - id: for-the-tax-levy
+    label: For the Tax Levy
+    order: 0
+  - id: against-the-tax-levy
+    label: Against the Tax Levy
+    order: 1
+ballot_text:
+  title: Proposed Tax Levy (Additional) Delaware County Board of Developmental
+    Disabilities
+  entity: Delaware County Board of Developmental Disabilities
+  text: A majority affirmative vote is necessary for passage. An additional tax
+    for the benefit of Delaware County for the purpose of community
+    developmental disabilities programs and services pursuant to Chapter 5126.
+    of the Revised Code, except that such levies shall be subject to the
+    procedures and requirements of section 5705.222 of the Revised Code that the
+    county auditor estimates will collect $25,448,490 annually, at a rate not
+    exceeding 1.8 mills for each $1 of taxable value, which amounts to $63 for
+    each $100,000 of the county auditor's market value, for 5 years, commencing
+    in 2026, first due in calendar year 2027.
+ballot_snapshot_hash: 5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf
+ballot_page: 2

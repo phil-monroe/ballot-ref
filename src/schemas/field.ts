@@ -2,8 +2,16 @@ import { z } from 'zod';
 import { FieldStatus, IsoDateTime, Sha256, Tier } from './shared.ts';
 
 export const Extractor = z.discriminatedUnion('kind', [
-  z.strictObject({ kind: z.literal('model'), model: z.string().min(1), prompt_version: z.string().min(1) }),
-  z.strictObject({ kind: z.literal('parser'), name: z.string().min(1), version: z.string().min(1) }),
+  z.strictObject({
+    kind: z.literal('model'),
+    model: z.string().min(1),
+    prompt_version: z.string().min(1),
+  }),
+  z.strictObject({
+    kind: z.literal('parser'),
+    name: z.string().min(1),
+    version: z.string().min(1),
+  }),
   z.strictObject({ kind: z.literal('manual') }),
 ]);
 

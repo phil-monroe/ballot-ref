@@ -1,0 +1,523 @@
+{
+  "contests": [
+    {
+      "id": "2026-11-03:governor-lt-governor:oh:unspecified",
+      "kind": "candidate",
+      "title": "Governor and Lieutenant Governor",
+      "term": null,
+      "vote_for": 1,
+      "page": 1,
+      "candidates": [
+        {
+          "name": "Amy Acton",
+          "party": "Democratic",
+          "write_in": false,
+          "ticket_id": "ticket-1",
+          "role": "governor"
+        },
+        {
+          "name": "David Pepper",
+          "party": "Democratic",
+          "write_in": false,
+          "ticket_id": "ticket-1",
+          "role": "lieutenant-governor"
+        },
+        {
+          "name": "Don Kissick",
+          "party": "Libertarian",
+          "write_in": false,
+          "ticket_id": "ticket-2",
+          "role": "governor"
+        },
+        {
+          "name": "James L. Mills",
+          "party": "Libertarian",
+          "write_in": false,
+          "ticket_id": "ticket-2",
+          "role": "lieutenant-governor"
+        },
+        {
+          "name": "Vivek Ramaswamy",
+          "party": "Republican",
+          "write_in": false,
+          "ticket_id": "ticket-3",
+          "role": "governor"
+        },
+        {
+          "name": "Robert A. McColley",
+          "party": "Republican",
+          "write_in": false,
+          "ticket_id": "ticket-3",
+          "role": "lieutenant-governor"
+        },
+        {
+          "name": "Write-in",
+          "party": null,
+          "write_in": true,
+          "ticket_id": null
+        }
+      ],
+      "options": []
+    },
+    {
+      "id": "2026-11-03:attorney-general:oh:unspecified",
+      "kind": "candidate",
+      "title": "Attorney General",
+      "term": null,
+      "vote_for": 1,
+      "page": 1,
+      "candidates": [
+        {
+          "name": "John J. Kulewicz",
+          "party": "Democratic",
+          "write_in": false,
+          "ticket_id": null
+        },
+        {
+          "name": "Keith Faber",
+          "party": "Republican",
+          "write_in": false,
+          "ticket_id": null
+        }
+      ],
+      "options": []
+    },
+    {
+      "id": "2026-11-03:auditor-of-state:oh:unspecified",
+      "kind": "candidate",
+      "title": "Auditor of State",
+      "term": null,
+      "vote_for": 1,
+      "page": 1,
+      "candidates": [
+        {
+          "name": "Frank LaRose",
+          "party": "Republican",
+          "write_in": false,
+          "ticket_id": null
+        },
+        {
+          "name": "Annette Blackwell",
+          "party": "Democratic",
+          "write_in": false,
+          "ticket_id": null
+        }
+      ],
+      "options": []
+    },
+    {
+      "id": "2026-11-03:secretary-of-state:oh:unspecified",
+      "kind": "candidate",
+      "title": "Secretary of State",
+      "term": null,
+      "vote_for": 1,
+      "page": 1,
+      "candidates": [
+        {
+          "name": "Tom Pruss",
+          "party": "Libertarian",
+          "write_in": false,
+          "ticket_id": null
+        },
+        {
+          "name": "Allison Russo",
+          "party": "Democratic",
+          "write_in": false,
+          "ticket_id": null
+        },
+        {
+          "name": "Robert Sprague",
+          "party": "Republican",
+          "write_in": false,
+          "ticket_id": null
+        }
+      ],
+      "options": []
+    },
+    {
+      "id": "2026-11-03:treasurer-of-state:oh:unspecified",
+      "kind": "candidate",
+      "title": "Treasurer of State",
+      "term": null,
+      "vote_for": 1,
+      "page": 1,
+      "candidates": [
+        {
+          "name": "Seth Walsh",
+          "party": "Democratic",
+          "write_in": false,
+          "ticket_id": null
+        },
+        {
+          "name": "Jay Edwards",
+          "party": "Republican",
+          "write_in": false,
+          "ticket_id": null
+        }
+      ],
+      "options": []
+    },
+    {
+      "id": "2026-11-03:supreme-court-justice:oh:full-2027-01-01",
+      "kind": "judicial",
+      "title": "Justice of the Supreme Court",
+      "term": "Full term commencing 1-1-2027",
+      "vote_for": 1,
+      "page": 1,
+      "candidates": [
+        {
+          "name": "Marilyn Zayas",
+          "party": "Democratic",
+          "write_in": false,
+          "ticket_id": null
+        },
+        {
+          "name": "Daniel R. Hawkins",
+          "party": "Republican",
+          "write_in": false,
+          "ticket_id": null
+        }
+      ],
+      "options": []
+    },
+    {
+      "id": "2026-11-03:supreme-court-justice:oh:full-2027-01-02",
+      "kind": "judicial",
+      "title": "Justice of the Supreme Court",
+      "term": "Full term commencing 1-2-2027",
+      "vote_for": 1,
+      "page": 1,
+      "candidates": [
+        {
+          "name": "Colleen O'Donnell",
+          "party": "Republican",
+          "write_in": false,
+          "ticket_id": null
+        },
+        {
+          "name": "Jennifer Brunner",
+          "party": "Democratic",
+          "write_in": false,
+          "ticket_id": null
+        }
+      ],
+      "options": []
+    },
+    {
+      "id": "2026-11-03:us-senate:oh:special-2029",
+      "kind": "candidate",
+      "title": "U.S. Senator",
+      "term": "Unexpired term ending 1-3-2029",
+      "vote_for": 1,
+      "page": 1,
+      "candidates": [
+        {
+          "name": "Jon Husted",
+          "party": "Republican",
+          "write_in": false,
+          "ticket_id": null
+        },
+        {
+          "name": "Greg Levy",
+          "party": "Other-party candidate",
+          "write_in": false,
+          "ticket_id": null
+        },
+        {
+          "name": "William B. Redpath",
+          "party": "Libertarian",
+          "write_in": false,
+          "ticket_id": null
+        },
+        {
+          "name": "Sherrod Brown",
+          "party": "Democratic",
+          "write_in": false,
+          "ticket_id": null
+        },
+        {
+          "name": "Write-in",
+          "party": null,
+          "write_in": true,
+          "ticket_id": null
+        }
+      ],
+      "options": []
+    },
+    {
+      "id": "2026-11-03:us-house:oh-12:unspecified",
+      "kind": "candidate",
+      "title": "Representative to Congress (12th District)",
+      "term": null,
+      "vote_for": 1,
+      "page": 1,
+      "candidates": [
+        {
+          "name": "Troy Balderson",
+          "party": "Republican",
+          "write_in": false,
+          "ticket_id": null
+        },
+        {
+          "name": "Jerrad Christian",
+          "party": "Democratic",
+          "write_in": false,
+          "ticket_id": null
+        }
+      ],
+      "options": []
+    },
+    {
+      "id": "2026-11-03:state-senate:oh-19:unspecified",
+      "kind": "candidate",
+      "title": "State Senator (19th District)",
+      "term": null,
+      "vote_for": 1,
+      "page": 1,
+      "candidates": [
+        {
+          "name": "Ryan Rivers",
+          "party": "Republican",
+          "write_in": false,
+          "ticket_id": null
+        },
+        {
+          "name": "Scott Charland",
+          "party": "Democratic",
+          "write_in": false,
+          "ticket_id": null
+        }
+      ],
+      "options": []
+    },
+    {
+      "id": "2026-11-03:state-house:oh-60:unspecified",
+      "kind": "candidate",
+      "title": "State Representative (60th District)",
+      "term": null,
+      "vote_for": 1,
+      "page": 1,
+      "candidates": [
+        {
+          "name": "Shelby Kimball",
+          "party": "Democratic",
+          "write_in": false,
+          "ticket_id": null
+        },
+        {
+          "name": "Brian Lorenz",
+          "party": "Republican",
+          "write_in": false,
+          "ticket_id": null
+        }
+      ],
+      "options": []
+    },
+    {
+      "id": "2026-11-03:court-of-appeals:oh-5:full-2027-02-09",
+      "kind": "judicial",
+      "title": "Judge of the Court of Appeals (5th District)",
+      "term": "Full term commencing 2-9-2027",
+      "vote_for": 1,
+      "page": 1,
+      "candidates": [
+        {
+          "name": "Matthew George",
+          "party": "Republican",
+          "write_in": false,
+          "ticket_id": null
+        }
+      ],
+      "options": []
+    },
+    {
+      "id": "2026-11-03:common-pleas-general:delaware:full-2027-02-09",
+      "kind": "judicial",
+      "title": "Judge of the Court of Common Pleas (General Division)",
+      "term": "Full term commencing 2-9-2027",
+      "vote_for": 1,
+      "page": 1,
+      "candidates": [
+        {
+          "name": "Marianne T. Hemmeter",
+          "party": null,
+          "write_in": false,
+          "ticket_id": null
+        }
+      ],
+      "options": []
+    },
+    {
+      "id": "2026-11-03:common-pleas-general:delaware:special-2030",
+      "kind": "judicial",
+      "title": "Judge of the Court of Common Pleas (General Division)",
+      "term": "Unexpired term ending 12-31-2030",
+      "vote_for": 1,
+      "page": 1,
+      "candidates": [
+        {
+          "name": "Emma Mirles-Jones",
+          "party": null,
+          "write_in": false,
+          "ticket_id": null
+        },
+        {
+          "name": "Nickolas K. McCoy",
+          "party": null,
+          "write_in": false,
+          "ticket_id": null
+        }
+      ],
+      "options": []
+    },
+    {
+      "id": "2026-11-03:common-pleas-probate-juvenile:delaware:full-2027-02-09",
+      "kind": "judicial",
+      "title": "Judge of the Court of Common Pleas (Probate/Juvenile Division)",
+      "term": "Full term commencing 2-9-2027",
+      "vote_for": 1,
+      "page": 1,
+      "candidates": [
+        {
+          "name": "David Hejmanowski",
+          "party": null,
+          "write_in": false,
+          "ticket_id": null
+        }
+      ],
+      "options": []
+    },
+    {
+      "id": "2026-11-03:county-commissioner:delaware:full-2027-01-01",
+      "kind": "candidate",
+      "title": "County Commissioner",
+      "term": "Full term commencing 1-1-2027",
+      "vote_for": 1,
+      "page": 1,
+      "candidates": [
+        {
+          "name": "Reneé Vaughan",
+          "party": "Republican",
+          "write_in": false,
+          "ticket_id": null
+        },
+        {
+          "name": "Ryan Grissinger",
+          "party": "Democratic",
+          "write_in": false,
+          "ticket_id": null
+        }
+      ],
+      "options": []
+    },
+    {
+      "id": "2026-11-03:county-auditor:delaware:unspecified",
+      "kind": "candidate",
+      "title": "County Auditor",
+      "term": null,
+      "vote_for": 1,
+      "page": 1,
+      "candidates": [
+        {
+          "name": "George Kaitsa",
+          "party": "Republican",
+          "write_in": false,
+          "ticket_id": null
+        }
+      ],
+      "options": []
+    },
+    {
+      "id": "2026-11-03:state-issue-3:oh:constitutional-amendment",
+      "kind": "constitutional-issue",
+      "title": "Issue 3 Proposed Constitutional Amendment",
+      "term": null,
+      "vote_for": 1,
+      "page": 2,
+      "candidates": [],
+      "options": [
+        "YES",
+        "NO"
+      ],
+      "text_contains": [
+        "TO REQUIRE VOTERS TO PRESENT PHOTO IDENTIFICATION IN ORDER TO VOTE",
+        "To enact Section 5 of Article V of the Constitution of the State of Ohio",
+        "government-issued photo identification",
+        "SHALL THE AMENDMENT BE APPROVED?"
+      ]
+    },
+    {
+      "id": "2026-11-03:levy:delaware-area-career-center:renewal-and-decrease",
+      "kind": "levy",
+      "title": "Proposed Tax Levy (Renewal and Decrease) Delaware Area Career Center Delaware, Franklin, Marion, Morrow, and Union Counties",
+      "term": null,
+      "vote_for": 1,
+      "page": 2,
+      "candidates": [],
+      "options": [
+        "For the Tax Levy",
+        "Against the Tax Levy"
+      ],
+      "text_contains": [
+        "$5,773,576 annually",
+        "a combined rate not exceeding 0.75 mill",
+        "which amounts to $18 for each $100,000",
+        "for 10 years"
+      ]
+    },
+    {
+      "id": "2026-11-03:levy:delaware-county-regional-transit-authority:sales-use-tax",
+      "kind": "levy",
+      "title": "Proposed Sales and Use Tax Delaware County Regional Transit Authority",
+      "term": null,
+      "vote_for": 1,
+      "page": 2,
+      "candidates": [],
+      "options": [
+        "For the Sales and Use Tax",
+        "Against the Sales and Use Tax"
+      ],
+      "text_contains": [
+        "at a rate not exceeding 0.2 per cent for a continuing period of time?"
+      ]
+    },
+    {
+      "id": "2026-11-03:levy:delaware-county-board-of-developmental-disabilities:additional",
+      "kind": "levy",
+      "title": "Proposed Tax Levy (Additional) Delaware County Board of Developmental Disabilities",
+      "term": null,
+      "vote_for": 1,
+      "page": 2,
+      "candidates": [],
+      "options": [
+        "For the Tax Levy",
+        "Against the Tax Levy"
+      ],
+      "text_contains": [
+        "$25,448,490 annually",
+        "at a rate not exceeding 1.8 mills",
+        "which amounts to $63 for each $100,000",
+        "for 5 years"
+      ]
+    },
+    {
+      "id": "2026-11-03:levy:delaware-morrow-mental-health-and-recovery-services-board:renewal-and-increase",
+      "kind": "levy",
+      "title": "Proposed Tax Levy (Renewal and Increase) Delaware-Morrow Mental Health & Recovery Services Board Delaware and Morrow Counties",
+      "term": null,
+      "vote_for": 1,
+      "page": 2,
+      "candidates": [],
+      "options": [
+        "For the Tax Levy",
+        "Against the Tax Levy"
+      ],
+      "text_contains": [
+        "$23,005,505 annually",
+        "exceeding 2 mills",
+        "which amounts to $50 for each $100,000",
+        "for 5 years"
+      ]
+    }
+  ]
+}

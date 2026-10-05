@@ -1,5 +1,8 @@
 #!/usr/bin/env -S npx tsx
 import { Command } from 'commander';
+import { loadConfig } from './config.ts';
+import { NeedsManualImport } from './ingest/fetch-ballot.ts';
+import { runIngest } from './ingest/run-ingest.ts';
 
 export const EXIT = { ok: 0, validation: 1, usage: 2, retrieval: 3 } as const;
 
@@ -18,7 +21,47 @@ const stub = (name: string, args: string, desc: string) =>
       process.exitCode = EXIT.usage;
     });
 
-stub('ingest', '<ballot-config>', 'Fetch and parse the official ballot');
+program
+  .command('ingest <ballot-config>')
+  .description('Fetch (direct, Playwright, then manual) and parse the official ballot')
+  .option('--from <file.pdf>', 'import a ballot PDF manually instead of fetching')
+  .action(async (ballotConfig: string, opts: { from?: string }) => {
+    try {
+      const r = await runIngest({
+        ballotFile: ballotConfig,
+        from: opts.from,
+        userAgent: loadConfig().user_agent,
+      });
+      const issues = r.contests.filter(
+        (c) => c.ballot_page > 1 || c.kind === 'levy' || c.kind === 'constitutional-issue',
+      );
+      if (program.opts().json) {
+        console.log(
+          JSON.stringify({ contests: r.contests.length, diff: r.diff, mismatches: r.mismatches }),
+        );
+      } else {
+        console.log(
+          `Ingested ${r.contests.length - issues.length} contests and ${issues.length} issues (snapshot ${r.snapshotHash.slice(0, 12)})`,
+        );
+        console.log(
+          `Diff: +${r.diff.added.length} -${r.diff.removed.length} ~${r.diff.changed.length}`,
+        );
+        for (const id of [
+          ...r.diff.added.map((x) => `added ${x}`),
+          ...r.diff.removed.map((x) => `removed ${x}`),
+          ...r.diff.changed.map((x) => `changed ${x}`),
+        ])
+          console.log(`  ${id}`);
+      }
+      if (r.mismatches.length) {
+        console.error(`Mismatch against fixture:\n${r.mismatches.join('\n')}`);
+        process.exitCode = EXIT.validation;
+      }
+    } catch (e) {
+      console.error(e instanceof Error ? e.message : String(e));
+      process.exitCode = e instanceof NeedsManualImport ? EXIT.retrieval : EXIT.usage;
+    }
+  });
 stub('fetch', '<contest-id>', 'Fetch whitelisted sources into snapshots');
 stub('import', '<source-url> <file>', 'Manually import a source');
 stub('extract', '<contest-id>', 'Run schema-constrained extraction');

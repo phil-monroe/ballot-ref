@@ -1,0 +1,24 @@
+id: 2026-11-03:state-senate:oh-19:unspecified
+kind: candidate
+title: State Senator (19th District)
+jurisdiction: oh-19
+term: null
+vote_for: 1
+candidates:
+  - id: ryan-rivers
+    ballot_name: Ryan Rivers
+    party_label: Republican
+    order: 0
+    write_in: false
+    incumbent: null
+    ticket_id: null
+  - id: scott-charland
+    ballot_name: Scott Charland
+    party_label: Democratic
+    order: 1
+    write_in: false
+    incumbent: null
+    ticket_id: null
+issue_options: []
+ballot_snapshot_hash: 5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf
+ballot_page: 1

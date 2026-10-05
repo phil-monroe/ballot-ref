@@ -1,0 +1,31 @@
+id: 2026-11-03:levy:delaware-area-career-center:renewal-and-decrease
+kind: levy
+title: Proposed Tax Levy (Renewal and Decrease) Delaware Area Career Center
+  Delaware, Franklin, Marion, Morrow, and Union Counties
+jurisdiction: delaware-area-career-center
+term: null
+vote_for: 1
+candidates: []
+issue_options:
+  - id: for-the-tax-levy
+    label: For the Tax Levy
+    order: 0
+  - id: against-the-tax-levy
+    label: Against the Tax Levy
+    order: 1
+ballot_text:
+  title: Proposed Tax Levy (Renewal and Decrease) Delaware Area Career Center
+    Delaware, Franklin, Marion, Morrow, and Union Counties
+  entity: Delaware Area Career Center
+  text: A majority affirmative vote is necessary for passage. A renewal of part of
+    an existing levy, being a reduction of 0.95 mill for each $1 of taxable
+    value, to constitute a tax for the benefit of Delaware Area Career Center
+    for the purpose of improving, renovating, remodeling, enlarging, furnishing
+    and equipping school buildings and facilities at a rate not exceeding 0.40
+    mill and for the purpose of current expenses at a rate not exceeding 0.35
+    mill, that the county auditor estimates will collect $5,773,576 annually, at
+    a combined rate not exceeding 0.75 mill for each $1 of taxable value, which
+    amounts to $18 for each $100,000 of the county auditor's market value, for
+    10 years, commencing in 2026, first due in calendar year 2027.
+ballot_snapshot_hash: 5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf
+ballot_page: 2

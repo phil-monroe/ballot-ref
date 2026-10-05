@@ -1,0 +1,32 @@
+county: delaware
+precinct_code: 154/1
+precinct_name: Powell City J
+election: 2026-11-03-general
+ballot_source:
+  county_slug: delaware
+  election_code: 20261103g_webeix0
+  precinct_code: 154___1
+contests:
+  - 2026-11-03:governor-lt-governor:oh:unspecified
+  - 2026-11-03:attorney-general:oh:unspecified
+  - 2026-11-03:auditor-of-state:oh:unspecified
+  - 2026-11-03:secretary-of-state:oh:unspecified
+  - 2026-11-03:treasurer-of-state:oh:unspecified
+  - 2026-11-03:supreme-court-justice:oh:full-2027-01-01
+  - 2026-11-03:supreme-court-justice:oh:full-2027-01-02
+  - 2026-11-03:us-senate:oh:special-2029
+  - 2026-11-03:us-house:oh-12:unspecified
+  - 2026-11-03:state-senate:oh-19:unspecified
+  - 2026-11-03:state-house:oh-60:unspecified
+  - 2026-11-03:court-of-appeals:oh-5:full-2027-02-09
+  - 2026-11-03:common-pleas-general:delaware:full-2027-02-09
+  - 2026-11-03:common-pleas-general:delaware:special-2030
+  - 2026-11-03:common-pleas-probate-juvenile:delaware:full-2027-02-09
+  - 2026-11-03:county-commissioner:delaware:full-2027-01-01
+  - 2026-11-03:county-auditor:delaware:unspecified
+  - 2026-11-03:state-issue-3:oh:constitutional-amendment
+  - 2026-11-03:levy:delaware-area-career-center:renewal-and-decrease
+  - 2026-11-03:levy:delaware-county-regional-transit-authority:sales-use-tax
+  - 2026-11-03:levy:delaware-county-board-of-developmental-disabilities:additional
+  - 2026-11-03:levy:delaware-morrow-mental-health-and-recovery-services-board:renewal-and-increase
+fixture: fixtures/powell-j/expected.json

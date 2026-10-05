@@ -1,0 +1,27 @@
+id: 2026-11-03:levy:delaware-county-regional-transit-authority:sales-use-tax
+kind: levy
+title: Proposed Sales and Use Tax Delaware County Regional Transit Authority
+jurisdiction: delaware-county-regional-transit-authority
+term: null
+vote_for: 1
+candidates: []
+issue_options:
+  - id: for-the-sales-and-use-tax
+    label: For the Sales and Use Tax
+    order: 0
+  - id: against-the-sales-and-use-tax
+    label: Against the Sales and Use Tax
+    order: 1
+ballot_text:
+  title: Proposed Sales and Use Tax Delaware County Regional Transit Authority
+  entity: Delaware County Regional Transit Authority
+  text: A majority affirmative vote is necessary for passage. Shall a sales and
+    use tax be levied by the Delaware County Regional Transit Authority for the
+    purpose of providing additional general revenues for a transit authority,
+    funding a regional transportation improvement project under section 5595.06
+    of the Revised Code, or funding public infrastructure projects as described
+    in section 306.353 of the Revised Code, and to pay the expenses of
+    administering such levy at a rate not exceeding 0.2 per cent for a
+    continuing period of time?
+ballot_snapshot_hash: 5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf
+ballot_page: 2

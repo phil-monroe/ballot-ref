@@ -1,0 +1,65 @@
+id: 2026-11-03:governor-lt-governor:oh:unspecified
+kind: candidate
+title: Governor and Lieutenant Governor
+jurisdiction: oh
+term: null
+vote_for: 1
+candidates:
+  - id: amy-acton
+    ballot_name: Amy Acton
+    party_label: Democratic
+    order: 0
+    write_in: false
+    incumbent: null
+    ticket_id: ticket-1
+    role: governor
+  - id: david-pepper
+    ballot_name: David Pepper
+    party_label: Democratic
+    order: 0
+    write_in: false
+    incumbent: null
+    ticket_id: ticket-1
+    role: lieutenant-governor
+  - id: don-kissick
+    ballot_name: Don Kissick
+    party_label: Libertarian
+    order: 1
+    write_in: false
+    incumbent: null
+    ticket_id: ticket-2
+    role: governor
+  - id: james-l-mills
+    ballot_name: James L. Mills
+    party_label: Libertarian
+    order: 1
+    write_in: false
+    incumbent: null
+    ticket_id: ticket-2
+    role: lieutenant-governor
+  - id: vivek-ramaswamy
+    ballot_name: Vivek Ramaswamy
+    party_label: Republican
+    order: 2
+    write_in: false
+    incumbent: null
+    ticket_id: ticket-3
+    role: governor
+  - id: robert-a-mccolley
+    ballot_name: Robert A. McColley
+    party_label: Republican
+    order: 2
+    write_in: false
+    incumbent: null
+    ticket_id: ticket-3
+    role: lieutenant-governor
+  - id: write-in
+    ballot_name: Write-in
+    party_label: null
+    order: 6
+    write_in: true
+    incumbent: null
+    ticket_id: null
+issue_options: []
+ballot_snapshot_hash: 5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf
+ballot_page: 1
