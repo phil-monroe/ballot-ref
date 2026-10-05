@@ -1,7 +1,8 @@
 import type { Contest } from '../schemas/contest.ts';
 import type { BallotDiff } from '../schemas/report.ts';
 
-const signature = (c: Contest) =>
+/** Content that identifies a contest as the same contest; excludes per-ballot page and snapshot hash. */
+export const contestSignature = (c: Contest) =>
   JSON.stringify({
     t: c.title,
     term: c.term,
@@ -22,7 +23,7 @@ export function diffBallots(
   const added = [...n.keys()].filter((id) => !p.has(id));
   const removed = [...p.keys()].filter((id) => !n.has(id));
   const changed = [...n.keys()].filter(
-    (id) => p.has(id) && signature(p.get(id)!) !== signature(n.get(id)!),
+    (id) => p.has(id) && contestSignature(p.get(id)!) !== contestSignature(n.get(id)!),
   );
   const prevOrder = prev.map((c) => c.id).filter((id) => n.has(id));
   const nextOrder = next.map((c) => c.id).filter((id) => p.has(id));

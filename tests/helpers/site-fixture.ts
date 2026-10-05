@@ -8,7 +8,8 @@ import {
   writeFileSync,
 } from 'node:fs';
 import { tmpdir } from 'node:os';
-import { join } from 'node:path';
+import { dirname, join, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { loadConfig } from '../../src/config.ts';
 import { DataStore } from '../../src/data.ts';
 import { SnapshotStore } from '../../src/fetch/snapshot-store.ts';
@@ -16,6 +17,7 @@ import { symmetryPath, writeSymmetryReport } from '../../src/report/symmetry.ts'
 import type { Contest } from '../../src/schemas/contest.ts';
 import type { Field } from '../../src/schemas/field.ts';
 
+const REPO_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 export const NOW = '2026-10-05T00:00:00Z';
 const H = '0'.repeat(64);
 
@@ -190,18 +192,28 @@ export function build(dir: string): { out: string; netLog: string } {
   const out = join(dir, 'dist');
   const netLog = join(dir, 'net.log');
   writeFileSync(netLog, '');
-  execFileSync(process.execPath, ['node_modules/astro/bin/astro.mjs', 'build', '--root', 'site'], {
-    env: {
-      ...process.env,
-      BALLOT_REF_DATA: join(dir, 'data'),
-      BALLOT_REF_OUT: out,
-      BALLOT_REF_NOW: NOW,
-      BALLOT_REF_NET_LOG: netLog,
-      ASTRO_TELEMETRY_DISABLED: '1',
-      NODE_OPTIONS: '--require ./tests/helpers/no-network.cjs',
+  execFileSync(
+    process.execPath,
+    [
+      join(REPO_ROOT, 'node_modules/astro/bin/astro.mjs'),
+      'build',
+      '--root',
+      join(REPO_ROOT, 'site'),
+    ],
+    {
+      cwd: REPO_ROOT,
+      env: {
+        ...process.env,
+        BALLOT_REF_DATA: join(dir, 'data'),
+        BALLOT_REF_OUT: out,
+        BALLOT_REF_NOW: NOW,
+        BALLOT_REF_NET_LOG: netLog,
+        ASTRO_TELEMETRY_DISABLED: '1',
+        NODE_OPTIONS: `--require ${join(REPO_ROOT, 'tests/helpers/no-network.cjs')}`,
+      },
+      stdio: 'pipe',
     },
-    stdio: 'pipe',
-  });
+  );
   return { out, netLog };
 }
 

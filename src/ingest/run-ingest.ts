@@ -6,12 +6,15 @@ import { loadConfig } from '../config.ts';
 import { proposeOfficialFields } from './propose-official.ts';
 import { buildContests } from './build-contests.ts';
 import { dateFromElectionCode } from './contest-id.ts';
-import { diffBallots } from './diff.ts';
+import { resolve } from 'node:path';
+import { contestSignature, diffBallots } from './diff.ts';
 import { Expected, compareToExpected } from './expected.ts';
 import { ballotUrl, getBallotBytes } from './fetch-ballot.ts';
 import { layoutLines, snapshotText } from './layout.ts';
 import { parseBallot } from './parse-ballot.ts';
 import { extractItems } from './pdf-items.ts';
+
+export class SharedContestConflict extends Error {}
 
 export interface IngestResult {
   contests: Contest[];
@@ -56,7 +59,26 @@ export async function runIngest(opts: {
     .map((id) => data.loadContest(id));
   const diff = diffBallots(previous, contests);
 
-  for (const c of contests) data.saveContest(c);
+  // Contests are shared across ballots. An identical existing contest is reused untouched (so approved
+  // fields keep applying); a different one is only replaced if no other ballot depends on it.
+  const usedElsewhere = new Set(
+    data
+      .listBallots()
+      .filter((b) => resolve(b.file) !== resolve(opts.ballotFile))
+      .flatMap((b) => b.ballot.contests),
+  );
+  for (const c of contests) {
+    if (existsSync(data.contestPath(c.id))) {
+      const existing = data.loadContest(c.id);
+      if (contestSignature(existing) === contestSignature(c)) continue;
+      if (usedElsewhere.has(c.id)) {
+        throw new SharedContestConflict(
+          `Contest ${c.id} differs from the version another ballot already uses; resolve before re-ingesting.`,
+        );
+      }
+    }
+    data.saveContest(c);
+  }
   data.saveBallot(opts.ballotFile, { ...ballot, contests: contests.map((c) => c.id) });
 
   mkdirSync(`${data.root}/reports`, { recursive: true });

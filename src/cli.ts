@@ -2,7 +2,7 @@
 import { Command } from 'commander';
 import { loadConfig } from './config.ts';
 import { NeedsManualImport } from './ingest/fetch-ballot.ts';
-import { runIngest } from './ingest/run-ingest.ts';
+import { SharedContestConflict, runIngest } from './ingest/run-ingest.ts';
 import {
   EXIT,
   buildCommand,
@@ -73,7 +73,12 @@ program
       }
     } catch (e) {
       console.error(e instanceof Error ? e.message : String(e));
-      process.exitCode = e instanceof NeedsManualImport ? EXIT.retrieval : EXIT.usage;
+      process.exitCode =
+        e instanceof NeedsManualImport
+          ? EXIT.retrieval
+          : e instanceof SharedContestConflict
+            ? EXIT.validation
+            : EXIT.usage;
     }
   });
 program

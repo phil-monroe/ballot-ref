@@ -238,10 +238,10 @@ description: "Task list for Ballot Reference (Sourced Voter Reference)"
 
 **Independent Test**: Add a second ballot file; page builds; shared contests show identical approved data; no extraction runs for them (SC-008).
 
-- [ ] T096 [P] [US6] Integration test `tests/integration/second-precinct.test.ts` using a synthetic second ballot in `fixtures/synthetic/second-ballot/`: shared statewide contests resolve to the same Contest ids, `extract` makes zero model calls for them, and the page builds with no code changes
-- [ ] T097 [US6] Ensure contest ids and field paths are election-scoped, not ballot-scoped, in `src/ingest/contest-id.ts` and `src/data.ts`; ingest of a second ballot links existing contests instead of recreating them
-- [ ] T098 [US6] Make the ballot page route generic over `data/ballots/*.yaml` in `site/src/pages/b/[ballot].astro` and `site/src/pages/index.astro`
-- [ ] T099 [US6] Add a second real ballot config (another precinct) once available and verify via quickstart.md second-precinct scenario
+- [X] T096 [P] [US6] Integration test `tests/integration/second-precinct.test.ts` using a synthetic second ballot in `fixtures/synthetic/second-ballot/`: shared statewide contests resolve to the same Contest ids, `extract` makes zero model calls for them, and the page builds with no code changes
+- [X] T097 [US6] Ensure contest ids and field paths are election-scoped, not ballot-scoped, in `src/ingest/contest-id.ts` and `src/data.ts`; ingest of a second ballot links existing contests instead of recreating them
+- [X] T098 [US6] Make the ballot page route generic over `data/ballots/*.yaml` in `site/src/pages/b/[ballot].astro` and `site/src/pages/index.astro`
+- [ ] T099 [US6] (needs the maintainer's second precinct code) Add a second real ballot config (another precinct) once available and verify via quickstart.md second-precinct scenario
 
 ---
 
