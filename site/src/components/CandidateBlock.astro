@@ -1,0 +1,27 @@
+---
+import type { PersonView } from '../../../src/site/view.ts';
+import FieldRow from './FieldRow.astro';
+interface Props {
+  person: PersonView;
+  contestId: string;
+  pageUrl: string;
+  repoUrl: string;
+}
+const { person, contestId, pageUrl, repoUrl } = Astro.props;
+const o = person.option;
+const ROLE: Record<string, string> = { governor: 'For Governor', 'lieutenant-governor': 'For Lieutenant Governor' };
+---
+<article class="person">
+  <h4>
+    {o.ballot_name}
+    {o.party_label && <span class="party">{o.party_label}</span>}
+  </h4>
+  {o.role && <p class="small role">{ROLE[o.role]}</p>}
+  {person.slots.length > 0 && (
+    <dl>
+      {person.slots.map((s) => (
+        <FieldRow slot={s} contestId={contestId} entityId={o.id} pageUrl={pageUrl} repoUrl={repoUrl} />
+      ))}
+    </dl>
+  )}
+</article>

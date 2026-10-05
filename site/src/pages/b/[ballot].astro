@@ -1,0 +1,52 @@
+---
+import { ballotUrl } from '../../../../src/ingest/fetch-ballot.ts';
+import Base from '../../layouts/Base.astro';
+import Contest from '../../components/Contest.astro';
+import { ballotView, ballots, config } from '../../lib/data';
+
+export function getStaticPaths() {
+  return ballots().map((b) => ({ params: { ballot: ballotView(b).slug }, props: { ballot: b } }));
+}
+const view = ballotView(Astro.props.ballot);
+const b = view.ballot;
+const pagePath = `/b/${view.slug}/`;
+const pageBase = config.site_url ? config.site_url.replace(/\/+$/, '') + pagePath : pagePath;
+const boe = ballotUrl(b);
+const reviewed = view.contests.filter((c) => c.ready).length;
+const candidates = view.contests.filter((c) => c.contest.kind === 'candidate' || c.contest.kind === 'judicial');
+const issues = view.contests.filter((c) => c.contest.kind === 'levy' || c.contest.kind === 'constitutional-issue');
+---
+<Base title={`${b.county} County ${b.precinct_name} ballot reference`}>
+  <h1>{b.county} County, {b.precinct_name}</h1>
+  <p class="small">Nov 3, 2026 General Election · precinct {b.precinct_code}</p>
+  <p class="notice">
+    A sourced reference, not a recommendation. Contests marked “Not yet reviewed” have not been
+    researched yet; that is different from “Not found in whitelisted sources.” {reviewed} of
+    {view.contests.length} contests are reviewed.
+  </p>
+  <nav class="toc" aria-label="Contests on this ballot">
+    <ol>
+      {view.contests.map((c) => (
+        <li><a href={`#${c.anchor}`}>{c.contest.title}</a>{!c.ready && <span class="small"> (not yet reviewed)</span>}</li>
+      ))}
+    </ol>
+  </nav>
+
+  <h2>Offices</h2>
+  {candidates.map((v) => (
+    <Contest view={v} pagePath={pageBase} repoUrl={config.repo_url} boeUrl={boe} sosUrl={config.links.sos_elections} />
+  ))}
+
+  <h2>Questions and issues</h2>
+  {issues.map((v) => (
+    <Contest view={v} pagePath={pageBase} repoUrl={config.repo_url} boeUrl={boe} sosUrl={config.links.sos_elections} />
+  ))}
+
+  <Fragment slot="footer">
+    <p>
+      <a href={config.links.vote411} rel="noopener noreferrer">Vote411</a> ·
+      <a href={boe} rel="noopener noreferrer"> County board of elections ballot viewer</a> ·
+      <a href={config.links.sos_elections} rel="noopener noreferrer"> Ohio Secretary of State</a>
+    </p>
+  </Fragment>
+</Base>

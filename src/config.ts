@@ -18,6 +18,18 @@ export const SiteConfig = z.strictObject({
   prompt_versions: z.record(z.string(), z.string()),
   rate_limit_seconds: z.number().positive(),
   user_agent: z.string().min(1),
+  /** Absolute site URL, if deployed; used in pre-filled error reports. Optional. */
+  site_url: z.string().url().optional(),
+  /** Footer links; defaults are the national and Ohio Secretary of State landing pages. */
+  links: z
+    .strictObject({
+      vote411: z.string().url().default('https://www.vote411.org/'),
+      sos_elections: z.string().url().default('https://www.ohiosos.gov/elections/'),
+    })
+    .default({
+      vote411: 'https://www.vote411.org/',
+      sos_elections: 'https://www.ohiosos.gov/elections/',
+    }),
 });
 export type SiteConfig = z.infer<typeof SiteConfig>;
 

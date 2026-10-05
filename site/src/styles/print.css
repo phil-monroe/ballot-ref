@@ -1,0 +1,9 @@
+@media print {
+  :root { --bg: #fff; --fg: #000; --muted: #333; --line: #999; --accent: #000; }
+  body { font-size: 11pt; }
+  .site-header nav, .toc { display: none; }
+  .contest { break-inside: avoid; }
+  a { text-decoration: none; }
+  a[href^='http']::after { content: ' (' attr(href) ')'; font-size: 8pt; word-break: break-all; }
+  .report, a[href*='/issues/new']::after { display: none; }
+}

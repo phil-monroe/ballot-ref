@@ -1,0 +1,15 @@
+---
+import type { ContestView } from '../../../src/site/view.ts';
+import FieldRow from './FieldRow.astro';
+interface Props {
+  view: ContestView;
+  pageUrl: string;
+  repoUrl: string;
+}
+const { view, pageUrl, repoUrl } = Astro.props;
+---
+<dl class="issue">
+  {view.issueSlots.map((s) => (
+    <FieldRow slot={s} contestId={view.contest.id} entityId="issue" pageUrl={pageUrl} repoUrl={repoUrl} />
+  ))}
+</dl>

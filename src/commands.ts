@@ -1,3 +1,4 @@
+import { execFileSync } from 'node:child_process';
 import { loadConfig } from './config.ts';
 import { DataStore } from './data.ts';
 import { AnthropicExtractor } from './extract/anthropic.ts';
@@ -178,4 +179,43 @@ export function reviewSymmetryCommand(
     console.error(e instanceof Error ? e.message : String(e));
     return EXIT.usage;
   }
+}
+
+/**
+ * Builds the static site from data/ with no network access. Contests that are not ready (including any
+ * with a stale snapshot) render "Not yet reviewed"; the reasons are printed as warnings (FR-036).
+ */
+export function buildCommand(o: Out): number {
+  const config = loadConfig();
+  const status = collectStatus(new DataStore(), new SnapshotStore(), config);
+  const blocked = status.contests.filter((c) => !c.ready);
+  const warnings = blocked.flatMap((c) => c.reasons.map((r) => `${c.contest_id}: ${r}`));
+  if (!o.json) {
+    console.log(
+      `${status.contests.length - blocked.length} of ${status.contests.length} contests ready to publish`,
+    );
+    for (const w of warnings.filter((x) => /stale/.test(x))) console.warn(`WARNING ${w}`);
+  }
+  try {
+    execFileSync(
+      process.execPath,
+      ['node_modules/astro/bin/astro.mjs', 'build', '--root', 'site'],
+      {
+        stdio: o.json ? 'pipe' : 'inherit',
+        env: { ...process.env, ASTRO_TELEMETRY_DISABLED: '1' },
+      },
+    );
+  } catch {
+    console.error('Site build failed.');
+    return EXIT.usage;
+  }
+  if (o.json)
+    console.log(
+      JSON.stringify({
+        ready: status.contests.length - blocked.length,
+        total: status.contests.length,
+        warnings,
+      }),
+    );
+  return EXIT.ok;
 }

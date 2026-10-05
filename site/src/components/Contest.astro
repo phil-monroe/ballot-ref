@@ -1,0 +1,52 @@
+---
+import type { ContestView } from '../../../src/site/view.ts';
+import CandidateBlock from './CandidateBlock.astro';
+import IssueBlock from './IssueBlock.astro';
+interface Props {
+  view: ContestView;
+  pagePath: string;
+  repoUrl: string;
+  boeUrl: string;
+  sosUrl: string;
+}
+const { view, pagePath, repoUrl, boeUrl, sosUrl } = Astro.props;
+const c = view.contest;
+const pageUrl = `${pagePath}#${view.anchor}`;
+const isIssue = c.kind === 'levy' || c.kind === 'constitutional-issue';
+---
+<section class="contest" id={view.anchor}>
+  <h3><a class="anchor" href={`#${view.anchor}`}>{c.title}</a></h3>
+  <p class="small">
+    {c.term && <span>{c.term} · </span>}Vote for not more than {c.vote_for}
+  </p>
+  {!view.ready && <p class="status status--pending">Not yet reviewed</p>}
+
+  {!isIssue && (
+    <div class="choices">
+      {view.choices.map((ch) => (
+        <div class={`choice ${ch.ticketId ? 'choice--ticket' : ''}`}>
+          {ch.people.map((p) =>
+            p.option.write_in ? (
+              <p class="writein">Write-in</p>
+            ) : (
+              <CandidateBlock person={p} contestId={c.id} pageUrl={pageUrl} repoUrl={repoUrl} />
+            ),
+          )}
+        </div>
+      ))}
+    </div>
+  )}
+
+  {isIssue && (
+    <>
+      <p class="small">Choices on the ballot: {c.issue_options.map((o) => o.label).join(' / ')}</p>
+      {view.ready && <IssueBlock view={view} pageUrl={pageUrl} repoUrl={repoUrl} />}
+      <p class="small">
+        Official sources: <a href={boeUrl} rel="noopener noreferrer">county board of elections ballot</a> ·
+        <a href={sosUrl} rel="noopener noreferrer"> Ohio Secretary of State</a>
+      </p>
+    </>
+  )}
+
+  {view.ready && view.lastReviewed && <p class="small">Last reviewed {view.lastReviewed.slice(0, 10)}</p>}
+</section>

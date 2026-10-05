@@ -1,0 +1,17 @@
+---
+import Base from '../layouts/Base.astro';
+import { ballotView, ballots } from '../lib/data';
+const list = ballots().map(ballotView);
+---
+<Base title="Ballot Reference">
+  <h1>Ballot Reference</h1>
+  <p>A sourced reference for specific Ohio ballots. Pick your ballot:</p>
+  <ul>
+    {list.map((v) => (
+      <li>
+        <a href={`/b/${v.slug}/`}>{v.ballot.county} County, precinct {v.ballot.precinct_name}</a>
+        <span class="small"> · {v.readyCount} of {v.contests.length} contests reviewed</span>
+      </li>
+    ))}
+  </ul>
+</Base>

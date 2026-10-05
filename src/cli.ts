@@ -5,6 +5,7 @@ import { NeedsManualImport } from './ingest/fetch-ballot.ts';
 import { runIngest } from './ingest/run-ingest.ts';
 import {
   EXIT,
+  buildCommand,
   extractCommand,
   fetchCommand,
   importCommand,
@@ -108,7 +109,10 @@ program
   .description('Readiness, stale snapshots, unverifiable sources, retrieval failures')
   .action((o: { contest?: string }) => void (process.exitCode = statusCommand(o.contest, out())));
 stub('verify', '', 'Best-effort whole-site quote re-verification');
-stub('build', '', 'Build the static site from data/');
+program
+  .command('build')
+  .description('Build the static site from data/ (no network)')
+  .action(() => void (process.exitCode = buildCommand(out())));
 
 const sources = program.command('sources').description('Source registry commands');
 sources

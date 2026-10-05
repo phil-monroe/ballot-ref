@@ -1,0 +1,37 @@
+---
+import type { SlotView } from '../../../src/site/view.ts';
+import { NOT_FOUND } from '../../../src/site/view.ts';
+import { errorReportUrl } from '../../../src/site/issue-url.ts';
+interface Props {
+  slot: SlotView;
+  contestId: string;
+  entityId: string;
+  pageUrl: string;
+  repoUrl: string;
+}
+const { slot, contestId, entityId, pageUrl, repoUrl } = Astro.props;
+const f = slot.field;
+const day = (iso: string | null) => (iso ? iso.slice(0, 10) : '');
+const report = f
+  ? errorReportUrl(repoUrl, { contestId, entityId, fieldKey: f.field_key, slot: f.slot, pageUrl })
+  : null;
+const TIER: Record<string, string> = { official: 'Official', says: 'Says', done: 'Done' };
+---
+<div class={`slot ${f ? '' : 'slot--missing'}`}>
+  <dt>{slot.label}</dt>
+  {f ? (
+    <dd>
+      {String(f.value) !== f.quote && <p class="value">{f.value}</p>}
+      <blockquote>{f.quote}</blockquote>
+      {f.author && <p class="small">Argument written by: {f.author}</p>}
+      <p class="meta small">
+        <span class={`badge badge--${f.tier}`} title={`Evidence tier: ${f.tier}`}>{TIER[f.tier]}</span>
+        <a href={f.source_url} rel="noopener noreferrer">Source</a>
+        · retrieved {day(f.retrieved_at)} · reviewed {day(f.reviewed_at)}
+        · <a href={report!} rel="noopener noreferrer">Report an error</a>
+      </p>
+    </dd>
+  ) : (
+    <dd class="not-found">{NOT_FOUND}</dd>
+  )}
+</div>

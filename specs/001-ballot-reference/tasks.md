@@ -158,21 +158,21 @@ description: "Task list for Ballot Reference (Sourced Voter Reference)"
 
 ### Tests for User Story 1
 
-- [ ] T064 [P] [US1] Build test `tests/integration/site-build.test.ts`: build with network disabled succeeds (SC-009); contests in official order; non-ready contests render "Not yet reviewed" with no fields; no `proposed|rejected` field text appears in output
-- [ ] T065 [P] [US1] Build test `tests/integration/site-privacy.test.ts`: no external URLs other than outbound `<a href>` links, no `<script src>` to other origins, no analytics, `noindex` meta on every page, `_headers` has `X-Robots-Tag: noindex`, `robots.txt` disallows all (SC-010)
-- [ ] T066 [P] [US1] Component test `tests/integration/site-layout.test.ts`: every candidate in a contest renders the same slot structure; a missing slot renders "Not found in whitelisted sources."; joint tickets render one choice with two person blocks; write-in lines render as printed with no slots
+- [X] T064 [P] [US1] Build test `tests/integration/site-build.test.ts`: build with network disabled succeeds (SC-009); contests in official order; non-ready contests render "Not yet reviewed" with no fields; no `proposed|rejected` field text appears in output
+- [X] T065 [P] [US1] Build test `tests/integration/site-privacy.test.ts`: no external URLs other than outbound `<a href>` links, no `<script src>` to other origins, no analytics, `noindex` meta on every page, `_headers` has `X-Robots-Tag: noindex`, `robots.txt` disallows all (SC-010)
+- [X] T066 [P] [US1] Component test `tests/integration/site-layout.test.ts`: every candidate in a contest renders the same slot structure; a missing slot renders "Not found in whitelisted sources."; joint tickets render one choice with two person blocks; write-in lines render as printed with no slots
 
 ### Implementation for User Story 1
 
-- [ ] T067 [US1] Scaffold the Astro project in `site/` (`site/package.json` or workspace-free setup using the root package, `site/astro.config.mjs`, static output, no client JS) and a data loader `site/src/lib/data.ts` that imports the shared Zod schemas and reads `data/` only (no network)
-- [ ] T068 [P] [US1] Implement build-time field selection in `site/src/lib/select.ts`: only `approved|edited` fields, contests gated by readiness; approved fields flagged `needs_rereview` still display from their original snapshot with the original retrieved date
-- [ ] T069 [P] [US1] Create the base layout in `site/src/layouts/Base.astro`: mobile-first CSS, `<meta name="robots" content="noindex">`, no external fonts or scripts, link to the methodology page and the footer links
-- [ ] T070 [P] [US1] Create `site/src/components/FieldRow.astro`: value, quote, source link, tier badge (`official|says|done`), retrieved date, last-reviewed date, "Report an error" link built from `repo_url` as a GitHub new-issue URL pre-filled with contest, entity, field, and page URL (FR-043)
-- [ ] T071 [P] [US1] Create `site/src/components/CandidateBlock.astro` and `site/src/components/Contest.astro`: options in ballot order with one layout; slot-driven rendering so absent fields show "Not found in whitelisted sources."; ticket and write-in rendering per contracts/site.md
-- [ ] T072 [US1] Create `site/src/pages/b/[ballot].astro` for `/b/<county>-<precinct>/`: contests in official ballot order, deep-link anchors per contest slug, "Not yet reviewed" state (FR-041a), unreviewed contests show candidate names as printed and no fields (depends on T068–T071)
-- [ ] T073 [P] [US1] Create `site/src/pages/index.astro` (links only to configured ballots, noindex), `site/public/robots.txt` (disallow all), and `site/public/_headers` (`X-Robots-Tag: noindex`)
-- [ ] T074 [P] [US1] Add the print stylesheet in `site/src/styles/print.css` and verify layout at phone width
-- [ ] T075 [US1] Wire the `build` command in `src/cli.ts` to run the Astro build offline; warn on stale snapshots (FR-036); contests not ready render "Not yet reviewed"
+- [X] T067 [US1] Scaffold the Astro project in `site/` (`site/package.json` or workspace-free setup using the root package, `site/astro.config.mjs`, static output, no client JS) and a data loader `site/src/lib/data.ts` that imports the shared Zod schemas and reads `data/` only (no network)
+- [X] T068 [P] [US1] Implement build-time field selection (lives in `src/site/view.ts` and `src/review/publishable.ts` so tests and the site share it; originally `site/src/lib/select.ts`): only `approved|edited` fields, contests gated by readiness; approved fields flagged `needs_rereview` still display from their original snapshot with the original retrieved date
+- [X] T069 [P] [US1] Create the base layout in `site/src/layouts/Base.astro`: mobile-first CSS, `<meta name="robots" content="noindex">`, no external fonts or scripts, link to the methodology page and the footer links
+- [X] T070 [P] [US1] Create `site/src/components/FieldRow.astro`: value, quote, source link, tier badge (`official|says|done`), retrieved date, last-reviewed date, "Report an error" link built from `repo_url` as a GitHub new-issue URL pre-filled with contest, entity, field, and page URL (FR-043)
+- [X] T071 [P] [US1] Create `site/src/components/CandidateBlock.astro` and `site/src/components/Contest.astro`: options in ballot order with one layout; slot-driven rendering so absent fields show "Not found in whitelisted sources."; ticket and write-in rendering per contracts/site.md
+- [X] T072 [US1] Create `site/src/pages/b/[ballot].astro` for `/b/<county>-<precinct>/`: contests in official ballot order, deep-link anchors per contest slug, "Not yet reviewed" state (FR-041a), unreviewed contests show candidate names as printed and no fields (depends on T068–T071)
+- [X] T073 [P] [US1] Create `site/src/pages/index.astro` (links only to configured ballots, noindex), `site/public/robots.txt` (disallow all), and `site/public/_headers` (`X-Robots-Tag: noindex`)
+- [X] T074 [P] [US1] Add the print stylesheet in `site/src/styles/print.css` and verify layout at phone width
+- [X] T075 [US1] Wire the `build` command in `src/cli.ts` to run the Astro build offline; warn on stale snapshots (FR-036); contests not ready render "Not yet reviewed"
 - [ ] T076 [US1] Build and manually view the Powell J site locally with the Senate contest published; confirm SC-004 (Senate viewable before any other contest is complete)
 
 **Checkpoint**: MVP: a voter can open the Powell J page and read the sourced U.S. Senate contest

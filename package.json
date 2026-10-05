@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.131.0",
+    "astro": "^7.3.5",
     "commander": "^15.0.0",
     "pdfjs-dist": "^6.4.299",
     "yaml": "^2.9.1",
