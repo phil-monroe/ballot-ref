@@ -133,17 +133,17 @@ description: "Task list for Ballot Reference (Sourced Voter Reference)"
 
 ### Tests for User Story 4
 
-- [ ] T055 [P] [US4] Unit tests `tests/unit/readiness.test.ts`: contest is ready iff all fields reviewed, symmetry acknowledged and not invalidated by later field changes, no stale snapshots, no `needs_rereview`; each failing condition blocks with a reason
-- [ ] T056 [P] [US4] Unit tests `tests/unit/review-actions.test.ts`: approve/reject/edit transitions (`proposed → approved | rejected | edited`); an edit that fails a gate is refused; edits record reviewer id and time; reviewer id required
-- [ ] T057 [P] [US4] Unit test `tests/unit/build-filter.test.ts`: `proposed` and `rejected` fields are never returned by the build field selector
+- [X] T055 [P] [US4] Unit tests `tests/unit/readiness.test.ts`: contest is ready iff all fields reviewed, symmetry acknowledged and not invalidated by later field changes, no stale snapshots, no `needs_rereview`; each failing condition blocks with a reason
+- [X] T056 [P] [US4] Unit tests `tests/unit/review-actions.test.ts`: approve/reject/edit transitions (`proposed → approved | rejected | edited`); an edit that fails a gate is refused; edits record reviewer id and time; reviewer id required
+- [X] T057 [P] [US4] Unit test `tests/unit/build-filter.test.ts`: `proposed` and `rejected` fields are never returned by the build field selector
 
 ### Implementation for User Story 4
 
-- [ ] T058 [P] [US4] Implement readiness evaluation in `src/review/readiness.ts` (FR-039) returning ready/blocked with reasons
-- [ ] T059 [US4] Implement review actions in `src/review/actions.ts`: approve, reject, edit (re-run gates on the edited value and quote), each appended to `data/logs/review.jsonl` with reviewer id, time, and before/after
-- [ ] T060 [US4] Implement `review symmetry <contest-id>` in `src/review/symmetry.ts`: display the matrix and record acknowledgment (reviewer, time); any later field change in the contest invalidates it
-- [ ] T061 [US4] Implement the interactive `review next [--contest id]` loop in `src/review/cli.ts`: show value, the quote highlighted inside a context window of the snapshot, source link, tier; prompt approve / reject / edit; refuse to approve a contest's fields if the symmetry report has not been viewed (depends on T058–T060)
-- [ ] T062 [US4] Implement the `status` command in `src/report/status.ts`: readiness per contest, stale snapshots, unverifiable sources, retrieval failures (`--contest` filter)
+- [X] T058 [P] [US4] Implement readiness evaluation in `src/review/readiness.ts` (FR-039) returning ready/blocked with reasons
+- [X] T059 [US4] Implement review actions in `src/review/actions.ts`: approve, reject, edit (re-run gates on the edited value and quote), each appended to `data/logs/review.jsonl` with reviewer id, time, and before/after
+- [X] T060 [US4] Implement `review symmetry <contest-id>` in `src/review/symmetry.ts`: display the matrix and record acknowledgment (reviewer, time); any later field change in the contest invalidates it
+- [X] T061 [US4] Implement the interactive `review next [--contest id]` loop in `src/review/cli.ts`: show value, the quote highlighted inside a context window of the snapshot, source link, tier; prompt approve / reject / edit; refuse to approve a contest's fields if the symmetry report has not been viewed (depends on T058–T060)
+- [X] T062 [US4] Implement the `status` command in `src/report/status.ts`: readiness per contest, stale snapshots, unverifiable sources, retrieval failures (`--contest` filter)
 - [ ] T063 [US4] Review and approve the U.S. Senate fields, acknowledge its symmetry report, confirm `status` shows the contest ready
 
 **Checkpoint**: Senate contest is `ready`; no code path publishes `proposed` fields

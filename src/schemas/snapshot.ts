@@ -10,5 +10,7 @@ export const SnapshotMeta = z.strictObject({
   redistributable: z.boolean(),
   body_path: z.string().min(1),
   text_path: z.string().min(1),
+  /** Last time a refetch confirmed the content unchanged; staleness is measured from this (or retrieved_at). */
+  confirmed_at: IsoDateTime.optional(),
 });
 export type SnapshotMeta = z.infer<typeof SnapshotMeta>;

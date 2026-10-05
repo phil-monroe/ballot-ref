@@ -8,7 +8,10 @@ import {
   extractCommand,
   fetchCommand,
   importCommand,
+  reviewNextCommand,
+  reviewSymmetryCommand,
   sourcesCheck,
+  statusCommand,
   validateCommand,
 } from './commands.ts';
 
@@ -99,7 +102,11 @@ program
   .command('validate <contest-id>')
   .description('Run all gates and the symmetry report; never repairs values')
   .action((id: string) => void (process.exitCode = validateCommand(id, out())));
-stub('status', '', 'Readiness, stale snapshots, failures');
+program
+  .command('status')
+  .option('--contest <id>')
+  .description('Readiness, stale snapshots, unverifiable sources, retrieval failures')
+  .action((o: { contest?: string }) => void (process.exitCode = statusCommand(o.contest, out())));
 stub('verify', '', 'Best-effort whole-site quote re-verification');
 stub('build', '', 'Build the static site from data/');
 
@@ -113,18 +120,24 @@ const review = program.command('review').description('Review workflow');
 review
   .command('next')
   .option('--contest <id>')
-  .description('Review the next proposed field')
-  .action(() => {
-    console.error('review next: not implemented yet');
-    process.exitCode = EXIT.usage;
-  });
+  .description('Review the next proposed field (approve / reject / edit)')
+  .action(
+    async (o: { contest?: string }) =>
+      void (process.exitCode = await reviewNextCommand(o.contest, program.opts().reviewer)),
+  );
 review
   .command('symmetry <contest-id>')
+  .option('--ack', 'acknowledge the report as the current reviewer')
   .description('Show and acknowledge the symmetry report')
-  .action(() => {
-    console.error('review symmetry: not implemented yet');
-    process.exitCode = EXIT.usage;
-  });
+  .action(
+    (id: string, o: { ack?: boolean }) =>
+      void (process.exitCode = reviewSymmetryCommand(
+        id,
+        Boolean(o.ack),
+        program.opts().reviewer,
+        out(),
+      )),
+  );
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   await program.parseAsync(process.argv);

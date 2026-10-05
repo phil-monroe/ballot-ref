@@ -55,6 +55,16 @@ export class SnapshotStore {
     return meta;
   }
 
+  /** Records that a refetch saw identical content. The body stays immutable; only the metadata moves. */
+  confirm(sha: string, at: string): void {
+    const meta = this.getMeta(sha);
+    if (!meta) return;
+    writeFileSync(
+      this.metaPath(sha),
+      JSON.stringify({ ...meta, confirmed_at: at }, null, 2) + '\n',
+    );
+  }
+
   getMeta(sha: string): SnapshotMeta | null {
     const p = this.metaPath(sha);
     return existsSync(p) ? SnapshotMeta.parse(JSON.parse(readFileSync(p, 'utf8'))) : null;

@@ -8,6 +8,9 @@ import { importManual } from './fetch/manual-import.ts';
 import { playwrightFallback } from './fetch/playwright-fallback.ts';
 import { runFetch } from './fetch/run-fetch.ts';
 import { SnapshotStore } from './fetch/snapshot-store.ts';
+import { collectStatus, formatStatus } from './report/status.ts';
+import { reviewLoop } from './review/cli.ts';
+import { acknowledgeSymmetry, formatSymmetry } from './review/symmetry.ts';
 import { writeSymmetryReport } from './report/symmetry.ts';
 import { checkRegistry, findSourceAnywhere } from './sources/registry.ts';
 import { revalidateContest } from './validate/revalidate.ts';
@@ -127,4 +130,52 @@ export function validateCommand(contestId: string, o: Out): number {
   ].join('\n');
   print(o, human, { failures, symmetry: sym });
   return failures.length ? EXIT.validation : EXIT.ok;
+}
+
+export function statusCommand(contest: string | undefined, o: Out): number {
+  const s = collectStatus(new DataStore(), new SnapshotStore(), loadConfig(), contest);
+  print(o, formatStatus(s), s);
+  return EXIT.ok;
+}
+
+const reviewerOf = (flag?: string) => flag ?? process.env.BALLOT_REF_REVIEWER ?? '';
+
+export async function reviewNextCommand(
+  contest: string | undefined,
+  reviewer: string | undefined,
+): Promise<number> {
+  try {
+    await reviewLoop({
+      reviewer: reviewerOf(reviewer),
+      contest,
+      data: new DataStore(),
+      store: new SnapshotStore(),
+      config: loadConfig(),
+    });
+    return EXIT.ok;
+  } catch (e) {
+    console.error(e instanceof Error ? e.message : String(e));
+    return EXIT.usage;
+  }
+}
+
+/** Shows the symmetry report; `--ack` records the acknowledgment (requires a reviewer id). */
+export function reviewSymmetryCommand(
+  contestId: string,
+  ack: boolean,
+  reviewer: string | undefined,
+  o: Out,
+): number {
+  const config = loadConfig();
+  const data = new DataStore();
+  try {
+    const report = ack
+      ? acknowledgeSymmetry(contestId, reviewerOf(reviewer), data, config)
+      : writeSymmetryReport(contestId, data, config);
+    print(o, formatSymmetry(report) + (ack ? '' : '\n(use --ack to acknowledge)'), report);
+    return EXIT.ok;
+  } catch (e) {
+    console.error(e instanceof Error ? e.message : String(e));
+    return EXIT.usage;
+  }
 }

@@ -86,6 +86,7 @@ export async function runFetch(opts: {
       at: now().toISOString(),
     });
 
+    if (prior && prior.sha256 === meta.sha256) opts.store.confirm(meta.sha256, now().toISOString());
     if (prior && prior.sha256 !== meta.sha256) {
       for (const entity of opts.data.listEntities(opts.contestId)) {
         const file = opts.data.loadFields(opts.contestId, entity);
