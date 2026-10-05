@@ -1,0 +1,23 @@
+{
+ "fields": [
+  {
+   "contest_id": "2026-11-03:lopsided:oh:unspecified",
+   "entity_id": "bare",
+   "field_key": "campaign_website",
+   "slot": null,
+   "value": "x",
+   "quote": "x",
+   "source_url": "https://example.gov/",
+   "source_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "retrieved_at": "2026-10-01T00:00:00Z",
+   "tier": "official",
+   "status": "approved",
+   "reviewer": null,
+   "reviewed_at": null,
+   "extractor": {
+    "kind": "manual"
+   },
+   "needs_rereview": false
+  }
+ ]
+}

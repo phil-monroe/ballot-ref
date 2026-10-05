@@ -6,7 +6,7 @@ import { buildContests } from './build-contests.ts';
 import { dateFromElectionCode } from './contest-id.ts';
 import { diffBallots } from './diff.ts';
 import { Expected, compareToExpected } from './expected.ts';
-import { getBallotBytes } from './fetch-ballot.ts';
+import { ballotUrl, getBallotBytes } from './fetch-ballot.ts';
 import { layoutLines, snapshotText } from './layout.ts';
 import { parseBallot } from './parse-ballot.ts';
 import { extractItems } from './pdf-items.ts';
@@ -33,9 +33,8 @@ export async function runIngest(opts: {
   const bytes = await getBallotBytes({ ballot, from: opts.from, userAgent: opts.userAgent });
   const lines = layoutLines(await extractItems(bytes.data));
   const meta = snapshots.put({
-    url: opts.from
-      ? `file:${opts.from}`
-      : `ballot:${ballot.ballot_source.county_slug}/${ballot.ballot_source.election_code}/${ballot.ballot_source.precinct_code}`,
+    // Canonical ballot URL even for manual imports (method records how it was obtained).
+    url: ballotUrl(ballot),
     body: Buffer.from(bytes.data),
     contentType: bytes.contentType,
     text: snapshotText(lines),

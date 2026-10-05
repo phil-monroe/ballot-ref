@@ -1,7 +1,7 @@
 {
   "sha256": "5dffac2f054fb8bd1d6e45cef041384e4773746fd08c74eaf5f48dfd346446cf",
-  "url": "file:fixtures/powell-j/ballot.pdf",
-  "retrieved_at": "2026-10-05T02:54:51.064Z",
+  "url": "https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X",
+  "retrieved_at": "2026-10-05T02:57:26.959Z",
   "content_type": "application/pdf",
   "method": "manual",
   "redistributable": true,

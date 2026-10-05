@@ -32,6 +32,8 @@ export const SymmetryReport = z.strictObject({
     }),
   ),
   flags: z.array(z.string()),
+  /** Digest of the contest's non-rejected field content; an acknowledgment is void if it changes. */
+  fields_digest: z.string(),
   acknowledged_by: z.string().nullable(),
   acknowledged_at: IsoDateTime.nullable(),
 });

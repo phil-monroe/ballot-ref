@@ -3,8 +3,18 @@ import { Command } from 'commander';
 import { loadConfig } from './config.ts';
 import { NeedsManualImport } from './ingest/fetch-ballot.ts';
 import { runIngest } from './ingest/run-ingest.ts';
+import {
+  EXIT,
+  extractCommand,
+  fetchCommand,
+  importCommand,
+  sourcesCheck,
+  validateCommand,
+} from './commands.ts';
 
-export const EXIT = { ok: 0, validation: 1, usage: 2, retrieval: 3 } as const;
+export { EXIT };
+
+const out = () => ({ json: Boolean(program.opts().json) });
 
 const program = new Command('ballot-ref')
   .description('Sourced, symmetric reference for Ohio precinct ballots')
@@ -62,10 +72,33 @@ program
       process.exitCode = e instanceof NeedsManualImport ? EXIT.retrieval : EXIT.usage;
     }
   });
-stub('fetch', '<contest-id>', 'Fetch whitelisted sources into snapshots');
-stub('import', '<source-url> <file>', 'Manually import a source');
-stub('extract', '<contest-id>', 'Run schema-constrained extraction');
-stub('validate', '<contest-id>', 'Run all gates and the symmetry report');
+program
+  .command('fetch <contest-id>')
+  .description('Fetch whitelisted sources into snapshots')
+  .option('--refetch', 'refetch stored sources; flag fields whose source changed')
+  .action(
+    async (id: string, o: { refetch?: boolean }) =>
+      void (process.exitCode = await fetchCommand(id, Boolean(o.refetch), out())),
+  );
+program
+  .command('import <source-url> <file>')
+  .description('Manually import a whitelisted source (text, HTML, or PDF)')
+  .action(
+    async (url: string, file: string) =>
+      void (process.exitCode = await importCommand(url, file, out())),
+  );
+program
+  .command('extract <contest-id>')
+  .option('--entity <id>', 'only this candidate')
+  .description('Run schema-constrained extraction (one source, one candidate per call)')
+  .action(
+    async (id: string, o: { entity?: string }) =>
+      void (process.exitCode = await extractCommand(id, o.entity, out())),
+  );
+program
+  .command('validate <contest-id>')
+  .description('Run all gates and the symmetry report; never repairs values')
+  .action((id: string) => void (process.exitCode = validateCommand(id, out())));
 stub('status', '', 'Readiness, stale snapshots, failures');
 stub('verify', '', 'Best-effort whole-site quote re-verification');
 stub('build', '', 'Build the static site from data/');
@@ -74,10 +107,7 @@ const sources = program.command('sources').description('Source registry commands
 sources
   .command('check <contest-id>')
   .description('Validate the registry for a contest')
-  .action(() => {
-    console.error('sources check: not implemented yet');
-    process.exitCode = EXIT.usage;
-  });
+  .action((id: string) => void (process.exitCode = sourcesCheck(id, out())));
 
 const review = program.command('review').description('Review workflow');
 review

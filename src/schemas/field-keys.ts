@@ -61,6 +61,13 @@ export const REQUIRED_TIER: Record<string, 'says' | 'done' | 'official'> = {
   finance_period_end: 'done',
   key_vote: 'done',
   bar_admission: 'official',
+  office_held: 'official',
+  prior_office: 'official',
+  ballot_language: 'official',
+  official_explanation: 'official',
+  effect_yes: 'official',
+  effect_no: 'official',
+  current_law: 'official',
 };
 
 export function isAllowedKey(kind: ContestKindKey, key: string): boolean {

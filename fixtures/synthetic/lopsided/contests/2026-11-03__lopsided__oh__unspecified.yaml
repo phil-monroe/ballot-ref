@@ -1,0 +1,12 @@
+id: "2026-11-03:lopsided:oh:unspecified"
+kind: candidate
+title: Lopsided Test Contest
+jurisdiction: oh
+term: null
+vote_for: 1
+candidates:
+  - { id: rich, ballot_name: Rita Rich, party_label: Democratic, order: 0, write_in: false, incumbent: null, ticket_id: null }
+  - { id: bare, ballot_name: Bob Bare, party_label: Republican, order: 1, write_in: false, incumbent: null, ticket_id: null }
+  - { id: write-in, ballot_name: Write-in, party_label: null, order: 2, write_in: true, incumbent: null, ticket_id: null }
+ballot_snapshot_hash: "0000000000000000000000000000000000000000000000000000000000000000"
+ballot_page: 1

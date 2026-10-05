@@ -9,7 +9,12 @@ export const SiteConfig = z.strictObject({
   symmetry_threshold: z.number().int().nonnegative(),
   priorities_per_candidate: z.number().int().positive(),
   key_vote_count: z.number().int().positive(),
-  model: z.strictObject({ provider: z.string(), id: z.string() }),
+  model: z.strictObject({
+    provider: z.string(),
+    id: z.string(),
+    /** Omit for models that reject non-default temperatures (claude-sonnet-5-5 does). */
+    temperature: z.number().min(0).max(1).optional(),
+  }),
   prompt_versions: z.record(z.string(), z.string()),
   rate_limit_seconds: z.number().positive(),
   user_agent: z.string().min(1),

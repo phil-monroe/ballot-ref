@@ -26,7 +26,7 @@ All items below were open or "deferred to plan" in the spec. No NEEDS CLARIFICAT
 
 ## 5. LLM extraction
 
-- **Decision**: Anthropic API behind an `LlmExtractor` interface; model pinned in `site.config.yaml` (initial: `claude-sonnet-5-5`), temperature 0, no tools declared, native JSON-schema structured output, one snapshot and one candidate per call; Zod re-validates the response. Prompt files are versioned (`prompts/candidate.v1.md`); each field stores `{model, prompt_version}`.
+- **Decision**: Anthropic API behind an `LlmExtractor` interface; model pinned in `site.config.yaml` (initial: `claude-sonnet-5-5`), temperature not sent (the API rejects any value other than 1.0 for this model, so "temperature 0" is unavailable; determinism is not a safety property here because the quote, schema, whitelist, and entity gates and human review check every output; `model.temperature` in config is honored if a future model accepts it), no tools declared, native JSON-schema structured output, one snapshot and one candidate per call; Zod re-validates the response. Prompt files are versioned (`prompts/candidate.v1.md`); each field stores `{model, prompt_version}`.
 - **Rationale**: Satisfies Principle VI and FR-010/011/048. Native structured output is not tool use, so the call remains tool-free.
 - **Alternatives**: Forced tool-calling for structure (rejected: contradicts "no tools"); regex/rule extractors only (kept for official sources where text is rigid, e.g., levy millage and auditor estimates parse directly from ballot text with no model).
 
