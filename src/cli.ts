@@ -1,4 +1,5 @@
 #!/usr/bin/env -S npx tsx
+import { existsSync } from 'node:fs';
 import { Command } from 'commander';
 import { loadConfig } from './config.ts';
 import { NeedsManualImport } from './ingest/fetch-ballot.ts';
@@ -16,6 +17,9 @@ import {
   validateCommand,
   verifyCommand,
 } from './commands.ts';
+
+// Load .env (BALLOT_REF_REVIEWER, ANTHROPIC_API_KEY). Variables already in the environment win.
+if (existsSync('.env')) process.loadEnvFile('.env');
 
 export { EXIT };
 
