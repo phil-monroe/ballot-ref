@@ -6,10 +6,12 @@ symmetry_threshold: 2
 priorities_per_candidate: 3
 key_vote_count: 10
 model:
-  provider: anthropic
+  # "claude-cli" uses your Claude Code login (no API key); "anthropic" uses ANTHROPIC_API_KEY.
+  provider: claude-cli
   id: claude-sonnet-5-5
+  # cli_path: /Users/you/.local/bin/claude   # only if `claude` is not on PATH
 prompt_versions:
-  candidate: v1
+  candidate: v2
   issue: v1
   judicial: v1
 rate_limit_seconds: 2

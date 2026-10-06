@@ -2,6 +2,7 @@ import { execFileSync } from 'node:child_process';
 import { loadConfig } from './config.ts';
 import { DataStore } from './data.ts';
 import { AnthropicExtractor } from './extract/anthropic.ts';
+import { ClaudeCliExtractor } from './extract/claude-cli.ts';
 import { loadPrompt, promptFamily } from './extract/prompts.ts';
 import { runExtract } from './extract/run-extract.ts';
 import { Fetcher } from './fetch/fetcher.ts';
@@ -87,14 +88,20 @@ export async function extractCommand(
   o: Out,
 ): Promise<number> {
   const config = loadConfig();
-  if (!process.env.ANTHROPIC_API_KEY) {
-    console.error('ANTHROPIC_API_KEY is not set.');
+  const useCli = config.model.provider === 'claude-cli';
+  if (!useCli && !process.env.ANTHROPIC_API_KEY) {
+    console.error(
+      'ANTHROPIC_API_KEY is not set (or set model.provider: claude-cli in site.config.yaml to use your Claude Code login).',
+    );
     return EXIT.usage;
   }
   const data = new DataStore();
   const contest = data.loadContest(contestId);
   const family = promptFamily(contest.kind);
-  const extractor = new AnthropicExtractor(config, (i) => loadPrompt(family, i.prompt_version));
+  const prompt = (i: { prompt_version: string }) => loadPrompt(family, i.prompt_version);
+  const extractor = useCli
+    ? new ClaudeCliExtractor(config, prompt)
+    : new AnthropicExtractor(config, prompt);
   const s = await runExtract({
     contestId,
     entityId,

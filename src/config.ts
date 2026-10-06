@@ -14,6 +14,8 @@ export const SiteConfig = z.strictObject({
     id: z.string(),
     /** Omit for models that reject non-default temperatures (claude-sonnet-5-5 does). */
     temperature: z.number().min(0).max(1).optional(),
+    /** provider "claude-cli" only: path to the Claude Code binary (default: `claude` on PATH). */
+    cli_path: z.string().optional(),
   }),
   prompt_versions: z.record(z.string(), z.string()),
   rate_limit_seconds: z.number().positive(),

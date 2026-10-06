@@ -28,11 +28,11 @@ full spec, plan, contracts, and task list are in [`specs/001-ballot-reference/`]
 
 ```sh
 npm install
-cp .env.example .env     # ANTHROPIC_API_KEY (extraction only), BALLOT_REF_REVIEWER
+cp .env.example .env     # BALLOT_REF_REVIEWER; ANTHROPIC_API_KEY only if model.provider is "anthropic"
 npm test
 ```
 
-Node.js 24 or newer. Edit `site.config.yaml` (set `repo_url` to this repository so "Report an error"
+Node.js 24 or newer. Extraction (`extract`) defaults to your Claude Code login via `model.provider: claude-cli` (no API key; run from a shell where `claude` works, or set `model.cli_path`). Set `provider: anthropic` to use the API instead. Edit `site.config.yaml` (set `repo_url` to this repository so "Report an error"
 links open GitHub issues here).
 
 ## Commands
