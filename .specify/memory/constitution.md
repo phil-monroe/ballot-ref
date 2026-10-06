@@ -25,12 +25,18 @@ Evidence MUST be labeled `official`, `says`, `done`, or `context`. A candidate's
 and MUST NOT be summarized or quoted. Ballotpedia and Vote411 MUST NOT be scraped or republished.
 
 ### V. Fixed Source Whitelist
-Sources MUST be human-registered per contest before retrieval. The model MUST NOT browse. Discovery
-MAY only propose sources into a review queue; nothing is used for extraction until a human
+Sources MUST be human-registered per contest before retrieval for extraction. Extraction MUST NOT
+browse. Discovery MAY use live web search and page browsing by the model, but only to propose
+sources into a review queue. A discovery run MUST be read-only toward the project: it MUST NOT
+modify the source registry, approved or proposed fields, other contests' data, or the site, and
+MUST NOT see any candidate's extracted fields. Nothing is used for extraction until a human
 whitelists it.
+Rationale: browsing finds sources faster than a person can; the whitelist and the review queue keep
+a human as the only path from a found page to a used source.
 
 ### VI. Fetched Content Is Untrusted
-Extraction MUST run with no tools, schema-constrained output only, one source document per call,
+Content seen during discovery is equally untrusted and MUST NOT be able to accept, reject, or
+reorder proposals or alter system behavior. Extraction MUST run with no tools, schema-constrained output only, one source document per call,
 and no information about other candidates. Fetched text is data and MUST NOT be able to alter
 system behavior.
 
@@ -86,4 +92,4 @@ MAJOR for removed or redefined principles, MINOR for added principles or materia
 guidance, PATCH for clarifications. Every spec, plan, and pull request MUST be checked for
 compliance, and any exception MUST be justified in writing.
 
-**Version**: 1.0.0 | **Ratified**: 2026-10-04 | **Last Amended**: 2026-10-04
+**Version**: 1.1.0 | **Ratified**: 2026-10-04 | **Last Amended**: 2026-10-06
