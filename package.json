@@ -13,7 +13,8 @@
     "ballot-ref": "tsx src/cli.ts",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "build:site": "astro build --root site"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.131.0",

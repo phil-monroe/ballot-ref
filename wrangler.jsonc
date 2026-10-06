@@ -1,0 +1,10 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ballot-ref",
+  "compatibility_date": "2026-10-01",
+  // Static site only: serve the Astro build output. _headers (X-Robots-Tag: noindex) is honored.
+  "assets": {
+    "directory": "./site/dist",
+    "not_found_handling": "404-page"
+  }
+}
