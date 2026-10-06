@@ -212,7 +212,7 @@ description: "Task list for Ballot Reference (Sourced Voter Reference)"
 - [X] T085 [P] [US7] Test `tests/integration/methodology.test.ts`: page contains what the tool does and does not do, tier definitions, whitelist rules, review process, key-vote rule and N, symmetry threshold, known gaps, correction method (GitHub Issues); does not contain the phrase "nonpartisan guide" except in a negation; labeled a "sourced reference" (FR-046)
 - [X] T086 [US7] Create `site/src/pages/methodology.astro` (served at `/methodology/`) with all topics; values for N, quote cap, staleness, and symmetry threshold read from `site.config.yaml`; known gaps generated from unpublished contests
 - [X] T087 [P] [US7] Create `site/src/components/Footer.astro` with links to Vote411, the county BOE ballot viewer (from the ballot config), and the SOS issue report for each issue; add the prominent methodology link to the base layout
-- [ ] T088 [P] [US7] (URL encoding test done in `tests/unit/issue-url.test.ts`; real `repo_url` still a placeholder until the GitHub repository exists) Set the real `repo_url` in `site.config.yaml` once the GitHub repository exists and test the pre-filled new-issue URL encoding in `tests/unit/issue-url.test.ts`
+- [X] T088 [P] [US7] (`repo_url` set to phil-monroe/ballot-ref; URL encoding test in `tests/unit/issue-url.test.ts`) Set the real `repo_url` in `site.config.yaml` once the GitHub repository exists and test the pre-filled new-issue URL encoding in `tests/unit/issue-url.test.ts`
 
 **Checkpoint**: Methodology and corrections path complete
 

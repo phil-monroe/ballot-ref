@@ -1,5 +1,4 @@
-# TODO: set to the real GitHub repository URL once it exists (used for "Report an error" links)
-repo_url: https://github.com/OWNER/ballot-reference
+repo_url: https://github.com/phil-monroe/ballot-ref
 quote_max_words: 25
 stale_days: 7
 symmetry_threshold: 2
@@ -15,4 +14,4 @@ prompt_versions:
   issue: v1
   judicial: v1
 rate_limit_seconds: 2
-user_agent: "ballot-ref/0.1 (+https://github.com/OWNER/ballot-reference; sourced voter reference)"
+user_agent: "ballot-ref/0.1 (+https://github.com/phil-monroe/ballot-ref; sourced voter reference)"
