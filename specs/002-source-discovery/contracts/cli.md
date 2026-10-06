@@ -6,7 +6,7 @@ All commands honor `--json`, `--reviewer` / `BALLOT_REF_REVIEWER`, and the exist
 | Command | Purpose | Notes |
 |---|---|---|
 | `discover <contest-id>` | Run discovery for one contest and write new proposals to the queue | Prints coverage summary on completion. Partial results are kept on failure; exit 3 if the agent or network failed. |
-| `discover --ballot <ballot-config>` | Run discovery for every contest on a ballot, one contest at a time | Shared contests discovered once (FR-018). Continues past a failed contest and reports it. |
+| `discover --ballot <ballot-config> [--refresh]` | Run discovery for every contest on a ballot, one contest at a time | Skips contests already discovered (for example shared with another ballot, FR-018) unless `--refresh`; a re-run adds only new URLs. Continues past a failed contest and reports it. |
 | `sources coverage <contest-id>` | Show proposals per candidate x class group, with zero/lopsided flags | Read-only. Also printed before review starts. |
 | `sources review [--contest id]` | Interactive review: accept / reject / edit / skip / quit | Order per R8. Shows excerpt in-terminal only. Candidate-site accept asks "Confirm this site belongs to <name>, <office>? [y/N]". Reject warns that reasons are published. Accept registers then processes in the background. |
 | `process [--contest id\|--all]` | Fetch and extract every accepted source not yet fetched or extracted | Retry path for failures (FR-005b). Reuses `fetch` and `extract` code. |

@@ -42,7 +42,7 @@ const gaps = views.flatMap((v) => v.contests.filter((c) => !c.ready).map((c) => 
 
   <h2 id="process">How each fact gets here</h2>
   <ol>
-    <li><strong>Fixed source list.</strong> A person registers the sources for each contest before anything is retrieved. A language model never browses and never picks sources. A candidate’s own website is added only after a person confirms it is theirs.</li>
+    <li><strong>Fixed source list.</strong> A person registers the sources for each contest before anything is retrieved. A language model may search the web to suggest sources, but every suggestion waits in a queue and nothing is used until a person accepts it; the model that extracts facts never browses and never picks sources. A candidate’s own website is added only after a person confirms it is theirs.</li>
     <li><strong>Extraction, not writing.</strong> A language model may only pull structured facts out of one stored source at a time. It never writes descriptions, and it sees nothing about the other candidates. Levy and issue wording comes straight from the official ballot, not from a model.</li>
     <li><strong>Verbatim quotes.</strong> Every fact carries a quote of at most {config.quote_max_words} words that must appear, character for character, in the stored copy of the source. A fact without a valid quote is dropped, not paraphrased.</li>
     <li><strong>Symmetry check.</strong> Each contest gets a coverage report. It is flagged if any candidate has no fields, or if candidates’ counts differ by more than {config.symmetry_threshold}. Gaps are shown, never filled with generated text.</li>

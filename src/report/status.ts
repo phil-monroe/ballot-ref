@@ -4,6 +4,9 @@ import { DataStore } from '../data.ts';
 import type { SnapshotStore } from '../fetch/snapshot-store.ts';
 import { orderedContestIds } from '../review/queue.ts';
 import { evaluateReadiness } from '../review/readiness.ts';
+import { computeCoverage } from '../discovery/coverage.ts';
+import { loadProcessing } from '../discovery/process.ts';
+import type { ProcessingRecord } from '../schemas/proposal.ts';
 import type { StatusEntry } from '../schemas/report.ts';
 
 export interface ContestStatus {
@@ -19,11 +22,21 @@ export interface ContestStatus {
   ready: boolean;
   reasons: string[];
   unverifiable: string[];
+  /** Proposed-source queue (FR-017). */
+  discovery: {
+    pending: number;
+    accepted: number;
+    rejected: number;
+    /** Candidates (or the issue) with no pending or accepted proposals. */
+    zero_source: string[];
+  };
 }
 
 export interface StatusReport {
   contests: ContestStatus[];
   retrieval_failures: StatusEntry[];
+  /** Accepted sources whose fetch or extraction did not finish; retry with `process`. */
+  processing_failures: ProcessingRecord[];
 }
 
 export function collectStatus(
@@ -45,6 +58,8 @@ export function collectStatus(
         }
       }
       const r = evaluateReadiness(id, data, store, config);
+      const proposals = data.loadProposals(id);
+      const cov = computeCoverage(contest, proposals, config);
       return {
         contest_id: id,
         title: contest.title,
@@ -52,6 +67,14 @@ export function collectStatus(
         ready: r.ready,
         reasons: r.reasons,
         unverifiable: [...unverifiable],
+        discovery: {
+          pending: proposals.filter((p) => p.status === 'pending').length,
+          accepted: proposals.filter((p) => p.status === 'accepted').length,
+          rejected: proposals.filter((p) => p.status === 'rejected').length,
+          zero_source: cov.rows
+            .filter((row) => row.pending + row.accepted === 0)
+            .map((row) => row.name),
+        },
       };
     },
   );
@@ -60,6 +83,9 @@ export function collectStatus(
   return {
     contests,
     retrieval_failures: entries.filter((e) => e.outcome === 'failed' || e.outcome === 'blocked'),
+    processing_failures: loadProcessing(data).filter(
+      (r) => (!r.fetched || !r.extracted) && (!contestFilter || r.contest_id === contestFilter),
+    ),
   };
 }
 
@@ -71,8 +97,23 @@ export function formatStatus(s: StatusReport): string {
       head,
       ...c.reasons.map((r) => `             - ${r}`),
       ...c.unverifiable.map((u) => `             - unverifiable here: ${u}`),
+      ...(c.discovery.pending + c.discovery.accepted + c.discovery.rejected > 0
+        ? [
+            `             - sources: ${c.discovery.pending} pending, ${c.discovery.accepted} accepted, ${c.discovery.rejected} rejected` +
+              (c.discovery.zero_source.length
+                ? `; none for ${c.discovery.zero_source.join(', ')}`
+                : ''),
+          ]
+        : []),
     ].join('\n');
   });
+  if (s.processing_failures.length) {
+    lines.push(
+      '',
+      'Accepted sources not fully processed (retry: ballot-ref process --all):',
+      ...s.processing_failures.map((r) => `  ${r.url} ${r.last_error ?? ''}`),
+    );
+  }
   if (s.retrieval_failures.length) {
     lines.push(
       '',

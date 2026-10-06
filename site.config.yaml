@@ -13,5 +13,9 @@ prompt_versions:
   candidate: v2
   issue: v1
   judicial: v1
+  discovery: v1
+discovery:
+  # Spend cap per agent call (one call per candidate) passed to the Claude CLI as --max-budget-usd.
+  max_budget_usd: 1
 rate_limit_seconds: 2
 user_agent: "ballot-ref/0.1 (+https://github.com/phil-monroe/ballot-ref; sourced voter reference)"

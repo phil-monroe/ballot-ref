@@ -7,8 +7,13 @@ import { SharedContestConflict, runIngest } from './ingest/run-ingest.ts';
 import {
   EXIT,
   buildCommand,
+  discoverBallotCommand,
+  discoverCommand,
   extractCommand,
   fetchCommand,
+  processCommand,
+  sourcesCoverageCommand,
+  sourcesReviewCommand,
   importCommand,
   reviewNextCommand,
   reviewSymmetryCommand,
@@ -77,6 +82,22 @@ program
     }
   });
 program
+  .command('discover [contest-id]')
+  .option('--ballot <ballot-config>', 'every contest on this ballot, one at a time')
+  .option('--refresh', 'with --ballot: re-run contests that were already discovered')
+  .description(
+    'Research candidate sources into the review queue (nothing is registered or fetched)',
+  )
+  .action(async (id: string | undefined, o: { ballot?: string; refresh?: boolean }) => {
+    if (o.ballot)
+      process.exitCode = await discoverBallotCommand(o.ballot, Boolean(o.refresh), out());
+    else if (id) process.exitCode = await discoverCommand(id, out());
+    else {
+      console.error('give a <contest-id> or --ballot <ballot-config>');
+      process.exitCode = EXIT.usage;
+    }
+  });
+program
   .command('fetch <contest-id>')
   .description('Fetch whitelisted sources into snapshots')
   .option('--refetch', 'refetch stored sources; flag fields whose source changed')
@@ -124,6 +145,28 @@ sources
   .command('check <contest-id>')
   .description('Validate the registry for a contest')
   .action((id: string) => void (process.exitCode = sourcesCheck(id, out())));
+
+sources
+  .command('coverage <contest-id>')
+  .description('Proposals per candidate and source class; flags gaps (never gates review)')
+  .action((id: string) => void (process.exitCode = sourcesCoverageCommand(id, out())));
+sources
+  .command('review')
+  .option('--contest <id>')
+  .description('Review proposed sources one at a time (accept / edit / reject / skip)')
+  .action(
+    async (o: { contest?: string }) =>
+      void (process.exitCode = await sourcesReviewCommand(o.contest, program.opts().reviewer)),
+  );
+program
+  .command('process')
+  .option('--contest <id>', 'only this contest (default: all)')
+  .option('--all', 'every contest (the default)')
+  .description('Fetch and extract every accepted source not yet fetched or extracted')
+  .action(
+    async (o: { contest?: string }) =>
+      void (process.exitCode = await processCommand(o.contest, out())),
+  );
 
 const review = program.command('review').description('Review workflow');
 review

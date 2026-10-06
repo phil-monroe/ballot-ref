@@ -15,6 +15,8 @@ export const DomainClass = z.enum([
   'county-auditor',
   'candidate-site',
   'sponsor-site',
+  /** Fits no other class; valid only with tier `context` (link-only, never fetched). */
+  'other',
 ]);
 export type DomainClass = z.infer<typeof DomainClass>;
 

@@ -14,7 +14,7 @@ import {
 
 export type CliRunner = (args: string[], stdin: string, cwd: string) => Promise<string>;
 
-const run: (bin: string) => CliRunner = (bin) => (args, stdin, cwd) =>
+export const run: (bin: string) => CliRunner = (bin) => (args, stdin, cwd) =>
   new Promise((resolve, reject) => {
     const child = spawn(bin, args, { cwd, stdio: ['pipe', 'pipe', 'pipe'] });
     let out = '';

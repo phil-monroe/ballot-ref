@@ -9,7 +9,9 @@ import { runExtract } from '../../src/extract/run-extract.ts';
 import { Fetcher } from '../../src/fetch/fetcher.ts';
 import { runFetch } from '../../src/fetch/run-fetch.ts';
 import { SnapshotStore } from '../../src/fetch/snapshot-store.ts';
-import { collectStatus } from '../../src/report/status.ts';
+import { collectStatus, formatStatus } from '../../src/report/status.ts';
+import { addProposals } from '../../src/discovery/queue.ts';
+import { newProposal } from '../helpers/discovery-fixture.ts';
 import { contest, sources } from '../unit/gate-helpers.ts';
 
 function setup() {
@@ -108,5 +110,63 @@ describe('no silent failures (SC-012)', () => {
     });
     expect(s.errors[0]).toMatch(/API down/);
     expect(readFileSync(logs.extractionRuns, 'utf8')).toMatch(/API down/);
+  });
+});
+
+describe('proposed-source status (FR-017)', () => {
+  it('reports pending, accepted and rejected counts and candidates with no sources', () => {
+    const { data, store } = setup();
+    const id = contest.id;
+    const mk = (url: string) => newProposal({ contest_id: id, entity_id: 'jon-husted', url });
+    const { added } = addProposals(
+      id,
+      [mk('https://p1.example/'), mk('https://p2.example/'), mk('https://p3.example/')],
+      data,
+    );
+    const q = data.loadProposals(id);
+    q[1] = { ...q[1]!, status: 'accepted' };
+    q[2] = { ...q[2]!, status: 'rejected' };
+    data.saveProposals(id, q);
+    expect(added).toHaveLength(3);
+    const report = collectStatus(data, store, loadConfig());
+    const c = report.contests.find((x) => x.contest_id === id)!;
+    expect(c.discovery).toEqual({ pending: 1, accepted: 1, rejected: 1, zero_source: [] });
+    expect(formatStatus(report)).toContain('sources: 1 pending, 1 accepted, 1 rejected');
+
+    // Reject the rest: the only candidate now has no live proposals.
+    data.saveProposals(
+      id,
+      q.map((p) => ({ ...p, status: 'rejected' as const })),
+    );
+    const c2 = collectStatus(data, store, loadConfig()).contests.find((x) => x.contest_id === id)!;
+    expect(c2.discovery.zero_source).toEqual(['Jon Husted']);
+  });
+  it('lists accepted sources whose processing failed', () => {
+    const { data, store } = setup();
+    mkdirSync(join(data.root, 'reports'), { recursive: true });
+    writeFileSync(
+      join(data.root, 'reports/processing.json'),
+      JSON.stringify([
+        {
+          contest_id: contest.id,
+          url: 'https://x.example/',
+          fetched: false,
+          extracted: false,
+          last_error: 'http: HTTP 500',
+          updated_at: '2026-10-06T00:00:00.000Z',
+        },
+        {
+          contest_id: contest.id,
+          url: 'https://y.example/',
+          fetched: true,
+          extracted: true,
+          last_error: null,
+          updated_at: '2026-10-06T00:00:00.000Z',
+        },
+      ]),
+    );
+    const report = collectStatus(data, store, loadConfig());
+    expect(report.processing_failures.map((r) => r.url)).toEqual(['https://x.example/']);
+    expect(formatStatus(report)).toContain('ballot-ref process');
   });
 });

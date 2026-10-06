@@ -31,6 +31,11 @@ describe('methodology page (FR-043, FR-046)', () => {
     expect(text).toContain(`differ by more than ${config.symmetry_threshold}`);
     expect(text).toContain(`older than ${config.stale_days} days`);
   });
+  it('discloses that a model may suggest sources, that a person accepts every one, and that extraction never browses', () => {
+    expect(text).toMatch(/may search the web to suggest sources/);
+    expect(text).toMatch(/nothing is used until a person accepts it/);
+    expect(text).toMatch(/model that extracts facts never browses/);
+  });
   it('lists unreviewed contests as known gaps', () => {
     expect(text).toContain('Pending Race');
     expect(text).not.toMatch(/Known gaps.*Ready Race.*Corrections/);

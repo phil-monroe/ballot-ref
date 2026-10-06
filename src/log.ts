@@ -11,4 +11,6 @@ export const LOGS = {
   review: 'data/logs/review.jsonl',
   drops: 'data/logs/drops.jsonl',
   extractionRuns: 'data/logs/extraction-runs.jsonl',
+  discoveryRuns: 'data/logs/discovery-runs.jsonl',
+  sourceDecisions: 'data/logs/source-decisions.jsonl',
 } as const;

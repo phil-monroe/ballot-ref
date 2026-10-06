@@ -10,14 +10,14 @@ First target: Nov 3, 2026 General Election, Delaware County precinct 154/1 (Powe
 ## How it works
 
 ```
-ingest ballot -> resolve contests -> source registry -> fetch + snapshot
+ingest ballot -> resolve contests -> discover + review sources -> source registry -> fetch + snapshot
    -> extract -> validate -> review -> build static site
 ```
 
 - A language model only **extracts** structured fields from one stored source at a time. It never writes prose.
 - Every field carries a quote that is a **literal substring of the stored snapshot** (whitespace-only normalization), at most 25 words.
 - Levy and issue wording comes from the official ballot PDF by deterministic parsing, never a model.
-- Sources are human-registered per contest before anything is fetched. Fetched text is untrusted data.
+- Sources are human-registered per contest before anything is fetched. Claude may research and *propose* sources into a review queue, but nothing is used until a person accepts it. Fetched text is untrusted data.
 - Nothing is published until a human approves each field; per-contest symmetry reports are acknowledged before a contest is ready.
 - The site builds offline from `data/`, is unlisted and `noindex`, and has no analytics or third-party requests.
 
@@ -42,6 +42,10 @@ Run with `npx tsx src/cli.ts <command>` (or the `ballot-ref` bin). Add `--json` 
 | Command | What it does |
 |---|---|
 | `ingest <ballot-config> [--from file.pdf]` | Fetch (direct, Playwright, then manual) and parse the official ballot; propose official issue/levy fields |
+| `discover <contest-id>` / `discover --ballot <file> [--refresh]` | Claude researches candidate sources with web search and queues them as proposals; nothing is registered or fetched |
+| `sources coverage <contest-id>` | Proposals per candidate and source class; flags gaps (never gates review) |
+| `sources review [--contest id]` | Review proposals one at a time: accept / edit / reject / skip. Accept registers the source and fetches + extracts it in the background |
+| `process [--contest id]` | Retry fetch + extract for every accepted source not yet processed |
 | `sources check <contest-id>` | Validate a contest's source registry |
 | `fetch <contest-id> [--refetch]` | Fetch whitelisted sources into snapshots (robots.txt honored, rate limited) |
 | `import <source-url> <file>` | Manually import a whitelisted source (text, HTML, PDF) |
@@ -54,6 +58,24 @@ Run with `npx tsx src/cli.ts <command>` (or the `ballot-ref` bin). Add `--json` 
 | `build` | Build the static site into `site/dist/` (no network) |
 
 Exit codes: 0 ok, 1 validation or verification failure, 2 usage or config error, 3 retrieval failure needing manual action.
+
+## Discovering sources
+
+Finding sources is the slow part, so `discover` has Claude do the research. It runs the Claude Code CLI with
+only web search and page fetch enabled (no file, shell or MCP access, an empty working directory, a spend cap
+from `discovery.max_budget_usd`) and sees only ballot names. Results are checked by code (reachable, redirects,
+lookalike or parked domains, whether a candidate's site shows their name and office) and written to
+`data/discovery/proposals/`. Review them with `sources review`; accepting a source registers it, then fetches and
+extracts it automatically. Extracted fields still go through `review next` before anything is published.
+
+```sh
+npx tsx src/cli.ts discover 2026-11-03:us-house:oh-12:unspecified
+npx tsx src/cli.ts sources review --contest 2026-11-03:us-house:oh-12:unspecified
+npx tsx src/cli.ts process --all        # retry anything that failed
+```
+
+The queue, including rejected URLs and the reasons you give, is committed. Keep reject reasons neutral and
+factual ("not this candidate", "dead link"). Details: [`specs/002-source-discovery/`](specs/002-source-discovery/).
 
 ## Adding a ballot
 

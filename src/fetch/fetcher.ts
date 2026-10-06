@@ -9,6 +9,8 @@ export type FetchResult =
       contentType: string;
       method: 'direct' | 'playwright';
       retried: boolean;
+      /** URL after redirects, when the transport reports it. */
+      finalUrl?: string;
     }
   | { ok: false; reason: FetchFailure; error: string };
 
@@ -115,7 +117,14 @@ export class Fetcher {
           error: 'page looks like a maintenance or block page',
         };
       }
-      return { ok: true, body, contentType, method: 'direct', retried };
+      return {
+        ok: true,
+        body,
+        contentType,
+        method: 'direct',
+        retried,
+        ...(res.url ? { finalUrl: res.url } : {}),
+      };
     } catch (e) {
       return { ok: false, reason: 'network', error: e instanceof Error ? e.message : String(e) };
     }

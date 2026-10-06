@@ -60,6 +60,8 @@ export interface ExtractSummary {
 export async function runExtract(opts: {
   contestId: string;
   entityId?: string;
+  /** Limit to one registered source URL (used when a proposal is accepted). */
+  onlyUrl?: string;
   data: DataStore;
   store: SnapshotStore;
   extractor: LlmExtractor;
@@ -85,6 +87,7 @@ export async function runExtract(opts: {
   for (const entity of entities) {
     const file = data.loadFields(contest.id, entity.id);
     for (const source of fetchable(sources)) {
+      if (opts.onlyUrl !== undefined && source.url !== opts.onlyUrl) continue;
       if (source.entity_id !== undefined && source.entity_id !== entity.id) continue;
       const meta = latestSnapshotFor(source.url, store);
       const text = meta ? store.getText(meta.sha256) : null;
@@ -198,7 +201,11 @@ export async function runExtract(opts: {
   writeFileSync(
     path,
     JSON.stringify(
-      [...prev.filter((d) => d.contest_id !== contest.id), ...summary.drops],
+      [
+        // A single-source run adds to the contest's drops; a full run replaces them.
+        ...prev.filter((d) => opts.onlyUrl !== undefined || d.contest_id !== contest.id),
+        ...summary.drops,
+      ],
       null,
       2,
     ) + '\n',

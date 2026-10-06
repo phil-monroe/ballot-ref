@@ -1,7 +1,14 @@
 import { execFileSync } from 'node:child_process';
+import { existsSync } from 'node:fs';
 import { loadConfig } from './config.ts';
 import { DataStore } from './data.ts';
 import { AnthropicExtractor } from './extract/anthropic.ts';
+import { ClaudeCliDiscoveryAgent } from './discovery/agent.ts';
+import { computeCoverage, formatCoverage } from './discovery/coverage.ts';
+import { runBallotDiscovery } from './discovery/run-ballot.ts';
+import { ProcessQueue, processOutstanding, type ProcessDeps } from './discovery/process.ts';
+import { sourceReviewLoop } from './discovery/review-cli.ts';
+import { runDiscovery } from './discovery/run-discovery.ts';
 import { ClaudeCliExtractor } from './extract/claude-cli.ts';
 import { loadPrompt, promptFamily } from './extract/prompts.ts';
 import { runExtract } from './extract/run-extract.ts';
@@ -33,13 +40,105 @@ export function sourcesCheck(contestId: string, o: Out): number {
   return problems.length ? EXIT.validation : EXIT.ok;
 }
 
-export async function fetchCommand(contestId: string, refetch: boolean, o: Out): Promise<number> {
-  const config = loadConfig();
-  const fetcher = new Fetcher({
+function makeFetcher(config: ReturnType<typeof loadConfig>): Fetcher {
+  return new Fetcher({
     userAgent: config.user_agent,
     rateLimitSeconds: config.rate_limit_seconds,
     fallback: playwrightFallback(config.user_agent),
   });
+}
+
+/** `discover <contest-id>`: research proposals into the review queue; nothing is registered or fetched. */
+export async function discoverCommand(contestId: string, o: Out): Promise<number> {
+  const config = loadConfig();
+  if (config.model.provider !== 'claude-cli') {
+    console.error(
+      'Discovery requires model.provider: claude-cli (it runs the Claude Code CLI with web tools).',
+    );
+    return EXIT.usage;
+  }
+  const data = new DataStore();
+  try {
+    data.loadContest(contestId);
+  } catch {
+    console.error(`contest not found: ${contestId}`);
+    return EXIT.usage;
+  }
+  const agent = new ClaudeCliDiscoveryAgent(
+    config,
+    loadPrompt('discovery', config.prompt_versions.discovery ?? 'v1'),
+  );
+  const { run, added } = await runDiscovery({
+    contestId,
+    data,
+    agent,
+    fetcher: makeFetcher(config),
+    config,
+  });
+  const human = [
+    `${contestId}: ${run.added} new proposal(s) (${run.skipped_duplicate} duplicate, ${run.invalid} invalid)`,
+    ...added.map(
+      (p) =>
+        `  ${p.proposed_tier.padEnd(8)} ${p.proposed_class.padEnd(16)} ${p.entity_id ?? '(contest)'}  ${p.url}${p.validity.status === 'ok' ? '' : `  [${p.validity.status}]`}`,
+    ),
+    '',
+    formatCoverage(
+      computeCoverage(data.loadContest(contestId), data.loadProposals(contestId), config),
+    ),
+    run.error ? `ERROR: ${run.error}` : '',
+  ]
+    .filter(Boolean)
+    .join('\n');
+  print(o, human, { run, added: added.length });
+  return run.error ? EXIT.retrieval : EXIT.ok;
+}
+
+/** `discover --ballot <file>`: every contest on a ballot, one at a time; already-discovered contests are skipped unless `--refresh`. */
+export async function discoverBallotCommand(
+  ballotFile: string,
+  refresh: boolean,
+  o: Out,
+): Promise<number> {
+  const config = loadConfig();
+  if (config.model.provider !== 'claude-cli') {
+    console.error(
+      'Discovery requires model.provider: claude-cli (it runs the Claude Code CLI with web tools).',
+    );
+    return EXIT.usage;
+  }
+  if (!existsSync(ballotFile)) {
+    console.error(`ballot config not found: ${ballotFile}`);
+    return EXIT.usage;
+  }
+  const agent = new ClaudeCliDiscoveryAgent(
+    config,
+    loadPrompt('discovery', config.prompt_versions.discovery ?? 'v1'),
+  );
+  const results = await runBallotDiscovery({
+    ballotFile,
+    data: new DataStore(),
+    agent,
+    fetcher: makeFetcher(config),
+    config,
+    refresh,
+    onResult: (r) => {
+      if (!o.json)
+        console.log(
+          `${r.outcome.padEnd(10)} ${r.contest_id}  (+${r.added}, ${r.pending} pending)${r.error ? `  ERROR: ${r.error}` : ''}`,
+        );
+    },
+  });
+  if (o.json) console.log(JSON.stringify(results));
+  else
+    console.log(
+      `\n${results.filter((r) => r.outcome === 'discovered').length} discovered, ${results.filter((r) => r.outcome === 'skipped').length} skipped (already discovered; --refresh to re-run), ${results.filter((r) => r.outcome === 'failed').length} failed`,
+    );
+  return results.some((r) => r.outcome === 'failed') ? EXIT.retrieval : EXIT.ok;
+}
+
+export async function fetchCommand(contestId: string, refetch: boolean, o: Out): Promise<number> {
+  const config = loadConfig();
+  const fetcher = makeFetcher(config);
   const s = await runFetch({
     contestId,
     refetch,
@@ -82,6 +181,89 @@ export async function importCommand(url: string, file: string, o: Out): Promise<
   return EXIT.ok;
 }
 
+/** Provider chosen by `model.provider`; the prompt family follows each call's contest kind. */
+function makeExtractor(config: ReturnType<typeof loadConfig>) {
+  const prompt = (i: { contestKind: Parameters<typeof promptFamily>[0]; prompt_version: string }) =>
+    loadPrompt(promptFamily(i.contestKind), i.prompt_version);
+  return config.model.provider === 'claude-cli'
+    ? new ClaudeCliExtractor(config, prompt)
+    : new AnthropicExtractor(config, prompt);
+}
+
+function processDeps(config: ReturnType<typeof loadConfig>): ProcessDeps {
+  return {
+    data: new DataStore(),
+    store: new SnapshotStore(),
+    fetcher: makeFetcher(config),
+    extractor: makeExtractor(config),
+    config,
+  };
+}
+
+/** `sources review`: accept / reject / edit / skip proposed sources; accepted ones are processed in the background. */
+export async function sourcesReviewCommand(
+  contest: string | undefined,
+  reviewer: string | undefined,
+): Promise<number> {
+  const config = loadConfig();
+  if (config.model.provider !== 'claude-cli' && !process.env.ANTHROPIC_API_KEY) {
+    console.error('ANTHROPIC_API_KEY is not set (or use model.provider: claude-cli).');
+    return EXIT.usage;
+  }
+  try {
+    const deps = processDeps(config);
+    await sourceReviewLoop({
+      reviewer: reviewerOf(reviewer),
+      contest,
+      data: deps.data,
+      config,
+      fetcher: deps.fetcher,
+      queue: new ProcessQueue(deps),
+    });
+    return EXIT.ok;
+  } catch (e) {
+    console.error(e instanceof Error ? e.message : String(e));
+    return EXIT.usage;
+  }
+}
+
+/** `process`: fetch and extract every accepted source that is not yet fetched or extracted. */
+export async function processCommand(contest: string | undefined, o: Out): Promise<number> {
+  const config = loadConfig();
+  if (config.model.provider !== 'claude-cli' && !process.env.ANTHROPIC_API_KEY) {
+    console.error('ANTHROPIC_API_KEY is not set (or use model.provider: claude-cli).');
+    return EXIT.usage;
+  }
+  const done = await processOutstanding(processDeps(config), contest ? [contest] : undefined);
+  const human = done.length
+    ? done
+        .map(
+          (r) =>
+            `${r.extracted ? 'ok    ' : r.fetched ? 'fetched' : 'FAILED '} ${r.contest_id}  ${r.url}${r.last_error ? `  (${r.last_error})` : ''}`,
+        )
+        .join('\n')
+    : 'nothing outstanding';
+  print(o, human, done);
+  return done.some((r) => !r.fetched || !r.extracted) ? EXIT.retrieval : EXIT.ok;
+}
+
+/** `sources coverage`: proposals per candidate and class group, with gaps flagged (never gated). */
+export function sourcesCoverageCommand(contestId: string, o: Out): number {
+  const data = new DataStore();
+  try {
+    const c = computeCoverage(
+      data.loadContest(contestId),
+      data.loadProposals(contestId),
+      loadConfig(),
+    );
+    print(o, formatCoverage(c), c);
+    return EXIT.ok;
+  } catch {
+    console.error(`contest not found: ${contestId}`);
+    return EXIT.usage;
+  }
+}
+
 export async function extractCommand(
   contestId: string,
   entityId: string | undefined,
@@ -96,12 +278,7 @@ export async function extractCommand(
     return EXIT.usage;
   }
   const data = new DataStore();
-  const contest = data.loadContest(contestId);
-  const family = promptFamily(contest.kind);
-  const prompt = (i: { prompt_version: string }) => loadPrompt(family, i.prompt_version);
-  const extractor = useCli
-    ? new ClaudeCliExtractor(config, prompt)
-    : new AnthropicExtractor(config, prompt);
+  const extractor = makeExtractor(config);
   const s = await runExtract({
     contestId,
     entityId,

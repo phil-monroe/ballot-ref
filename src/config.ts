@@ -18,6 +18,10 @@ export const SiteConfig = z.strictObject({
     cli_path: z.string().optional(),
   }),
   prompt_versions: z.record(z.string(), z.string()),
+  /** Source discovery (browsing agent). Optional; defaults apply. */
+  discovery: z
+    .strictObject({ max_budget_usd: z.number().positive().default(1) })
+    .default({ max_budget_usd: 1 }),
   rate_limit_seconds: z.number().positive(),
   user_agent: z.string().min(1),
   /** Absolute site URL, if deployed; used in pre-filled error reports. Optional. */

@@ -42,6 +42,8 @@ export function checkRegistry(contestId: string, data = new DataStore()): Regist
     } catch {
       add(`${s.url}: not a valid URL`);
     }
+    if (s.domain_class === 'other' && s.tier !== 'context')
+      add(`${s.url}: domain_class "other" is valid only with tier "context"`);
     if (s.tier === 'context' && s.redistributable)
       add(`${s.url}: context sources are link-only and cannot be redistributable`);
   }

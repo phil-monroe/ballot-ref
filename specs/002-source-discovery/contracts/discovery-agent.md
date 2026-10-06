@@ -11,8 +11,10 @@ interface DiscoveryAgent {
 
 ## Input (the only data the agent sees)
 
-`contest_title`, `office/kind`, `jurisdiction`, `election_date`, and for each candidate: `entity_id`,
-`ballot_name`, `party_label`. For issues and levies: title and taxing entity name. No registry contents, no
+One call is made per candidate (one call for an issue or levy), each with an identical task. A call receives
+`contest_title`, `office/kind`, `jurisdiction`, `election_date`, and exactly one candidate's `entity_id`,
+`ballot_name`, `party_label`. It may return results for that candidate or for the contest as a whole (`null`);
+a result naming any other candidate is invalid. One failed call keeps the other calls' results. For issues and levies: title and taxing entity name. No registry contents, no
 extracted fields, no snapshots, no other contests.
 
 ## Task template (same for every candidate in a contest)

@@ -41,6 +41,8 @@ export interface FetchSummary {
 export async function runFetch(opts: {
   contestId: string;
   refetch?: boolean;
+  /** Limit to one registered source URL (used when a proposal is accepted). */
+  onlyUrl?: string;
   data: DataStore;
   store: SnapshotStore;
   fetcher: Fetcher;
@@ -51,6 +53,7 @@ export async function runFetch(opts: {
   let flagged = 0;
 
   for (const source of fetchable(opts.data.loadSources(opts.contestId))) {
+    if (opts.onlyUrl !== undefined && source.url !== opts.onlyUrl) continue;
     const prior = latestSnapshotFor(source.url, opts.store);
     if (prior && !opts.refetch) {
       entries.push({

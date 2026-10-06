@@ -23,6 +23,12 @@ model, so `modelUsage` lists more than one model; log all of it. (2) Use `--max-
 per-contest safety cap (configurable, default about $1) so an unbounded search cannot run away.
 (3) Task 1 shrinks to turning this into the contract test; the API fallback stays documented but unneeded.
 
+**Decision update (live run, 2026-10-06): one agent call per candidate.** A single call for a whole
+contest did 3 shallow searches, missed FEC and Ohio records, and varied run to run (one run dropped sources
+the previous run found). Per-candidate calls with an identical task fix the depth, match the symmetry rule
+(FR-008), and let one failed call leave the rest intact. Cost is roughly one small call per candidate. Each
+call runs under `--max-budget-usd`.
+
 ## R2. Structured output and untrusted content
 
 **Decision**: Agent returns `{ contest_id, results: [{ entity_id|null, url, class_guess, tier_guess, reason,

@@ -12,3 +12,5 @@ All files are validated by Zod on load; unknown keys are errors. Paths are relat
 - `site.config.yaml`: `repo_url`, `quote_max_words` (25), `stale_days` (7), `symmetry_threshold` (2), `priorities_per_candidate` (3), `key_vote_count` (10), `model {provider, id}`, `prompt_versions`, `rate_limit_seconds`, `user_agent`.
 
 Invariants checked in CI: every ballot contest ref resolves; every committed `approved|edited` field has a `source_hash` with metadata present; no non-redistributable snapshot body is tracked; no `proposed` field is referenced by the build.
+
+Amended by `specs/002-source-discovery`: a source's `domain_class` may also be `other`, valid only with `tier: context` (link-only, never fetched). The proposal queue lives in `data/discovery/proposals/` (see `specs/002-source-discovery/contracts/data-files.md`).

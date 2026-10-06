@@ -3,7 +3,8 @@ import { dirname, join } from 'node:path';
 import { parse, stringify } from 'yaml';
 import { Ballot, Contest } from './schemas/contest.ts';
 import { FieldFile } from './schemas/field.ts';
-import { SourceFile } from './schemas/source.ts';
+import { ProposalFile } from './schemas/proposal.ts';
+import { SourceFile, type Source } from './schemas/source.ts';
 
 /** Contest ids contain ':'; filenames store them as '__'. */
 export const contestFileStem = (id: string): string => id.replaceAll(':', '__');
@@ -53,6 +54,28 @@ export class DataStore {
     const path = this.p('sources', `${contestFileStem(contestId)}.yaml`);
     if (!existsSync(path)) return [];
     return SourceFile.parse(parse(readFileSync(path, 'utf8')));
+  }
+
+  /** Overwrites a contest's registry file (validated). */
+  saveSources(contestId: string, sources: Source[]): void {
+    this.writeText(
+      this.p('sources', `${contestFileStem(contestId)}.yaml`),
+      stringify(SourceFile.parse(sources)),
+    );
+  }
+
+  proposalsPath(contestId: string): string {
+    return this.p('discovery', 'proposals', `${contestFileStem(contestId)}.yaml`);
+  }
+
+  loadProposals(contestId: string): ProposalFile {
+    const path = this.proposalsPath(contestId);
+    if (!existsSync(path)) return [];
+    return ProposalFile.parse(parse(readFileSync(path, 'utf8')) ?? []);
+  }
+
+  saveProposals(contestId: string, proposals: ProposalFile): void {
+    this.writeText(this.proposalsPath(contestId), stringify(ProposalFile.parse(proposals)));
   }
 
   fieldsPath(contestId: string, entityId: string): string {

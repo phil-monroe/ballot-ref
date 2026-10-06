@@ -12,6 +12,10 @@ export const Source = z
     whitelisted_at: IsoDateTime,
     notes: z.string().default(''),
   })
+  .refine((s) => s.domain_class !== 'other' || s.tier === 'context', {
+    message: 'domain_class "other" is valid only with tier "context"',
+    path: ['domain_class'],
+  })
   .describe('context-tier sources are link-only and are never fetched for extraction');
 export type Source = z.infer<typeof Source>;
 

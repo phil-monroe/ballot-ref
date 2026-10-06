@@ -18,3 +18,5 @@ Binary: `ballot-ref` (all commands idempotent and resumable; `--json` on any com
 
 Exit codes: 0 ok; 1 validation or verification failure; 2 usage/config error; 3 retrieval failure requiring manual action.
 Reviewer id comes from `--reviewer` or `BALLOT_REF_REVIEWER`.
+
+Source discovery commands (`discover`, `sources review`, `sources coverage`, `process`) are specified in `specs/002-source-discovery/contracts/cli.md`.
