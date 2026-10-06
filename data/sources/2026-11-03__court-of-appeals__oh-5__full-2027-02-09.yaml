@@ -1,0 +1,18 @@
+- url: https://www.knoxpages.com/2026/05/05/george-secures-gop-nomination-in-5th-district-court-of-appeals/
+  domain_class: other
+  tier: context
+  entity_id: matthew-george
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:59:27.533Z
+  notes: "discovery 941b0ffa543dfb84: News report on May 2026 Republican primary
+    result for 5th District Court of Appeals, including Matthew George."
+- url: https://www.richlandsource.com/2026/04/17/three-republicans-vie-for-ohio-5th-district-court-of-appeals-seat/
+  domain_class: other
+  tier: context
+  entity_id: matthew-george
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:59:33.164Z
+  notes: "discovery 90324ed0f3c9b2f3: News article on the three-candidate
+    Republican primary for the 5th District Court of Appeals, including George."

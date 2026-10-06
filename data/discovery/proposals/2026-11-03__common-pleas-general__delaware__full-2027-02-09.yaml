@@ -1,0 +1,71 @@
+- id: f54ff97773dc07a9
+  contest_id: 2026-11-03:common-pleas-general:delaware:full-2027-02-09
+  entity_id: marianne-t-hemmeter
+  url: https://courtnewsohio.gov/bench/2024/HemmeterAppt_120624.asp
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: Court News Ohio item on 2024 gubernatorial appointment of Marianne
+    Hemmeter to Delaware County Common Pleas Court, General Division.
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T142152-g9k3
+  found_at: 2026-10-06T14:22:09.032Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:59:47.455Z
+  decision_reason: null
+  accepted_as:
+    domain_class: other
+    tier: context
+    redistributable: false
+  ownership_confirmed: null
+- id: 87daceb82c225208
+  contest_id: 2026-11-03:common-pleas-general:delaware:full-2027-02-09
+  entity_id: marianne-t-hemmeter
+  url: https://1808delaware.com/life-in-delaware-county/governor-appoints-hemmeter-to-delaware-county-court-of-common-pleas-seat/
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: Local news article on appointment of Hemmeter to Delaware County Common
+    Pleas seat.
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T142152-g9k3
+  found_at: 2026-10-06T14:22:11.558Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:59:42.724Z
+  decision_reason: null
+  accepted_as:
+    domain_class: other
+    tier: context
+    redistributable: false
+  ownership_confirmed: null
+- id: 561420f35bcc901d
+  contest_id: 2026-11-03:common-pleas-general:delaware:full-2027-02-09
+  entity_id: marianne-t-hemmeter
+  url: https://delawareohio.net/government/departments/municipal-court/about/bios/judge-marianne-hemmeter
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: City of Delaware municipal court biography page for Judge Marianne Hemmeter.
+  identity_label: null
+  validity:
+    status: unchecked
+    note: "blocked: HTTP 403"
+  run_id: 20261006T142152-g9k3
+  found_at: 2026-10-06T14:22:18.048Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:59:54.429Z
+  decision_reason: null
+  accepted_as:
+    domain_class: other
+    tier: context
+    redistributable: false
+  ownership_confirmed: null

@@ -1,0 +1,187 @@
+- id: 55229478ac587555
+  contest_id: 2026-11-03:us-house:oh-12:unspecified
+  entity_id: troy-balderson
+  url: https://www.fec.gov/data/candidate/H8OH12180/?cycle=2026
+  final_url: null
+  proposed_class: fec
+  proposed_tier: official
+  reason: FEC candidate page for Troy Balderson, 2026 cycle, with committee and
+    financial filings summary.
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T133937-nvik
+  found_at: 2026-10-06T13:40:13.914Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:01:30.951Z
+  decision_reason: null
+  accepted_as:
+    domain_class: fec
+    tier: official
+    redistributable: true
+  ownership_confirmed: null
+- id: ffcba81961316302
+  contest_id: 2026-11-03:us-house:oh-12:unspecified
+  entity_id: troy-balderson
+  url: https://balderson.house.gov/
+  final_url: null
+  proposed_class: congress
+  proposed_tier: official
+  reason: "Official U.S. House website of Rep. Troy Balderson, Ohio 12th District:
+    news, legislation, services."
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T133937-nvik
+  found_at: 2026-10-06T13:40:15.979Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:01:23.482Z
+  decision_reason: null
+  accepted_as:
+    domain_class: congress
+    tier: official
+    redistributable: true
+  ownership_confirmed: null
+- id: d98ae7bb0bdbd329
+  contest_id: 2026-11-03:us-house:oh-12:unspecified
+  entity_id: troy-balderson
+  url: https://en.wikipedia.org/wiki/Troy_Balderson
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: Wikipedia article on Troy Balderson, U.S. Representative for Ohio's 12th
+    district.
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T133937-nvik
+  found_at: 2026-10-06T13:40:18.090Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:04:45.044Z
+  decision_reason: null
+  accepted_as:
+    domain_class: other
+    tier: context
+    redistributable: false
+  ownership_confirmed: null
+- id: 5d30afffaf4a0157
+  contest_id: 2026-11-03:us-house:oh-12:unspecified
+  entity_id: jerrad-christian
+  url: https://christianforohio.com/
+  final_url: https://www.christianforohio.com/
+  proposed_class: candidate-site
+  proposed_tier: says
+  reason: Campaign website of Jerrad Christian, Democratic candidate for U.S.
+    House Ohio's 12th district.
+  identity_label: identity-matched
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T133937-nvik
+  found_at: 2026-10-06T13:40:20.470Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:04:36.847Z
+  decision_reason: null
+  accepted_as:
+    domain_class: candidate-site
+    tier: says
+    redistributable: false
+  ownership_confirmed: true
+- id: b4ef8ab2b68bb862
+  contest_id: 2026-11-03:us-house:oh-12:unspecified
+  entity_id: jerrad-christian
+  url: https://www.fec.gov/data/candidate/H4OH12080/
+  final_url: null
+  proposed_class: fec
+  proposed_tier: official
+  reason: FEC candidate page for Jerrad Christian, Ohio District 12 House candidate.
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T133937-nvik
+  found_at: 2026-10-06T13:40:21.141Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:01:41.584Z
+  decision_reason: null
+  accepted_as:
+    domain_class: fec
+    tier: official
+    redistributable: true
+  ownership_confirmed: null
+- id: 63e329ffa8c47b8c
+  contest_id: 2026-11-03:us-house:oh-12:unspecified
+  entity_id: jerrad-christian
+  url: https://www.fec.gov/data/committee/C00851956/
+  final_url: null
+  proposed_class: fec
+  proposed_tier: official
+  reason: FEC committee page for Citizens for J Christian, principal campaign
+    committee; receipts and filings.
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T133937-nvik
+  found_at: 2026-10-06T13:40:24.189Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:02:13.276Z
+  decision_reason: null
+  accepted_as:
+    domain_class: fec
+    tier: official
+    redistributable: true
+  ownership_confirmed: null
+- id: 134962c4e763ebdc
+  contest_id: 2026-11-03:us-house:oh-12:unspecified
+  entity_id: jerrad-christian
+  url: https://ballotpedia.org/OH-12
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: Ballotpedia page on Ohio's 12th Congressional District, election information.
+  identity_label: null
+  validity:
+    status: unchecked
+    note: link-only context; not fetched
+  run_id: 20261006T133937-nvik
+  found_at: 2026-10-06T13:40:24.190Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:05:36.080Z
+  decision_reason: null
+  accepted_as:
+    domain_class: other
+    tier: context
+    redistributable: false
+  ownership_confirmed: null
+- id: 094a3c7830cfb17e
+  contest_id: 2026-11-03:us-house:oh-12:unspecified
+  entity_id: jerrad-christian
+  url: https://www.aol.com/articles/meet-3-democrats-challenging-balderson-122142090.html
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: News article profiling the three Democratic primary candidates in the
+    12th District, including Christian.
+  identity_label: null
+  validity:
+    status: unreachable
+    note: "http: HTTP 404"
+  run_id: 20261006T133937-nvik
+  found_at: 2026-10-06T13:40:30.546Z
+  status: rejected
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:06:21.287Z
+  decision_reason: dead link
+  accepted_as: null
+  ownership_confirmed: null

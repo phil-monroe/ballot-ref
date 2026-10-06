@@ -1,0 +1,62 @@
+- url: https://www.justicebrunner.com/
+  domain_class: candidate-site
+  tier: says
+  entity_id: jennifer-brunner
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:52:42.156Z
+  notes: "discovery 735855a6d3f689a4: Campaign website for Justice Jennifer
+    Brunner, Ohio Supreme Court"
+- url: https://ohiocapitaljournal.com/2026/07/31/challenger-to-incumbent-ohio-supreme-court-justice-touts-originalism-strict-immigration-rulings/
+  domain_class: other
+  tier: context
+  entity_id: colleen-o-donnell
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:52:49.125Z
+  notes: "discovery adc73e2d3d3beb4c: Ohio Capital Journal article on O'Donnell's
+    Supreme Court campaign and background."
+- url: https://www.ballotready.org/people/colleen-t-o-donnell
+  domain_class: other
+  tier: context
+  entity_id: colleen-o-donnell
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:52:57.278Z
+  notes: "discovery 00ad4308f1f496a2: BallotReady profile page for Colleen T.
+    O'Donnell, Ohio Supreme Court candidate."
+- url: https://www.wfmj.com/news/political/odonnell-wins-republican-primary-for-ohio-supreme-court/article_7c3147be-a281-413b-9e68-4baa61ae1ffb.html
+  domain_class: other
+  tier: context
+  entity_id: colleen-o-donnell
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:53:02.759Z
+  notes: "discovery da145e91fd735875: WFMJ report on O'Donnell winning the May
+    2026 Republican primary for Ohio Supreme Court."
+- url: https://en.wikipedia.org/wiki/Jennifer_Brunner
+  domain_class: other
+  tier: context
+  entity_id: jennifer-brunner
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:53:24.421Z
+  notes: "discovery 123bc204f2614c1d: Wikipedia article on Jennifer Brunner"
+- url: https://www.ohiodcca.org/ohio-democratic-candidates/justice-jennifer-brunner-ohio-supreme-court/
+  domain_class: other
+  tier: context
+  entity_id: jennifer-brunner
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:53:33.665Z
+  notes: "discovery 575a415a5bc0dbc2: Ohio Democratic party page listing Jennifer
+    Brunner as Ohio Supreme Court candidate"
+- url: https://www.supremecourt.ohio.gov/courts/judicial-system/supreme-court-of-ohio/justices-overview/jennifer-brunner/
+  domain_class: other
+  tier: context
+  entity_id: jennifer-brunner
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:53:40.341Z
+  notes: "discovery 6ab60b31234cdacd: Supreme Court of Ohio official page for
+    Justice Jennifer Brunner: biography and service"

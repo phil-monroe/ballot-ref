@@ -1,0 +1,63 @@
+- url: https://balderson.house.gov/
+  domain_class: congress
+  tier: official
+  entity_id: troy-balderson
+  redistributable: true
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:01:23.482Z
+  notes: "discovery ffcba81961316302: Official U.S. House website of Rep. Troy
+    Balderson, Ohio 12th District: news, legislation, services."
+- url: https://www.fec.gov/data/candidate/H8OH12180/?cycle=2026
+  domain_class: fec
+  tier: official
+  entity_id: troy-balderson
+  redistributable: true
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:01:30.951Z
+  notes: "discovery 55229478ac587555: FEC candidate page for Troy Balderson, 2026
+    cycle, with committee and financial filings summary."
+- url: https://www.fec.gov/data/candidate/H4OH12080/
+  domain_class: fec
+  tier: official
+  entity_id: jerrad-christian
+  redistributable: true
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:01:41.584Z
+  notes: "discovery b4ef8ab2b68bb862: FEC candidate page for Jerrad Christian,
+    Ohio District 12 House candidate."
+- url: https://www.fec.gov/data/committee/C00851956/
+  domain_class: fec
+  tier: official
+  entity_id: jerrad-christian
+  redistributable: true
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:02:13.276Z
+  notes: "discovery 63e329ffa8c47b8c: FEC committee page for Citizens for J
+    Christian, principal campaign committee; receipts and filings."
+- url: https://christianforohio.com/
+  domain_class: candidate-site
+  tier: says
+  entity_id: jerrad-christian
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:04:36.847Z
+  notes: "discovery 5d30afffaf4a0157: Campaign website of Jerrad Christian,
+    Democratic candidate for U.S. House Ohio's 12th district."
+- url: https://en.wikipedia.org/wiki/Troy_Balderson
+  domain_class: other
+  tier: context
+  entity_id: troy-balderson
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:04:45.044Z
+  notes: "discovery d98ae7bb0bdbd329: Wikipedia article on Troy Balderson, U.S.
+    Representative for Ohio's 12th district."
+- url: https://ballotpedia.org/OH-12
+  domain_class: other
+  tier: context
+  entity_id: jerrad-christian
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:05:36.080Z
+  notes: "discovery 134962c4e763ebdc: Ballotpedia page on Ohio's 12th
+    Congressional District, election information."

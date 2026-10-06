@@ -1,0 +1,46 @@
+{
+  "fields": [
+    {
+      "contest_id": "2026-11-03:treasurer-of-state:oh:unspecified",
+      "entity_id": "jay-edwards",
+      "field_key": "priority",
+      "slot": 1,
+      "value": "protecting taxpayer dollars and keeping Ohio's money working in Ohio communities",
+      "quote": "focused on protecting taxpayer dollars and keeping Ohio’s money working in Ohio communities.",
+      "source_url": "https://www.edwardsforohio.com/",
+      "source_hash": "3a59123c3ec9223c43c3b7bff1b1d237e55550a5b0748b16a9ad99506697a448",
+      "retrieved_at": "2026-10-06T14:50:44.449Z",
+      "tier": "says",
+      "status": "proposed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "extractor": {
+        "kind": "model",
+        "model": "claude-sonnet-5-5",
+        "prompt_version": "v2"
+      },
+      "needs_rereview": false
+    },
+    {
+      "contest_id": "2026-11-03:treasurer-of-state:oh:unspecified",
+      "entity_id": "jay-edwards",
+      "field_key": "priority",
+      "slot": 2,
+      "value": "keep politics out of our investments",
+      "quote": "I will keep politics out of our investments & keep those dollars in our local communities",
+      "source_url": "https://www.edwardsforohio.com/",
+      "source_hash": "3a59123c3ec9223c43c3b7bff1b1d237e55550a5b0748b16a9ad99506697a448",
+      "retrieved_at": "2026-10-06T14:50:44.449Z",
+      "tier": "says",
+      "status": "proposed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "extractor": {
+        "kind": "model",
+        "model": "claude-sonnet-5-5",
+        "prompt_version": "v2"
+      },
+      "needs_rereview": false
+    }
+  ]
+}

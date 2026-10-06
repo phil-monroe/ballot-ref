@@ -1,0 +1,67 @@
+{
+  "fields": [
+    {
+      "contest_id": "2026-11-03:attorney-general:oh:unspecified",
+      "entity_id": "keith-faber",
+      "field_key": "priority",
+      "slot": 1,
+      "value": "Protect Ohio families and defend our Constitution",
+      "quote": "he pledged to protect Ohio families and defend our Constitution",
+      "source_url": "https://keithfaber.org/",
+      "source_hash": "5b12637206aad6586aa8999519bdf6ed335c1839c32393ef1e5ad4ee2d548cc5",
+      "retrieved_at": "2026-10-06T14:46:14.212Z",
+      "tier": "says",
+      "status": "proposed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "extractor": {
+        "kind": "model",
+        "model": "claude-sonnet-5-5",
+        "prompt_version": "v2"
+      },
+      "needs_rereview": false
+    },
+    {
+      "contest_id": "2026-11-03:attorney-general:oh:unspecified",
+      "entity_id": "keith-faber",
+      "field_key": "priority",
+      "slot": 2,
+      "value": "Public safety and actively supporting Ohio police and prosecutors",
+      "quote": "his Attorney General’s office will focus on public safety and will actively support Ohio police and prosecutors",
+      "source_url": "https://keithfaber.org/",
+      "source_hash": "5b12637206aad6586aa8999519bdf6ed335c1839c32393ef1e5ad4ee2d548cc5",
+      "retrieved_at": "2026-10-06T14:46:14.212Z",
+      "tier": "says",
+      "status": "proposed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "extractor": {
+        "kind": "model",
+        "model": "claude-sonnet-5-5",
+        "prompt_version": "v2"
+      },
+      "needs_rereview": false
+    },
+    {
+      "contest_id": "2026-11-03:attorney-general:oh:unspecified",
+      "entity_id": "keith-faber",
+      "field_key": "priority",
+      "slot": 3,
+      "value": "Policies that create safe communities, economic opportunity and personal freedom",
+      "quote": "he champions policies that create safe communities, economic opportunity and personal freedom",
+      "source_url": "https://keithfaber.org/",
+      "source_hash": "5b12637206aad6586aa8999519bdf6ed335c1839c32393ef1e5ad4ee2d548cc5",
+      "retrieved_at": "2026-10-06T14:46:14.212Z",
+      "tier": "says",
+      "status": "proposed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "extractor": {
+        "kind": "model",
+        "model": "claude-sonnet-5-5",
+        "prompt_version": "v2"
+      },
+      "needs_rereview": false
+    }
+  ]
+}

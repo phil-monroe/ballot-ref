@@ -1,0 +1,63 @@
+- url: https://www.hawkinsforohio.com/
+  domain_class: candidate-site
+  tier: says
+  entity_id: daniel-r-hawkins
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:51:42.114Z
+  notes: "discovery 537d61229e8a0034: Campaign website of Dan Hawkins, Ohio
+    Supreme Court; hawkinsforjustice.com redirects here"
+- url: https://emilyslist.org/?p=11076
+  domain_class: other
+  tier: context
+  entity_id: marilyn-zayas
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:51:52.536Z
+  notes: "discovery d9da1c7b2db34407: EMILYs List announcement of endorsement of
+    Zayas for Ohio Supreme Court"
+- url: https://en.wikipedia.org/wiki/Marilyn_Zayas
+  domain_class: other
+  tier: context
+  entity_id: marilyn-zayas
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:51:57.589Z
+  notes: "discovery 1450eb8cc6b23dd7: Wikipedia article on Marilyn Zayas, judge of
+    Ohio First District Court of Appeals"
+- url: https://ohiocitizen.org/team/marilyn-zayas/
+  domain_class: other
+  tier: context
+  entity_id: marilyn-zayas
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:52:03.177Z
+  notes: "discovery a8505ea25b43dc2d: Ohio Citizen Action page 'Judge Marilyn
+    Zayas for Ohio Supreme Court'"
+- url: https://www.ballotready.org/people/marilyn-zayas
+  domain_class: other
+  tier: context
+  entity_id: marilyn-zayas
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:52:06.978Z
+  notes: "discovery 10546e6385e5ae15: BallotReady profile for Marilyn Zayas, 2026
+    Ohio Supreme Court candidate"
+- url: https://www.vindy.com/news/local-news/2026/07/ohio-high-court-hopeful-running-for-judicial-independence/
+  domain_class: other
+  tier: context
+  entity_id: marilyn-zayas
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:52:12.243Z
+  notes: "discovery 1b6376b9ba7947e8: Vindicator news article on Zayas's 2026 Ohio
+    Supreme Court campaign"
+- url: https://www.ballotready.org/people/daniel-r-hawkins
+  domain_class: other
+  tier: context
+  entity_id: daniel-r-hawkins
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:52:22.665Z
+  notes: "discovery 59aadb7eb78e1a57: BallotReady profile for Daniel R. Hawkins,
+    Ohio Supreme Court candidate"

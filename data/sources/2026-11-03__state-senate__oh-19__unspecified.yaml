@@ -1,0 +1,27 @@
+- url: https://ivoterguide.com/candidate/90979/race/26087/election/1396
+  domain_class: other
+  tier: context
+  entity_id: ryan-rivers
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:56:09.465Z
+  notes: "discovery 3beb7395b9aef13e: iVoterGuide candidate page for Ryan Rivers,
+    Ohio Senate District 19."
+- url: https://www.ballotready.org/people/ryan-rivers-c0ff55bf-5d36-46bc-9537-4f5c80ebba4c
+  domain_class: other
+  tier: context
+  entity_id: ryan-rivers
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:56:15.964Z
+  notes: "discovery 6b2f88ecbf51ede8: BallotReady profile for Ryan Rivers, Ohio
+    Senate District 19 candidate."
+- url: https://www.knoxpages.com/2026/04/27/lear-rivers-vie-for-ohio-district-19-senate-seat/
+  domain_class: other
+  tier: context
+  entity_id: ryan-rivers
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:57:27.082Z
+  notes: "discovery 1f61e2a42f2e7615: Knox Pages article on the Republican primary
+    for Ohio Senate District 19, Lear and Rivers."

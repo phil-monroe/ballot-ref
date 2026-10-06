@@ -1,0 +1,203 @@
+- id: e95673356f9345ad
+  contest_id: 2026-11-03:treasurer-of-state:oh:unspecified
+  entity_id: seth-walsh
+  url: https://www.ohiodcca.org/ohio-democratic-candidates/seth-walsh-candidate-for-ohio-treasurer/
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: Ohio Democrats county chairs page for Seth Walsh, candidate for Ohio
+    Treasurer
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T141510-htao
+  found_at: 2026-10-06T14:15:52.412Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:51:04.712Z
+  decision_reason: null
+  accepted_as:
+    domain_class: other
+    tier: context
+    redistributable: false
+  ownership_confirmed: null
+- id: 558beecb18170bb9
+  contest_id: 2026-11-03:treasurer-of-state:oh:unspecified
+  entity_id: seth-walsh
+  url: https://en.wikipedia.org/wiki/2026_Ohio_State_Treasurer_election
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: Wikipedia page on the 2026 Ohio State Treasurer election, listing candidates
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T141510-htao
+  found_at: 2026-10-06T14:15:52.681Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:50:50.284Z
+  decision_reason: null
+  accepted_as:
+    domain_class: other
+    tier: context
+    redistributable: false
+  ownership_confirmed: null
+- id: a9e08b9d13289d22
+  contest_id: 2026-11-03:treasurer-of-state:oh:unspecified
+  entity_id: seth-walsh
+  url: https://www.wcpo.com/news/local-news/cincinnati-council-member-seth-walsh-announces-run-for-state-treasurer
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: WCPO news article on Walsh's announcement of run for state treasurer
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T141510-htao
+  found_at: 2026-10-06T14:15:55.101Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:51:13.282Z
+  decision_reason: null
+  accepted_as:
+    domain_class: other
+    tier: context
+    redistributable: false
+  ownership_confirmed: null
+- id: f6e5c33b6f810bc2
+  contest_id: 2026-11-03:treasurer-of-state:oh:unspecified
+  entity_id: seth-walsh
+  url: https://www.citybeat.com/news/city-council-member-seth-walsh-announces-state-office-campaign/
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: CityBeat article on Walsh's campaign announcement for state treasurer
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T141510-htao
+  found_at: 2026-10-06T14:15:58.513Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:50:57.620Z
+  decision_reason: null
+  accepted_as:
+    domain_class: other
+    tier: context
+    redistributable: false
+  ownership_confirmed: null
+- id: 1a1cd2540970be8a
+  contest_id: 2026-11-03:treasurer-of-state:oh:unspecified
+  entity_id: jay-edwards
+  url: https://www.edwardsforohio.com/
+  final_url: null
+  proposed_class: candidate-site
+  proposed_tier: says
+  reason: Campaign website showing Jay Edwards and his candidacy for Ohio Treasurer.
+  identity_label: identity-matched
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T141510-htao
+  found_at: 2026-10-06T14:16:00.656Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:50:44.084Z
+  decision_reason: null
+  accepted_as:
+    domain_class: candidate-site
+    tier: says
+    redistributable: false
+  ownership_confirmed: true
+- id: 0834fe5544b04dc8
+  contest_id: 2026-11-03:treasurer-of-state:oh:unspecified
+  entity_id: jay-edwards
+  url: https://www.ohiohouse.gov/jay-edwards
+  final_url: null
+  proposed_class: ohio-legislature
+  proposed_tier: official
+  reason: Ohio House page for former Representative Jay Edwards, District 94.
+  identity_label: null
+  validity:
+    status: unreachable
+    note: "http: HTTP 404"
+  run_id: 20261006T141510-htao
+  found_at: 2026-10-06T14:16:06.885Z
+  status: rejected
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:50:14.247Z
+  decision_reason: dead link
+  accepted_as: null
+  ownership_confirmed: null
+- id: 945bd5f2145e0c47
+  contest_id: 2026-11-03:treasurer-of-state:oh:unspecified
+  entity_id: jay-edwards
+  url: https://www.ohiohouse.gov/jay-edwards/biography
+  final_url: null
+  proposed_class: ohio-legislature
+  proposed_tier: official
+  reason: Ohio House biography page for Jay Edwards, District 94.
+  identity_label: null
+  validity:
+    status: unreachable
+    note: "http: HTTP 500"
+  run_id: 20261006T141510-htao
+  found_at: 2026-10-06T14:16:13.205Z
+  status: rejected
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:50:38.607Z
+  decision_reason: dead
+  accepted_as: null
+  ownership_confirmed: null
+- id: 284df88f58e8e4ed
+  contest_id: 2026-11-03:treasurer-of-state:oh:unspecified
+  entity_id: jay-edwards
+  url: https://en.wikipedia.org/wiki/2026_Ohio_State_Treasurer_election
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: Wikipedia page on the 2026 Ohio State Treasurer election.
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T141510-htao
+  found_at: 2026-10-06T14:16:13.456Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:51:18.286Z
+  decision_reason: null
+  accepted_as:
+    domain_class: other
+    tier: context
+    redistributable: false
+  ownership_confirmed: null
+- id: 66ec09e7d1c20994
+  contest_id: 2026-11-03:treasurer-of-state:oh:unspecified
+  entity_id: jay-edwards
+  url: https://news.ballotpedia.org/2026/05/07/jay-edwards-r-defeated-kristina-daley-roegner-r-in-the-republican-primary-for-ohio-treasurer-on-may-5-2026/
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: Ballotpedia news item on the May 5, 2026 Republican primary for Ohio
+    Treasurer.
+  identity_label: null
+  validity:
+    status: unchecked
+    note: link-only context; not fetched
+  run_id: 20261006T141510-htao
+  found_at: 2026-10-06T14:16:13.457Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:51:27.662Z
+  decision_reason: null
+  accepted_as:
+    domain_class: other
+    tier: context
+    redistributable: false
+  ownership_confirmed: null

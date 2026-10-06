@@ -1,0 +1,62 @@
+- id: 7ff1225729f69af8
+  contest_id: 2026-11-03:county-auditor:delaware:unspecified
+  entity_id: george-kaitsa
+  url: http://www.delawarecountyauditor.org/
+  final_url: null
+  proposed_class: county-auditor
+  proposed_tier: official
+  reason: Delaware County Auditor office website; office held by George Kaitsa per
+    directory listing.
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T142351-466r
+  found_at: 2026-10-06T14:24:02.923Z
+  status: pending
+  decided_by: null
+  decided_at: null
+  decision_reason: null
+  accepted_as: null
+  ownership_confirmed: null
+- id: 10a56cc284bb24af
+  contest_id: 2026-11-03:county-auditor:delaware:unspecified
+  entity_id: george-kaitsa
+  url: https://caao.org/auditors-directory/name/delaware-county
+  final_url: https://caao.org/auditors-directory/name/delaware-county/
+  proposed_class: other
+  proposed_tier: context
+  reason: County Auditors Association of Ohio directory entry for Delaware County
+    auditor.
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T142351-466r
+  found_at: 2026-10-06T14:24:05.326Z
+  status: pending
+  decided_by: null
+  decided_at: null
+  decision_reason: null
+  accepted_as: null
+  ownership_confirmed: null
+- id: fb53c605b58ffb78
+  contest_id: 2026-11-03:county-auditor:delaware:unspecified
+  entity_id: null
+  url: https://goodparty.org/elections/oh/delaware-county/position/county-auditor
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: Third-party page on the Delaware County, Ohio County Auditor election.
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T142351-466r
+  found_at: 2026-10-06T14:24:06.073Z
+  status: pending
+  decided_by: null
+  decided_at: null
+  decision_reason: null
+  accepted_as: null
+  ownership_confirmed: null

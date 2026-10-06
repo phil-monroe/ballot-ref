@@ -1,0 +1,48 @@
+- id: 941b0ffa543dfb84
+  contest_id: 2026-11-03:court-of-appeals:oh-5:full-2027-02-09
+  entity_id: matthew-george
+  url: https://www.knoxpages.com/2026/05/05/george-secures-gop-nomination-in-5th-district-court-of-appeals/
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: News report on May 2026 Republican primary result for 5th District Court
+    of Appeals, including Matthew George.
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T142133-7a5d
+  found_at: 2026-10-06T14:21:47.994Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:59:27.533Z
+  decision_reason: null
+  accepted_as:
+    domain_class: other
+    tier: context
+    redistributable: false
+  ownership_confirmed: null
+- id: 90324ed0f3c9b2f3
+  contest_id: 2026-11-03:court-of-appeals:oh-5:full-2027-02-09
+  entity_id: matthew-george
+  url: https://www.richlandsource.com/2026/04/17/three-republicans-vie-for-ohio-5th-district-court-of-appeals-seat/
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: News article on the three-candidate Republican primary for the 5th
+    District Court of Appeals, including George.
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T142133-7a5d
+  found_at: 2026-10-06T14:21:52.208Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:59:33.164Z
+  decision_reason: null
+  accepted_as:
+    domain_class: other
+    tier: context
+    redistributable: false
+  ownership_confirmed: null

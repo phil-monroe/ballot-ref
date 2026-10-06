@@ -1,0 +1,125 @@
+- url: https://www.fec.gov/data/candidate/S6OH00304/
+  domain_class: fec
+  tier: official
+  entity_id: jon-husted
+  redistributable: true
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:53:58.056Z
+  notes: "discovery 6ae1b382d9739501: FEC candidate overview for Jon Husted, Ohio
+    Senate, Republican"
+- url: https://www.fec.gov/data/committee/C00896019/
+  domain_class: fec
+  tier: official
+  entity_id: jon-husted
+  redistributable: true
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:54:10.539Z
+  notes: "discovery b75f207711d665d0: FEC committee page for Husted for Senate,
+    principal campaign committee"
+- url: https://www.husted.senate.gov/about/
+  domain_class: congress
+  tier: official
+  entity_id: jon-husted
+  redistributable: true
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:54:15.726Z
+  notes: "discovery 18c30eee522f2886: Official U.S. Senate page for Sen. Jon
+    Husted: biography"
+- url: https://www.fec.gov/data/candidate/S6OH00395/
+  domain_class: fec
+  tier: official
+  entity_id: greg-levy
+  redistributable: true
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:54:23.597Z
+  notes: "discovery 4649ea755b374969: FEC candidate page for Gregory Lee Levy, ID
+    S6OH00395, Ohio Senate; filings and totals."
+- url: https://www.fec.gov/data/candidate/S6OH00429/
+  domain_class: fec
+  tier: official
+  entity_id: william-b-redpath
+  redistributable: true
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:54:39.008Z
+  notes: "discovery fac003508f206cad: FEC candidate page for William B. Redpath,
+    U.S. Senate Ohio, Libertarian"
+- url: https://www.fec.gov/data/committee/C00795112/
+  domain_class: fec
+  tier: official
+  entity_id: william-b-redpath
+  redistributable: true
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:54:45.789Z
+  notes: "discovery 34264df1b433d43b: FEC committee page for Redpath For Us Senate
+    Committee"
+- url: https://www.fec.gov/data/committee/C00916288/
+  domain_class: fec
+  tier: official
+  entity_id: sherrod-brown
+  redistributable: true
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:54:55.084Z
+  notes: "discovery 5e0c6ce26d6a4cc7: FEC committee page for Friends of Sherrod
+    Brown, principal campaign committee (filings and totals)"
+- url: https://www.jonhustedforsenate.com/
+  domain_class: candidate-site
+  tier: says
+  entity_id: jon-husted
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:55:05.272Z
+  notes: "discovery d647ea3110de7dc9: Campaign website jonhustedforsenate.com for
+    Jon Husted, U.S. Senate"
+- url: https://sherrodbrown.com/
+  domain_class: candidate-site
+  tier: says
+  entity_id: sherrod-brown
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:55:11.496Z
+  notes: "discovery dc267238aae61df7: Campaign website for Sherrod Brown, 2026
+    U.S. Senate candidate in Ohio"
+- url: https://news.ballotpedia.org/2026/06/08/appointed-senator-and-former-senator-face-off-in-ohios-u-s-senate-special-election/
+  domain_class: other
+  tier: context
+  entity_id: jon-husted
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:55:18.219Z
+  notes: "discovery 5c7ea6b2fda0b2d2: Ballotpedia News article on the 2026 Ohio
+    U.S. Senate special election"
+- url: https://ballotpedia.org/Gregory_Levy
+  domain_class: other
+  tier: context
+  entity_id: greg-levy
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:55:23.560Z
+  notes: "discovery 64a550e4966f198b: Ballotpedia profile of Gregory Levy, 2026
+    Ohio U.S. Senate special election candidate."
+- url: https://cwcolumbus.com/news/local/greg-levy-2026-ohio-senate-campaign-socialist-party-akron-veteran-working-class-black-liberation-union-movement-paul-robeson-revolutionary-choir-inequality-economy-minimum-wage-rural-hospitals-workers-rights-corporate-greed
+  domain_class: other
+  tier: context
+  entity_id: greg-levy
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:55:30.568Z
+  notes: "discovery 92b9855e3c9b4ad9: CW Columbus news article on Greg Levy's 2026
+    Ohio Senate campaign launch."
+- url: https://lpo.org/2025/11/06/2026-candidates/
+  domain_class: other
+  tier: context
+  entity_id: william-b-redpath
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:55:43.215Z
+  notes: "discovery 7fa5b3b76604ad6a: Libertarian Party of Ohio 2026 primary
+    candidates listing"
+- url: https://www.ballotready.org/people/sherrod-brown-b9ab2fa1-4bf2-4c64-a61d-d1b08a329234
+  domain_class: other
+  tier: context
+  entity_id: sherrod-brown
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:55:48.503Z
+  notes: "discovery 3dc1c812977d686e: BallotReady profile page for Sherrod Brown"

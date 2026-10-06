@@ -1,0 +1,63 @@
+- url: https://www.edwardsforohio.com/
+  domain_class: candidate-site
+  tier: says
+  entity_id: jay-edwards
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:50:44.084Z
+  notes: "discovery 1a1cd2540970be8a: Campaign website showing Jay Edwards and his
+    candidacy for Ohio Treasurer."
+- url: https://en.wikipedia.org/wiki/2026_Ohio_State_Treasurer_election
+  domain_class: other
+  tier: context
+  entity_id: seth-walsh
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:50:50.284Z
+  notes: "discovery 558beecb18170bb9: Wikipedia page on the 2026 Ohio State
+    Treasurer election, listing candidates"
+- url: https://www.citybeat.com/news/city-council-member-seth-walsh-announces-state-office-campaign/
+  domain_class: other
+  tier: context
+  entity_id: seth-walsh
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:50:57.620Z
+  notes: "discovery f6e5c33b6f810bc2: CityBeat article on Walsh's campaign
+    announcement for state treasurer"
+- url: https://www.ohiodcca.org/ohio-democratic-candidates/seth-walsh-candidate-for-ohio-treasurer/
+  domain_class: other
+  tier: context
+  entity_id: seth-walsh
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:51:04.712Z
+  notes: "discovery e95673356f9345ad: Ohio Democrats county chairs page for Seth
+    Walsh, candidate for Ohio Treasurer"
+- url: https://www.wcpo.com/news/local-news/cincinnati-council-member-seth-walsh-announces-run-for-state-treasurer
+  domain_class: other
+  tier: context
+  entity_id: seth-walsh
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:51:13.282Z
+  notes: "discovery a9e08b9d13289d22: WCPO news article on Walsh's announcement of
+    run for state treasurer"
+- url: https://en.wikipedia.org/wiki/2026_Ohio_State_Treasurer_election
+  domain_class: other
+  tier: context
+  entity_id: jay-edwards
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:51:18.286Z
+  notes: "discovery 284df88f58e8e4ed: Wikipedia page on the 2026 Ohio State
+    Treasurer election."
+- url: https://news.ballotpedia.org/2026/05/07/jay-edwards-r-defeated-kristina-daley-roegner-r-in-the-republican-primary-for-ohio-treasurer-on-may-5-2026/
+  domain_class: other
+  tier: context
+  entity_id: jay-edwards
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:51:27.662Z
+  notes: "discovery 66ec09e7d1c20994: Ballotpedia news item on the May 5, 2026
+    Republican primary for Ohio Treasurer."

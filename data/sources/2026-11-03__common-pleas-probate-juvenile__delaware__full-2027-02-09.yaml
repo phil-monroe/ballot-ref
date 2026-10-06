@@ -1,0 +1,27 @@
+- url: https://facjj.ojp.gov/bio/judge-david-hejmanowski
+  domain_class: other
+  tier: context
+  entity_id: david-hejmanowski
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T15:00:22.055Z
+  notes: "discovery 55f4ebee2e1ce610: Federal Advisory Committee on Juvenile
+    Justice biography of Judge David Hejmanowski"
+- url: https://goodparty.org/elections/oh/delaware-county/position/state-trial-court-judge-general
+  domain_class: other
+  tier: context
+  entity_id: david-hejmanowski
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T15:00:39.263Z
+  notes: "discovery 16c16fbfdce199d2: Delaware County state trial court judge race
+    listing including candidate priorities"
+- url: https://www.ncjfcj.org/?p=5178
+  domain_class: other
+  tier: context
+  entity_id: david-hejmanowski
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T15:00:50.830Z
+  notes: "discovery 3cb291dbe2c7dc6b: NCJFCJ profile page for Honorable David
+    Hejmanowski"

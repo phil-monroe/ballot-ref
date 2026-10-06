@@ -1,0 +1,161 @@
+[
+  {
+    "url": "https://balderson.house.gov/",
+    "outcome": "ok",
+    "at": "2026-10-06T14:01:23.682Z"
+  },
+  {
+    "url": "https://www.fec.gov/data/candidate/H8OH12180/?cycle=2026",
+    "outcome": "ok",
+    "at": "2026-10-06T14:01:33.030Z"
+  },
+  {
+    "url": "https://www.fec.gov/data/candidate/H4OH12080/",
+    "outcome": "ok",
+    "at": "2026-10-06T14:01:41.683Z"
+  },
+  {
+    "url": "https://www.fec.gov/data/committee/C00851956/",
+    "outcome": "ok",
+    "at": "2026-10-06T14:02:13.489Z"
+  },
+  {
+    "url": "https://christianforohio.com/",
+    "outcome": "ok",
+    "at": "2026-10-06T14:04:37.187Z"
+  },
+  {
+    "url": "https://www.ohiosos.gov/office/media-center/categories/press-releases/2026-02-04",
+    "outcome": "blocked",
+    "at": "2026-10-06T14:41:34.148Z",
+    "error": "blocked: HTTP 403"
+  },
+  {
+    "url": "https://ohiosenate.gov/senators/mccolley",
+    "outcome": "ok",
+    "at": "2026-10-06T14:42:43.258Z"
+  },
+  {
+    "url": "https://actonforgovernor.com/",
+    "outcome": "ok",
+    "at": "2026-10-06T14:43:09.219Z",
+    "error": "already stored; not re-requested"
+  },
+  {
+    "url": "https://actonforgovernor.com/",
+    "outcome": "ok",
+    "at": "2026-10-06T14:43:09.219Z",
+    "error": "already stored; not re-requested"
+  },
+  {
+    "url": "https://vivekforohio.com/vivek-selects-rob-mccolley-to-serve-as-his-running-mate/",
+    "outcome": "ok",
+    "at": "2026-10-06T14:45:47.840Z"
+  },
+  {
+    "url": "https://john4ohioag.com/",
+    "outcome": "ok",
+    "at": "2026-10-06T14:46:03.424Z"
+  },
+  {
+    "url": "https://keithfaber.org/",
+    "outcome": "ok",
+    "at": "2026-10-06T14:46:14.216Z"
+  },
+  {
+    "url": "https://www.ohiosos.gov/office/biography",
+    "outcome": "blocked",
+    "at": "2026-10-06T14:47:25.715Z",
+    "error": "blocked: HTTP 403"
+  },
+  {
+    "url": "https://ohiohouse.gov/members/c-allison-russo/news/russo-sworn-in-as-state-rep-for-ohios-24th-house-district-98988",
+    "outcome": "ok",
+    "at": "2026-10-06T14:48:49.729Z"
+  },
+  {
+    "url": "https://allisonrusso.com/",
+    "outcome": "ok",
+    "at": "2026-10-06T14:49:02.672Z"
+  },
+  {
+    "url": "https://www.edwardsforohio.com/",
+    "outcome": "ok",
+    "at": "2026-10-06T14:50:44.452Z"
+  },
+  {
+    "url": "https://www.hawkinsforohio.com/",
+    "outcome": "ok",
+    "at": "2026-10-06T14:51:42.413Z"
+  },
+  {
+    "url": "https://www.justicebrunner.com/",
+    "outcome": "ok",
+    "at": "2026-10-06T14:52:43.954Z"
+  },
+  {
+    "url": "https://www.fec.gov/data/candidate/S6OH00304/",
+    "outcome": "ok",
+    "at": "2026-10-06T14:53:58.296Z"
+  },
+  {
+    "url": "https://www.fec.gov/data/committee/C00896019/",
+    "outcome": "ok",
+    "at": "2026-10-06T14:54:12.725Z"
+  },
+  {
+    "url": "https://www.husted.senate.gov/about/",
+    "outcome": "ok",
+    "at": "2026-10-06T14:54:16.160Z"
+  },
+  {
+    "url": "https://www.fec.gov/data/candidate/S6OH00395/",
+    "outcome": "ok",
+    "at": "2026-10-06T14:54:25.684Z"
+  },
+  {
+    "url": "https://www.fec.gov/data/candidate/S6OH00429/",
+    "outcome": "ok",
+    "at": "2026-10-06T14:54:41.091Z"
+  },
+  {
+    "url": "https://www.fec.gov/data/committee/C00795112/",
+    "outcome": "ok",
+    "at": "2026-10-06T14:54:46.003Z"
+  },
+  {
+    "url": "https://www.fec.gov/data/committee/C00916288/",
+    "outcome": "ok",
+    "at": "2026-10-06T14:54:55.253Z"
+  },
+  {
+    "url": "https://www.jonhustedforsenate.com/",
+    "outcome": "ok",
+    "at": "2026-10-06T14:55:05.528Z"
+  },
+  {
+    "url": "https://sherrodbrown.com/",
+    "outcome": "ok",
+    "at": "2026-10-06T14:55:11.889Z"
+  },
+  {
+    "url": "https://www.ohiohouse.gov/members/brian-lorenz",
+    "outcome": "ok",
+    "at": "2026-10-06T14:57:34.592Z"
+  },
+  {
+    "url": "https://kimballforohio.com/",
+    "outcome": "ok",
+    "at": "2026-10-06T14:57:41.549Z"
+  },
+  {
+    "url": "https://secure.actblue.com/donate/shelby-kimball-2",
+    "outcome": "ok",
+    "at": "2026-10-06T14:57:50.615Z"
+  },
+  {
+    "url": "https://lorenzforohio.com/",
+    "outcome": "ok",
+    "at": "2026-10-06T14:57:56.325Z"
+  }
+]

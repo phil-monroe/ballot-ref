@@ -1,0 +1,67 @@
+{
+  "fields": [
+    {
+      "contest_id": "2026-11-03:state-house:oh-60:unspecified",
+      "entity_id": "shelby-kimball",
+      "field_key": "priority",
+      "slot": 1,
+      "value": "Strong Public Schools: fully funding Ohio's public schools, supporting teachers, and ensuring classrooms have the resources students need",
+      "quote": "She supports fully funding Ohio’s public schools, supporting teachers, and ensuring classrooms have the resources students need to succeed.",
+      "source_url": "https://kimballforohio.com/",
+      "source_hash": "ba197b714425306733932a18b86637fb89716cbf61e1adffaae2d466dcec0739",
+      "retrieved_at": "2026-10-06T14:57:41.539Z",
+      "tier": "says",
+      "status": "proposed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "extractor": {
+        "kind": "model",
+        "model": "claude-sonnet-5-5",
+        "prompt_version": "v2"
+      },
+      "needs_rereview": false
+    },
+    {
+      "contest_id": "2026-11-03:state-house:oh-60:unspecified",
+      "entity_id": "shelby-kimball",
+      "field_key": "priority",
+      "slot": 2,
+      "value": "Affordable, Accessible Healthcare: expand access to care, protect coverage for families and children, strengthen support for patients with rare conditions, and ensure veterans receive the services they have earned",
+      "quote": "She will fight to expand access to care, protect coverage for families and children, strengthen support for patients with rare conditions",
+      "source_url": "https://kimballforohio.com/",
+      "source_hash": "ba197b714425306733932a18b86637fb89716cbf61e1adffaae2d466dcec0739",
+      "retrieved_at": "2026-10-06T14:57:41.539Z",
+      "tier": "says",
+      "status": "proposed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "extractor": {
+        "kind": "model",
+        "model": "claude-sonnet-5-5",
+        "prompt_version": "v2"
+      },
+      "needs_rereview": false
+    },
+    {
+      "contest_id": "2026-11-03:state-house:oh-60:unspecified",
+      "entity_id": "shelby-kimball",
+      "field_key": "priority",
+      "slot": 3,
+      "value": "Support for Veterans and Military Families: improving access to benefits, mental health services, job opportunities, and healthcare",
+      "quote": "She is committed to improving access to benefits, mental health services, job opportunities, and healthcare for those who have served our country.",
+      "source_url": "https://kimballforohio.com/",
+      "source_hash": "ba197b714425306733932a18b86637fb89716cbf61e1adffaae2d466dcec0739",
+      "retrieved_at": "2026-10-06T14:57:41.539Z",
+      "tier": "says",
+      "status": "proposed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "extractor": {
+        "kind": "model",
+        "model": "claude-sonnet-5-5",
+        "prompt_version": "v2"
+      },
+      "needs_rereview": false
+    }
+  ]
+}

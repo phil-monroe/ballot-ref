@@ -1,0 +1,87 @@
+- url: https://www.ohiohouse.gov/members/brian-lorenz
+  domain_class: ohio-legislature
+  tier: official
+  entity_id: brian-lorenz
+  redistributable: true
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:57:34.345Z
+  notes: "discovery 93b1d7a4d258cc89: Ohio House official member page for Brian
+    Lorenz, District 60"
+- url: https://kimballforohio.com/
+  domain_class: candidate-site
+  tier: says
+  entity_id: shelby-kimball
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:57:41.263Z
+  notes: "discovery ba870ee716806f32: Campaign website of Shelby Kimball, Ohio
+    House candidate; shows name and office, no district number."
+- url: https://secure.actblue.com/donate/shelby-kimball-2
+  domain_class: candidate-site
+  tier: says
+  entity_id: shelby-kimball
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:57:50.301Z
+  notes: "discovery 333d8c2e6681f4d9: ActBlue donation page for Shelby Kimball."
+- url: https://lorenzforohio.com/
+  domain_class: candidate-site
+  tier: says
+  entity_id: brian-lorenz
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:57:55.992Z
+  notes: "discovery fe355249290c05aa: Campaign website naming Brian Lorenz and the
+    60th District, Ohio House"
+- url: https://bluevoterguide.org/es/OH/candidate_Shelby_Kimball/726419
+  domain_class: other
+  tier: context
+  entity_id: shelby-kimball
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:58:12.983Z
+  notes: "discovery 29cc3b7fbc63283b: Blue Voter Guide candidate page for Shelby
+    Kimball."
+- url: https://matriotsohio.com/candidate/shelby-kimball/
+  domain_class: other
+  tier: context
+  entity_id: shelby-kimball
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:58:23.725Z
+  notes: "discovery 26a8dbec9531669a: Matriots Ohio candidate page for Shelby
+    Kimball."
+- url: https://www.ballotready.org/people/shelby-kimball
+  domain_class: other
+  tier: context
+  entity_id: shelby-kimball
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:58:40.044Z
+  notes: "discovery f34660ae84e751c6: BallotReady candidate profile for Shelby
+    Kimball."
+- url: https://www.dlcc.org/candidates/shelby-kimball/
+  domain_class: other
+  tier: context
+  entity_id: shelby-kimball
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:59:08.555Z
+  notes: "discovery aba500189c3110bc: DLCC candidate profile page for Shelby Kimball."
+- url: https://ballotpedia.org/Brian_Lorenz
+  domain_class: other
+  tier: context
+  entity_id: brian-lorenz
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:59:12.058Z
+  notes: "discovery 109abb85db89e5fb: Ballotpedia profile for Brian Lorenz, Ohio
+    House District 60"
+- url: https://www.ballotready.org/people/brian-lorenz-30c68658-8198-4936-b45e-dbfb99550202
+  domain_class: other
+  tier: context
+  entity_id: brian-lorenz
+  redistributable: false
+  whitelisted_by: phil-m
+  whitelisted_at: 2026-10-06T14:59:18.019Z
+  notes: "discovery ac88cc5a177fe5f0: BallotReady profile page for Brian Lorenz"

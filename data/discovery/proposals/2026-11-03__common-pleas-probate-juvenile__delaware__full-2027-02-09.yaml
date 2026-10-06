@@ -1,0 +1,71 @@
+- id: 55f4ebee2e1ce610
+  contest_id: 2026-11-03:common-pleas-probate-juvenile:delaware:full-2027-02-09
+  entity_id: david-hejmanowski
+  url: https://facjj.ojp.gov/bio/judge-david-hejmanowski
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: Federal Advisory Committee on Juvenile Justice biography of Judge David
+    Hejmanowski
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T142246-f3ea
+  found_at: 2026-10-06T14:23:03.039Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T15:00:22.055Z
+  decision_reason: null
+  accepted_as:
+    domain_class: other
+    tier: context
+    redistributable: false
+  ownership_confirmed: null
+- id: 3cb291dbe2c7dc6b
+  contest_id: 2026-11-03:common-pleas-probate-juvenile:delaware:full-2027-02-09
+  entity_id: david-hejmanowski
+  url: https://www.ncjfcj.org/?p=5178
+  final_url: https://www.ncjfcj.org/webcasts/managing-the-impact-of-the-work-and-judicial-self-care-part-1/
+  proposed_class: other
+  proposed_tier: context
+  reason: NCJFCJ profile page for Honorable David Hejmanowski
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T142246-f3ea
+  found_at: 2026-10-06T14:23:07.343Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T15:00:50.830Z
+  decision_reason: null
+  accepted_as:
+    domain_class: other
+    tier: context
+    redistributable: false
+  ownership_confirmed: null
+- id: 16c16fbfdce199d2
+  contest_id: 2026-11-03:common-pleas-probate-juvenile:delaware:full-2027-02-09
+  entity_id: david-hejmanowski
+  url: https://goodparty.org/elections/oh/delaware-county/position/state-trial-court-judge-general
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: Delaware County state trial court judge race listing including candidate
+    priorities
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T142246-f3ea
+  found_at: 2026-10-06T14:23:08.529Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T15:00:39.263Z
+  decision_reason: null
+  accepted_as:
+    domain_class: other
+    tier: context
+    redistributable: false
+  ownership_confirmed: null

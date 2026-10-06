@@ -1,0 +1,186 @@
+- id: d2a39b34661e8128
+  contest_id: 2026-11-03:attorney-general:oh:unspecified
+  entity_id: john-j-kulewicz
+  url: https://john4ohioag.com/
+  final_url: null
+  proposed_class: candidate-site
+  proposed_tier: says
+  reason: Campaign website titled John J. Kulewicz For Ohio Attorney General
+  identity_label: identity-matched
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T141005-hp90
+  found_at: 2026-10-06T14:11:07.279Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:46:03.029Z
+  decision_reason: null
+  accepted_as:
+    domain_class: candidate-site
+    tier: says
+    redistributable: false
+  ownership_confirmed: true
+- id: 2528fc2d74fe47a1
+  contest_id: 2026-11-03:attorney-general:oh:unspecified
+  entity_id: john-j-kulewicz
+  url: https://www.ballotready.org/people/john-j-kulewicz
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: BallotReady profile page for John J. Kulewicz
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T141005-hp90
+  found_at: 2026-10-06T14:11:09.343Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:47:06.279Z
+  decision_reason: null
+  accepted_as:
+    domain_class: other
+    tier: context
+    redistributable: false
+  ownership_confirmed: null
+- id: 7b448992eccbe99e
+  contest_id: 2026-11-03:attorney-general:oh:unspecified
+  entity_id: john-j-kulewicz
+  url: https://ohiocapitaljournal.com/briefs/columbus-lawyer-john-kulewicz-wins-ohio-democratic-primary-for-attorney-general/
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: Ohio Capital Journal news brief on 2026 Democratic primary result for
+    Attorney General
+  identity_label: null
+  validity:
+    status: unchecked
+    note: "blocked: HTTP 403"
+  run_id: 20261006T141005-hp90
+  found_at: 2026-10-06T14:11:13.561Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:46:58.194Z
+  decision_reason: null
+  accepted_as:
+    domain_class: other
+    tier: context
+    redistributable: false
+  ownership_confirmed: null
+- id: 64460d608ed23343
+  contest_id: 2026-11-03:attorney-general:oh:unspecified
+  entity_id: john-j-kulewicz
+  url: https://en.wikipedia.org/wiki/2026_Ohio_Attorney_General_election
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: Wikipedia page on the 2026 Ohio Attorney General election
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T141005-hp90
+  found_at: 2026-10-06T14:11:14.046Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:46:39.331Z
+  decision_reason: null
+  accepted_as:
+    domain_class: other
+    tier: context
+    redistributable: false
+  ownership_confirmed: null
+- id: d026c91d117a99bf
+  contest_id: 2026-11-03:attorney-general:oh:unspecified
+  entity_id: john-j-kulewicz
+  url: https://dems.ag/profile/john-kulewicz/
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: Democratic Attorneys General Association profile page for John Kulewicz
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T141005-hp90
+  found_at: 2026-10-06T14:11:16.184Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:46:30.103Z
+  decision_reason: null
+  accepted_as:
+    domain_class: other
+    tier: context
+    redistributable: false
+  ownership_confirmed: null
+- id: d9db6224416af8db
+  contest_id: 2026-11-03:attorney-general:oh:unspecified
+  entity_id: keith-faber
+  url: https://keithfaber.org/
+  final_url: https://www.keithfaber.org/
+  proposed_class: candidate-site
+  proposed_tier: says
+  reason: Campaign site for Keith Faber, candidate for Ohio Attorney General;
+    announcement and priorities.
+  identity_label: identity-matched
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T141005-hp90
+  found_at: 2026-10-06T14:11:18.602Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:46:13.792Z
+  decision_reason: null
+  accepted_as:
+    domain_class: candidate-site
+    tier: says
+    redistributable: false
+  ownership_confirmed: true
+- id: a14f14b125cceaae
+  contest_id: 2026-11-03:attorney-general:oh:unspecified
+  entity_id: keith-faber
+  url: https://ballotpedia.org/Keith_Faber
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: Ballotpedia profile of Keith Faber.
+  identity_label: null
+  validity:
+    status: unchecked
+    note: link-only context; not fetched
+  run_id: 20261006T141005-hp90
+  found_at: 2026-10-06T14:11:18.603Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:47:13.887Z
+  decision_reason: null
+  accepted_as:
+    domain_class: other
+    tier: context
+    redistributable: false
+  ownership_confirmed: null
+- id: f1757a726c78bafb
+  contest_id: 2026-11-03:attorney-general:oh:unspecified
+  entity_id: null
+  url: https://en.wikipedia.org/wiki/2026_Ohio_Attorney_General_election
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: Wikipedia page on the 2026 Ohio Attorney General election.
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T141005-hp90
+  found_at: 2026-10-06T14:11:18.824Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:46:20.232Z
+  decision_reason: null
+  accepted_as:
+    domain_class: other
+    tier: context
+    redistributable: false
+  ownership_confirmed: null

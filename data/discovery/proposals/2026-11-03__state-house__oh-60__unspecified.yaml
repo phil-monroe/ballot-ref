@@ -1,0 +1,251 @@
+- id: ba870ee716806f32
+  contest_id: 2026-11-03:state-house:oh-60:unspecified
+  entity_id: shelby-kimball
+  url: https://kimballforohio.com/
+  final_url: null
+  proposed_class: candidate-site
+  proposed_tier: says
+  reason: Campaign website of Shelby Kimball, Ohio House candidate; shows name and
+    office, no district number.
+  identity_label: identity-matched
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T142025-jp1o
+  found_at: 2026-10-06T14:21:10.555Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:57:41.263Z
+  decision_reason: null
+  accepted_as:
+    domain_class: candidate-site
+    tier: says
+    redistributable: false
+  ownership_confirmed: true
+- id: 333d8c2e6681f4d9
+  contest_id: 2026-11-03:state-house:oh-60:unspecified
+  entity_id: shelby-kimball
+  url: https://secure.actblue.com/donate/shelby-kimball-2
+  final_url: null
+  proposed_class: candidate-site
+  proposed_tier: says
+  reason: ActBlue donation page for Shelby Kimball.
+  identity_label: possible-match
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T142025-jp1o
+  found_at: 2026-10-06T14:21:12.788Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:57:50.301Z
+  decision_reason: null
+  accepted_as:
+    domain_class: candidate-site
+    tier: says
+    redistributable: false
+  ownership_confirmed: true
+- id: aba500189c3110bc
+  contest_id: 2026-11-03:state-house:oh-60:unspecified
+  entity_id: shelby-kimball
+  url: https://www.dlcc.org/candidates/shelby-kimball/
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: DLCC candidate profile page for Shelby Kimball.
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T142025-jp1o
+  found_at: 2026-10-06T14:21:15.309Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:59:08.555Z
+  decision_reason: null
+  accepted_as:
+    domain_class: other
+    tier: context
+    redistributable: false
+  ownership_confirmed: null
+- id: f34660ae84e751c6
+  contest_id: 2026-11-03:state-house:oh-60:unspecified
+  entity_id: shelby-kimball
+  url: https://www.ballotready.org/people/shelby-kimball
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: BallotReady candidate profile for Shelby Kimball.
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T142025-jp1o
+  found_at: 2026-10-06T14:21:15.710Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:58:40.044Z
+  decision_reason: null
+  accepted_as:
+    domain_class: other
+    tier: context
+    redistributable: false
+  ownership_confirmed: null
+- id: 26a8dbec9531669a
+  contest_id: 2026-11-03:state-house:oh-60:unspecified
+  entity_id: shelby-kimball
+  url: https://matriotsohio.com/candidate/shelby-kimball/
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: Matriots Ohio candidate page for Shelby Kimball.
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T142025-jp1o
+  found_at: 2026-10-06T14:21:17.976Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:58:23.725Z
+  decision_reason: null
+  accepted_as:
+    domain_class: other
+    tier: context
+    redistributable: false
+  ownership_confirmed: null
+- id: 2c4097a9c0167feb
+  contest_id: 2026-11-03:state-house:oh-60:unspecified
+  entity_id: shelby-kimball
+  url: https://www.aol.com/news/two-democrats-running-ohio-house-165942855.html
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: News article on the Ohio House District 60 Democratic primary candidates.
+  identity_label: null
+  validity:
+    status: unreachable
+    note: "http: HTTP 404"
+  run_id: 20261006T142025-jp1o
+  found_at: 2026-10-06T14:21:24.285Z
+  status: rejected
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:58:35.572Z
+  decision_reason: dead
+  accepted_as: null
+  ownership_confirmed: null
+- id: 29cc3b7fbc63283b
+  contest_id: 2026-11-03:state-house:oh-60:unspecified
+  entity_id: shelby-kimball
+  url: https://bluevoterguide.org/es/OH/candidate_Shelby_Kimball/726419
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: Blue Voter Guide candidate page for Shelby Kimball.
+  identity_label: null
+  validity:
+    status: unchecked
+    note: "blocked: HTTP 403"
+  run_id: 20261006T142025-jp1o
+  found_at: 2026-10-06T14:21:30.533Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:58:12.983Z
+  decision_reason: null
+  accepted_as:
+    domain_class: other
+    tier: context
+    redistributable: false
+  ownership_confirmed: null
+- id: 93b1d7a4d258cc89
+  contest_id: 2026-11-03:state-house:oh-60:unspecified
+  entity_id: brian-lorenz
+  url: https://www.ohiohouse.gov/members/brian-lorenz
+  final_url: null
+  proposed_class: ohio-legislature
+  proposed_tier: official
+  reason: Ohio House official member page for Brian Lorenz, District 60
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T142025-jp1o
+  found_at: 2026-10-06T14:21:30.894Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:57:34.345Z
+  decision_reason: null
+  accepted_as:
+    domain_class: ohio-legislature
+    tier: official
+    redistributable: true
+  ownership_confirmed: null
+- id: fe355249290c05aa
+  contest_id: 2026-11-03:state-house:oh-60:unspecified
+  entity_id: brian-lorenz
+  url: https://lorenzforohio.com/
+  final_url: null
+  proposed_class: candidate-site
+  proposed_tier: says
+  reason: Campaign website naming Brian Lorenz and the 60th District, Ohio House
+  identity_label: identity-matched
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T142025-jp1o
+  found_at: 2026-10-06T14:21:32.991Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:57:55.992Z
+  decision_reason: null
+  accepted_as:
+    domain_class: candidate-site
+    tier: says
+    redistributable: false
+  ownership_confirmed: true
+- id: 109abb85db89e5fb
+  contest_id: 2026-11-03:state-house:oh-60:unspecified
+  entity_id: brian-lorenz
+  url: https://ballotpedia.org/Brian_Lorenz
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: Ballotpedia profile for Brian Lorenz, Ohio House District 60
+  identity_label: null
+  validity:
+    status: unchecked
+    note: link-only context; not fetched
+  run_id: 20261006T142025-jp1o
+  found_at: 2026-10-06T14:21:32.991Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:59:12.058Z
+  decision_reason: null
+  accepted_as:
+    domain_class: other
+    tier: context
+    redistributable: false
+  ownership_confirmed: null
+- id: ac88cc5a177fe5f0
+  contest_id: 2026-11-03:state-house:oh-60:unspecified
+  entity_id: brian-lorenz
+  url: https://www.ballotready.org/people/brian-lorenz-30c68658-8198-4936-b45e-dbfb99550202
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: BallotReady profile page for Brian Lorenz
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T142025-jp1o
+  found_at: 2026-10-06T14:21:33.589Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:59:18.019Z
+  decision_reason: null
+  accepted_as:
+    domain_class: other
+    tier: context
+    redistributable: false
+  ownership_confirmed: null

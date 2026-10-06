@@ -1,0 +1,10 @@
+{
+  "sha256": "100d93f6837b4ceb5cb57ac594ae36392aff7549fc1f38dd2f62b723e1be5877",
+  "url": "https://ohiosenate.gov/senators/mccolley",
+  "retrieved_at": "2026-10-06T14:42:43.256Z",
+  "content_type": "text/html;charset=UTF-8",
+  "method": "direct",
+  "redistributable": true,
+  "body_path": "public/100d93f6837b4ceb5cb57ac594ae36392aff7549fc1f38dd2f62b723e1be5877.html",
+  "text_path": "public/100d93f6837b4ceb5cb57ac594ae36392aff7549fc1f38dd2f62b723e1be5877.txt"
+}

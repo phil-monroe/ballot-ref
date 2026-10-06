@@ -1,0 +1,428 @@
+- id: fb3969d86ab50e40
+  contest_id: 2026-11-03:governor-lt-governor:oh:unspecified
+  entity_id: amy-acton
+  url: https://actonforgovernor.com/
+  final_url: null
+  proposed_class: candidate-site
+  proposed_tier: says
+  reason: Campaign website titled 'Dr. Amy Acton for Governor'; shows candidate
+    name and office of Ohio Governor.
+  identity_label: identity-matched
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T140651-r6li
+  found_at: 2026-10-06T14:09:01.676Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:42:55.530Z
+  decision_reason: null
+  accepted_as:
+    domain_class: candidate-site
+    tier: says
+    redistributable: false
+  ownership_confirmed: true
+- id: 2b7d4ce6d45a2926
+  contest_id: 2026-11-03:governor-lt-governor:oh:unspecified
+  entity_id: amy-acton
+  url: https://www.ohiosos.gov/office/media-center/categories/press-releases/2026-02-04
+  final_url: null
+  proposed_class: ohio-sos
+  proposed_tier: official
+  reason: Ohio Secretary of State press release from 2026-02-04 on the statewide
+    candidate list after the filing deadline.
+  identity_label: null
+  validity:
+    status: unchecked
+    note: "blocked: HTTP 403"
+  run_id: 20261006T140651-r6li
+  found_at: 2026-10-06T14:09:08.078Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:41:29.526Z
+  decision_reason: null
+  accepted_as:
+    domain_class: ohio-sos
+    tier: official
+    redistributable: true
+  ownership_confirmed: null
+- id: 9f7a788ea24ba809
+  contest_id: 2026-11-03:governor-lt-governor:oh:unspecified
+  entity_id: amy-acton
+  url: https://en.wikipedia.org/wiki/Amy_Acton
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: Reference page on Amy Acton, Democratic nominee for Ohio governor.
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T140651-r6li
+  found_at: 2026-10-06T14:09:10.192Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:43:57.356Z
+  decision_reason: null
+  accepted_as:
+    domain_class: other
+    tier: context
+    redistributable: false
+  ownership_confirmed: null
+- id: c2edf64237668a21
+  contest_id: 2026-11-03:governor-lt-governor:oh:unspecified
+  entity_id: david-pepper
+  url: https://actonforgovernor.com/
+  final_url: null
+  proposed_class: candidate-site
+  proposed_tier: says
+  reason: Acton for Governor campaign site (ticket with Pepper as Lt. Gov. running
+    mate); homepage itself does not name Pepper.
+  identity_label: possible-match
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T140651-r6li
+  found_at: 2026-10-06T14:09:10.334Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:43:09.203Z
+  decision_reason: null
+  accepted_as:
+    domain_class: candidate-site
+    tier: says
+    redistributable: false
+  ownership_confirmed: true
+- id: aa6656b754292e9b
+  contest_id: 2026-11-03:governor-lt-governor:oh:unspecified
+  entity_id: david-pepper
+  url: https://ohiocapitaljournal.com/2026/01/07/amy-acton-chooses-former-ohio-democratic-party-leader-david-pepper-as-running-mate/
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: News article on Amy Acton selecting David Pepper as Lieutenant Governor
+    running mate.
+  identity_label: null
+  validity:
+    status: unchecked
+    note: "blocked: HTTP 403"
+  run_id: 20261006T140651-r6li
+  found_at: 2026-10-06T14:09:16.570Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:44:10.405Z
+  decision_reason: null
+  accepted_as:
+    domain_class: other
+    tier: context
+    redistributable: false
+  ownership_confirmed: null
+- id: 08016212ce2423e0
+  contest_id: 2026-11-03:governor-lt-governor:oh:unspecified
+  entity_id: don-kissick
+  url: https://www.hometownstations.com/news/allen_county/don-kissick-announces-candidacy-for-governor-of-ohio-names-james-mills-as-lieutenant-governor-running/article_7cf08961-6f00-4459-acc1-e939c8b36ff7.html
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: News article on Kissick's candidacy announcement for Ohio governor with
+    James Mills as running mate
+  identity_label: null
+  validity:
+    status: unreachable
+    note: "http: HTTP 404"
+  run_id: 20261006T140651-r6li
+  found_at: 2026-10-06T14:09:22.726Z
+  status: rejected
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:45:05.156Z
+  decision_reason: dead link
+  accepted_as: null
+  ownership_confirmed: null
+- id: 5e21700c3726a75a
+  contest_id: 2026-11-03:governor-lt-governor:oh:unspecified
+  entity_id: don-kissick
+  url: https://www.hometownstations.com/news/libertarian-candidates-kissick-mills-outline-vision-in-lima-ahead-of-ohio-governor-race/article_944be1ce-869a-40e5-9b68-fd9b244c0f42.html
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: News article on Kissick and Mills campaign event in Lima
+  identity_label: null
+  validity:
+    status: unreachable
+    note: "http: HTTP 404"
+  run_id: 20261006T140651-r6li
+  found_at: 2026-10-06T14:09:28.961Z
+  status: rejected
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:45:18.477Z
+  decision_reason: dead linkt
+  accepted_as: null
+  ownership_confirmed: null
+- id: b1c5df260c5902b0
+  contest_id: 2026-11-03:governor-lt-governor:oh:unspecified
+  entity_id: don-kissick
+  url: https://lpo.org/2025/11/06/2026-candidates/
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: Libertarian Party of Ohio page listing 2026 candidates
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T140651-r6li
+  found_at: 2026-10-06T14:09:32.335Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:44:54.143Z
+  decision_reason: null
+  accepted_as:
+    domain_class: other
+    tier: context
+    redistributable: false
+  ownership_confirmed: null
+- id: 6bebec8d725005d9
+  contest_id: 2026-11-03:governor-lt-governor:oh:unspecified
+  entity_id: don-kissick
+  url: https://goodparty.org/candidate/don-kissick/ohio-governor
+  final_url: https://goodparty.org/people/don-kissick-da372906
+  proposed_class: other
+  proposed_tier: context
+  reason: GoodParty.org candidate profile for Don Kissick, Ohio governor
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T140651-r6li
+  found_at: 2026-10-06T14:09:35.888Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:44:24.451Z
+  decision_reason: null
+  accepted_as:
+    domain_class: other
+    tier: context
+    redistributable: false
+  ownership_confirmed: null
+- id: 2fdbe5ee52f49888
+  contest_id: 2026-11-03:governor-lt-governor:oh:unspecified
+  entity_id: don-kissick
+  url: https://votehamiltoncountyohio.gov/wp-content/uploads/2026/07/November-2026-Candidate-Profile-1-1.pdf
+  final_url: null
+  proposed_class: ohio-boe
+  proposed_tier: official
+  reason: Hamilton County Board of Elections November 2026 candidate profile
+    document; may list governor candidates
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T140651-r6li
+  found_at: 2026-10-06T14:09:37.991Z
+  status: rejected
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:42:27.191Z
+  decision_reason: not super helpful
+  accepted_as: null
+  ownership_confirmed: null
+- id: 8674fe71e78c8766
+  contest_id: 2026-11-03:governor-lt-governor:oh:unspecified
+  entity_id: don-kissick
+  url: https://en.wikipedia.org/wiki/2026_Ohio_gubernatorial_election
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: Wikipedia page on the 2026 Ohio gubernatorial election
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T140651-r6li
+  found_at: 2026-10-06T14:09:38.370Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:44:16.263Z
+  decision_reason: null
+  accepted_as:
+    domain_class: other
+    tier: context
+    redistributable: false
+  ownership_confirmed: null
+- id: 91a5cca5839353af
+  contest_id: 2026-11-03:governor-lt-governor:oh:unspecified
+  entity_id: james-l-mills
+  url: https://www.hometownstations.com/news/allen_county/don-kissick-announces-candidacy-for-governor-of-ohio-names-james-mills-as-lieutenant-governor-running/article_7cf08961-6f00-4459-acc1-e939c8b36ff7.html
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: News article on Don Kissick's gubernatorial candidacy naming James Mills
+    as Lieutenant Governor running mate
+  identity_label: null
+  validity:
+    status: unreachable
+    note: "http: HTTP 404"
+  run_id: 20261006T140651-r6li
+  found_at: 2026-10-06T14:09:42.583Z
+  status: rejected
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:45:11.606Z
+  decision_reason: dead link
+  accepted_as: null
+  ownership_confirmed: null
+- id: 44141f69b65c783f
+  contest_id: 2026-11-03:governor-lt-governor:oh:unspecified
+  entity_id: james-l-mills
+  url: https://www.hometownstations.com/news/libertarian-candidates-kissick-mills-outline-vision-in-lima-ahead-of-ohio-governor-race/article_944be1ce-869a-40e5-9b68-fd9b244c0f42.html
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: News article on Kissick and Mills Libertarian ticket remarks in Lima
+  identity_label: null
+  validity:
+    status: unreachable
+    note: "http: HTTP 404"
+  run_id: 20261006T140651-r6li
+  found_at: 2026-10-06T14:09:48.633Z
+  status: rejected
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:45:27.839Z
+  decision_reason: dead link
+  accepted_as: null
+  ownership_confirmed: null
+- id: 31a8fd0c6bae825b
+  contest_id: 2026-11-03:governor-lt-governor:oh:unspecified
+  entity_id: james-l-mills
+  url: https://goodparty.org/candidate/james-mills/ohio-lieutenant-governor
+  final_url: https://goodparty.org/people/james-mills-8dde797c
+  proposed_class: other
+  proposed_tier: context
+  reason: GoodParty.org profile page for James Mills, Ohio Lieutenant Governor
+    candidate
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T140651-r6li
+  found_at: 2026-10-06T14:09:50.385Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:44:35.621Z
+  decision_reason: null
+  accepted_as:
+    domain_class: other
+    tier: context
+    redistributable: false
+  ownership_confirmed: null
+- id: ccfea02062721531
+  contest_id: 2026-11-03:governor-lt-governor:oh:unspecified
+  entity_id: james-l-mills
+  url: https://crawfordcountyohioboe.gov/wp-content/uploads/LibertarianCandidatesMay2026.pdf
+  final_url: null
+  proposed_class: ohio-boe
+  proposed_tier: official
+  reason: Crawford County Board of Elections list of Libertarian candidates, May 2026
+  identity_label: null
+  validity:
+    status: unreachable
+    note: "http: HTTP 404"
+  run_id: 20261006T140651-r6li
+  found_at: 2026-10-06T14:09:56.815Z
+  status: rejected
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:41:46.209Z
+  decision_reason: dead link
+  accepted_as: null
+  ownership_confirmed: null
+- id: 5ba76d69826161ea
+  contest_id: 2026-11-03:governor-lt-governor:oh:unspecified
+  entity_id: robert-a-mccolley
+  url: https://ohiosenate.gov/senators/mccolley
+  final_url: https://ohiosenate.gov/members/rob-mccolley
+  proposed_class: ohio-legislature
+  proposed_tier: official
+  reason: Ohio Senate member page for Senate President Rob McColley, District 1.
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T140651-r6li
+  found_at: 2026-10-06T14:09:59.040Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:42:42.838Z
+  decision_reason: null
+  accepted_as:
+    domain_class: ohio-legislature
+    tier: official
+    redistributable: true
+  ownership_confirmed: null
+- id: 25e33ed6ab0f01ea
+  contest_id: 2026-11-03:governor-lt-governor:oh:unspecified
+  entity_id: robert-a-mccolley
+  url: https://vivekforohio.com/vivek-selects-rob-mccolley-to-serve-as-his-running-mate/
+  final_url: null
+  proposed_class: sponsor-site
+  proposed_tier: says
+  reason: Ramaswamy campaign press release announcing Rob McColley as Lieutenant
+    Governor running mate.
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T140651-r6li
+  found_at: 2026-10-06T14:10:01.089Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:45:47.681Z
+  decision_reason: null
+  accepted_as:
+    domain_class: sponsor-site
+    tier: says
+    redistributable: false
+  ownership_confirmed: null
+- id: 08ee543e7ba190dd
+  contest_id: 2026-11-03:governor-lt-governor:oh:unspecified
+  entity_id: robert-a-mccolley
+  url: https://ohiocapitaljournal.com/2026/01/06/ohio-senate-president-rob-mccolley-tapped-as-vivek-ramaswamys-running-mate/
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: News article on McColley selected as Ramaswamy's running mate.
+  identity_label: null
+  validity:
+    status: unchecked
+    note: "blocked: HTTP 403"
+  run_id: 20261006T140651-r6li
+  found_at: 2026-10-06T14:10:05.318Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:45:40.778Z
+  decision_reason: null
+  accepted_as:
+    domain_class: other
+    tier: context
+    redistributable: false
+  ownership_confirmed: null
+- id: e48ae7f8bec01583
+  contest_id: 2026-11-03:governor-lt-governor:oh:unspecified
+  entity_id: robert-a-mccolley
+  url: https://en.wikipedia.org/wiki/Rob_McColley
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: Wikipedia biography of Rob McColley.
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T140651-r6li
+  found_at: 2026-10-06T14:10:05.656Z
+  status: accepted
+  decided_by: phil-m
+  decided_at: 2026-10-06T14:45:33.576Z
+  decision_reason: null
+  accepted_as:
+    domain_class: other
+    tier: context
+    redistributable: false
+  ownership_confirmed: null

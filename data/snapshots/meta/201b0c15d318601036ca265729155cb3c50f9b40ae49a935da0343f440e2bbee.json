@@ -1,0 +1,10 @@
+{
+  "sha256": "201b0c15d318601036ca265729155cb3c50f9b40ae49a935da0343f440e2bbee",
+  "url": "https://www.fec.gov/data/committee/C00896019/",
+  "retrieved_at": "2026-10-06T14:54:12.722Z",
+  "content_type": "text/html; charset=utf-8",
+  "method": "direct",
+  "redistributable": true,
+  "body_path": "public/201b0c15d318601036ca265729155cb3c50f9b40ae49a935da0343f440e2bbee.html",
+  "text_path": "public/201b0c15d318601036ca265729155cb3c50f9b40ae49a935da0343f440e2bbee.txt"
+}

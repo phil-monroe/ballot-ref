@@ -1,0 +1,42 @@
+- id: 812f061c3eaca906
+  contest_id: 2026-11-03:levy:delaware-county-regional-transit-authority:sales-use-tax
+  entity_id: null
+  url: https://www.delcotransit.com/levy/
+  final_url: null
+  proposed_class: sponsor-site
+  proposed_tier: says
+  reason: Delaware County Transit page on the proposed 0.2% sales and use tax levy
+    on the Nov. 3, 2026 ballot.
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T142454-l0pr
+  found_at: 2026-10-06T14:25:14.363Z
+  status: pending
+  decided_by: null
+  decided_at: null
+  decision_reason: null
+  accepted_as: null
+  ownership_confirmed: null
+- id: e5f24f75388eb131
+  contest_id: 2026-11-03:levy:delaware-county-regional-transit-authority:sales-use-tax
+  entity_id: null
+  url: https://1808delaware.com/?p=29867
+  final_url: https://1808delaware.com/sunbury/sunbury-maps-a-bigger-road-ahead/
+  proposed_class: other
+  proposed_tier: context
+  reason: Local news article covering the transit agency's proposed 0.2% sales and
+    use tax and planned service expansions.
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T142454-l0pr
+  found_at: 2026-10-06T14:25:14.607Z
+  status: pending
+  decided_by: null
+  decided_at: null
+  decision_reason: null
+  accepted_as: null
+  ownership_confirmed: null

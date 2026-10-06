@@ -1,0 +1,10 @@
+{
+  "sha256": "7a4a603e8f711a46ca702cb7cb3f0ad85c45bbdcb2d1c32e39d330e58a85b809",
+  "url": "https://balderson.house.gov/",
+  "retrieved_at": "2026-10-06T14:01:23.680Z",
+  "content_type": "text/html; charset=utf-8",
+  "method": "direct",
+  "redistributable": true,
+  "body_path": "public/7a4a603e8f711a46ca702cb7cb3f0ad85c45bbdcb2d1c32e39d330e58a85b809.html",
+  "text_path": "public/7a4a603e8f711a46ca702cb7cb3f0ad85c45bbdcb2d1c32e39d330e58a85b809.txt"
+}

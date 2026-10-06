@@ -1,0 +1,104 @@
+- id: d4d80df93d90bc9c
+  contest_id: 2026-11-03:state-issue-3:oh:constitutional-amendment
+  entity_id: null
+  url: https://www.ohiosos.gov/office/media-center/categories/press-releases/2026-08-18
+  final_url: null
+  proposed_class: ohio-sos
+  proposed_tier: official
+  reason: "Ohio Secretary of State press release on State Issue 3: full text,
+    ballot language, explanation, arguments for and against."
+  identity_label: null
+  validity:
+    status: unchecked
+    note: "blocked: HTTP 403"
+  run_id: 20261006T142406-i84v
+  found_at: 2026-10-06T14:24:23.990Z
+  status: pending
+  decided_by: null
+  decided_at: null
+  decision_reason: null
+  accepted_as: null
+  ownership_confirmed: null
+- id: b8e10a3487619b82
+  contest_id: 2026-11-03:state-issue-3:oh:constitutional-amendment
+  entity_id: null
+  url: https://www.ohiosos.gov/office/media-center/categories/week-in-review/week-in-review-2026-08-21
+  final_url: null
+  proposed_class: ohio-sos
+  proposed_tier: official
+  reason: Ohio Secretary of State weekly review item mentioning State Issue 3 on
+    the November 2026 ballot.
+  identity_label: null
+  validity:
+    status: unchecked
+    note: "blocked: HTTP 403"
+  run_id: 20261006T142406-i84v
+  found_at: 2026-10-06T14:24:30.175Z
+  status: pending
+  decided_by: null
+  decided_at: null
+  decision_reason: null
+  accepted_as: null
+  ownership_confirmed: null
+- id: 274744bdf8ec78ca
+  contest_id: 2026-11-03:state-issue-3:oh:constitutional-amendment
+  entity_id: null
+  url: https://news.ballotpedia.org/2026/06/12/ohio-voters-to-decide-voter-id-amendment-in-november-one-of-five-voter-id-ballot-measures-in-2026/
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: Ballotpedia news article on the Ohio voter ID amendment on the November
+    2026 ballot.
+  identity_label: null
+  validity:
+    status: unchecked
+    note: link-only context; not fetched
+  run_id: 20261006T142406-i84v
+  found_at: 2026-10-06T14:24:30.175Z
+  status: pending
+  decided_by: null
+  decided_at: null
+  decision_reason: null
+  accepted_as: null
+  ownership_confirmed: null
+- id: 6be7c7bd79e0fd2e
+  contest_id: 2026-11-03:state-issue-3:oh:constitutional-amendment
+  entity_id: null
+  url: https://www.fox19.com/2026/08/04/ohio-voter-id-amendment-is-officially-headed-november-ballot/
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: News article on the Ohio voter ID amendment certified for the November
+    2026 ballot.
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T142406-i84v
+  found_at: 2026-10-06T14:24:32.833Z
+  status: pending
+  decided_by: null
+  decided_at: null
+  decision_reason: null
+  accepted_as: null
+  ownership_confirmed: null
+- id: f565d2f14b96200f
+  contest_id: 2026-11-03:state-issue-3:oh:constitutional-amendment
+  entity_id: null
+  url: https://www.news5cleveland.com/news/politics/ohio-politics/what-is-issue-3-on-the-ohio-ballot
+  final_url: null
+  proposed_class: other
+  proposed_tier: context
+  reason: News explainer on Issue 3 on the Ohio ballot.
+  identity_label: null
+  validity:
+    status: ok
+    note: ""
+  run_id: 20261006T142406-i84v
+  found_at: 2026-10-06T14:24:34.912Z
+  status: pending
+  decided_by: null
+  decided_at: null
+  decision_reason: null
+  accepted_as: null
+  ownership_confirmed: null
