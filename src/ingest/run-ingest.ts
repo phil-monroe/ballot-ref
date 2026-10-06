@@ -48,6 +48,9 @@ export async function runIngest(opts: {
     redistributable: true, // official ballot: government record
   });
 
+  // Re-ingesting unchanged content confirms the stored copy is still current (resets staleness).
+  snapshots.confirm(meta.sha256, new Date().toISOString());
+
   const contests = buildContests(parseBallot(lines), {
     date: dateFromElectionCode(ballot.ballot_source.election_code),
     county: ballot.ballot_source.county_slug,
