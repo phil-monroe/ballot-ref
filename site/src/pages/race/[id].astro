@@ -15,7 +15,6 @@ const { c, prev, next } = Astro.props;
 ---
 <Base title={label(c)}>
   <h1>{label(c)}</h1>
-  <AskClaude src={`/race/${c.id}.txt`} prompt={`I pasted a voter guide section for "${label(c)}" below (I will paste it right after this message). Help me understand it: compare the options, cite which source supports each claim, flag anything marked unverified or a campaign claim, and stay neutral. Do not tell me who to vote for. My first question: `} />
   <section class="part" data-row={c.id} aria-labelledby="your-choice">
     <h2 class="part-title" id="your-choice">Your choice</h2>
     <Picker c={c} />
@@ -25,6 +24,11 @@ const { c, prev, next } = Astro.props;
     </label>
   </section>
   <Contest c={c} />
+  <section class="part" aria-labelledby="ask-claude">
+    <h2 class="part-title" id="ask-claude">Ask Claude</h2>
+    <p class="small">Have questions about this race? Copy these details into a Claude chat to compare the options and ask follow-ups.</p>
+  <AskClaude src={`/race/${c.id}.txt`} prompt={`I pasted a voter guide section for "${label(c)}" below (I will paste it right after this message). Help me understand it: compare the options, cite which source supports each claim, flag anything marked unverified or a campaign claim, and stay neutral. Do not tell me who to vote for. My first question: `} />
+  </section>
   <nav class="bottom-nav" aria-label="Contest navigation">
     {prev ? <a href={`/race/${prev.id}/`} aria-label="Previous contest">&lsaquo; Prev</a> : <span />}
     <a href="/" class="bottom-all">All contests</a>
