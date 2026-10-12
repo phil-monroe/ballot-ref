@@ -180,3 +180,11 @@ details[open] > summary::before { transform: rotate(90deg); }
 .scroll table { overflow-wrap: normal; word-break: normal; }
 .scroll th { white-space: nowrap; }
 .scroll td { min-width: 5rem; }
+
+/* checkbox-style choice cards */
+.pick { flex-direction: row; align-items: center; gap: 12px; }
+.pick-text { display: flex; flex-direction: column; min-width: 0; }
+.box { flex: none; display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border: 2px solid var(--muted); border-radius: 6px; background: var(--bg); color: transparent; transition: background 0.12s, border-color 0.12s, color 0.12s; }
+.pick[aria-pressed='true'] { background: color-mix(in srgb, var(--accent) 16%, var(--bg)); color: var(--fg); border-color: var(--accent); font-weight: 600; }
+.pick[aria-pressed='true'] .pick-party { color: var(--muted); opacity: 1; }
+.pick[aria-pressed='true'] .box { background: var(--accent); border-color: var(--accent); color: var(--bg); }

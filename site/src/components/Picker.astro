@@ -8,8 +8,13 @@ const byName = new Map((c.candidates ?? []).map((x: any) => [x.name, x]));
     const cand: any = byName.get(name);
     return (
       <button type="button" class="pick" data-contest={c.id} data-choice={name} aria-pressed="false">
-        <span class="pick-name">{name}</span>
-        {cand?.party && <span class="pick-party">{cand.party}{cand.incumbent ? ' · incumbent' : ''}</span>}
+        <span class="box" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>
+        </span>
+        <span class="pick-text">
+          <span class="pick-name">{name}</span>
+          {cand?.party && <span class="pick-party">{cand.party}{cand.incumbent ? ' · incumbent' : ''}</span>}
+        </span>
       </button>
     );
   })}
