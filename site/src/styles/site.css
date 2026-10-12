@@ -138,3 +138,9 @@ summary { list-style: none; }
 summary::-webkit-details-marker { display: none; }
 details > summary::before { content: '▸'; display: inline-block; width: 1.1em; flex: none; transition: transform 0.15s; }
 details[open] > summary::before { transform: rotate(90deg); }
+
+.row-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+.row-head h3 { flex: 1; min-width: 0; margin: 0; }
+.details-icon { flex: none; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; margin: -8px -10px 0 0; color: var(--accent); border-radius: 50%; }
+.details-icon:active { background: var(--line); }
+@media print { .details-icon { display: none; } }
