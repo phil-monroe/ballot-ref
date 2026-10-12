@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import Bullets from '../components/Bullets.astro';
 import Links from '../components/Links.astro';
+import AskClaude from '../components/AskClaude.astro';
 import { VERIFICATION, guide } from '../lib';
 const { meta } = guide;
 const compiled = new Date(`${meta.guide_compiled}T12:00:00`).toLocaleDateString('en-US', { dateStyle: 'long' });
@@ -32,6 +33,7 @@ const compiled = new Date(`${meta.guide_compiled}T12:00:00`).toLocaleDateString(
     The whole guide is available as one plain-text file you can paste or upload into a chat, so you can ask questions like
     “compare the Supreme Court candidates” or “what would the transit tax cost me?”
   </p>
+  <AskClaude src="/llms-full.txt" label="Ask Claude about the whole guide" prompt={`I will paste a voter guide for ${meta.jurisdiction}, precinct ${meta.precinct}, right after this message. Using only that guide, answer my questions, cite which source supports each claim, flag anything marked unverified or a campaign claim, and stay neutral. Do not tell me who to vote for. My first question: `} />
   <p>
     <button type="button" class="btn" data-copy-guide>Copy guide as text</button>
     <span class="small" data-copy-status role="status"></span>

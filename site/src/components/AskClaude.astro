@@ -1,0 +1,8 @@
+---
+const { src, prompt, label = 'Ask Claude about this' } = Astro.props;
+const url = `https://claude.ai/new?q=${encodeURIComponent(prompt)}`;
+---
+<div class="ask">
+  <a class="btn" href={url} target="_blank" rel="noopener noreferrer" data-ask-claude data-src={src}>{label} &nearr;</a>
+  <p class="small" data-ask-status role="status">Copies the details to your clipboard and opens Claude. Paste them into the chat, then send.</p>
+</div>

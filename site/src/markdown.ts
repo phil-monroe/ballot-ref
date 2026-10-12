@@ -35,7 +35,7 @@ const candidate = (c: any): string => {
   return out.join('\n');
 };
 
-const contest = (c: any): string => {
+export const contest = (c: any): string => {
   const out: string[] = [];
   if (c.type === 'ballot_issue') {
     out.push(`## ${c.ballot_order}. ${c.title}`);
@@ -144,4 +144,14 @@ export const indexMarkdown = (base: string): string => {
     '',
   ];
   return lines.join('\n');
+};
+
+export const raceMarkdown = (c: any): string => {
+  const m = guide.meta;
+  return [
+    `Voter guide excerpt: ${m.title}. ${m.jurisdiction}, precinct ${m.precinct}. Compiled ${m.guide_compiled}.`,
+    SITE_NOTE,
+    '',
+    contest(c),
+  ].join('\n').replace(/\n{3,}/g, '\n\n');
 };

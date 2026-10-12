@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import Contest from '../../components/Contest.astro';
 import Picker from '../../components/Picker.astro';
+import AskClaude from '../../components/AskClaude.astro';
 import { contests, label } from '../../lib';
 
 export function getStaticPaths() {
@@ -14,6 +15,7 @@ const { c, prev, next } = Astro.props;
 ---
 <Base title={label(c)}>
   <h1>{label(c)}</h1>
+  <AskClaude src={`/race/${c.id}.txt`} prompt={`I pasted a voter guide section for "${label(c)}" below (I will paste it right after this message). Help me understand it: compare the options, cite which source supports each claim, flag anything marked unverified or a campaign claim, and stay neutral. Do not tell me who to vote for. My first question: `} />
   <section class="part" data-row={c.id} aria-labelledby="your-choice">
     <h2 class="part-title" id="your-choice">Your choice</h2>
     <Picker c={c} />

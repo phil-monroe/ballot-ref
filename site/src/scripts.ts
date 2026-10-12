@@ -112,3 +112,21 @@ if (copyBtn) {
     }
   });
 }
+
+document.querySelectorAll<HTMLAnchorElement>('[data-ask-claude]').forEach((a) => {
+  const status = a.parentElement?.querySelector<HTMLElement>('[data-ask-status]');
+  let cached: string | undefined;
+  // Prefetch so the clipboard write can happen synchronously inside the click.
+  fetch(a.dataset.src!).then((r) => r.text()).then((t) => (cached = t)).catch(() => {});
+  a.addEventListener('click', (ev) => {
+    const done = (ok: boolean) => {
+      if (status) status.textContent = ok ? 'Copied. Paste into the Claude chat that just opened, then send.' : 'Could not copy automatically. Open the guide text link on the About page and copy it.';
+    };
+    if (cached !== undefined) {
+      navigator.clipboard.writeText(cached).then(() => done(true), () => done(false));
+      return;
+    }
+    ev.preventDefault();
+    fetch(a.dataset.src!).then((r) => r.text()).then((t) => navigator.clipboard.writeText(t)).then(() => done(true), () => done(false)).finally(() => window.open(a.href, '_blank', 'noopener'));
+  });
+});

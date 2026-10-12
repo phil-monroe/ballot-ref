@@ -202,3 +202,8 @@ details[open] > summary::before { transform: rotate(90deg); }
 .card-head h4 { order: 1; }
 
 .part-title { scroll-margin-top: 64px; }
+
+.btn { display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border: 1px solid var(--accent); border-radius: 8px; color: var(--accent); background: transparent; font: inherit; font-weight: 600; text-decoration: none; cursor: pointer; }
+.ask { margin: 8px 0 4px; }
+.ask .small { margin: 6px 0 0; }
+@media print { .ask { display: none; } }
