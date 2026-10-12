@@ -18,6 +18,12 @@ const { c } = Astro.props;
   </p>
   {c.summary && <p>{c.summary}</p>}
   {c.verification_note && <p class="small">{c.verification_note}</p>}
+  {c.website && (
+    <>
+      <Bullets title="Top priorities (per campaign site)" items={c.priorities} />
+      {c.priorities_note && <p class="small">{c.priorities_note}</p>}
+    </>
+  )}
   <Bullets title="Stated positions" items={c.positions} />
   <Bullets title="Money" items={c.money} />
   <Bullets title="Endorsements" items={c.endorsements} />

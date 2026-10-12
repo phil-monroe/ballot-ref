@@ -11,6 +11,8 @@
 #       sources[]: {title, url} - links used for that item
 #       website: official URL (candidate: campaign site; contest: office or issue page). Omitted when none
 #                was found; the site then shows a "No website" badge.
+#       priorities: (candidates) top issues as the campaign site itself lists them, 3-5 short items, plus
+#                priorities_note for provenance or when the site lists none.
 #
 # Neutrality: support/oppose lists are arguments made by supporters/critics, not Claude's recommendations.
 # Items marked verification: "unverified" or "campaign_claim" should be labeled as such on the site.
@@ -122,6 +124,12 @@ sections:
         candidates:
           - name: "Jon Husted"
             website: "https://jonhustedforsenate.com/"
+            priorities:
+              - "Jobs and economic development: cites bringing Intel's chip plant to Licking County and business-driven job training (TechCred)"
+              - "Cutting government waste and costs: cites InnovateOhio and moving driver's license and title services online"
+              - "Support for law enforcement funding"
+              - "Fiscal conservatism: cites the largest income tax cut in Ohio history while House Speaker"
+            priorities_note: "The campaign site has no issues page; these come from its Bio page, which highlights his record."
             party: "Republican"
             incumbent: true
             summary: "Appointed to the seat by Gov. DeWine in January 2025. Previously 20+ years as a state lawmaker and statewide officeholder, most recently Lieutenant Governor."
@@ -144,6 +152,12 @@ sections:
               - { title: "NBC4: Husted, Brown set stage for Ohio's 2026 U.S. Senate race", url: "https://www.nbc4i.com/news/your-local-election-hq/husted-brown-set-stage-for-ohios-2026-u-s-senate-race/" }
           - name: "Sherrod Brown"
             website: "https://www.sherrodbrown.com/"
+            priorities:
+              - "Hold health insurers accountable: ban denials of care a doctor prescribes, with fines for improper denials"
+              - "Lower prescription drug costs: bar drug companies from charging Americans more than other countries"
+              - "Make data centers pay the full cost of their utilities, with local say over whether they are built"
+              - "Cap utility rate increases"
+              - "Ban stock trading by members of Congress and their spouses, and bar them from lobbying after leaving office"
             party: "Democratic"
             incumbent: false
             summary: "U.S. Senator 2007-2025; lost in 2024 to Bernie Moreno."
@@ -165,6 +179,11 @@ sections:
               - { title: "Ohio Capital Journal: Brown outraises Husted", url: "https://ohiocapitaljournal.com/2026/07/29/sherrod-brown-comfortably-outraises-jon-husted-as-outside-groups-enter-ohios-u-s-senate-race/" }
           - name: "William B. Redpath"
             website: "https://billredpath.com/"
+            priorities:
+              - "Repeal all tariffs (unilateral free trade)"
+              - "Cut federal spending: eliminate the Departments of Education and Housing & Urban Development and end corporate welfare and farm subsidies"
+              - "Repeal federal laws on consensual crimes, including drug prohibition and the ban on online gambling"
+              - "Lower taxes and protect civil liberties"
             party: "Libertarian"
             incumbent: false
             summary: "On the ballot. Almost no coverage found; platform not verified. Libertarian candidates generally run on smaller government and civil liberties."
@@ -173,6 +192,11 @@ sections:
               - { title: "Ballot (official)", url: "https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X" }
           - name: "Greg Levy"
             website: "https://www.greg4senate.com/"
+            priorities:
+              - "Bring the 100 largest corporations into public ownership under democratic worker control"
+              - "Make basics constitutional rights: national rent cap (no more than 20% of income), eviction ban, single-payer health care, cancelled student debt, free public education"
+              - "Price freeze on essential goods"
+              - "Repeal the 2025 federal tax cuts"
             party: "Other party (as printed on ballot)"
             incumbent: false
             summary: "On the ballot. Almost no coverage found; platform not verified."
@@ -198,6 +222,11 @@ sections:
         candidates:
           - name: "Troy Balderson"
             website: "https://baldersonforcongress.com/"
+            priorities:
+              - "Secure the border: more border patrol and technology, go after cartels, end sanctuary cities"
+              - "Energy: streamline permits, build pipelines, lift the LNG export ban, roll back green-energy policies"
+              - "Lower inflation, cut taxes and reduce federal spending"
+              - "Stand up to China and reduce dependence on it"
             party: "Republican"
             incumbent: true
             summary: "In Congress since a 2018 special election. Former state senator and representative. Third-generation auto dealer from Zanesville."
@@ -216,6 +245,13 @@ sections:
               - { title: "End Dark Money: OH-12 Congressional Race", url: "https://enddarkmoney.us/oh-12-congressional-race/" }
           - name: "Jerrad Christian"
             website: "https://www.christianforohio.com/"
+            priorities:
+              - "Get money out of politics: end Citizens United, cap campaign spending, restrict lobbying"
+              - "Protect voting rights: pass the John Lewis Voting Rights Advancement Act"
+              - "Expand civil rights protections, including reproductive rights and marriage equality"
+              - "Abolish ICE as it exists and prosecute agents who break the law"
+              - "Universal health care; raise the minimum wage"
+            priorities_note: "Site lists about 25 issues; these are the first five in its order."
             party: "Democratic"
             incumbent: false
             summary: "Navy veteran and software engineer. Lost to Balderson in 2024. Won a three-way 2026 primary with 46.4% districtwide and 48.95% in Delaware County."
@@ -261,6 +297,13 @@ sections:
         candidates:
           - name: "Amy Acton / David Pepper (Lt. Gov.)"
             website: "https://actonforgovernor.com/"
+            priorities:
+              - "Reduce costs for families: Working Families Tax Cut, including an earned income credit and child tax credit"
+              - "Clean up corruption"
+              - "Improve education"
+              - "Lower health care costs"
+              - "Grow Ohio jobs and businesses"
+            priorities_note: "Site lists about 18 priorities; these are the first five in its order."
             party: "Democratic"
             incumbent: false
             summary: "Acton was Ohio Department of Health director during the early COVID-19 pandemic. Pepper is a former Ohio Democratic Party chair."
@@ -277,6 +320,12 @@ sections:
               - { title: "Mediaite: Acton won't debate 'chronic liar' Ramaswamy", url: "https://www.mediaite.com/media/news/ohio-dem-refuses-to-debate-chronic-liar-ramaswamy-in-whats-being-called-the-ugliest-race-in-the-country/" }
           - name: "Vivek Ramaswamy / Robert A. McColley (Lt. Gov.)"
             website: "https://vivekforohio.com/"
+            priorities:
+              - "Cut property taxes immediately and phase out the state income tax, starting with capital gains"
+              - "Lower electric bills by expanding natural gas and other energy and streamlining permits"
+              - "World-class education for kids"
+              - "Cut red tape and government waste"
+              - "Gas tax relief: 90-day suspension of the state motor fuel tax"
             party: "Republican"
             incumbent: false
             summary: "Ramaswamy is a biotech entrepreneur and billionaire, 2024 presidential candidate, and former Trump administration official. McColley is Ohio Senate President."
@@ -295,6 +344,11 @@ sections:
               - { title: "Mediaite: Acton won't debate Ramaswamy", url: "https://www.mediaite.com/media/news/ohio-dem-refuses-to-debate-chronic-liar-ramaswamy-in-whats-being-called-the-ugliest-race-in-the-country/" }
           - name: "Don Kissick / James L. Mills (Lt. Gov.)"
             website: "https://donkissick.com/"
+            priorities:
+              - "Data centers: halt new projects, citing power and water use, farmland and tax incentives"
+              - "Restrict government use of automated license-plate cameras and limit vehicle-location data sharing"
+              - "Property taxes: supports ending property taxes in favor of local consumption-based funding"
+              - "Against corruption: end corporate contributions from regulated monopolies"
             party: "Libertarian"
             incumbent: false
             summary: "Kissick has sought a spot in debates. Platform beyond general Libertarian positions not verified."
@@ -321,6 +375,11 @@ sections:
         candidates:
           - name: "Keith Faber"
             website: "https://www.keithfaber.org/"
+            priorities:
+              - "Defend the Constitution and religious liberty, and push back on federal overreach"
+              - "Combat the drug epidemic: treatment, prosecuting suppliers, border security"
+              - "Consumer protection: scams, fraud and predatory companies, especially against seniors"
+              - "Stop human trafficking and support survivors"
             party: "Republican"
             incumbent: false
             summary: "Ohio Auditor of State, finishing his second and final term. Former member of the Ohio House and Senate. Campaign says focus is 'protecting Ohio families, supporting law enforcement and defending our Constitution.'"
@@ -334,6 +393,12 @@ sections:
               - { title: "Signal Cleveland: Keith Faber and John Kulewicz, Ohio's next attorney general", url: "https://signalcleveland.org/election-2026-keith-faber-and-john-kulewicz-ohio-next-attorney-general/" }
           - name: "John J. Kulewicz"
             website: "https://john4ohioag.com/"
+            priorities:
+              - "Take on corrupt politicians and restore transparency and accountability"
+              - "Go after price-fixing monopolies, scam artists and robocallers"
+              - "Fight Medicaid provider and nursing home fraud"
+              - "Be an independent-minded Attorney General"
+            priorities_note: "From the 'Why I'm Running' section; the site has no separate issues page."
             party: "Democratic"
             incumbent: false
             summary: "Upper Arlington City Council member since 2020. Retired in 2025 after 44 years at Vorys, Sater, Seymour and Pease. Yale graduate. 'Transparency Tour' campaign."
@@ -362,6 +427,10 @@ sections:
         candidates:
           - name: "Frank LaRose"
             website: "https://www.franklarose.com/"
+            priorities:
+              - "Transparency, efficiency and accountability in how state and local governments manage tax dollars"
+              - "Hold government offices accountable when they mismanage public money"
+            priorities_note: "The site has no issues page; this comes from its home page statement."
             party: "Republican"
             incumbent: false
             summary: "Two-term Secretary of State, term-limited. Former state senator and Army veteran."
@@ -373,6 +442,12 @@ sections:
               - { title: "WOSU: Ohio 2026 election guide", url: "https://www.wosu.org/2026-10-06/ohio-2026-election-guide-what-voters-need-to-know-about-their-ballots" }
           - name: "Annette Blackwell"
             website: "https://blackwellforohio.com/"
+            priorities:
+              - "Protect working families"
+              - "Fight corruption and hold bad actors accountable"
+              - "Safeguard taxpayer dollars"
+              - "Partner with communities to make Ohio safe and affordable"
+            priorities_note: "The site has no issues page; this comes from its home page statement."
             party: "Democratic"
             incumbent: false
             summary: "Mayor of Maple Heights."
@@ -396,6 +471,11 @@ sections:
         candidates:
           - name: "Robert Sprague"
             website: "https://www.spragueforohio.com/"
+            priorities:
+              - "Only U.S. citizens vote: verify citizenship when people register, using federal data"
+              - "Require photo ID for mail-in voting"
+              - "Eliminate ballot drop boxes"
+              - "Post-election audits of voting processes and chain of custody"
             party: "Republican"
             incumbent: false
             summary: "Current State Treasurer. Strongly backs Issue 3 and supports the federal SAVE Act. Quote: 'I would like to see us go back to in-person voting - that way everybody has to show their photo ID.'"
@@ -408,6 +488,12 @@ sections:
               - { title: "Ideastream: Secretary of State race", url: "https://www.ideastream.org/secretary-of-state" }
           - name: "Allison Russo"
             website: "https://allisonrusso.com/"
+            priorities:
+              - "Protect your voice and vote: elections that are fair, secure and accessible"
+              - "Protect personal data"
+              - "Government accountable to the people, on affordability and rising costs"
+              - "Voters choose politicians, not the other way around"
+            priorities_note: "The site has no issues page; this comes from its home page statement."
             party: "Democratic"
             incumbent: false
             summary: "Former Ohio House Minority Leader. Supports photo ID but calls Issue 3 a waste of time because current photo ID requirements are 'the strictest in the country.'"
@@ -443,6 +529,12 @@ sections:
         candidates:
           - name: "Jay Edwards"
             website: "https://www.edwardsforohio.com/"
+            priorities:
+              - "Protect taxpayer dollars with a numbers-first approach, drawing on his time as House Finance chair"
+              - "Keep Ohio's money working in Ohio communities"
+              - "Keep politics out of state investments"
+              - "Spend every dollar wisely and transparently"
+            priorities_note: "The site's Issues page contains only a short statement; these come from it and the home page."
             party: "Republican"
             incumbent: false
             summary: "Former state representative. Won the GOP primary with 53.1% over Kristina Roegner."
@@ -455,6 +547,13 @@ sections:
               - { title: "Wikipedia: 2026 Ohio State Treasurer election", url: "https://en.wikipedia.org/wiki/2026_Ohio_State_Treasurer_election" }
           - name: "Seth Walsh"
             website: "https://teamwalshhq.com/"
+            priorities:
+              - "Put Ohioans first in state investments: no new investments in other countries, reinvest in Ohio community banks"
+              - "Help small businesses and entrepreneurs get access to capital"
+              - "Expand affordable housing"
+              - "Return unclaimed funds to Ohioans"
+              - "Protect public pensions"
+            priorities_note: "Site lists nine stances; these are the first five in its order."
             party: "Democratic"
             incumbent: false
             summary: "Cincinnati City Council member. Promises to name 'qualified, independent individuals to the pension boards,' invest in infrastructure and housing, and return unclaimed funds."
@@ -485,6 +584,12 @@ sections:
         candidates:
           - name: "Ryan Rivers"
             website: "https://riversforohio.com/"
+            priorities:
+              - "Affordability: lower everyday costs and energy bills, grow high-paying jobs, tax reform"
+              - "Local control over economic development"
+              - "Lower property taxes"
+              - "Eliminate fraud and waste"
+              - "Support law enforcement"
             party: "Republican"
             incumbent: false
             summary: "Former Orange Township trustee and past president of the Ohio Township Association. Founding director of The Rivers Companies; BallotReady lists him as a Delaware County bond-program project manager. Ohio University graduate. Beat state Rep. Beth Lear 51.84% to 48.16% in the primary, carrying all four counties."
@@ -503,6 +608,11 @@ sections:
               - { title: "BallotReady: Ryan Rivers", url: "https://www.ballotready.org/people/ryan-rivers-c0ff55bf-5d36-46bc-9537-4f5c80ebba4c" }
           - name: "Scott Charland"
             website: "https://www.strongwithscott.com/"
+            priorities:
+              - "Strong public education (opposes school vouchers)"
+              - "Protect Ohio's natural resources"
+              - "A wealth tax"
+              - "Working-class economic policy"
             party: "Democratic"
             incumbent: false
             verification: "unverified"
@@ -539,6 +649,7 @@ sections:
         candidates:
           - name: "Brian Lorenz"
             website: "https://lorenzforohio.com/"
+            priorities_note: "The site lists no issues or priorities; it highlights his record (chairing the House Economic & Workforce Development Committee, passing two bipartisan bills, and about $10 million in capital funds for Delaware County)."
             party: "Republican"
             incumbent: true
             summary: "Appointed in 2023 after Rep. Kris Jordan died; won a full term in 2024 with 54.3% over Rachael Morocco. Powell City Council 2010-2023, including time as Mayor. Senior Director of Planning at WD Partners. Master's in city planning from Ohio State. Chairs the House Economic & Workforce Development Committee; sponsored a 'regulatory sandbox' bill and HB 776 (motorcycle lane filtering). Won the 2026 primary with 77.19% over Peggy Guzzo."
@@ -558,6 +669,12 @@ sections:
               - { title: "HB 776 testimony (Lorenz), Ohio Legislature", url: "https://search-prod.lis.state.oh.us/api/v2/general_assembly_136/committees/cmte_h_trans_1/meetings/cmte_h_trans_1_2026-05-19-0330_1299/testimony/17663/hb776testimonylorenz.pdf" }
           - name: "Shelby Kimball"
             website: "https://kimballforohio.com/"
+            priorities:
+              - "Strong public schools, fully funded"
+              - "Affordable, accessible health care"
+              - "Support for veterans and military families"
+              - "Safe, strong communities"
+              - "Family-focused economic opportunity"
             party: "Democratic"
             incumbent: false
             summary: "Marine Corps veteran and Dublin resident. Beat Eli Wenzel 52.95% to 47.05% in the primary."
@@ -594,6 +711,7 @@ sections:
         candidates:
           - name: "Daniel R. Hawkins"
             website: "https://www.hawkinsforohio.com/"
+            priorities_note: "The site lists no issues or priorities; it describes his career as a prosecutor and judge, and the site appears to date from his 2024 run."
             party: "Republican"
             incumbent: true
             summary: "Elected in 2024. Former Franklin County prosecutor. Calls himself a 'strong conservative' who is tough on crime."
@@ -609,6 +727,12 @@ sections:
               - { title: "WFMJ: Decision 2026, two races for Ohio Supreme Court", url: "https://www.wfmj.com/news/local-news/decision-2026-two-races-for-ohio-supreme-court-justice/article_e0615892-0f8f-471a-8e21-31cd56f904ea.html" }
           - name: "Marilyn Zayas"
             website: "https://judgemarilynzayas.com/"
+            priorities:
+              - "Judicial independence and impartiality"
+              - "Expanded access to justice"
+              - "Standing up for all Ohioans"
+              - "A political outsider with proven integrity"
+            priorities_note: "From the headings on the site's 'Why Judge Zayas?' page."
             party: "Democratic"
             incumbent: false
             summary: "Judge on the First District Court of Appeals (Cincinnati) for nearly a decade. Born in East Harlem; Ohio resident since 1988. Says 'politics has no place in our Ohio Supreme Court.'"
@@ -637,6 +761,12 @@ sections:
         candidates:
           - name: "Jennifer Brunner"
             website: "https://justicebrunner.com/"
+            priorities:
+              - "Fairness and respect in court for injured workers"
+              - "Fair rules so businesses can compete"
+              - "Public safety for people at home and on the road"
+              - "Protecting people from scams and fraud"
+            priorities_note: "The site frames what 'justice' means to different Ohioans rather than listing a platform."
             party: "Democratic"
             incumbent: true
             summary: "On the court since 2021. Tenth District Court of Appeals 2014-2020. Ohio Secretary of State 2007-2011. The only Democrat now holding a statewide elected office in Ohio."
@@ -652,6 +782,10 @@ sections:
               - { title: "Mahoning Matters: Overview of Ohio's 2026 statewide and Supreme Court races", url: "https://www.mahoningmatters.com/news/state/article314605422.html" }
           - name: "Colleen O'Donnell"
             website: "https://www.odonnellforohio.com/"
+            priorities:
+              - "Uphold the rule of law"
+              - "Protect public safety"
+              - "Preserve a conservative majority on the Court"
             party: "Republican"
             incumbent: false
             summary: "Franklin County Common Pleas judge 2013-2023 (lost re-election), then a federal immigration judge in Laredo, Texas; her campaign says she 'never once granted asylum.' Calls herself a 'constitutional conservative' and originalist. Daughter of former Justice Terrence O'Donnell. Won a four-way GOP primary with 32%."
@@ -688,6 +822,12 @@ sections:
         candidates:
           - name: "Matthew George"
             website: "https://matthewgeorge.org/"
+            priorities:
+              - "Strict interpretation of the law"
+              - "Protecting constitutional rights"
+              - "Equal justice for all"
+              - "Accountability and integrity"
+            priorities_note: "The site describes his judicial philosophy; the 5th District race has no other listed priorities."
             party: "Republican"
             incumbent: false
             summary: "Licking County Municipal Court judge since 2020 and former magistrate; 18 years of judicial experience. Ashland University and Washington and Lee Law graduate. Won a three-way GOP primary. Promises to 'apply the law as written' and oppose 'judicial activism.'"
@@ -726,6 +866,7 @@ sections:
         candidates:
           - name: "Nickolas K. McCoy"
             website: "https://voteformccoy.com/"
+            priorities_note: "The site lists no issues or priorities; it is a biography."
             party: "Nonpartisan ballot (filed as Republican)"
             incumbent: false
             summary: "Magistrate in the county's Juvenile and Probate Division. Admitted to practice in 2009. Nearly 16 years in estate planning, elder law, guardianship, and domestic relations. Two-term president of the Delaware County Bar Association."
@@ -739,6 +880,7 @@ sections:
               - { title: "The Ballot Brief: Delaware County", url: "https://theballotbrief.com/state/ohio/delaware-county" }
           - name: "Emma Mirles-Jones"
             website: "https://votemirlesjones.com/"
+            priorities_note: "The site lists no issues or priorities; it says she is the only candidate with criminal, civil and neutral-party experience."
             party: "Nonpartisan ballot (filed as Democrat)"
             incumbent: false
             summary: "16 years as court-appointed counsel and public defender in Franklin, Delaware, and Morrow counties. Guardian ad litem and Supreme Court-qualified mediator. JD/MBA from Case Western Reserve. Campaign says she is 'the only candidate' with General Division (criminal and civil) experience (campaign claim). Says Delaware County Fair officials and a deputy interfered with her campaigning on Sept. 20; fair officials dispute her account."
@@ -793,6 +935,12 @@ sections:
         candidates:
           - name: "Reneé Vaughan"
             website: "https://www.vaughanfordelaware.com/"
+            priorities:
+              - "Responsible growth: plan roads, utilities and services alongside development"
+              - "Fiscal responsibility, balanced budgets and keeping Delaware County's AAA bond ratings"
+              - "Roads and infrastructure planned ahead of development"
+              - "Public safety: support law enforcement and first responders"
+              - "Local control and transparency"
             party: "Republican"
             incumbent: false
             summary: "Genoa Township trustee since January 2020. President of the Delaware County Township Association; member of the Ohio Township Association board. Former special-education teacher with degrees from Cincinnati, Pittsburgh, and Slippery Rock. Endorsed by the county GOP. Beat Sunbury Mayor Joe St. John in the primary."
@@ -810,6 +958,13 @@ sections:
               - { title: "Vaughan campaign: Issues", url: "https://www.vaughanfordelaware.com/issues" }
           - name: "Ryan Grissinger"
             website: "https://ryangrissinger.com/"
+            priorities:
+              - "Growth: publish a public 10-year Growth Impact Forecast every year"
+              - "Traffic: plan roads ahead of new development"
+              - "Sewer: make county sewer capacity decisions in public"
+              - "Taxes"
+              - "Housing"
+            priorities_note: "Site has 12 issue pages (also data centers, schools, public safety, privacy, jobs, budget, transit); these are the first five in its order."
             party: "Democratic"
             incumbent: false
             summary: "Genoa Township resident running for office for the first time. Founder and CEO of AI consulting firm Polaris Pixels. Nearly ten years as CTO of Roof Maxx, which grew to 350 franchise locations."
