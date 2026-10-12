@@ -144,3 +144,5 @@ details[open] > summary::before { transform: rotate(90deg); }
 .details-icon { flex: none; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; margin: -8px -10px 0 0; color: var(--accent); border-radius: 50%; }
 .details-icon:active { background: var(--line); }
 @media print { .details-icon { display: none; } }
+
+.choices { grid-template-columns: 1fr; }
