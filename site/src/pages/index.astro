@@ -11,7 +11,7 @@ const sid = (t: string) => 's-' + t.toLowerCase().replace(/[^a-z]+/g, '-');
   <p class="small">{meta.jurisdiction} · Precinct {meta.precinct}</p>
   <p class="small"><a class="site-link" href={meta.ballot_source.url} rel="noopener noreferrer">Official sample ballot &nearr;</a></p>
   <p class="small">
-    Tap a name to mark your choice (tap again to clear). Your picks and notes stay on this device only.
+    Tap a name to mark your choice (tap it again to remove it). Your picks and notes stay on this device only.
     <button type="button" class="link" data-reset>Reset all</button>
   </p>
   <nav class="chips" aria-label="Jump to section">

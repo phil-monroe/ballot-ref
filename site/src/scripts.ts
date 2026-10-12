@@ -45,7 +45,12 @@ document.addEventListener('click', (ev) => {
   if (b) {
     const id = b.dataset.contest!;
     const e = (state[id] ??= {});
-    e.pick = e.pick === b.dataset.choice ? undefined : b.dataset.choice;
+    if (e.pick === b.dataset.choice) {
+      if (!confirm(`Remove your choice "${e.pick}"?`)) return;
+      e.pick = undefined;
+    } else {
+      e.pick = b.dataset.choice;
+    }
     save();
     render();
   } else if ((ev.target as HTMLElement).closest('[data-reset]') && confirm('Clear all your choices and notes on this device?')) {
