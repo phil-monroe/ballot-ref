@@ -7,7 +7,7 @@
     "node": ">=24"
   },
   "scripts": {
-    "dev": "astro dev --root site",
+    "dev": "cd site && astro dev",
     "build:site": "astro build --root site"
   },
   "dependencies": {
