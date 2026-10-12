@@ -24,22 +24,6 @@ const rev = c.revenue_estimate;
 
   {c.what_the_office_does && <p>{c.what_the_office_does}</p>}
   {c.background && <p>{c.background}</p>}
-  {c.race_status && <p class="status"><strong>Race status:</strong> {c.race_status}</p>}
-
-  {c.polls?.length > 0 && (
-    <div class="scroll"><table class="polls">
-      <caption>Polls</caption>
-      <thead><tr><th>Pollster</th><th>Dates</th><th>Sample</th><th>Result</th></tr></thead>
-      <tbody>
-        {c.polls.map((p: any) => (
-          <tr><td>{p.pollster}</td><td>{p.dates}</td><td>{p.population}</td><td>{p.result}</td></tr>
-        ))}
-      </tbody>
-    </table></div>
-  )}
-  {c.debate_note && <p>{c.debate_note}</p>}
-  <Bullets title="Events" items={c.events} />
-
   {isIssue && (
     <>
       <Bullets title="What the ballot says" items={c.ballot_language_summary} />
@@ -71,6 +55,27 @@ const rev = c.revenue_estimate;
 
   <Links sources={c.sources} label="Race sources" />
 </section>
+
+{(c.race_status || c.polls?.length > 0 || c.debate_note || list(c.events).length > 0) && (
+  <section class="part" id={`${c.id}-status`} aria-labelledby={`${c.id}-status-title`}>
+    <h2 class="part-title" id={`${c.id}-status-title`}>Race status &amp; polling</h2>
+    {c.race_status && <p class="status"><strong>Race status:</strong> {c.race_status}</p>}
+
+    {c.polls?.length > 0 && (
+      <div class="scroll"><table class="polls">
+        <caption>Polls</caption>
+        <thead><tr><th>Pollster</th><th>Dates</th><th>Sample</th><th>Result</th></tr></thead>
+        <tbody>
+          {c.polls.map((p: any) => (
+            <tr><td>{p.pollster}</td><td>{p.dates}</td><td>{p.population}</td><td>{p.result}</td></tr>
+          ))}
+        </tbody>
+      </table></div>
+    )}
+    {c.debate_note && <p>{c.debate_note}</p>}
+    <Bullets title="Events" items={c.events} />
+  </section>
+)}
 
 {list(c.candidates).length > 0 && (
   <section class="part" id={`${c.id}-candidates`} aria-labelledby={`${c.id}-cand-title`}>
