@@ -200,3 +200,5 @@ details[open] > summary::before { transform: rotate(90deg); }
 .card-head { justify-content: space-between; }
 .card-head .card-check { order: 2; margin: -6px -8px 0 0; }
 .card-head h4 { order: 1; }
+
+.part-title { scroll-margin-top: 64px; }

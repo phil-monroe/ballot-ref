@@ -27,5 +27,20 @@ const compiled = new Date(`${meta.guide_compiled}T12:00:00`).toLocaleDateString(
       </li>
     ))}
   </ul>
+  <h2 id="claude">Use this guide with Claude or another AI chat</h2>
+  <p>
+    The whole guide is available as one plain-text file you can paste or upload into a chat, so you can ask questions like
+    “compare the Supreme Court candidates” or “what would the transit tax cost me?”
+  </p>
+  <p>
+    <button type="button" class="btn" data-copy-guide>Copy guide as text</button>
+    <span class="small" data-copy-status role="status"></span>
+  </p>
+  <ul>
+    <li><a href="/llms-full.txt" target="_blank" rel="noopener noreferrer">Full guide (markdown text)</a>: paste or upload this</li>
+    <li><a href="/llms.txt" target="_blank" rel="noopener noreferrer">llms.txt</a>: short index for AI tools that read it</li>
+    <li><a href="/guide.yaml" target="_blank" rel="noopener noreferrer">guide.yaml</a>: the raw research data</li>
+  </ul>
+  <p class="small">Suggested first message: “Using only the voter guide below, answer my questions, cite which source supports each claim, flag anything marked unverified or a campaign claim, and stay neutral. Don’t tell me who to vote for.”</p>
   <Links sources={meta.global_sources} label="General sources" />
 </Base>

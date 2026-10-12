@@ -98,3 +98,17 @@ if (compare && select) {
     }
   });
 }
+
+const copyBtn = document.querySelector<HTMLButtonElement>('[data-copy-guide]');
+if (copyBtn) {
+  const status = document.querySelector<HTMLElement>('[data-copy-status]');
+  copyBtn.addEventListener('click', async () => {
+    try {
+      const text = await (await fetch('/llms-full.txt')).text();
+      await navigator.clipboard.writeText(text);
+      if (status) status.textContent = ' Copied. Paste it into your chat.';
+    } catch {
+      if (status) status.textContent = ' Could not copy; open the full guide link and copy from there.';
+    }
+  });
+}

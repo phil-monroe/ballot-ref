@@ -4,12 +4,13 @@ import Picker from '../components/Picker.astro';
 import { contests, guide, label } from '../lib';
 const { meta } = guide;
 const sections = [...new Set(contests.map((c: any) => c.section))];
+const bySection = sections.map((t) => ({ title: t as string, items: contests.filter((c: any) => c.section === t) }));
 const sid = (t: string) => 's-' + t.toLowerCase().replace(/[^a-z]+/g, '-');
 ---
 <Base title="My Ballot" description={`${meta.jurisdiction}, precinct ${meta.precinct}`}>
   <h1>{meta.title}</h1>
   <p class="small">{meta.jurisdiction} · Precinct {meta.precinct}</p>
-  <p class="small"><a class="site-link" href={meta.ballot_source.url} rel="noopener noreferrer">Official sample ballot &nearr;</a></p>
+  <p class="small"><a class="site-link" href={meta.ballot_source.url} target="_blank" rel="noopener noreferrer">Official sample ballot &nearr;</a></p>
   <p class="small">
     Tap a name to mark your choice (tap it again to remove it). Your picks and notes stay on this device only.
     <button type="button" class="link" data-reset>Reset all</button>
@@ -18,23 +19,25 @@ const sid = (t: string) => 's-' + t.toLowerCase().replace(/[^a-z]+/g, '-');
     {sections.map((t) => <a href={`#${sid(t)}`}>{t.replace(/ Races$/, '')}</a>)}
   </nav>
 
-  {contests.map((c, i) => (
-    <>
-      {c.section !== contests[i - 1]?.section && <h2 id={sid(c.section)}>{c.section}</h2>}
-      <section class="row" data-row={c.id}>
-        <div class="row-head">
-          <h3>
-            <a href={`/race/${c.id}/`}><span class="order">{c.ballot_order}.</span> {label(c)}</a>
-            {c.contested === false && <span class="badge">Uncontested</span>}
-          </h3>
-          <a class="details-icon" href={`/race/${c.id}/`} aria-label={`Details for ${label(c)}`}>
-            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="M13 6l6 6-6 6" /></svg>
-          </a>
-        </div>
-        {c.term && <p class="small">{c.term}</p>}
-        <Picker c={c} />
-        <p class="note-view" data-note-view hidden></p>
-      </section>
-    </>
+  {bySection.map((g) => (
+    <section class="part" aria-labelledby={sid(g.title)}>
+      <h2 class="part-title" id={sid(g.title)}>{g.title}</h2>
+      {g.items.map((c: any) => (
+        <section class="row" data-row={c.id}>
+          <div class="row-head">
+            <h3>
+              <a href={`/race/${c.id}/`}><span class="order">{c.ballot_order}.</span> {label(c)}</a>
+              {c.contested === false && <span class="badge">Uncontested</span>}
+            </h3>
+            <a class="details-icon" href={`/race/${c.id}/`} aria-label={`Details for ${label(c)}`}>
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="M13 6l6 6-6 6" /></svg>
+            </a>
+          </div>
+          {c.term && <p class="small">{c.term}</p>}
+          <Picker c={c} />
+          <p class="note-view" data-note-view hidden></p>
+        </section>
+      ))}
+    </section>
   ))}
 </Base>

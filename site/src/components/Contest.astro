@@ -18,7 +18,7 @@ const rev = c.revenue_estimate;
 
   <p class="site">
     {c.website
-      ? <a href={c.website} rel="noopener noreferrer">{isIssue ? 'Official issue page' : 'Official office website'} &nearr;</a>
+      ? <a href={c.website} target="_blank" rel="noopener noreferrer">{isIssue ? 'Official issue page' : 'Official office website'} &nearr;</a>
       : <span class="badge badge--none">No website found</span>}
   </p>
 

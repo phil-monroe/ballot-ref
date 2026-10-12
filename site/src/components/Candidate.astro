@@ -21,7 +21,7 @@ const has = (...keys: string[]) => keys.some((k) => list(c[k]).length > 0);
   </div>
   <p class="site">
     {c.website
-      ? <a href={c.website} rel="noopener noreferrer">Campaign website &nearr;</a>
+      ? <a href={c.website} target="_blank" rel="noopener noreferrer">Campaign website &nearr;</a>
       : <span class="badge badge--none">No website found</span>}
   </p>
 
