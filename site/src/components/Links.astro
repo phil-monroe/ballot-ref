@@ -1,0 +1,13 @@
+---
+const { sources = [], label = 'Sources' } = Astro.props;
+---
+{sources.length > 0 && (
+  <details class="sources">
+    <summary>{label} ({sources.length})</summary>
+    <ul>
+      {sources.map((s: { title: string; url: string }) => (
+        <li><a href={s.url} rel="noopener noreferrer">{s.title}</a></li>
+      ))}
+    </ul>
+  </details>
+)}

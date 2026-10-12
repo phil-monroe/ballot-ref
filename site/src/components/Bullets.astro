@@ -1,0 +1,11 @@
+---
+import { list } from '../lib';
+const { title, items, class: cls = '' } = Astro.props;
+const rows = list(items);
+---
+{rows.length > 0 && (
+  <div class={`bullets ${cls}`}>
+    {title && <h5>{title}</h5>}
+    {rows.length === 1 ? <p>{rows[0]}</p> : <ul>{rows.map((r) => <li>{r}</li>)}</ul>}
+  </div>
+)}

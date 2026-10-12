@@ -1,11 +1,10 @@
 ---
 import '../styles/site.css';
-import '../styles/print.css';
 interface Props {
   title: string;
   description?: string;
 }
-const { title, description = 'A sourced reference for a specific Ohio ballot.' } = Astro.props;
+const { title, description = 'Voter guide for a specific Ohio ballot.' } = Astro.props;
 ---
 <!doctype html>
 <html lang="en">
@@ -17,19 +16,8 @@ const { title, description = 'A sourced reference for a specific Ohio ballot.' }
     <title>{title}</title>
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="/">Ballot Reference</a>
-      <nav><a href="/methodology/">Methodology: what this is and is not</a></nav>
-    </header>
     <main>
       <slot />
     </main>
-    <footer class="site-footer">
-      <slot name="footer" />
-      <p class="small">
-        A sourced reference, not a recommendation. Every fact is a short quote from a pre-approved
-        source, reviewed by a person. <a href="/methodology/">Read the methodology.</a>
-      </p>
-    </footer>
   </body>
 </html>

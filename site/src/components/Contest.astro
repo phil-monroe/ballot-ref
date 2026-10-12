@@ -1,52 +1,73 @@
 ---
-import type { ContestView } from '../../../src/site/view.ts';
-import CandidateBlock from './CandidateBlock.astro';
-import IssueBlock from './IssueBlock.astro';
-interface Props {
-  view: ContestView;
-  pagePath: string;
-  repoUrl: string;
-  boeUrl: string;
-  sosUrl: string;
-}
-const { view, pagePath, repoUrl, boeUrl, sosUrl } = Astro.props;
-const c = view.contest;
-const pageUrl = `${pagePath}#${view.anchor}`;
-const isIssue = c.kind === 'levy' || c.kind === 'constitutional-issue';
+import Bullets from './Bullets.astro';
+import Candidate from './Candidate.astro';
+import Links from './Links.astro';
+import { VERIFICATION, list } from '../lib';
+const { c } = Astro.props;
+const isIssue = c.type === 'ballot_issue';
+const heading = isIssue ? c.title : c.office;
+const meta = [c.term, c.districts_note, c.jurisdiction, c.levy_type, c.threshold && `Needs: ${c.threshold}`].filter(Boolean);
+const rev = c.revenue_estimate;
 ---
-<section class="contest" id={view.anchor}>
-  <h3><a class="anchor" href={`#${view.anchor}`}>{c.title}</a></h3>
+<section class="contest" id={c.id}>
+  <h3><a class="anchor" href={`#${c.id}`}><span class="order">{c.ballot_order}.</span> {heading}</a></h3>
   <p class="small">
-    {c.term && <span>{c.term} · </span>}Vote for not more than {c.vote_for}
+    {meta.join(' · ')}
+    {c.contested === false && <span class="badge">Uncontested</span>}
+    {c.open_seat && <span class="badge">Open seat</span>}
   </p>
-  {!view.ready && <p class="status status--pending">Not yet reviewed</p>}
 
-  {!isIssue && (
-    <div class="choices">
-      {view.choices.map((ch) => (
-        <div class={`choice ${ch.ticketId ? 'choice--ticket' : ''}`}>
-          {ch.people.map((p) =>
-            p.option.write_in ? (
-              <p class="writein">Write-in</p>
-            ) : (
-              <CandidateBlock person={p} contestId={c.id} pageUrl={pageUrl} repoUrl={repoUrl} />
-            ),
-          )}
-        </div>
-      ))}
-    </div>
+  {c.what_the_office_does && <p>{c.what_the_office_does}</p>}
+  {c.background && <p>{c.background}</p>}
+  {c.race_status && <p class="status"><strong>Race status:</strong> {c.race_status}</p>}
+
+  {c.polls?.length > 0 && (
+    <table class="polls">
+      <caption>Polls</caption>
+      <thead><tr><th>Pollster</th><th>Dates</th><th>Sample</th><th>Result</th></tr></thead>
+      <tbody>
+        {c.polls.map((p: any) => (
+          <tr><td>{p.pollster}</td><td>{p.dates}</td><td>{p.population}</td><td>{p.result}</td></tr>
+        ))}
+      </tbody>
+    </table>
   )}
+  {c.debate_note && <p>{c.debate_note}</p>}
+  <Bullets title="Events" items={c.events} />
 
   {isIssue && (
     <>
-      <p class="small">Choices on the ballot: {c.issue_options.map((o) => o.label).join(' / ')}</p>
-      {view.ready && <IssueBlock view={view} pageUrl={pageUrl} repoUrl={repoUrl} />}
-      <p class="small">
-        Official sources: <a href={boeUrl} rel="noopener noreferrer">county board of elections ballot</a> ·
-        <a href={sosUrl} rel="noopener noreferrer"> Ohio Secretary of State</a>
-      </p>
+      <Bullets title="What the ballot says" items={c.ballot_language_summary} />
+      {c.what_it_does && <p>{c.what_it_does}</p>}
+      {c.how_it_got_on_ballot && <p>{c.how_it_got_on_ballot}</p>}
+      <Bullets title="Cost to you" items={c.cost} />
+      {rev && (
+        <p>
+          <strong>Estimated revenue:</strong> {rev.value}
+          {rev.verification && <span class="badge badge--warn">{VERIFICATION[rev.verification] ?? rev.verification}</span>}
+          {rev.note && <span class="small"> {rev.note}</span>}
+        </p>
+      )}
+      <Bullets title="Cost context" items={c.cost_context} />
+      <Bullets title="What it would fund" items={c.what_it_would_fund ?? c.what_it_funds} />
+      {c.implementation_note && <p>{c.implementation_note}</p>}
+      <Bullets title="Context" items={c.context} />
+      <Bullets title="History" items={c.history} />
+      <div class="pair">
+        <Bullets title="Supporters" items={c.supporters} />
+        <Bullets title="Opponents" items={c.opponents} />
+      </div>
+      <div class="pair">
+        <Bullets title="Arguments for" items={c.arguments_for} class="for" />
+        <Bullets title="Arguments against" items={c.arguments_against} class="against" />
+      </div>
     </>
   )}
 
-  {view.ready && view.lastReviewed && <p class="small">Last reviewed {view.lastReviewed.slice(0, 10)}</p>}
+  {list(c.candidates).length > 0 && (
+    <div class="choices">
+      {c.candidates.map((cand: any) => <Candidate c={cand} />)}
+    </div>
+  )}
+  <Links sources={c.sources} label="Race sources" />
 </section>

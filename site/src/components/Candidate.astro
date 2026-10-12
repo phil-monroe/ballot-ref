@@ -1,0 +1,24 @@
+---
+import Bullets from './Bullets.astro';
+import Links from './Links.astro';
+import { VERIFICATION } from '../lib';
+const { c } = Astro.props;
+---
+<article class="card">
+  <h4>
+    {c.name}
+    {c.party && <span class="party">{c.party}</span>}
+    {c.incumbent && <span class="badge">Incumbent</span>}
+    {c.verification && <span class="badge badge--warn">{VERIFICATION[c.verification] ?? c.verification}</span>}
+  </h4>
+  {c.summary && <p>{c.summary}</p>}
+  {c.verification_note && <p class="small">{c.verification_note}</p>}
+  <Bullets title="Stated positions" items={c.positions} />
+  <Bullets title="Money" items={c.money} />
+  <Bullets title="Endorsements" items={c.endorsements} />
+  <div class="pair">
+    <Bullets title="Supporters say" items={c.support} class="for" />
+    <Bullets title="Critics say" items={c.oppose} class="against" />
+  </div>
+  <Links sources={c.sources} />
+</article>
