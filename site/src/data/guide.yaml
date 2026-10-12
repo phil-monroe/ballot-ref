@@ -79,6 +79,10 @@ meta:
       url: "https://theballotbrief.com/state/ohio/delaware-county"
     - title: "Delaware County Democratic Party 2026 Voting Guide & Slate Card"
       url: "https://ohiodeladems.org/2026-election/"
+    - title: "Delaware County Board of Elections: May 5, 2026 primary results (county)"
+      url: "https://vote.delawarecountyohio.gov/wp-content/uploads/2026/05/418_PALL_Election_SummaryWriteIn.pdf"
+    - title: "FEC candidate totals (Husted, Brown, Balderson, Christian), through June 30, 2026"
+      url: "https://www.fec.gov/data/"
 
 quick_reference:
   - { order: 1,  contest: "Governor / Lt. Governor", candidates: "Amy Acton & David Pepper (D); Don Kissick & James L. Mills (Lib.); Vivek Ramaswamy & Robert A. McColley (R); write-in", contested: true }
@@ -118,10 +122,14 @@ sections:
         term: "Unexpired term ending Jan. 3, 2029"
         contested: true
         what_the_office_does: "Senators write and vote on federal laws, confirm federal judges and Cabinet officials, and ratify treaties. The winner serves the last two years of JD Vance's term."
-        race_status: "Toss-up per polling roundups; recent polls show Brown slightly ahead, mostly within margin of error."
+        race_status: "Toss-up per polling roundups. Most recent polls show Brown ahead by 1 to 8 points, but co/efficient (Oct. 5-6) has Husted +1, and Siena's July poll had Husted +3. RealClearPolling average: Brown 47.3, Husted 44.2."
         polls:
           - { pollster: "NYT/Siena", dates: "Sept. 22 - Oct. 1, 2026", population: "616 likely voters", result: "Brown 49%, Husted 46%" }
-          - { pollster: "Marist", dates: "n/a", population: "registered voters", result: "Brown 51%, Husted 43%" }
+          - { pollster: "CNN/SSRS", dates: "Sept. 29 - Oct. 5, 2026", population: "760 likely voters", result: "Brown 49%, Husted 43%" }
+          - { pollster: "Marist", dates: "Sept. 2026", population: "registered voters", result: "Brown 51%, Husted 43%" }
+          - { pollster: "Suffolk/USA Today", dates: "late Sept. 2026", population: "likely voters", result: "Brown about 47%, Husted about 44%" }
+          - { pollster: "co/efficient (R)", dates: "Oct. 5-6, 2026", population: "925 likely voters", result: "Husted 46%, Brown 45%" }
+          - { pollster: "Siena (earlier)", dates: "July 2026", population: "n/a", result: "Husted 50%, Brown 47%" }
           - { pollster: "BGSU", dates: "earlier", population: "n/a", result: "Brown 49%, Husted 48%" }
         candidates:
           - name: "Jon Husted"
@@ -138,7 +146,7 @@ sections:
               - "Created InnovateOhio, which moved services such as driver's license renewal and title transfer online (campaign claim)"
               - "Secretary of State: cut the office's budget by $14.5 million and about a third of its staff; asked in 2016 for no taxpayer funding for the rest of his term"
               - "Speaker: campaign says he led the most fiscally conservative budget in 40 years and what was then the largest income tax cut in Ohio history"
-              - "U.S. Senate: voted for the 2025 tax law and the Laken Riley Act"
+              - "U.S. Senate: voted for the 2025 tax-and-spending law (One Big Beautiful Bill Act)"
             resume_sources:
               - title: "Wikipedia: Jon Husted"
                 url: "https://en.wikipedia.org/wiki/Jon_Husted"
@@ -171,18 +179,16 @@ sections:
             incumbent: true
             summary: "Appointed to the seat by Gov. DeWine in January 2025. Previously 20+ years as a state lawmaker and statewide officeholder, most recently Lieutenant Governor."
             money:
-              - "Reported $7.7 million raised in Q2 2026 across affiliated committees, including $3.4 million in the main committee; more than $11 million cash on hand (campaign claim: largest Q2 ever for an Ohio Republican Senate candidate)."
+              - "FEC, principal campaign committee, 2026 cycle through June 30, 2026: $14.4 million raised, $4.9 million spent, $9.4 million cash on hand."
+              - "Ohio Capital Journal: $7.7 million raised in Q2 2026 across affiliated committees (campaign claim: largest Q2 ever for an Ohio Republican Senate candidate)."
               - "Senate Leadership Fund super PAC plans to spend $79 million on the race."
-              - "Legis1 (secondary source): FEC data through Q4 2025 showed 584 unique itemized donors to his network vs. 6,700+ for Brown."
-              - "Ohio Capital Journal reported two Jane Street Capital executives gave a combined $637,200 through his joint fundraising committee, Husted Victory."
+              - "Legis1 (secondary source): 584 unique itemized donors to his network through Q4 2025 vs. 6,700+ for Brown."
             support:
-              - "Long executive experience in state government"
-              - "Would keep a Republican Senate seat and the Republican majority"
-              - "Strong backing from business donors and national Republicans; President Trump expected to campaign for him"
+              - "Campaign and supporters cite his record on economic development, including bringing Intel's chip plant to Licking County, and workforce programs such as TechCred"
+              - "Endorsed by President Trump; his campaign also cites endorsements from 75 county sheriffs and the Fraternal Order of Police"
             oppose:
-              - "Brown's campaign ties him to Ohio's House Bill 6 bribery scandal (campaign attack; Husted was not charged in that case)"
-              - "Criticized for long support of data centers"
-              - "Narrower itemized donor base; large donations from a small number of executives"
+              - "Brown's campaign ties him to Ohio's House Bill 6 bribery scandal. Husted testified as a defense witness in the March 2026 trial of former FirstEnergy executives and has not been charged (Wikipedia)"
+              - "Brown's campaign criticizes tax breaks he gave data-center companies as Lieutenant Governor"
             sources:
               - { title: "Ohio Capital Journal: Brown outraises Husted as outside groups enter Senate race", url: "https://ohiocapitaljournal.com/2026/07/29/sherrod-brown-comfortably-outraises-jon-husted-as-outside-groups-enter-ohios-u-s-senate-race/" }
               - { title: "Legis1: The Money Race Shaping Ohio's 2026 Senate Election (secondary)", url: "https://legis1.com/news/ohio-2026-senate-election-the-money-race-shaping" }
@@ -202,7 +208,7 @@ sections:
               - "Co-chaired the Joint Select Committee on multiemployer pension solvency (2018)"
               - "Championed the 2022 PACT Act expanding VA care for burn-pit-exposed veterans (Ballot Brief); campaign also cites capping insulin costs"
               - "Voted for the 2022 CHIPS and Science Act, which Ballot Brief says helped land Intel's Ohio chip facility"
-              - "Opposed the 2001 USA PATRIOT Act and the Iraq War resolution"
+              - "Voted against the 2001 USA PATRIOT Act and the 2002 Iraq War resolution"
             resume_sources:
               - title: "Wikipedia: Sherrod Brown"
                 url: "https://en.wikipedia.org/wiki/Sherrod_Brown"
@@ -233,17 +239,15 @@ sections:
             incumbent: false
             summary: "U.S. Senator 2007-2025; lost in 2024 to Bernie Moreno."
             money:
-              - "$17.1 million raised in Q2 2026, including $14.1 million to Friends of Sherrod Brown; more than $5.1 million via ActBlue."
+              - "FEC, principal campaign committee, 2026 cycle through June 30, 2026: $38.6 million raised, $22.3 million spent, $16.2 million cash on hand."
+              - "Ohio Capital Journal: $17.1 million raised in Q2 2026, including $14.1 million to Friends of Sherrod Brown; more than $5.1 million via ActBlue."
               - "Senate Majority PAC has committed $64 million."
             support:
-              - "Long record on workers and trade"
-              - "History of winning votes from both parties"
-              - "Opposes data-center expansion"
-              - "Heavy small-donor support"
+              - "Supporters cite his long record on workers, trade and veterans' issues, including the 2022 PACT Act"
+              - "His campaign points to a broad small-donor base: 6,700+ itemized donors vs. 584 for Husted's network (Legis1, FEC data through Q4 2025)"
             oppose:
               - "Husted's campaign calls him Chuck Schumer's 'handpicked candidate'"
-              - "Critics say Ohio voters already rejected him in 2024 and that he would add to a Democratic majority"
-              - "Critics question how grassroots his large outside money truly is"
+              - "Republicans point to his 2024 loss to Bernie Moreno (46.5% to 50.1%) and argue he would add a vote to a Democratic Senate majority"
             sources:
               - { title: "Yahoo/AP: Sherrod Brown expected to seek a return to the US Senate in 2026", url: "https://www.yahoo.com/news/articles/sherrod-brown-ohio-highest-profile-194533033.html" }
               - { title: "PBS NewsHour: Sherrod Brown expected to seek his return to the Senate in 2026", url: "https://www.pbs.org/newshour/politics/sherrod-brown-expected-to-seek-his-return-to-the-senate-in-2026" }
@@ -400,12 +404,10 @@ sections:
             money:
               - "FEC through June 30, 2026: $1,743,281 raised; $1,982,352 cash on hand."
             support:
-              - "Experience and seniority"
-              - "Conservative record that fits the district"
-              - "Large financial edge"
+              - "Supporters cite his seniority and a conservative record they say fits the district"
             oppose:
-              - "Democrats call him a reliable party-line vote"
-              - "Campaign claim (not independently verified): only 33% of his money comes from Ohio vs. 67% of Christian's"
+              - "Christian's campaign calls him a reliable party-line vote and claims only 33% of his money comes from Ohio (campaign claim, not independently verified)"
+              - "Voted against the Respect for Marriage Act in July 2022 (Wikipedia)"
             sources:
               - { title: "Know Your Reps: Ohio's 12th District 2026", url: "https://knowyourreps.io/races/2026/ohio/district-12" }
               - { title: "Smarter.vote: Ohio's 12th Congressional District 2026", url: "https://smarter.vote/races/oh-house-12-2026/" }
@@ -482,13 +484,7 @@ sections:
             money:
               - "$84,378 raised; $18,925 cash on hand."
             support:
-              - "Grassroots, 'people-first' campaign"
-              - "Veteran"
-              - "Mostly in-state donors (campaign's claim)"
-            oppose:
-              - "Large money gap"
-              - "Already lost to the incumbent"
-              - "District leans heavily Republican"
+              - "His campaign describes a grassroots, 'people-first' effort and says most of its money comes from Ohio donors (campaign claim)"
             sources:
               - { title: "Delaware Gazette: Christian earns Democratic nomination for 12th District", url: "https://www.delgazette.com/2026/05/07/christian-earns-democratic-nomination-for-12th-congressional-district/" }
               - { title: "Smarter.vote: Jerrad Christian", url: "https://smarter.vote/races/oh-house-12-2026/jerrad-christian/" }
@@ -511,11 +507,11 @@ sections:
         what_the_office_does: "Ohio's chief executive. Signs or vetoes bills, proposes the state budget, appoints agency heads, and fills judicial vacancies. Gov. Mike DeWine is term-limited. None of the three candidates for governor has held elected office."
         race_status: "Toss-up (Cook, Sabato). Polls range from Ramaswamy +2 (co/efficient, Oct. 5-6) to Acton +9 (Suffolk)."
         polls:
-          - { pollster: "CNN/SSRS", result: "Acton +8" }
-          - { pollster: "NYT/Siena", result: "Acton 49-45" }
-          - { pollster: "Suffolk", result: "Acton 50-41" }
-          - { pollster: "Marist", result: "Acton 50-44" }
-          - { pollster: "co/efficient", dates: "Oct. 5-6, 2026", result: "Ramaswamy 45-43" }
+          - { pollster: "CNN/SSRS", dates: "Sept. 29 - Oct. 5, 2026", population: "760 likely voters", result: "Acton 50-42" }
+          - { pollster: "NYT/Siena", dates: "Sept. 22 - Oct. 1, 2026", population: "616 likely voters", result: "Acton 49-45" }
+          - { pollster: "Suffolk", dates: "Sept. 23-27, 2026", population: "500 likely voters", result: "Acton 50-41" }
+          - { pollster: "Marist", dates: "Sept. 24-27, 2026", population: "1,298 registered voters", result: "Acton 50-44" }
+          - { pollster: "co/efficient (R)", dates: "Oct. 5-6, 2026", population: "925 likely voters", result: "Ramaswamy 45-43" }
           - { pollster: "BGSU", result: "Statistical tie; net favorability Ramaswamy -11, Acton -1" }
         debate_note: "Acton declined to debate Ramaswamy, calling him a 'chronic liar.'"
         candidates:
@@ -524,6 +520,7 @@ sections:
               - "Acton: Born in Youngstown; physician and public-health researcher; associate professor of practice in public health, Ohio State University"
               - "Acton: Grants manager at the Columbus Foundation and director of Project LOVE (Love Our kids, Vaccinate Early)"
               - "Acton: 2019-2020: Director, Ohio Department of Health (first woman in the post); led the state's early COVID-19 response under Gov. DeWine"
+              - "Acton: June 2020: resigned as health director after Republican legislators introduced bills to limit the department's orders; served as DeWine's chief health advisor until August 2020"
               - "Acton: 2022-2023: President and CEO, RAPID 5 (Franklin County parks access nonprofit)"
               - "Pepper: Cincinnati City Council (elected 2001; chaired Law and Public Safety); lost the 2005 mayoral race"
               - "Pepper: Hamilton County Commissioner (elected 2006); lost the 2014 race for Attorney General"
@@ -531,7 +528,7 @@ sections:
             track_record:
               - "Pepper, as county commissioner: his campaign cites a foreclosure-prevention program, a prescription drug discount program, an earned income tax credit initiative, and a balanced budget"
               - "Pepper, as Cincinnati councilmember: chaired the Law and Public Safety Committee"
-              - "Acton has not held elected office; as Health Director she advised Gov. DeWine on closing schools and limiting gatherings in March 2020, early in the pandemic"
+              - "Acton has not held elected office; as Health Director she advised Gov. DeWine on the early pandemic response, which Wikipedia credits to DeWine as the first governor to close schools and limit gatherings to 100 people"
             resume_sources:
               - title: "Wikipedia: Amy Acton"
                 url: "https://en.wikipedia.org/wiki/Amy_Acton"
@@ -591,12 +588,10 @@ sections:
             summary: "Acton was Ohio Department of Health director during the early COVID-19 pandemic. Pepper is a former Ohio Democratic Party chair."
             positions: ["Supports Issue 3"]
             support:
-              - "Public-health experience"
-              - "Supporters see her as steady and trustworthy"
-              - "Polling strength with women and independents"
+              - "Supporters cite her public-health background and her role leading the Ohio Department of Health in the early pandemic; she received the JFK Library's Profile in Courage Award in 2021 (Wikipedia)"
             oppose:
-              - "Critics fault her pandemic-era health orders"
-              - "Refused to debate Ramaswamy; critics say that denies voters a side-by-side comparison"
+              - "Republican legislators and others opposed her 2020 health orders. In May 2020, 35 gyms sued the Department of Health and a judge granted a preliminary injunction; she then reopened gyms (Wikipedia)"
+              - "She declined to debate Ramaswamy, calling him a 'chronic liar' (Mediaite)"
             sources:
               - { title: "Ironton Tribune: Two polls show Acton lead grows over Ramaswamy", url: "https://irontontribune.com/2026/10/06/two-polls-show-acton-lead-grows-over-ramaswamy/" }
               - { title: "Mediaite: Acton won't debate 'chronic liar' Ramaswamy", url: "https://www.mediaite.com/media/news/ohio-dem-refuses-to-debate-chronic-liar-ramaswamy-in-whats-being-called-the-ugliest-race-in-the-country/" }
@@ -604,15 +599,15 @@ sections:
             resume:
               - "Ramaswamy: Valedictorian, St. Xavier High School (2003); Harvard biology degree (2007); Yale Law JD (2013)"
               - "Ramaswamy: 2007-2014: QVT Financial hedge fund, biotech investing (partner)"
-              - "Ramaswamy: 2014-2021: Founded Roivant Sciences and served as CEO; 2022: co-founded Strive Asset Management"
-              - "Ramaswamy: Author of Woke, Inc. (2021); ran for the 2024 Republican presidential nomination"
-              - "Ramaswamy: Named co-lead of the proposed Department of Government Efficiency in Nov. 2024; left on Inauguration Day to focus on a governor run"
+              - "Ramaswamy: 2014: Founded Roivant Sciences (CEO until Jan. 2021, then executive chairman until Feb. 2023); 2022: co-founded Strive Asset Management (executive chairman, resigned Feb. 2023)"
+              - "Ramaswamy: Author of Woke, Inc. (2021) and Nation of Victims (2022); ran for the 2024 Republican presidential nomination (fourth in the Iowa caucuses, then endorsed Trump)"
+              - "Ramaswamy: Named co-lead (with Elon Musk) of the proposed Department of Government Efficiency in Nov. 2024; dropped out on Inauguration Day to focus on the governor race, per Wikipedia without working with the DOGE team"
               - "McColley: Ohio State BS in business administration (finance), University of Toledo JD (2010); Henry County Community Improvement Corporation"
-              - "McColley: Attorney from Napoleon; Ohio House (81st District, 2015-2019); Ohio Senate (1st District) since 2019; unanimously elected Senate President in Jan. 2025"
+              - "McColley: Attorney from Napoleon; Ohio House (81st District, 2015-2017; assistant majority whip); Ohio Senate (1st District) since Dec. 2017; Senate Majority Leader 2023-2025; Senate President since Jan. 2025"
             track_record:
               - "McColley, as state senator: chaired the Energy and Public Utilities Committee; opposed House Bill 6 (2019) on free-market grounds, one of few Republican senators to do so"
-              - "McColley co-sponsored the 2019 'Heartbeat Bill' (SB 23), signed into law April 2019; the 2023 abortion-rights amendment later superseded it"
-              - "McColley rose to Senate President and House leadership (assistant majority whip)"
+              - "McColley co-sponsored the 2019 'Heartbeat Bill' (SB 23), signed into law April 11, 2019; the 2023 abortion-rights constitutional amendment later effectively overturned it (Wikipedia)"
+              - "McColley rose from assistant majority whip in the House to Senate Majority Leader and, in 2025, Senate President"
               - "Ramaswamy has not held elected office"
             resume_sources:
               - title: "Wikipedia: Vivek Ramaswamy"
@@ -648,16 +643,13 @@ sections:
             priorities_note: "The Plan page lists these pillars; the campaign also links separate plans for property tax rollbacks and gas tax relief. McColley's page was not summarized."
             party: "Republican"
             incumbent: false
-            summary: "Ramaswamy is a biotech entrepreneur and billionaire, 2024 presidential candidate, and former Trump administration official. McColley is Ohio Senate President."
+            summary: "Ramaswamy is a biotech entrepreneur (founded Roivant Sciences) and 2024 presidential candidate; Forbes estimated his net worth at $2.3 billion in Sept. 2026. He was named in Nov. 2024 as co-lead of a proposed Department of Government Efficiency but left on Inauguration Day before working with it. McColley is Ohio Senate President."
             positions: ["Supports Issue 3"]
             support:
-              - "Business experience"
-              - "Pro-growth, low-tax agenda"
-              - "Running mate who knows the legislature"
+              - "Supporters cite his business record, including founding Roivant Sciences, and his tax-cutting agenda; endorsed by President Trump and Gov. DeWine (Wikipedia)"
             oppose:
-              - "Net favorability of -11 in the BGSU poll vs. -1 for Acton"
-              - "Critics question his ties to Ohio and his priorities as a national figure"
-              - "NYT (Oct. 5) called it possibly the ugliest campaign in the country and reported his backers outspending Acton's on ads by more than 3-1"
+              - "His campaign acknowledged in 2023 paying an editor to alter his Wikipedia biography; a federal judge in Aug. 2026 let a former Strive executive's retaliation claim proceed, without deciding whether the alleged violations occurred (Wikipedia)"
+              - "Wikipedia reports he has called climate change a 'hoax' and made a claim about deaths from climate policies that it calls false"
             sources:
               - { title: "Newsweek: Ramaswamy gets boost after five polling blows in a row", url: "https://www.newsweek.com/vivek-ramaswamy-gets-boost-after-five-ohio-polling-blows-in-a-row-12544047" }
               - { title: "Newsweek: Ramaswamy vs. Acton poll shows decline in support", url: "https://www.newsweek.com/vivek-ramaswamy-vs-amy-acton-poll-decline-support-12452312" }
@@ -705,10 +697,6 @@ sections:
             incumbent: false
             summary: "Kissick has sought a spot in debates. Platform beyond general Libertarian positions not verified."
             verification: "unverified"
-            support:
-              - "An option for voters unhappy with both major parties"
-            oppose:
-              - "Little realistic chance of winning, which some voters see as a wasted vote"
             sources:
               - { title: "Ballot (official)", url: "https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X" }
         sources:
@@ -735,7 +723,7 @@ sections:
               - "2019-present: Ohio Auditor of State; member of the Ohio Redistricting Commission"
             track_record:
               - "As Senate President, priorities included reducing regulatory filings, cutting the state income tax, lowering the small-business tax rate, and creating the Ohio Higher Education Challenge"
-              - "As auditor, the office reports 153 convictions since 2019 (23 in 2025 alone) and 272 findings for recovery totaling more than $28.5 million, per its Dec. 31, 2025 press release; these count fraud convictions generally, not only public officials, and campaign/Wikipedia figures run higher"
+              - "As auditor, the office reported 153 convictions since 2019 and 272 findings for recovery totaling more than $28.5 million as of Dec. 31, 2025 (press release); later tallies are higher (Wikipedia: 165 convictions on 376 charges as of Aug. 2026; his campaign: 170 on 391). These count fraud convictions generally, not only public officials"
               - "Auditor's office was among the first to examine unemployment-compensation fraud; his campaign cites about $6.9 billion in fraud and overpayments identified"
               - "Won statewide election as auditor in 2018 and again in 2022"
             resume_sources:
@@ -772,11 +760,9 @@ sections:
             incumbent: false
             summary: "Ohio Auditor of State, finishing his second and final term. Former member of the Ohio House and Senate. Campaign says focus is 'protecting Ohio families, supporting law enforcement and defending our Constitution.'"
             support:
-              - "Long experience in government and oversight"
-              - "Law-and-order message"
+              - "Supporters cite decades in state government and the Auditor's fraud investigations and convictions"
             oppose:
-              - "Democrats say decades in Statehouse politics make him part of the status quo"
-              - "Has never been a prosecutor"
+              - "An October 2018 AP investigation reported tax delinquency penalties for Faber and his businesses from 2008 to 2015. Faber attributed the late payments to administrative errors and his bookkeeper took responsibility (Wikipedia)"
             sources:
               - { title: "Signal Cleveland: Keith Faber and John Kulewicz, Ohio's next attorney general", url: "https://signalcleveland.org/election-2026-keith-faber-and-john-kulewicz-ohio-next-attorney-general/" }
           - name: "John J. Kulewicz"
@@ -785,8 +771,8 @@ sections:
               - "Clerked for a federal judge for one year"
               - "1981-: Litigator at Vorys, Sater, Seymour and Pease; head of the appellate division; partner from 1987; about 44 years at the firm"
               - "1984: Ohio campaign manager for Gary Hart's presidential campaign"
-              - "2020-present: Upper Arlington City Council"
-              - "Argued before the U.S. Supreme Court in 2022 (Marietta Memorial Hospital Employee Health Benefit Plan v. DaVita)"
+              - "2020-present: Upper Arlington City Council (elected Nov. 2019, reelected 2023)"
+              - "Argued before the U.S. Supreme Court on March 1, 2022 for the petitioners in Marietta Memorial Hospital Employee Health Benefit Plan v. DaVita (decided 7-2 for his side)"
               - "Author of An Ohioan's Odyssey (memoir); board service includes the Columbus Zoo and Ohio Bicentennial Commission"
             track_record:
               - "First elected to Upper Arlington City Council in 2019 and reelected in 2023; his campaign says he was the top vote-getter both times and won more votes than any contested council candidate since the city charter"
@@ -819,11 +805,7 @@ sections:
             summary: "Upper Arlington City Council member since 2020. Retired in 2025 after 44 years at Vorys, Sater, Seymour and Pease. Yale graduate. 'Transparency Tour' campaign."
             money: ["Raised $1.7 million; $1.2 million on hand as of early October."]
             support:
-              - "Long courtroom and legal career"
-              - "Transparency platform"
-            oppose:
-              - "Less experience in government"
-              - "Corporate-law background is a target for critics"
+              - "Supporters cite more than four decades of litigation, including a 2022 U.S. Supreme Court argument; endorsed by the Ohio AFL-CIO, UAW Region 2B and the Ohio Education Association (campaign)"
             sources:
               - { title: "Times Leader: Kulewicz, Blackwell pitch Democratic vision", url: "https://www.timesleaderonline.com/news/local-news/2026/07/kulewicz-blackwell-pitch-democratic-vision-during-steubenville-stop/" }
               - { title: "Tribune Chronicle: AG candidates to debate at YSU", url: "https://www.tribtoday.com/news/local-news/2026/10/state-attorney-general-candidates-to-debate-at-ysu" }
@@ -842,10 +824,10 @@ sections:
         candidates:
           - name: "Frank LaRose"
             resume:
-              - "U.S. Army: youngest sergeant in the 101st Airborne; deployed to the southern border and led a NATO peacekeeping mission in Kosovo; Green Beret (2003); Bronze Star for service in Iraq; later Army National Guard"
+              - "U.S. Army (1998-2007) and later Army National Guard: sergeant first class; 101st Airborne and 19th Special Forces Group (Green Beret); Bronze Star for Iraq service. His campaign adds that he was the youngest sergeant in the 101st Airborne and led a NATO peacekeeping mission in Kosovo (campaign claims)"
               - "2011-2019: Ohio Senate (27th District)"
               - "2019-present: Ohio Secretary of State"
-              - "2024: ran in the Republican U.S. Senate primary (finished third)"
+              - "2024: ran in the Republican U.S. Senate primary (third place with 16.7%, behind Moreno and Dolan)"
               - "2026: Republican nominee for Auditor of State"
             track_record:
               - "In the Ohio Senate, chaired the Transportation Committee, the Commerce and Workforce Committee, and others; Governing magazine named him a 'legislator to watch' in 2014"
@@ -874,9 +856,10 @@ sections:
             incumbent: false
             summary: "Two-term Secretary of State, term-limited. Former state senator and Army veteran."
             support:
-              - "Statewide administrative experience and name recognition"
+              - "Supporters cite his statewide election-administration experience and military service (campaign)"
             oppose:
-              - "Critics point to his partisan handling of past election issues and see the auditor run as office-hopping"
+              - "Democrats criticized the 2019 voter-roll purge, in which the state found about 40,000 of 235,000 flagged entries were errors (Wikipedia)"
+              - "As Ballot Board chair he was criticized over the summary language for the 2024 redistricting amendment (Wikipedia)"
             sources:
               - { title: "WOSU: Ohio 2026 election guide", url: "https://www.wosu.org/2026-10-06/ohio-2026-election-guide-what-voters-need-to-know-about-their-ballots" }
           - name: "Annette Blackwell"
@@ -916,9 +899,7 @@ sections:
             incumbent: false
             summary: "Mayor of Maple Heights."
             support:
-              - "Hands-on experience running, and being audited as, a local government"
-            oppose:
-              - "Less known statewide; no state-level experience"
+              - "Supporters cite her turnaround of Maple Heights' finances as mayor, which her campaign says took the city out of fiscal emergency"
             sources:
               - { title: "Times Leader: Kulewicz, Blackwell pitch Democratic vision", url: "https://www.timesleaderonline.com/news/local-news/2026/07/kulewicz-blackwell-pitch-democratic-vision-during-steubenville-stop/" }
         sources:
@@ -935,9 +916,9 @@ sections:
         candidates:
           - name: "Robert Sprague"
             resume:
-              - "Engineer by training; Findlay, Ohio native"
+              - "Findlay High School; Duke University BS in mechanical engineering; UNC Chapel Hill MBA; consultant at Ernst & Young, then founded an international consulting firm"
               - "City auditor and treasurer of Findlay"
-              - "2011-2017: Ohio House of Representatives (83rd District; appointed 2011, elected 2012, 2014, 2016)"
+              - "2011-2018: Ohio House of Representatives (83rd District; appointed Feb. 2011, elected 2012, 2014, 2016)"
               - "2019-present: Ohio Treasurer of State"
               - "Jan.-Feb. 2025: briefly ran for governor, then switched to the Secretary of State race"
             track_record:
@@ -981,10 +962,9 @@ sections:
             incumbent: false
             summary: "Current State Treasurer. Strongly backs Issue 3 and supports the federal SAVE Act. Quote: 'I would like to see us go back to in-person voting - that way everybody has to show their photo ID.'"
             support:
-              - "Statewide executive experience"
-              - "Election-security message"
+              - "Supporters cite his election-security proposals and his experience as State Treasurer"
             oppose:
-              - "Opponents read his comments as hostile to mail voting, which many Ohioans use"
+              - "Opponents read his comments about returning to in-person voting as hostile to mail voting (Ideastream)"
             sources:
               - { title: "Ideastream: Secretary of State race", url: "https://www.ideastream.org/secretary-of-state" }
           - name: "Allison Russo"
@@ -992,11 +972,11 @@ sections:
               - "Doctor of Public Health (health policy), George Washington University; MPH (epidemiology), University of Alabama at Birmingham"
               - "20+ years in health care policy, advising federal agencies and health systems on care for seniors, veterans, military families and vulnerable communities"
               - "Senior director at a federally qualified small business"
-              - "2019-present: Ohio House of Representatives (four terms); former House Minority Leader"
-              - "Committees: Health, Finance, Medicaid Oversight, Constitutional Resolutions, and the Ohio Redistricting Commission"
-              - "Founded Girls Who Lead"
+              - "2019-present: Ohio House of Representatives (24th District 2019-2022, 7th District since 2023); House Minority Leader Jan. 2022 to June 2025"
+              - "Committees (per her campaign): Health, Finance, Medicaid Oversight, Constitutional Resolutions, and the Ohio Redistricting Commission"
+              - "Founded Girls Who Lead (campaign)"
             track_record:
-              - "First Democrat in a decade to flip a central-Ohio House seat"
+              - "Her campaign says she was the first Democrat in a decade to flip a central-Ohio House seat"
               - "Her campaign says she authored or co-sponsored dozens of bills signed into law, steered bipartisan reforms through a Republican supermajority, and helped build coalitions that defeated the August 2023 Issue 1 and enshrined reproductive freedom in the constitution"
               - "Cites work on mental-health parity, veteran services, the Fair School Funding Plan, and access to child care"
             resume_sources:
@@ -1031,10 +1011,9 @@ sections:
             incumbent: false
             summary: "Former Ohio House Minority Leader. Supports photo ID but calls Issue 3 a waste of time because current photo ID requirements are 'the strictest in the country.'"
             support:
-              - "Legislative leadership experience"
-              - "Focus on access"
+              - "Supporters cite her health-policy expertise and her time as House Minority Leader (Jan. 2022 to June 2025)"
             oppose:
-              - "Republicans call her a partisan Democratic leader"
+              - "Her vote for the September 2023 Ohio Redistricting Commission maps drew criticism during her 2026 campaign (Wikipedia, which flags that section for neutrality)"
             sources:
               - { title: "Ideastream: Secretary of State race", url: "https://www.ideastream.org/secretary-of-state" }
               - { title: "Ohio Capital Journal: What is Issue 3?", url: "https://ohiocapitaljournal.com/2026/07/29/what-is-issue-3-on-the-ohio-ballot/" }
@@ -1053,10 +1032,6 @@ sections:
             party: "Libertarian"
             incumbent: false
             summary: "Toledo small-business owner, age 59. Running on 'independent, transparent, and nonpartisan' election administration. Notes Issue 3 does not settle absentee-voting questions."
-            support:
-              - "Not tied to either major party"
-            oppose:
-              - "No government experience; little realistic chance of winning"
             sources:
               - { title: "Ideastream: Secretary of State race", url: "https://www.ideastream.org/secretary-of-state" }
         sources:
@@ -1083,7 +1058,6 @@ sections:
               - "His campaign says he fought for a billion-dollar increase in public education funding and helped secure nearly $400 million for higher-education capital projects"
               - "Sponsored the 2021 resolution to bar non-citizens from voting in local elections, which voters approved as Issue 2 in Nov. 2022 (Wikipedia)"
               - "News coverage credits the budget he helped write with a roughly $3.1 billion tax cut and universal school choice (figures vary by outlet)"
-              - "Context, not an endorsement of either view: he voted for the 2019 House Bill 6 later tied to the Householder racketeering case (no charges against him), and was one of 21 Republicans who voted against expelling Householder (Wikipedia)"
             resume_sources:
               - title: "Edwards campaign: Home"
                 url: "https://www.edwardsforohio.com/home"
@@ -1113,18 +1087,20 @@ sections:
             incumbent: false
             summary: "Former state representative. Won the GOP primary with 53.1% over Kristina Roegner."
             support:
-              - "Legislative experience in budgeting"
+              - "Supporters cite his experience writing the state budget as House Finance chair; reported endorsements include Vice President JD Vance and Sen. Bernie Moreno"
             oppose:
-              - "Democrats criticize his record as a legislator (specific criticisms not verified in independent coverage)"
+              - "He voted for the 2019 House Bill 6, which federal prosecutors later tied to a racketeering scheme involving then-Speaker Larry Householder; no charges were filed against Edwards (Wikipedia)"
+              - "He was one of 21 Republicans who voted against expelling Householder (Wikipedia)"
+              - "He reported more than 42 gifts of at least $75 each in 2025, totaling at least $3,100, and later said some may not have been received (Wikipedia)"
             sources:
               - { title: "Ideastream: State Treasurer race", url: "https://www.ideastream.org/state-treasurer" }
               - { title: "Wikipedia: 2026 Ohio State Treasurer election", url: "https://en.wikipedia.org/wiki/2026_Ohio_State_Treasurer_election" }
           - name: "Seth Walsh"
             resume:
-              - "Grew up in St. Joseph, Michigan; moved to Cincinnati in 2009; Xavier University political science (student body president)"
-              - "Launched the Sedamsville Community Development Corporation; led the College Hill Community Urban Redevelopment Corporation"
+              - "Grew up in St. Joseph, Michigan; moved to Cincinnati in 2009; Xavier University political science degree (2013); student body president"
+              - "Worked for Cincinnati council members and the CDC Association of Greater Cincinnati; helped launch and led the Sedamsville Community Development Corporation; executive director of the College Hill Community Urban Redevelopment Corporation from 2016"
               - "Founded the Cincy Soccer League"
-              - "Cincinnati City Council member (fourth year); serves on Budget and Finance, Equitable Growth and Housing, and Climate, Environment and Infrastructure committees"
+              - "Cincinnati City Council member since Dec. 2022 (appointed to fill the seat of Greg Landsman, who went to Congress; since elected); serves on Budget and Finance, Equitable Growth and Housing, and Climate, Environment and Infrastructure committees"
               - "Member, Cincinnati Retirement System board of trustees"
             track_record:
               - "Campaign says he created economic development tools including the Quick Strike Acquisition Fund and the Economic Development Gap Financing Fund"
@@ -1166,10 +1142,7 @@ sections:
             incumbent: false
             summary: "Cincinnati City Council member. Promises to name 'qualified, independent individuals to the pension boards,' invest in infrastructure and housing, and return unclaimed funds."
             support:
-              - "Focus on pensions and returning unclaimed money"
-            oppose:
-              - "Only local-government experience"
-              - "Critics may see his investment agenda as politicizing state finances"
+              - "Supporters cite his community-development work in College Hill and his focus on pensions and returning unclaimed funds (campaign)"
             sources:
               - { title: "Ideastream: State Treasurer race", url: "https://www.ideastream.org/state-treasurer" }
         sources:
@@ -1229,15 +1202,10 @@ sections:
             priorities_note: "Issues page lists five priorities; the About page adds his general focus."
             party: "Republican"
             incumbent: false
-            summary: "Former Orange Township trustee and past president of the Ohio Township Association. Founding director of The Rivers Companies; BallotReady lists him as a Delaware County bond-program project manager. Ohio University graduate. Beat state Rep. Beth Lear 51.84% to 48.16% in the primary, carrying all four counties."
+            summary: "Former Orange Township trustee and past president of the Ohio Township Association. Founding director of The Rivers Companies; BallotReady lists him as a Delaware County bond-program project manager. Ohio University graduate. Beat state Rep. Beth Lear 51.84% to 48.16% districtwide in the May primary (KnoxPages), although Lear won Delaware County 52.3% to 47.7% (county board of elections results)."
             positions: ["Self-described 'America First conservative' and 'conservative outsider'", "Property-tax reform", "Lower energy bills", "Audits to cut wasteful spending", "'Meaningful local input' on big economic projects"]
             support:
-              - "Local-government experience"
-              - "Anti-waste message"
-              - "Local control over development"
-            oppose:
-              - "Democrats see his America First positioning as too partisan"
-              - "Narrow primary win suggests his own party is divided"
+              - "Supporters cite his township and county government experience and his local-control message"
             sources:
               - { title: "KnoxPages: Lear, Rivers vie for District 19 Senate seat", url: "https://www.knoxpages.com/2026/04/27/lear-rivers-vie-for-ohio-district-19-senate-seat/" }
               - { title: "Delaware Gazette: Two conservatives running for Ohio Senate seat", url: "https://www.delgazette.com/2026/04/09/two-conservatives-running-for-ohio-senate-seat/" }
@@ -1277,13 +1245,6 @@ sections:
             summary: "Strength and conditioning coach for 25+ years; now Manager of Human Performance in health care. Former national and state champion powerlifter. BA from Florida State; MEd from UAB. Serves on the Orange Township Parks Advisory Committee; volunteers with Metro Parks, Friends of the Lower Olentangy, and the Red Cross. Ran for Delaware Municipal Court Clerk in 2025. Says the Sandy Hook shooting first drew him into politics."
             positions: ["Stronger public schools", "Protecting natural resources", "Working-class economic policies"]
             endorsements: ["Planned Parenthood Advocates of Ohio"]
-            support:
-              - "Community-volunteer background"
-              - "Focus on schools and the environment"
-            oppose:
-              - "No elected experience"
-              - "District leans Republican"
-              - "No campaign finance figures found for either candidate"
             sources:
               - { title: "United She Stands: Scott Charland (SD-19) & Laura Sirot (SD-31)", url: "https://www.unitedshestands.com/p/scott-charland-sd-19-and-laura-sirot" }
               - { title: "Ballotpedia: Scott Charland (2025 municipal court clerk candidate)", url: "https://ballotpedia.org/Scott_Charland_(Delaware_County_Municipal_Court_Clerk,_Ohio,_candidate_2025)" }
@@ -1329,21 +1290,16 @@ sections:
             website: "https://lorenzforohio.com/"
             priority_details:
               - title: "Record he cites"
-                summary: "Chairs the House Economic & Workforce Development Committee; a certified planner (AICP) with 25 years in housing, zoning and development; passed two bills with near-unanimous bipartisan support; and brought nearly $10 million in capital budget funds to Delaware County."
+                summary: "The campaign page says he chairs the House Economic & Workforce Development Committee (the House website lists him as vice chair of the Development Committee); a certified planner (AICP) with 25 years in housing, zoning and development; passed two bills with near-unanimous bipartisan support; and brought nearly $10 million in capital budget funds to Delaware County."
               - title: "Background"
                 summary: "Former Powell mayor and city council member; served on the Olentangy School District facilities committee."
             priorities_note: "The site lists no priorities or issues; it highlights his record. It has a single page."
             party: "Republican"
             incumbent: true
-            summary: "Appointed in 2023 after Rep. Kris Jordan died; won a full term in 2024 with 54.3% over Rachael Morocco. Powell City Council 2010-2023, including time as Mayor. Senior Director of Planning at WD Partners. Master's in city planning from Ohio State. Chairs the House Economic & Workforce Development Committee; sponsored a 'regulatory sandbox' bill and HB 776 (motorcycle lane filtering). Won the 2026 primary with 77.19% over Peggy Guzzo."
+            summary: "Appointed in 2023 after Rep. Kris Jordan died; won a full term in 2024 with 54.3% over Rachael Morocco. Powell City Council 2010-2023, including time as Mayor. Planner by profession; Ohio State master's in city and regional planning. Vice chair of the House Development Committee (per the House website); co-sponsored a 'regulatory sandbox' bill and HB 776 (motorcycle lane filtering). Won the 2026 primary with 77.19% over Peggy Guzzo."
             money: ["Raised $503,072 in 2024."]
             support:
-              - "Long Powell roots"
-              - "Planning expertise relevant to growth"
-              - "Committee leadership"
-            oppose:
-              - "Democrats tie him to the Republican supermajority's record on school funding and property taxes"
-              - "2024 margin shows the district is competitive"
+              - "His campaign cites two bipartisan bills and nearly $10 million in capital budget funds for Delaware County"
             sources:
               - { title: "Ohio House: Lorenz sworn in to fill 60th House District seat", url: "https://house.ohio.gov/members/brian-lorenz/news/lorenz-sworn-in-to-fill-60th-house-district-seat-114712" }
               - { title: "Ballotpedia: Brian Lorenz", url: "https://ballotpedia.org/Brian_Lorenz" }
@@ -1354,7 +1310,7 @@ sections:
             resume:
               - "U.S. Marine Corps: maintenance management specialist, later platoon sergeant"
               - "Army National Guard: patient administration specialist"
-              - "Background in criminology and public policy"
+              - "Working toward a criminology degree at Ohio State (per the Columbus Dispatch); has not held elected office"
               - "State advocate, National Foundation for Ectodermal Dysplasias"
               - "School volunteer and youth soccer coach; mother of four, Dublin resident"
             resume_sources:
@@ -1385,12 +1341,6 @@ sections:
             incumbent: false
             summary: "Marine Corps veteran and Dublin resident. Beat Eli Wenzel 52.95% to 47.05% in the primary."
             positions: ["Public education", "Access to health care", "Support for military families"]
-            support:
-              - "Military service"
-              - "Focus on schools and health care"
-            oppose:
-              - "No elected experience"
-              - "As of September, little public platform detail and no campaign website"
             sources:
               - { title: "Delaware Gazette: Lorenz, Kimball win primaries for District 60", url: "https://www.delgazette.com/2026/05/07/lorenz-kimball-win-primaries-for-district-60-seat/" }
               - { title: "The Ballot Brief: Ohio House District 60", url: "https://theballotbrief.com/state/ohio/delaware-county/ohio-house-district-60" }
@@ -1421,12 +1371,12 @@ sections:
               - "2001-2013: Assistant prosecuting attorney, Franklin County; Director of the Special Victims Unit (last decade)"
               - "2013-2019: Judge, Franklin County Municipal Court Environmental Division"
               - "2019-2024: Judge, Franklin County Court of Common Pleas"
-              - "2024-present: Ohio Supreme Court Justice (won the 2024 election by more than 540,000 votes)"
+              - "2024-present: Ohio Supreme Court Justice (won the Nov. 2024 election over Lisa Forbes, about 55% to 45%, a margin of roughly 542,000 votes; took office Dec. 2024)"
             track_record:
               - "Took more than 100 cases to trial as a prosecutor"
               - "On the Environmental Court, created a neighborhood clean-up program using court-ordered community service"
               - "Earned high ratings from the Columbus Bar Association as a Common Pleas judge"
-              - "Elected to the Ohio Supreme Court in 2024 with 2.94 million votes (campaign site)"
+              - "Won an open Ohio Supreme Court seat in 2024 (succeeding Joe Deters, who had been appointed)"
             resume_sources:
               - title: "Wikipedia: Daniel R. Hawkins"
                 url: "https://en.wikipedia.org/wiki/Daniel_R._Hawkins"
@@ -1444,11 +1394,9 @@ sections:
             summary: "Elected in 2024. Former Franklin County prosecutor. Calls himself a 'strong conservative' who is tough on crime."
             endorsements: ["Ohio Chamber of Commerce", "NFIB-Ohio", "Ohio Business Roundtable", "Ohio Farm Bureau", "Ohio Manufacturers' Association"]
             support:
-              - "Prosecutor's background"
-              - "Endorsements from business and farm groups"
+              - "Supporters cite his prosecutor background and endorsements from business and farm groups"
             oppose:
-              - "Democrats say partisanship has shaped the court"
-              - "Has served only two years"
+              - "Democrats say a 6-1 Republican court needs more balance and are running candidates for both seats (Ohio Capital Journal)"
             sources:
               - { title: "NBC4: Who's running for Ohio Supreme Court in 2026?", url: "https://www.nbc4i.com/news/your-local-election-hq/whos-running-for-ohio-supreme-court-in-2026-all-about-the-candidates/" }
               - { title: "WFMJ: Decision 2026, two races for Ohio Supreme Court", url: "https://www.wfmj.com/news/local-news/decision-2026-two-races-for-ohio-supreme-court-justice/article_e0615892-0f8f-471a-8e21-31cd56f904ea.html" }
@@ -1457,10 +1405,10 @@ sections:
               - "Raised by a mother who migrated from Puerto Rico; commuted four hours a day to finish college"
               - "Began career as an IT manager at Procter & Gamble; law degree, University of Cincinnati"
               - "Private and public-sector attorney; built her own law firm"
-              - "2016-present: Judge, First District Court of Appeals (Hamilton County); reelected 2018"
+              - "2016-present: Judge, First District Court of Appeals (Hamilton County); won the 2016 election for an unexpired term and was reelected in 2018"
               - "Selected by Ohio's Chief Justice to sit on the Ohio Supreme Court and on four other districts' appeals courts"
             track_record:
-              - "First person of Latino heritage elected to an Ohio court of appeals (2016)"
+              - "Described on Wikipedia as the first person of Latino heritage elected to an Ohio court of appeals (2016); one cited source uses the narrower 'first Hispanic female judge'"
               - "Created Educating Tomorrow's Leaders (2016), a program connecting students with judges and attorneys"
               - "National Bar Association Latina Judge of the Year (campaign claim)"
               - "Cleveland Metropolitan Bar Association 'excellent' rating (2022); led initiatives to reduce court costs and broaden access (campaign claim)"
@@ -1491,10 +1439,7 @@ sections:
             summary: "Judge on the First District Court of Appeals (Cincinnati) for nearly a decade. Born in East Harlem; Ohio resident since 1988. Says 'politics has no place in our Ohio Supreme Court.'"
             endorsements: ["Ohio Democratic Party", "Ohio Citizen Action", "Planned Parenthood Advocates of Ohio", "NASW-Ohio"]
             support:
-              - "Long appellate experience"
-              - "Message about balance on the court"
-            oppose:
-              - "Conservatives see her advocacy-group endorsements as a sign of ideology"
+              - "Supporters cite her appellate experience and her message that 'politics has no place' in the Ohio Supreme Court"
             sources:
               - { title: "NBC4: Who's running for Ohio Supreme Court in 2026?", url: "https://www.nbc4i.com/news/your-local-election-hq/whos-running-for-ohio-supreme-court-in-2026-all-about-the-candidates/" }
               - { title: "Mahoning Matters: Ohio Democrats press for wins in 2026 Supreme Court races", url: "https://www.mahoningmatters.com/news/state/article315708964.html" }
@@ -1517,7 +1462,7 @@ sections:
               - "Attorney since 1983; 17 years in private practice, starting her own firm; native of Springfield, Ohio; Miami University graduate"
               - "Judge, Franklin County Court of Common Pleas, about five years"
               - "Ohio Secretary of State (the state's first woman in the post)"
-              - "Judge, Tenth District Court of Appeals, six years"
+              - "Judge, Tenth District Court of Appeals, 2015-2020 (elected 2014)"
               - "2021-present: Ohio Supreme Court Justice (elected 2020)"
               - "Has worked with USAID and the State Department on anti-corruption and election integrity in Serbia, Egypt and Benin; Ph.D. studies at the University of York"
             track_record:
@@ -1549,14 +1494,9 @@ sections:
             priorities_note: "Judicial candidate; the site frames what 'justice' means to different Ohioans rather than listing a platform."
             party: "Democratic"
             incumbent: true
-            summary: "On the court since 2021. Tenth District Court of Appeals 2014-2020. Ohio Secretary of State 2007-2011. The only Democrat now holding a statewide elected office in Ohio."
+            summary: "On the court since 2021. Tenth District Court of Appeals 2015-2020. Ohio Secretary of State 2007-2011. The only Democrat now holding a statewide elected office in Ohio."
             support:
-              - "Experience"
-              - "Keeps some ideological balance on the court"
-              - "Challenge to the party-label law"
-            oppose:
-              - "Republicans say her dissents are out of step with the majority"
-              - "Some see her party-label lawsuit as political"
+              - "Supporters cite her experience at all three levels of Ohio's courts and her role as the court's lone Democrat"
             sources:
               - { title: "NBC4: Who's running for Ohio Supreme Court in 2026?", url: "https://www.nbc4i.com/news/your-local-election-hq/whos-running-for-ohio-supreme-court-in-2026-all-about-the-candidates/" }
               - { title: "Mahoning Matters: Overview of Ohio's 2026 statewide and Supreme Court races", url: "https://www.mahoningmatters.com/news/state/article314605422.html" }
@@ -1593,13 +1533,11 @@ sections:
             summary: "Franklin County Common Pleas judge 2013-2023 (lost re-election), then a federal immigration judge in Laredo, Texas; her campaign says she 'never once granted asylum.' Calls herself a 'constitutional conservative' and originalist. Daughter of former Justice Terrence O'Donnell. Won a four-way GOP primary with 32%."
             endorsements: ["Ohio Chamber of Commerce", "NFIB-Ohio", "Ohio Business Roundtable", "Ohio Farm Bureau", "Ohio Manufacturers' Association"]
             support:
-              - "Ten years as a trial judge"
-              - "Promise of judicial restraint"
-              - "Strict enforcement of immigration law"
+              - "Supporters cite a decade as a trial judge and her stated originalist, 'constitutional conservative' approach"
             oppose:
-              - "A three-judge panel found she broke judicial campaign rules by reposting an endorsement calling her 'Judge' when she was not one; no sanction, and the panel called the violation 'technical'"
-              - "Critics read her asylum record as evidence of a predetermined approach"
-              - "Declined post-primary interviews with the Ohio Capital Journal"
+              - "A three-judge panel found she broke judicial campaign rules by reposting an endorsement calling her 'Judge' when she was not one; no sanction was imposed (reports conflict on whether it was dismissed or a violation was found, see note)"
+              - "She lost her 2022 bid for a full Common Pleas term to Andria Noble, about 55% to 45% (Ballotpedia)"
+              - "She declined post-primary interviews with the Ohio Capital Journal"
             verification: "conflicting_reports"
             verification_note: "Bloomberg Law headlines conflict on whether the ethics complaint was 'tossed' or resulted in a violation without punishment."
             sources:
@@ -1660,7 +1598,7 @@ sections:
             priorities_note: "Judicial candidate; the site is explicitly partisan ('constitutional conservative') and states judicial philosophy, not a policy platform."
             party: "Republican"
             incumbent: false
-            summary: "Licking County Municipal Court judge since 2020 and former magistrate; 18 years of judicial experience. Ashland University and Washington and Lee Law graduate. Won a three-way GOP primary. Promises to 'apply the law as written' and oppose 'judicial activism.'"
+            summary: "Licking County Municipal Court judge since 2020 and former magistrate; 18 years of judicial experience. Ashland University and Washington and Lee Law graduate. Won a three-way GOP primary with 46% (unofficial results: 58,315 votes to Matt Donahue's 41%). Promises to 'apply the law as written' and oppose 'judicial activism.'"
             sources:
               - { title: "The Ballot Brief: Delaware County", url: "https://theballotbrief.com/state/ohio/delaware-county" }
         sources:
@@ -1710,7 +1648,7 @@ sections:
         term: "Ending Dec. 31, 2030"
         contested: true
         what_the_office_does: "See Common Pleas General Division (full term)."
-        background: "Seat opened when Judge James Schuck retired in June 2026 amid allegations by a former assistant county prosecutor that he sexually assaulted and stalked her. Candidates filed as Republican (McCoy) and Democrat (Mirles-Jones) petition candidates, but no party labels appear on the ballot."
+        background: "Seat opened when Judge James Schuck retired in June 2026. Before he retired, an assistant county prosecutor alleged in court filings that he pressured her for sex and sent her tens of thousands of messages; Schuck's attorney said he adamantly denies the allegations. In August a Cuyahoga County prosecutor's review found insufficient admissible evidence to present a case to a grand jury, and the matter was referred to the Ohio Supreme Court's disciplinary counsel (local TV reports). McCoy and Mirles-Jones filed as Republican and Democratic petition candidates, but no party labels appear on the ballot."
         candidates:
           - name: "Nickolas K. McCoy"
             resume:
@@ -1732,11 +1670,8 @@ sections:
             party: "Nonpartisan ballot (filed as Republican)"
             incumbent: false
             summary: "Magistrate in the county's Juvenile and Probate Division. Admitted to practice in 2009. Nearly 16 years in estate planning, elder law, guardianship, and domestic relations. Two-term president of the Delaware County Bar Association."
-            support:
-              - "Already works as a court officer"
-              - "Strong standing with the local bar"
             oppose:
-              - "Opponent argues he has little General Division (criminal and civil) experience"
+              - "His opponent's campaign says he has little General Division (criminal and civil) experience"
             sources:
               - { title: "The Ballot Brief: Common Pleas General Division, unexpired term", url: "https://theballotbrief.com/state/ohio/delaware-county/judge-delaware-county-court-of-common-pleas-general-division-unexpired-term-ending-12-31-2030" }
               - { title: "The Ballot Brief: Delaware County", url: "https://theballotbrief.com/state/ohio/delaware-county" }
@@ -1765,11 +1700,9 @@ sections:
             incumbent: false
             summary: "16 years as court-appointed counsel and public defender in Franklin, Delaware, and Morrow counties. Guardian ad litem and Supreme Court-qualified mediator. JD/MBA from Case Western Reserve. Campaign says she is 'the only candidate' with General Division (criminal and civil) experience (campaign claim). Says Delaware County Fair officials and a deputy interfered with her campaigning on Sept. 20; fair officials dispute her account."
             support:
-              - "Hands-on felony courtroom experience"
-              - "Varied business background"
+              - "Her campaign says she is the only candidate with criminal, civil and neutral-party (guardian ad litem, mediator) experience"
             oppose:
-              - "Critics may see a defense-only practice as one-sided"
-              - "The county fair dispute drew attention and remains contested"
+              - "She says Delaware County Fair officials and a deputy interfered with her campaigning on Sept. 20; fair officials dispute her account"
             verification: "campaign_claim"
             sources:
               - { title: "Mirles-Jones campaign site", url: "https://votemirlesjones.com/" }
@@ -1784,7 +1717,7 @@ sections:
         type: "candidate_race"
         ballot_order: 15
         office: "Judge, Common Pleas Court, Probate/Juvenile Division"
-        term: "Standard term"
+        term: "Full term beginning Feb. 9, 2027"
         contested: false
         what_the_office_does: "Handles estates, guardianships, adoptions, marriage licenses, and juvenile delinquency and abuse cases."
         candidates:
@@ -1835,7 +1768,7 @@ sections:
             resume:
               - "Educator for 15 years working with students and families in Indiana and Pennsylvania; former special education teacher"
               - "Degrees from the University of Cincinnati, University of Pittsburgh and Slippery Rock University"
-              - "Genoa Township Trustee since 2020 (first elected 2019)"
+              - "Genoa Township Trustee since 2020 (first elected 2019, reelected 2023)"
               - "President, Delaware County Township Association; director, Ohio Township Association board"
             track_record:
               - "As trustee, her campaign cites hands-on work with roads, infrastructure, zoning, public safety, budgets, annexation and development"
@@ -1872,14 +1805,10 @@ sections:
             priorities_note: "The Issues page lists these areas; the site has no other issues pages."
             party: "Republican"
             incumbent: false
-            summary: "Genoa Township trustee since January 2020. President of the Delaware County Township Association; member of the Ohio Township Association board. Former special-education teacher with degrees from Cincinnati, Pittsburgh, and Slippery Rock. Endorsed by the county GOP. Beat Sunbury Mayor Joe St. John in the primary."
+            summary: "Genoa Township trustee since January 2020. President of the Delaware County Township Association; member of the Ohio Township Association board. Former special-education teacher with degrees from Cincinnati, Pittsburgh, and Slippery Rock. Endorsed by the county GOP. Beat Sunbury Mayor Joe St. John in the primary, 56.7% to 43.3% in Delaware County (county board of elections results)."
             positions: ["'Conservative leadership rooted in common sense, fiscal discipline'", "Keep roads, schools, and public safety paced with growth", "Partnerships with townships and cities"]
             support:
-              - "Township experience"
-              - "Relationships with local governments"
-              - "Party endorsement"
-            oppose:
-              - "Critics may ask whether her record in fast-growing Genoa Township shows she can manage growth countywide"
+              - "Endorsed by the county Republican Party; supporters cite her township experience and relationships with local governments"
             sources:
               - { title: "AOL/Columbus Dispatch: Genoa trustee Vaughan wins GOP primary", url: "https://www.aol.com/news/two-republicans-battle-delaware-county-220148239.html" }
               - { title: "Delaware Gazette: Trustee announces commissioner bid", url: "https://www.delgazette.com/2026/02/10/trustee-announces-commissioner-bid/" }
@@ -1934,12 +1863,6 @@ sections:
             incumbent: false
             summary: "Genoa Township resident running for office for the first time. Founder and CEO of AI consulting firm Polaris Pixels. Nearly ten years as CTO of Roof Maxx, which grew to 350 franchise locations."
             positions: ["Publish a yearly 10-year growth forecast", "Require new developments to pay their proportional share of infrastructure costs", "Countywide planning with public input"]
-            support:
-              - "Business planning skills"
-              - "Specific growth-management proposals"
-            oppose:
-              - "No government experience"
-              - "Delaware County leans Republican"
             sources:
               - { title: "The Ballot Brief: Delaware County", url: "https://theballotbrief.com/state/ohio/delaware-county" }
         sources:
@@ -1963,13 +1886,13 @@ sections:
               - "2009-present: Delaware County Auditor (appointed 2009, elected to a full term in 2010)"
             track_record:
               - "Elected county auditor in 2010 and has served since 2009"
-              - "Won the 2026 Republican primary over Don Rankey Jr. (per the research guide)"
+              - "Won the 2026 Republican primary over Don Rankey, 67.6% to 32.4% (county board of elections results)"
             resume_sources:
               - title: "The Ballot Brief: George Kaitsa"
                 url: "https://theballotbrief.com/candidate/george-kaitsa-oh"
             party: "Republican"
             incumbent: true
-            summary: "Auditor since his 2009 appointment; elected in 2010. Former first CFO of the Ohio Department of Development. Kenyon economics graduate with an MBA from Ohio State. Beat Don Rankey Jr. in the primary. No Democrat filed."
+            summary: "Auditor since his 2009 appointment; elected in 2010. Former first CFO of the Ohio Department of Development. Kenyon economics graduate with an MBA from Ohio State. Beat Don Rankey in the May primary, 67.6% to 32.4%. No Democrat filed."
             sources:
               - { title: "The Ballot Brief: Delaware County", url: "https://theballotbrief.com/state/ohio/delaware-county" }
         sources:
@@ -1994,27 +1917,27 @@ sections:
           - "Requires voters who don't vote in person to provide photo ID, unless the law authorizes them to vote by providing a signature and at least one other specified unique identifier."
           - "Approved IDs: unexpired Ohio driver's license or state ID card, U.S. passport or passport card, or a U.S. military, Ohio National Guard, or VA ID card."
           - "Takes effect immediately."
-        what_it_does: "Photo ID has been required to vote in person in Ohio since 2023. Issue 3 would move that requirement into the constitution; future legislatures could then change it only through another statewide vote. Day-to-day, the voting process would barely change."
+        what_it_does: "Photo ID has been required to vote in person in Ohio since a 2023 law (HB 458); absentee voters currently provide a copy of a photo ID, a driver's license number, or the last four digits of their Social Security number, and voters with a religious objection to being photographed can sign an affidavit. Issue 3 would write a photo ID requirement into the constitution: in person, photo ID; for absentee voters, photo ID unless the legislature authorizes a signature plus one other unique identifier. Future legislatures could then change it only through another statewide vote."
         how_it_got_on_ballot: "Passed by the Republican-controlled General Assembly with a three-fifths supermajority in June 2026."
         cost: "No direct fiscal impact identified."
         supporters:
-          - "Jane Timken and Sen. Theresa Gavarone (official ballot argument)"
-          - "Both candidates for governor; Sec. of State candidate Robert Sprague"
+          - "Official ballot argument for: Sens. Jane Timken and Theresa Gavarone and Reps. Adam Bird and Heidi Workman"
+          - "Both major-party candidates for governor; Sec. of State candidate Robert Sprague"
           - "Tribune Chronicle editorial board"
         opponents:
-          - "Allison Russo (calls it a waste of time)"
-          - "Ohio Democratic Party figure DeMora (digital/biometric ID concern)"
-          - "Democrats and Libertarians (Tom Pruss: absentee-voting language unclear)"
+          - "Official ballot argument against: Sen. Bill DeMora and Reps. Desiree Tims and Terrence Upchurch, who call it 'unneeded and unpopular'"
+          - "ACLU of Ohio"
+          - "Allison Russo (calls it a waste of time); Tom Pruss (says the absentee-voting language is unclear)"
         arguments_for:
           - "Photo ID is a proven method to protect Ohio's elections and improve voter confidence. Official argument by Timken and Gavarone: 'If you can show an ID to drive a car, you can show an ID to decide the future of our state.'"
           - "Timken argues AI can easily fake utility bills and bank statements, so photo ID should be locked in."
-          - "A future legislature could otherwise repeal the rule."
+          - "Supporters say it adds protection if the law is challenged in court, and that a future legislature could otherwise repeal the rule."
         arguments_against:
           - "Unnecessary because the rule is already law (Russo: 'a waste of time')."
           - "Putting specific ID types in the constitution could stop Ohio from adopting digital or biometric IDs later."
-          - "Democrats and Libertarians say it is mainly meant to boost Republican turnout."
+          - "Some Democrats argue its main purpose is to energize Republican voters; a political scientist quoted by Signal Cleveland says supporters may also see the issue as important and want certainty it won't be reversed."
           - "Pruss warns the absentee-voting language leaves unclear what a future legislature might require."
-          - "Context: no evidence of widespread voter fraud in Ohio, even before the photo ID law."
+          - "Opponents note that documented voter fraud in Ohio is rare, and that ID rules can burden voters who lack the listed IDs."
         sources:
           - { title: "NBC4: What is Issue 3?", url: "https://www.nbc4i.com/news/your-local-election-hq/what-is-issue-3-ohioans-to-decide-on-voter-id-amendment-in-november-election/" }
           - { title: "Ohio Capital Journal: What is Issue 3 on the Ohio ballot?", url: "https://ohiocapitaljournal.com/2026/07/29/what-is-issue-3-on-the-ohio-ballot/" }
