@@ -2,6 +2,7 @@
 import Bullets from './Bullets.astro';
 import Candidate from './Candidate.astro';
 import Links from './Links.astro';
+import PfItems from './PfItems.astro';
 import { VERIFICATION, list, politifactLinks } from '../lib';
 const { c } = Astro.props;
 const isIssue = c.type === 'ballot_issue';
@@ -59,6 +60,7 @@ const rev = c.revenue_estimate;
       <ul class="pf">
         {politifactLinks(c).map((l) => <li><a href={l.url} target="_blank" rel="noopener noreferrer">{l.label} &nearr;</a></li>)}
       </ul>
+      <PfItems items={c.politifact_items} />
       <p class="small">Opens PolitiFact's search for this topic. PolitiFact rarely covers local levies, so a search may return little or nothing.</p>
     </div>
   )}

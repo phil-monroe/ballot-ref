@@ -1,0 +1,18 @@
+---
+const { items = [] } = Astro.props;
+const cls = (r: string) => 'rating rating--' + r.toLowerCase().replace(/[^a-z]+/g, '-').replace(/^-|-$/g, '');
+---
+{items.length > 0 && (
+  <ul class="pf-items">
+    {items.map((i: any) => (
+      <li>
+        <a href={i.url} target="_blank" rel="noopener noreferrer">{i.title} &nearr;</a>
+        <span class="small">
+          {i.kind === 'fact_check' ? 'Fact-check' : 'Article'} · {i.date}
+          {i.rating && <span class={cls(i.rating)}>{i.rating}</span>}
+        </span>
+        {i.note && <span class="small pf-note">{i.note}</span>}
+      </li>
+    ))}
+  </ul>
+)}

@@ -1,6 +1,7 @@
 ---
 import Bullets from './Bullets.astro';
 import Links from './Links.astro';
+import PfItems from './PfItems.astro';
 import { VERIFICATION, list, politifactLinks } from '../lib';
 const { c, contestId } = Astro.props;
 const pf = politifactLinks(c);
@@ -83,7 +84,8 @@ const has = (...keys: string[]) => keys.some((k) => list(c[k]).length > 0);
     <ul class="pf">
       {pf.map((l) => <li><a href={l.url} target="_blank" rel="noopener noreferrer">{l.label} &nearr;</a></li>)}
     </ul>
-    <p class="small">{pf.some((l) => l.direct) ? 'Fact-checks of statements by this candidate, rated by PolitiFact.' : 'No PolitiFact profile page was found; the search link lists any fact-checks or articles that mention them.'}</p>
+    <PfItems items={c.politifact_items} />
+    <p class="small">{pf.some((l) => l.direct) ? 'PolitiFact rates statements by the person named; the items above are about this race or candidate. Older fact-checks are on the profile page.' : 'No PolitiFact profile page was found. The search link lists any fact-checks or articles that mention them.'}</p>
   </div>
 
   <div class="sec" data-sec="arguments">

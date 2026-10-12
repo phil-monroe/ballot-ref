@@ -212,3 +212,12 @@ details[open] > summary::before { transform: rotate(90deg); }
 .pf { margin: 0 0 4px; padding-left: 1.1em; }
 .pf li { margin: 6px 0; }
 .pf-block { margin-top: 12px; }
+
+.pf-items { list-style: none; margin: 8px 0; padding: 0; }
+.pf-items li { margin: 0 0 12px; display: flex; flex-direction: column; gap: 2px; }
+.pf-note { color: var(--muted); }
+.rating { margin-left: 8px; padding: 1px 8px; border-radius: 999px; border: 1px solid var(--line); font-weight: 600; font-size: 0.78rem; }
+.rating--true, .rating--mostly-true { border-color: #2e7d32; color: #2e7d32; }
+.rating--half-true { border-color: #b26a00; color: #b26a00; }
+.rating--mostly-false, .rating--false, .rating--pants-on-fire { border-color: #c62828; color: #c62828; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme='light']) .rating--true, :root:not([data-theme='light']) .rating--mostly-true { color: #81c784; border-color: #81c784; } :root:not([data-theme='light']) .rating--half-true { color: #ffb74d; border-color: #ffb74d; } :root:not([data-theme='light']) .rating--mostly-false, :root:not([data-theme='light']) .rating--false, :root:not([data-theme='light']) .rating--pants-on-fire { color: #ef9a9a; border-color: #ef9a9a; } }

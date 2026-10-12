@@ -68,6 +68,8 @@ meta:
     - id: "property-tax-stat"
       text: "The claim that Delaware County has Ohio's highest median property tax bill ($6,896 vs. $2,396 state median, 2023) was attributed to Realtor.com/Tax Foundation data as reported by 1808 Delaware. No source link was retained; verify before publishing."
       verification: "unverified"
+    - id: "politifact"
+      text: "PolitiFact items were collected from PolitiFact's own search and profile pages on Oct. 12, 2026 and are not exhaustive. Only items clearly about a candidate, their claims, or the issue are listed; many candidates have none, and most local candidates and levies have no PolitiFact coverage. Ratings are PolitiFact's, not ours."
     - id: "secondary-sources"
       text: "Some aggregators (The Ballot Brief, Legis1, Newsweek poll roundups, Wikipedia) are secondary sources. Treat their claims accordingly."
   global_sources:
@@ -177,6 +179,14 @@ sections:
             priorities_note: "The campaign site has no issues or platform page. These come from its Bio page and press releases; its coalitions page (law enforcement, 2A, faith leaders, sportsmen, farmers, veterans) lists audiences, not positions."
             politifact:
               - { label: "Jon Husted", url: "https://www.politifact.com/personalities/jon-husted/" }
+            politifact_items:
+              - { kind: "fact_check", title: "Sen. Jon Husted voted \"to kick 490,000 Ohioans off their healthcare.\"", date: "Oct. 9, 2026", rating: "Half-True", url: "https://politifact.com/factchecks/2026/oct/09/sherrod-brown/jon-husted-health-insurance-490000-ohio-senate/", note: "Claim by Sherrod Brown about Husted" }
+              - { kind: "fact_check", title: "Sen. Jon Husted \"led the push to bring data centers to Ohio and gave billions of tax dollars to make it happen.\"", date: "Sept. 23, 2026", rating: "Mostly True", url: "https://politifact.com/factchecks/2026/sep/23/sherrod-brown/jon-husted-pushed-for-data-centers-and-tax-incentives-in-ohio-as-sherrod-brown-ads-say/", note: "Claim by Sherrod Brown about Husted" }
+              - { kind: "fact_check", title: "When he was a senator, Sherrod Brown \"supported Social Security payments for illegals, healthcare for illegals and COVID checks for illegals.\"", date: "Aug. 25, 2026", rating: "False", url: "https://politifact.com/factchecks/2026/aug/25/jon-husted/sherrod-brown-immigration-ohio-senate/", note: "Claim by Jon Husted about Brown" }
+              - { kind: "fact_check", title: "Since the passage of the \"Jon Husted-backed\" HB 6, Ohioans' residential utility rates have gone up $663 a year.", date: "July 20, 2026", rating: "Half-True", url: "https://politifact.com/factchecks/2026/jul/20/sherrod-brown/sherrod-brown-blames-hb-6-for-electric-bill-spike-experts-say-the-law-wasnt-the-main-cause/", note: "Claim by Sherrod Brown about Husted" }
+              - { kind: "article", title: "Fact-checking Donald Trump, Jon Husted at Ohio rally on economy, Sherrod Brown's record", date: "Oct. 3, 2026", url: "https://politifact.com/article/2026/oct/03/trump-rally-vandalia-dayton-ohio-fact-check/" }
+              - { kind: "article", title: "Rival TV ads in Ohio's US Senate race play up donors' Epstein links. Are they legit?", date: "June 8, 2026", url: "https://politifact.com/article/2026/jun/08/epstein-ohio-senate-husted-brown-donations/" }
+              - { kind: "article", title: "The Epstein midterms: Why the deceased felon appears in Texas, Ohio, Georgia, MA Senate attacks", date: "Aug. 13, 2026", url: "https://politifact.com/article/2026/aug/13/jeffrey-epstein-senate-midterms-georgia-ohio-texas/", note: "Covers Senate-race attacks in several states, including Ohio" }
             party: "Republican"
             incumbent: true
             summary: "Appointed to the seat by Gov. DeWine in January 2025. Previously 20+ years as a state lawmaker and statewide officeholder, most recently Lieutenant Governor."
@@ -239,6 +249,16 @@ sections:
             priorities_note: "The site's only issues page, 'Our Fight', frames these as fixes to a 'rigged' system and a high cost of living."
             politifact:
               - { label: "Sherrod Brown", url: "https://www.politifact.com/personalities/sherrod-brown/" }
+            politifact_items:
+              - { kind: "fact_check", title: "Sherrod Brown supports \"forcing childhood sex change surgery.\"", date: "Oct. 1, 2026", rating: "False", url: "https://politifact.com/factchecks/2026/oct/01/senate-leadership-fund/no-ohio-senate-candidate-sherrod-brown-does-not-support-forcing-childhood-sex-change-surgery/", note: "Claim by the Senate Leadership Fund about Brown" }
+              - { kind: "fact_check", title: "A fatal Ohio crash happened because \"Sherrod Brown opened our borders to dangerous illegals.\"", date: "Sept. 1, 2026", rating: "False", url: "https://politifact.com/factchecks/2026/sep/01/national-republican-senatorial-committee/theres-no-evidence-sherrod-browns-immigration-votes-caused-a-fatal-ohio-crash/", note: "Claim by the National Republican Senatorial Committee about Brown" }
+              - { kind: "fact_check", title: "When he was a senator, Sherrod Brown \"supported Social Security payments for illegals, healthcare for illegals and COVID checks for illegals.\"", date: "Aug. 25, 2026", rating: "False", url: "https://politifact.com/factchecks/2026/aug/25/jon-husted/sherrod-brown-immigration-ohio-senate/", note: "Claim by Jon Husted about Brown" }
+              - { kind: "fact_check", title: "Since the passage of the \"Jon Husted-backed\" HB 6, Ohioans' residential utility rates have gone up $663 a year.", date: "July 20, 2026", rating: "Half-True", url: "https://politifact.com/factchecks/2026/jul/20/sherrod-brown/sherrod-brown-blames-hb-6-for-electric-bill-spike-experts-say-the-law-wasnt-the-main-cause/", note: "Claim by Sherrod Brown about Husted" }
+              - { kind: "fact_check", title: "Sen. Jon Husted \"led the push to bring data centers to Ohio and gave billions of tax dollars to make it happen.\"", date: "Sept. 23, 2026", rating: "Mostly True", url: "https://politifact.com/factchecks/2026/sep/23/sherrod-brown/jon-husted-pushed-for-data-centers-and-tax-incentives-in-ohio-as-sherrod-brown-ads-say/", note: "Claim by Sherrod Brown about Husted" }
+              - { kind: "fact_check", title: "Sen. Jon Husted voted \"to kick 490,000 Ohioans off their healthcare.\"", date: "Oct. 9, 2026", rating: "Half-True", url: "https://politifact.com/factchecks/2026/oct/09/sherrod-brown/jon-husted-health-insurance-490000-ohio-senate/", note: "Claim by Sherrod Brown about Husted" }
+              - { kind: "article", title: "Fact-checking Donald Trump, Jon Husted at Ohio rally on economy, Sherrod Brown's record", date: "Oct. 3, 2026", url: "https://politifact.com/article/2026/oct/03/trump-rally-vandalia-dayton-ohio-fact-check/" }
+              - { kind: "article", title: "Rival TV ads in Ohio's US Senate race play up donors' Epstein links. Are they legit?", date: "June 8, 2026", url: "https://politifact.com/article/2026/jun/08/epstein-ohio-senate-husted-brown-donations/" }
+              - { kind: "article", title: "The Epstein midterms: Why the deceased felon appears in Texas, Ohio, Georgia, MA Senate attacks", date: "Aug. 13, 2026", url: "https://politifact.com/article/2026/aug/13/jeffrey-epstein-senate-midterms-georgia-ohio-texas/", note: "Covers Senate-race attacks in several states, including Ohio" }
             party: "Democratic"
             incumbent: false
             summary: "U.S. Senator 2007-2025; lost in 2024 to Bernie Moreno."
@@ -404,6 +424,10 @@ sections:
             priorities_note: "The site lists nine issue areas, with some overlap between energy sections."
             politifact:
               - { label: "Troy Balderson", url: "https://www.politifact.com/personalities/troy-balderson/" }
+            politifact_items:
+              - { kind: "fact_check", title: "Troy Balderson: \"A lot of people are still dealing with lack of access to health care.\"", date: "Oct. 30, 2018", rating: "Half-True", url: "https://politifact.com/factchecks/2018/oct/30/troy-balderson/ohio-troy-balderson-brings-seldom-mentioned-health/", note: "Claim by Balderson during his 2018 campaign" }
+              - { kind: "fact_check", title: "Danny O'Connor has raised \"90 percent of his campaign funds from liberal out of staters.\"", date: "Sept. 25, 2018", rating: "Half-True", url: "https://politifact.com/factchecks/2018/sep/25/troy-balderson/does-danny-oconnor-get-90-percent-his-campaign-fun/", note: "Claim by Troy Balderson about his 2018 opponent" }
+              - { kind: "fact_check", title: "Balderson backs a \"massive tax giveaway\" for corporations.", date: "Sept. 26, 2018", rating: "Mostly False", url: "https://politifact.com/factchecks/2018/sep/26/danny-oconnor/danny-oconnors-ad-ohio-really-slashes/", note: "Claim by Danny O'Connor's campaign about Balderson" }
             party: "Republican"
             incumbent: true
             summary: "In Congress since a 2018 special election. Former state senator and representative. Third-generation auto dealer from Zanesville."
@@ -592,6 +616,9 @@ sections:
             politifact:
               - { label: "Amy Acton", url: "https://www.politifact.com/personalities/amy-acton/" }
               - { label: "David Pepper", url: "https://www.politifact.com/personalities/david-pepper/" }
+            politifact_items:
+              - { kind: "article", title: "Ad Watch: In Ohio's governor race, GOP ad misleads on Dr. Amy Acton's medical record and substance use", date: "Sept. 28, 2026", url: "https://politifact.com/article/2026/sep/28/ad-watch-in-ohios-governor-race-gop-ad-misleads-on-dr-amy-actons-medical-record-and-substance-use/", note: "Ad paid for by a super PAC supporting Ramaswamy (V-PAC: Victors, Not Victims)" }
+              - { kind: "fact_check", title: "In 2020, \"Amy Acton called off Ohio's election at the last minute.\"", date: "May 13, 2026", rating: "Mostly False", url: "https://politifact.com/factchecks/2026/may/13/vivek-ramaswamy/amy-acton-ohio-2020-covid-primary-senate/", note: "Claim by Vivek Ramaswamy about Acton" }
             party: "Democratic"
             incumbent: false
             summary: "Acton was Ohio Department of Health director during the early COVID-19 pandemic. Pepper is a former Ohio Democratic Party chair."
@@ -653,6 +680,9 @@ sections:
             politifact:
               - { label: "Vivek Ramaswamy", url: "https://www.politifact.com/personalities/vivek-ramaswamy/" }
               - { label: "Rob McColley", url: "https://www.politifact.com/search/?q=Rob%20McColley", search: true }
+            politifact_items:
+              - { kind: "fact_check", title: "In 2020, \"Amy Acton called off Ohio's election at the last minute.\"", date: "May 13, 2026", rating: "Mostly False", url: "https://politifact.com/factchecks/2026/may/13/vivek-ramaswamy/amy-acton-ohio-2020-covid-primary-senate/", note: "Claim by Vivek Ramaswamy about Acton" }
+              - { kind: "article", title: "Ad Watch: In Ohio's governor race, GOP ad misleads on Dr. Amy Acton's medical record and substance use", date: "Sept. 28, 2026", url: "https://politifact.com/article/2026/sep/28/ad-watch-in-ohios-governor-race-gop-ad-misleads-on-dr-amy-actons-medical-record-and-substance-use/", note: "Ad paid for by a super PAC supporting Ramaswamy (V-PAC: Victors, Not Victims)" }
             party: "Republican"
             incumbent: false
             summary: "Ramaswamy is a biotech entrepreneur (founded Roivant Sciences) and 2024 presidential candidate; Forbes estimated his net worth at $2.3 billion in Sept. 2026. He was named in Nov. 2024 as co-lead of a proposed Department of Government Efficiency but left on Inauguration Day before working with it. McColley is Ohio Senate President."
@@ -770,6 +800,8 @@ sections:
             priorities_note: "The Issues page lists four areas plus a separate health-insurance policy page; the Record section is his track record, not a stated priority."
             politifact:
               - { label: "Keith Faber", url: "https://www.politifact.com/personalities/keith-faber/" }
+            politifact_items:
+              - { kind: "fact_check", title: "Thanks to the strong charter school reforms put in place while he was Senate President, the online charter school ECOT \"was caught and is out of business.\"", date: "May 17, 2018", rating: "Mostly False", url: "https://politifact.com/factchecks/2018/may/17/keith-faber/ohio-auditor-candidate-misleads-about-his-role-onl/", note: "Claim by Keith Faber, then an Auditor candidate" }
             party: "Republican"
             incumbent: false
             summary: "Ohio Auditor of State, finishing his second and final term. Former member of the Ohio House and Senate. Campaign says focus is 'protecting Ohio families, supporting law enforcement and defending our Constitution.'"
@@ -866,6 +898,9 @@ sections:
               - title: "Record cited (not a stated priority)"
                 summary: "Cites his Secretary of State record on election administration ('national leader in election integrity') and record numbers of new businesses, plus a military background and endorsement by President Trump."
             priorities_note: "The site has no issues page; this comes from the home page statement and 'About Frank'."
+            politifact_items:
+              - { kind: "article", title: "Fact-checking the Trump administration's count of 250,000 noncitizens on the voter rolls", date: "July 17, 2026", url: "https://politifact.com/article/2026/jul/17/mullin-dhs-250000-noncitizen-voters-trump/", note: "Mentions LaRose's 2024 referral of 597 apparent noncitizen registrants for prosecution (he said 138 voted)" }
+              - { kind: "article", title: "Successful program finds voters who moved or died. Why are states leaving it before 2024 elections?", date: "May 4, 2023", url: "https://politifact.com/article/2023/may/04/successful-program-finds-voters-who-moved-or-died/", note: "Mentions LaRose's 2019 statement about the ERIC voter-roll program and Ohio's 2023 exit" }
             party: "Republican"
             incumbent: false
             summary: "Two-term Secretary of State, term-limited. Former state senator and Army veteran."
@@ -1921,6 +1956,8 @@ sections:
       - id: "state-issue-3"
         type: "ballot_issue"
         politifact_query: "Ohio voter ID"
+        politifact_items:
+          - { kind: "fact_check", title: "Valid IDs are not required for voting.", date: "Mar. 20, 2024", rating: "Mostly False", url: "https://politifact.com/factchecks/2024/mar/20/facebook-posts/no-id-required-to-vote-thats-not-the-case-for-most/", note: "Background on voter ID rules by state; lists Ohio among ten states with 'strict' photo ID laws (before this amendment)" }
         ballot_order: 18
         title: "State Issue 3 - Proposed Constitutional Amendment: Photo ID to Vote"
         jurisdiction: "Statewide"
