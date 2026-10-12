@@ -1,6 +1,6 @@
 ---
 import '../styles/site.css';
-import { PICKS_KEY } from '../lib';
+import { PICKS_KEY, contests } from '../lib';
 interface Props {
   title: string;
   description?: string;
@@ -8,18 +8,20 @@ interface Props {
 const { title, description = 'Voter guide for a specific Ohio ballot.' } = Astro.props;
 ---
 <!doctype html>
-<html lang="en" data-picks-key={PICKS_KEY}>
+<html lang="en" data-picks-key={PICKS_KEY} data-total={contests.length}>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#1f4e8c" />
     <meta name="robots" content="noindex, nofollow" />
     <meta name="description" content={description} />
     <title>{title}</title>
   </head>
   <body>
     <header class="top">
-      <a href="/">My ballot</a>
-      <a href="/about/">About &amp; caveats</a>
+      <a href="/" class="top-home">My ballot</a>
+      <span class="top-progress" data-progress></span>
+      <a href="/about/">About</a>
     </header>
     <main>
       <slot />

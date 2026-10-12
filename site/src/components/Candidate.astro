@@ -3,6 +3,7 @@ import Bullets from './Bullets.astro';
 import Links from './Links.astro';
 import { VERIFICATION } from '../lib';
 const { c } = Astro.props;
+const hasMore = ['positions', 'money', 'endorsements', 'support', 'oppose'].some((k) => c[k]?.length);
 ---
 <article class="card">
   <h4>
@@ -37,12 +38,17 @@ const { c } = Astro.props;
       {c.priorities_note && <p class="small">{c.priorities_note}</p>}
     </>
   )}
-  <Bullets title="Stated positions" items={c.positions} />
-  <Bullets title="Money" items={c.money} />
-  <Bullets title="Endorsements" items={c.endorsements} />
-  <div class="pair">
-    <Bullets title="Supporters say" items={c.support} class="for" />
-    <Bullets title="Critics say" items={c.oppose} class="against" />
-  </div>
+  {hasMore && (
+    <details class="more-info">
+      <summary>Positions, money, endorsements &amp; arguments</summary>
+      <Bullets title="Stated positions" items={c.positions} />
+      <Bullets title="Money" items={c.money} />
+      <Bullets title="Endorsements" items={c.endorsements} />
+      <div class="pair">
+        <Bullets title="Supporters say" items={c.support} class="for" />
+        <Bullets title="Critics say" items={c.oppose} class="against" />
+      </div>
+    </details>
+  )}
   <Links sources={c.sources} />
 </article>

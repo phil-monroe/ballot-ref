@@ -35,9 +35,9 @@ const render = () => {
   document.querySelectorAll<HTMLTextAreaElement>('textarea[data-note]').forEach((t) => {
     if (document.activeElement !== t) t.value = state[t.dataset.note!]?.note ?? '';
   });
-  const total = document.querySelectorAll('[data-row]').length;
+  const total = Number(document.documentElement.dataset.total) || document.querySelectorAll('[data-row]').length;
   const done = Object.values(state).filter((e) => e.pick).length;
-  document.querySelectorAll<HTMLElement>('[data-progress]').forEach((p) => (p.textContent = `${done} of ${total} chosen`));
+  document.querySelectorAll<HTMLElement>('[data-progress]').forEach((p) => (p.textContent = `${done}/${total} chosen`));
 };
 
 document.addEventListener('click', (ev) => {

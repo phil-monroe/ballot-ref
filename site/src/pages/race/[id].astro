@@ -13,13 +13,6 @@ export function getStaticPaths() {
 const { c, prev, next } = Astro.props;
 ---
 <Base title={label(c)}>
-  <nav class="pager">
-    <a href="/">&larr; All contests</a>
-    <span>
-      {prev && <a href={`/race/${prev.id}/`}>&lsaquo; Previous</a>}
-      {next && <a href={`/race/${next.id}/`}>Next &rsaquo;</a>}
-    </span>
-  </nav>
   <h1>{label(c)}</h1>
   <div data-row={c.id}>
     <h2 class="your">Your choice</h2>
@@ -30,4 +23,9 @@ const { c, prev, next } = Astro.props;
     </label>
   </div>
   <Contest c={c} />
+  <nav class="bottom-nav" aria-label="Contest navigation">
+    {prev ? <a href={`/race/${prev.id}/`} aria-label="Previous contest">&lsaquo; Prev</a> : <span />}
+    <a href="/" class="bottom-all">All contests</a>
+    {next ? <a href={`/race/${next.id}/`} aria-label="Next contest">Next &rsaquo;</a> : <span />}
+  </nav>
 </Base>

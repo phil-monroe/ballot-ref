@@ -3,21 +3,24 @@ import Base from '../layouts/Base.astro';
 import Picker from '../components/Picker.astro';
 import { contests, guide, label } from '../lib';
 const { meta } = guide;
+const sections = [...new Set(contests.map((c: any) => c.section))];
+const sid = (t: string) => 's-' + t.toLowerCase().replace(/[^a-z]+/g, '-');
 ---
 <Base title="My Ballot" description={`${meta.jurisdiction}, precinct ${meta.precinct}`}>
   <h1>{meta.title}</h1>
+  <p class="small">{meta.jurisdiction} · Precinct {meta.precinct}</p>
+  <p class="small"><a class="site-link" href={meta.ballot_source.url} rel="noopener noreferrer">Official sample ballot &nearr;</a></p>
   <p class="small">
-    {meta.jurisdiction} · Precinct {meta.precinct} ·
-    <a href={meta.ballot_source.url} rel="noopener noreferrer">Official sample ballot</a>
+    Tap a name to mark your choice (tap again to clear). Your picks and notes stay on this device only.
+    <button type="button" class="link" data-reset>Reset all</button>
   </p>
-  <p class="small">
-    Tap a name to mark your choice (tap again to clear). Choices and notes stay on this device only.
-    <strong data-progress></strong> · <button type="button" class="link" data-reset>Reset</button>
-  </p>
+  <nav class="chips" aria-label="Jump to section">
+    {sections.map((t) => <a href={`#${sid(t)}`}>{t.replace(/ Races$/, '')}</a>)}
+  </nav>
 
   {contests.map((c, i) => (
     <>
-      {c.section !== contests[i - 1]?.section && <h2>{c.section}</h2>}
+      {c.section !== contests[i - 1]?.section && <h2 id={sid(c.section)}>{c.section}</h2>}
       <section class="row" data-row={c.id}>
         <h3>
           <a href={`/race/${c.id}/`}><span class="order">{c.ballot_order}.</span> {label(c)}</a>

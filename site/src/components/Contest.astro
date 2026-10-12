@@ -26,7 +26,7 @@ const rev = c.revenue_estimate;
   {c.race_status && <p class="status"><strong>Race status:</strong> {c.race_status}</p>}
 
   {c.polls?.length > 0 && (
-    <table class="polls">
+    <div class="scroll"><table class="polls">
       <caption>Polls</caption>
       <thead><tr><th>Pollster</th><th>Dates</th><th>Sample</th><th>Result</th></tr></thead>
       <tbody>
@@ -34,7 +34,7 @@ const rev = c.revenue_estimate;
           <tr><td>{p.pollster}</td><td>{p.dates}</td><td>{p.population}</td><td>{p.result}</td></tr>
         ))}
       </tbody>
-    </table>
+    </table></div>
   )}
   {c.debate_note && <p>{c.debate_note}</p>}
   <Bullets title="Events" items={c.events} />
