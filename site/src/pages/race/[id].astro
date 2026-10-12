@@ -14,14 +14,14 @@ const { c, prev, next } = Astro.props;
 ---
 <Base title={label(c)}>
   <h1>{label(c)}</h1>
-  <div data-row={c.id}>
-    <h2 class="your">Your choice</h2>
+  <section class="part" data-row={c.id} aria-labelledby="your-choice">
+    <h2 class="part-title" id="your-choice">Your choice</h2>
     <Picker c={c} />
     <label class="note-label">
       Notes
       <textarea data-note={c.id} rows="2" placeholder="Private notes, saved on this device"></textarea>
     </label>
-  </div>
+  </section>
   <Contest c={c} />
   <nav class="bottom-nav" aria-label="Contest navigation">
     {prev ? <a href={`/race/${prev.id}/`} aria-label="Previous contest">&lsaquo; Prev</a> : <span />}

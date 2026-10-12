@@ -8,7 +8,8 @@ const isIssue = c.type === 'ballot_issue';
 const meta = [c.term, c.districts_note, c.jurisdiction, c.levy_type, c.threshold && `Needs: ${c.threshold}`].filter(Boolean);
 const rev = c.revenue_estimate;
 ---
-<section class="contest" id={c.id}>
+<section class="part contest" id={c.id} aria-labelledby={`${c.id}-about`}>
+  <h2 class="part-title" id={`${c.id}-about`}>{isIssue ? 'About this issue' : 'About this position'}</h2>
   <p class="small">
     {meta.join(' · ')}
     {c.contested === false && <span class="badge">Uncontested</span>}
@@ -68,7 +69,12 @@ const rev = c.revenue_estimate;
     </>
   )}
 
-  {list(c.candidates).length > 0 && (
+  <Links sources={c.sources} label="Race sources" />
+</section>
+
+{list(c.candidates).length > 0 && (
+  <section class="part" id={`${c.id}-candidates`} aria-labelledby={`${c.id}-cand-title`}>
+    <h2 class="part-title" id={`${c.id}-cand-title`}>Candidate details</h2>
     <div class="compare" data-view={c.candidates.length > 1 ? 'summary' : 'all'}>
       {c.candidates.length > 1 && (
       <div class="compare-bar">
@@ -86,6 +92,5 @@ const rev = c.revenue_estimate;
         {c.candidates.map((cand: any) => <Candidate c={cand} />)}
       </div>
     </div>
-  )}
-  <Links sources={c.sources} label="Race sources" />
-</section>
+  </section>
+)}
