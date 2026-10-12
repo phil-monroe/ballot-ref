@@ -197,3 +197,6 @@ details[open] > summary::before { transform: rotate(90deg); }
 .card.picked { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
 @media print { .card-check { display: none; } }
 .card-head h4 { padding-top: 4px; }
+.card-head { justify-content: space-between; }
+.card-head .card-check { order: 2; margin: -6px -8px 0 0; }
+.card-head h4 { order: 1; }
