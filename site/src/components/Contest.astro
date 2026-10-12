@@ -96,7 +96,7 @@ const rev = c.revenue_estimate;
       </div>
       )}
       <div class="choices">
-        {c.candidates.map((cand: any) => <Candidate c={cand} />)}
+        {c.candidates.map((cand: any) => <Candidate c={cand} contestId={c.id} />)}
       </div>
     </div>
   </section>

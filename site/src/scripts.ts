@@ -19,9 +19,10 @@ const save = () => {
 };
 
 const render = () => {
-  document.querySelectorAll<HTMLElement>('.pick').forEach((b) => {
+  document.querySelectorAll<HTMLElement>('.pick, .card-check').forEach((b) => {
     const on = state[b.dataset.contest!]?.pick === b.dataset.choice;
     b.setAttribute('aria-pressed', String(on));
+    b.closest('.card')?.classList.toggle('picked', on);
   });
   document.querySelectorAll<HTMLElement>('[data-row]').forEach((r) => {
     const e = state[r.dataset.row!] ?? {};
@@ -41,7 +42,7 @@ const render = () => {
 };
 
 document.addEventListener('click', (ev) => {
-  const b = (ev.target as HTMLElement).closest<HTMLElement>('.pick');
+  const b = (ev.target as HTMLElement).closest<HTMLElement>('.pick, .card-check');
   if (b) {
     const id = b.dataset.contest!;
     const e = (state[id] ??= {});

@@ -2,16 +2,23 @@
 import Bullets from './Bullets.astro';
 import Links from './Links.astro';
 import { VERIFICATION, list } from '../lib';
-const { c } = Astro.props;
+const { c, contestId } = Astro.props;
 const has = (...keys: string[]) => keys.some((k) => list(c[k]).length > 0);
 ---
 <article class="card">
+  <div class="card-head">
+  <button type="button" class="card-check" data-contest={contestId} data-choice={c.name} aria-pressed="false" aria-label={`Choose ${c.name}`}>
+    <span class="box" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>
+    </span>
+  </button>
   <h4>
     {c.name}
     {c.party && <span class="party">{c.party}</span>}
     {c.incumbent && <span class="badge">Incumbent</span>}
     {c.verification && <span class="badge badge--warn">{VERIFICATION[c.verification] ?? c.verification}</span>}
   </h4>
+  </div>
   <p class="site">
     {c.website
       ? <a href={c.website} rel="noopener noreferrer">Campaign website &nearr;</a>
