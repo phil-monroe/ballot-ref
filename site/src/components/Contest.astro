@@ -2,7 +2,7 @@
 import Bullets from './Bullets.astro';
 import Candidate from './Candidate.astro';
 import Links from './Links.astro';
-import { VERIFICATION, list } from '../lib';
+import { VERIFICATION, list, politifactLinks } from '../lib';
 const { c } = Astro.props;
 const isIssue = c.type === 'ballot_issue';
 const meta = [c.term, c.districts_note, c.jurisdiction, c.levy_type, c.threshold && `Needs: ${c.threshold}`].filter(Boolean);
@@ -53,6 +53,16 @@ const rev = c.revenue_estimate;
     </>
   )}
 
+  {isIssue && (
+    <div class="pf-block">
+      <h5 class="sec-title">PolitiFact</h5>
+      <ul class="pf">
+        {politifactLinks(c).map((l) => <li><a href={l.url} target="_blank" rel="noopener noreferrer">{l.label} &nearr;</a></li>)}
+      </ul>
+      <p class="small">Opens PolitiFact's search for this topic. PolitiFact rarely covers local levies, so a search may return little or nothing.</p>
+    </div>
+  )}
+
   <Links sources={c.sources} label="Race sources" />
 </section>
 
@@ -92,6 +102,7 @@ const rev = c.revenue_estimate;
           <option value="positions">Positions</option>
           <option value="money">Money</option>
           <option value="arguments">Endorsements + arguments</option>
+          <option value="factchecks">PolitiFact</option>
         </select>
       </div>
       )}

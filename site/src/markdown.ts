@@ -1,4 +1,4 @@
-import { contests, guide, list } from './lib';
+import { contests, guide, list, politifactLinks } from './lib';
 
 // Plain-markdown rendering of the whole guide, for llms.txt / llms-full.txt and pasting into an AI chat.
 const bullets = (items: unknown, indent = ''): string => list(items).map((i) => `${indent}- ${i}`).join('\n');
@@ -30,6 +30,7 @@ const candidate = (c: any): string => {
     block('Critics say', c.oppose),
   ];
   out.push(sec.filter(Boolean).join('\n'));
+  out.push('#### PolitiFact\n' + politifactLinks(c).map((l) => `- [${l.label}](${l.url})`).join('\n') + '\n');
   const src = [...(c.resume_sources ?? []), ...(c.sources ?? [])];
   if (src.length) out.push(links(src));
   return out.join('\n');
@@ -58,6 +59,7 @@ export const contest = (c: any): string => {
       ['Arguments against', c.arguments_against],
     ];
     for (const [t, v] of parts) out.push(block(t, v, '###'));
+    out.push('### PolitiFact\n' + politifactLinks(c).map((l) => `- [${l.label}](${l.url})`).join('\n') + '\n');
     out.push(links(c.sources));
     return out.filter(Boolean).join('\n');
   }

@@ -175,6 +175,8 @@ sections:
               - title: "Trump endorsement priorities"
                 summary: "A press release says President Trump endorsed him to secure the border, fight inflation and champion common-sense values (the campaign's characterization of the endorsement)."
             priorities_note: "The campaign site has no issues or platform page. These come from its Bio page and press releases; its coalitions page (law enforcement, 2A, faith leaders, sportsmen, farmers, veterans) lists audiences, not positions."
+            politifact:
+              - { label: "Jon Husted", url: "https://www.politifact.com/personalities/jon-husted/" }
             party: "Republican"
             incumbent: true
             summary: "Appointed to the seat by Gov. DeWine in January 2025. Previously 20+ years as a state lawmaker and statewide officeholder, most recently Lieutenant Governor."
@@ -235,6 +237,8 @@ sections:
               - title: "Banning congressional stock trading and lobbying"
                 summary: "No member of Congress or spouse should trade stocks, and former members should not become lobbyists."
             priorities_note: "The site's only issues page, 'Our Fight', frames these as fixes to a 'rigged' system and a high cost of living."
+            politifact:
+              - { label: "Sherrod Brown", url: "https://www.politifact.com/personalities/sherrod-brown/" }
             party: "Democratic"
             incumbent: false
             summary: "U.S. Senator 2007-2025; lost in 2024 to Bernie Moreno."
@@ -398,6 +402,8 @@ sections:
               - title: "Protecting our families (public safety)"
                 summary: "Hold 'rogue' prosecutors and judges accountable, secure the border against drugs and criminals, hire more police and fund police departments."
             priorities_note: "The site lists nine issue areas, with some overlap between energy sections."
+            politifact:
+              - { label: "Troy Balderson", url: "https://www.politifact.com/personalities/troy-balderson/" }
             party: "Republican"
             incumbent: true
             summary: "In Congress since a 2018 special election. Former state senator and representative. Third-generation auto dealer from Zanesville."
@@ -583,6 +589,9 @@ sections:
               - title: "Supporting Ohio's Black communities"
                 summary: "Protect early voting, create an Election Protection Liaison, and work toward equal access to education and economic opportunity."
             priorities_note: "The site lists 19 priorities; the first five in its order are shown above. Pepper's own page (meet-david) was not summarized."
+            politifact:
+              - { label: "Amy Acton", url: "https://www.politifact.com/personalities/amy-acton/" }
+              - { label: "David Pepper", url: "https://www.politifact.com/personalities/david-pepper/" }
             party: "Democratic"
             incumbent: false
             summary: "Acton was Ohio Department of Health director during the early COVID-19 pandemic. Pepper is a former Ohio Democratic Party chair."
@@ -641,6 +650,9 @@ sections:
               - title: "Bring people together"
                 summary: "Says he wants a political culture of respectful disagreement, 'up vs. down' rather than right vs. left."
             priorities_note: "The Plan page lists these pillars; the campaign also links separate plans for property tax rollbacks and gas tax relief. McColley's page was not summarized."
+            politifact:
+              - { label: "Vivek Ramaswamy", url: "https://www.politifact.com/personalities/vivek-ramaswamy/" }
+              - { label: "Rob McColley", url: "https://www.politifact.com/search/?q=Rob%20McColley", search: true }
             party: "Republican"
             incumbent: false
             summary: "Ramaswamy is a biotech entrepreneur (founded Roivant Sciences) and 2024 presidential candidate; Forbes estimated his net worth at $2.3 billion in Sept. 2026. He was named in Nov. 2024 as co-lead of a proposed Department of Government Efficiency but left on Inauguration Day before working with it. McColley is Ohio Senate President."
@@ -756,6 +768,8 @@ sections:
               - title: "Record he cites"
                 summary: "Site also highlights his auditor record: 170 convictions on 391 charges from his investigations, $29 million in findings for recovery, and about $6.9 billion in unemployment fraud identified."
             priorities_note: "The Issues page lists four areas plus a separate health-insurance policy page; the Record section is his track record, not a stated priority."
+            politifact:
+              - { label: "Keith Faber", url: "https://www.politifact.com/personalities/keith-faber/" }
             party: "Republican"
             incumbent: false
             summary: "Ohio Auditor of State, finishing his second and final term. Former member of the Ohio House and Senate. Campaign says focus is 'protecting Ohio families, supporting law enforcement and defending our Constitution.'"
@@ -1906,6 +1920,7 @@ sections:
 
       - id: "state-issue-3"
         type: "ballot_issue"
+        politifact_query: "Ohio voter ID"
         ballot_order: 18
         title: "State Issue 3 - Proposed Constitutional Amendment: Photo ID to Vote"
         jurisdiction: "Statewide"
@@ -1950,6 +1965,7 @@ sections:
 
       - id: "career-center-levy"
         type: "ballot_issue"
+        politifact_query: "Delaware Area Career Center levy"
         website: "https://www.delawareareacc.org/"
         ballot_order: 19
         title: "Delaware Area Career Center - Tax Levy (Renewal and Decrease)"
@@ -1983,6 +1999,7 @@ sections:
 
       - id: "transit-sales-tax"
         type: "ballot_issue"
+        politifact_query: "Delaware County transit sales tax"
         website: "https://www.delcotransit.com/levy/"
         ballot_order: 20
         title: "Delaware County Regional Transit Authority - 0.2% Sales and Use Tax (Continuing)"
@@ -2033,6 +2050,7 @@ sections:
 
       - id: "developmental-disabilities-levy"
         type: "ballot_issue"
+        politifact_query: "Delaware County developmental disabilities levy"
         website: "https://www.dcbdd.org/levy/"
         ballot_order: 21
         title: "Delaware County Board of Developmental Disabilities - Tax Levy (Additional)"
@@ -2084,6 +2102,7 @@ sections:
 
       - id: "mental-health-levy"
         type: "ballot_issue"
+        politifact_query: "Delaware-Morrow mental health levy"
         website: "https://dmmhrsb.org/levy"
         ballot_order: 22
         title: "Delaware-Morrow Mental Health & Recovery Services Board - Tax Levy (Renewal and Increase)"

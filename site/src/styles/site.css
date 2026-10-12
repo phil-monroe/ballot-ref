@@ -161,7 +161,8 @@ details[open] > summary::before { transform: rotate(90deg); }
 .compare[data-view='priorities'] .sec[data-sec='priorities'],
 .compare[data-view='positions'] .sec[data-sec='positions'],
 .compare[data-view='money'] .sec[data-sec='money'],
-.compare[data-view='arguments'] .sec[data-sec='arguments'] { display: block; }
+.compare[data-view='arguments'] .sec[data-sec='arguments'],
+.compare[data-view='factchecks'] .sec[data-sec='factchecks'] { display: block; }
 .sec-title { margin: 8px 0 4px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }
 .empty { color: var(--muted); font-style: italic; }
 .card h4 { margin-bottom: 2px; }
@@ -207,3 +208,7 @@ details[open] > summary::before { transform: rotate(90deg); }
 .ask { margin: 8px 0 4px; }
 .ask .small { margin: 6px 0 0; }
 @media print { .ask { display: none; } }
+
+.pf { margin: 0 0 4px; padding-left: 1.1em; }
+.pf li { margin: 6px 0; }
+.pf-block { margin-top: 12px; }

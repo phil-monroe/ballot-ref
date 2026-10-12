@@ -1,8 +1,9 @@
 ---
 import Bullets from './Bullets.astro';
 import Links from './Links.astro';
-import { VERIFICATION, list } from '../lib';
+import { VERIFICATION, list, politifactLinks } from '../lib';
 const { c, contestId } = Astro.props;
+const pf = politifactLinks(c);
 const has = (...keys: string[]) => keys.some((k) => list(c[k]).length > 0);
 ---
 <article class="card">
@@ -75,6 +76,14 @@ const has = (...keys: string[]) => keys.some((k) => list(c[k]).length > 0);
   <div class="sec" data-sec="money">
     <h5 class="sec-title">Money</h5>
     {has('money') ? <ul>{list(c.money).map((p) => <li>{p}</li>)}</ul> : <p class="empty">None listed.</p>}
+  </div>
+
+  <div class="sec" data-sec="factchecks">
+    <h5 class="sec-title">PolitiFact</h5>
+    <ul class="pf">
+      {pf.map((l) => <li><a href={l.url} target="_blank" rel="noopener noreferrer">{l.label} &nearr;</a></li>)}
+    </ul>
+    <p class="small">{pf.some((l) => l.direct) ? 'Fact-checks of statements by this candidate, rated by PolitiFact.' : 'No PolitiFact profile page was found; the search link lists any fact-checks or articles that mention them.'}</p>
   </div>
 
   <div class="sec" data-sec="arguments">

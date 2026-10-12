@@ -25,3 +25,20 @@ export const choices = (c: any): string[] =>
 
 export const label = (c: any): string => c.title ?? c.office;
 export const PICKS_KEY = `ballot-ref:${guide.meta.election_date}:${guide.meta.precinct}`;
+
+// PolitiFact: direct profile pages are listed in the YAML (`politifact`) only where one was confirmed to exist;
+// everyone else, and every ballot issue, gets a PolitiFact search link.
+const pfSearch = (q: string) => `https://www.politifact.com/search/?q=${encodeURIComponent(q)}`;
+export type PfLink = { label: string; url: string; direct: boolean };
+export const politifactLinks = (c: any): PfLink[] => {
+  if (c.type === 'ballot_issue') {
+    return [{ label: `Search PolitiFact: ${c.politifact_query ?? c.title}`, url: pfSearch(c.politifact_query ?? c.title), direct: false }];
+  }
+  if (c.politifact?.length) {
+    return c.politifact.map((p: any) => (p.search ? { label: `Search PolitiFact for ${p.label}`, url: p.url, direct: false } : { label: `${p.label} on PolitiFact`, url: p.url, direct: true }));
+  }
+  return String(c.name)
+    .split(' / ')
+    .map((n) => n.replace(/\s*\(.*?\)/g, '').trim())
+    .map((n) => ({ label: `Search PolitiFact for ${n}`, url: pfSearch(n), direct: false }));
+};
