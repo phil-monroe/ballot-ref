@@ -25,6 +25,18 @@ const has = (...keys: string[]) => keys.some((k) => list(c[k]).length > 0);
     <Links sources={c.sources} />
   </div>
 
+  <div class="sec" data-sec="resume">
+    <h5 class="sec-title">Resume</h5>
+    {has('resume') ? <ul>{list(c.resume).map((p) => <li>{p}</li>)}</ul> : <p class="empty">No background found.</p>}
+    <Links sources={c.resume_sources} label="Resume sources" />
+  </div>
+
+  <div class="sec" data-sec="track">
+    <h5 class="sec-title">Track record</h5>
+    {has('track_record') ? <ul>{list(c.track_record).map((p) => <li>{p}</li>)}</ul> : <p class="empty">Has not held elected office.</p>}
+    {has('track_record') && <p class="small">Highlights drawn from the campaign's own materials and public biographies, not an evaluation. Criticism is under Endorsements + arguments.</p>}
+  </div>
+
   <div class="sec" data-sec="priorities">
     <h5 class="sec-title">Stated priorities (per campaign site)</h5>
     {has('priorities') ? (

@@ -11,6 +11,8 @@
 #       sources[]: {title, url} - links used for that item
 #       website: official URL (candidate: campaign site; contest: office or issue page). Omitted when none
 #                was found; the site then shows a "No website" badge.
+#       resume: (candidates) career/background items, oldest first, with resume_sources [{title,url}].
+#       track_record: (candidates who held elected office) highlights; omitted for those who have not.
 #       priorities: (candidates) top issues as the campaign site itself lists them, 3-5 short items, plus
 #                priorities_note for provenance or when the site lists none.
 #
@@ -123,6 +125,27 @@ sections:
           - { pollster: "BGSU", dates: "earlier", population: "n/a", result: "Brown 49%, Husted 48%" }
         candidates:
           - name: "Jon Husted"
+            resume:
+              - "Business and economic development VP, Dayton Area Chamber of Commerce; earlier staffer for a Montgomery County commissioner"
+              - "2001-2009: Ohio House of Representatives (Speaker, 2005-2009)"
+              - "2009-2011: Ohio Senate"
+              - "2011-2019: Ohio Secretary of State"
+              - "2019-2025: Lieutenant Governor of Ohio (led InnovateOhio)"
+              - "2025-present: U.S. Senator (appointed Jan. 2025 to fill JD Vance's seat)"
+              - "Education: bachelor's and master's, University of Dayton"
+            track_record:
+              - "Lieutenant Governor: his campaign says he helped land Intel's chip plant in Licking County and pioneered business-driven job training such as TechCred"
+              - "Created InnovateOhio, which moved services such as driver's license renewal and title transfer online (campaign claim)"
+              - "Secretary of State: cut the office's budget by $14.5 million and about a third of its staff; asked in 2016 for no taxpayer funding for the rest of his term"
+              - "Speaker: campaign says he led the most fiscally conservative budget in 40 years and what was then the largest income tax cut in Ohio history"
+              - "U.S. Senate: voted for the 2025 tax law and the Laken Riley Act"
+            resume_sources:
+              - title: "Wikipedia: Jon Husted"
+                url: "https://en.wikipedia.org/wiki/Jon_Husted"
+              - title: "Husted campaign: Bio"
+                url: "https://www.jonhustedforsenate.com/bio/"
+              - title: "The Ballot Brief: Jon Husted"
+                url: "https://theballotbrief.com/candidate/jon-husted-oh"
             website: "https://jonhustedforsenate.com/"
             priorities:
               - "Jobs and economic development: cites bringing Intel's chip plant to Licking County and business-driven job training (TechCred)"
@@ -165,6 +188,28 @@ sections:
               - { title: "Legis1: The Money Race Shaping Ohio's 2026 Senate Election (secondary)", url: "https://legis1.com/news/ohio-2026-senate-election-the-money-race-shaping" }
               - { title: "NBC4: Husted, Brown set stage for Ohio's 2026 U.S. Senate race", url: "https://www.nbc4i.com/news/your-local-election-hq/husted-brown-set-stage-for-ohios-2026-u-s-senate-race/" }
           - name: "Sherrod Brown"
+            resume:
+              - "Yale University and Ohio State University graduate; Mansfield native"
+              - "Mid-1970s-1983: Ohio House of Representatives (youngest member elected at the time)"
+              - "1983-1991: Ohio Secretary of State"
+              - "1993-2007: U.S. House of Representatives (13th District)"
+              - "2007-2025: U.S. Senator (chaired the Banking, Housing, and Urban Affairs Committee, 2021-2025)"
+              - "2025: Harvard Kennedy School visiting fellow; launched the Dignity of Work Institute"
+              - "Author of three books, including Myths of Free Trade (2006) and Desk 88 (2019)"
+            track_record:
+              - "Led House Democrats' effort that blocked the Central American Free Trade Agreement (CAFTA) in 2005 (as described on Wikipedia)"
+              - "Chaired the Senate Banking Committee and its Social Security, Pensions, and Family Policy subcommittee"
+              - "Co-chaired the Joint Select Committee on multiemployer pension solvency (2018)"
+              - "Championed the 2022 PACT Act expanding VA care for burn-pit-exposed veterans (Ballot Brief); campaign also cites capping insulin costs"
+              - "Voted for the 2022 CHIPS and Science Act, which Ballot Brief says helped land Intel's Ohio chip facility"
+              - "Opposed the 2001 USA PATRIOT Act and the Iraq War resolution"
+            resume_sources:
+              - title: "Wikipedia: Sherrod Brown"
+                url: "https://en.wikipedia.org/wiki/Sherrod_Brown"
+              - title: "Brown campaign: Our Fight"
+                url: "https://www.sherrodbrown.com/our-fight"
+              - title: "The Ballot Brief: Sherrod Brown"
+                url: "https://theballotbrief.com/candidate/sherrod-brown-oh"
             website: "https://www.sherrodbrown.com/"
             priorities:
               - "Hold health insurers accountable: ban denials of care a doctor prescribes, with fines for improper denials"
@@ -204,6 +249,18 @@ sections:
               - { title: "PBS NewsHour: Sherrod Brown expected to seek his return to the Senate in 2026", url: "https://www.pbs.org/newshour/politics/sherrod-brown-expected-to-seek-his-return-to-the-senate-in-2026" }
               - { title: "Ohio Capital Journal: Brown outraises Husted", url: "https://ohiocapitaljournal.com/2026/07/29/sherrod-brown-comfortably-outraises-jon-husted-as-outside-groups-enter-ohios-u-s-senate-race/" }
           - name: "William B. Redpath"
+            resume:
+              - "Born and raised in Findlay; BA in economics and political science, Indiana University; MBA, University of Chicago"
+              - "Early career at Arthur Andersen, WISH-TV, ABC and NBC"
+              - "38-year career in business valuation (media and telecommunications) at BIA Advisory Services and Summit Ridge Group; active CPA (Ohio, Illinois)"
+              - "Libertarian National Committee: member 1989-1993 and 2003-2020; Chair 2006-2010"
+              - "Nine-time Libertarian candidate; previously ran for governor, U.S. Senate and U.S. House in Virginia"
+              - "One of 14 inductees in the Libertarian Party's Hall of Liberty"
+            resume_sources:
+              - title: "Redpath campaign: About"
+                url: "https://billredpath.com/about/"
+              - title: "The Ballot Brief: William B. Redpath"
+                url: "https://theballotbrief.com/candidate/william-b-redpath-oh"
             website: "https://billredpath.com/"
             priorities:
               - "Repeal all tariffs (unilateral free trade)"
@@ -236,6 +293,17 @@ sections:
             sources:
               - { title: "Ballot (official)", url: "https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X" }
           - name: "Greg Levy"
+            resume:
+              - "Born in the Joy Park housing projects and raised in Akron; third of six brothers"
+              - "Joined the military as a young man to pay for college; his son was born during his service"
+              - "Works as a mover"
+              - "Founded the Paul Robeson Revolutionary Choir, which tours church and community venues"
+              - "Community organizer and self-described socialist; his campaign site links an 'About the PSL' (Party for Socialism and Liberation) page"
+            resume_sources:
+              - title: "Levy campaign: About Greg"
+                url: "https://www.greg4senate.com/about-1"
+              - title: "The Ballot Brief: Greg Levy"
+                url: "https://theballotbrief.com/candidate/greg-levy-oh"
             website: "https://www.greg4senate.com/"
             priorities:
               - "Bring the 100 largest corporations into public ownership under democratic worker control"
@@ -281,6 +349,24 @@ sections:
         race_status: "Cook Political Report: Solid Republican."
         candidates:
           - name: "Troy Balderson"
+            resume:
+              - "1987-2008: Vice president and general manager, family business Balderson Motor Sales (third generation); attended Muskingum College and Ohio State"
+              - "2009-2011: Ohio House of Representatives (94th District)"
+              - "2011-2018: Ohio Senate (20th District, appointed 2011; elected 2012 and 2016)"
+              - "2018-present: U.S. Representative, Ohio's 12th District (won a 2018 special election by 0.8%, then reelected)"
+            track_record:
+              - "Chaired the Ohio Senate Energy and Natural Resources Committee"
+              - "Co-chaired the legislative committee reviewing Ohio's renewable energy and efficiency regulations (2014)"
+              - "In the Ohio House, served on the Finance Committee and chaired its Agriculture and Natural Resources subcommittee"
+              - "Won the 2018 special election for Ohio's 12th District and has been reelected"
+              - "Voted for the 2025 One Big Beautiful Bill Act, the Laken Riley Act, and the 2026 NDAA (Ballot Brief)"
+            resume_sources:
+              - title: "Wikipedia: Troy Balderson"
+                url: "https://en.wikipedia.org/wiki/Troy_Balderson"
+              - title: "Balderson campaign: Issues"
+                url: "https://baldersonforcongress.com/issues"
+              - title: "The Ballot Brief: Troy Balderson"
+                url: "https://theballotbrief.com/candidate/troy-balderson-oh"
             website: "https://baldersonforcongress.com/"
             priorities:
               - "Secure the border: more border patrol and technology, go after cartels, end sanctuary cities"
@@ -325,6 +411,16 @@ sections:
               - { title: "Smarter.vote: Ohio's 12th Congressional District 2026", url: "https://smarter.vote/races/oh-house-12-2026/" }
               - { title: "End Dark Money: OH-12 Congressional Race", url: "https://enddarkmoney.us/oh-12-congressional-race/" }
           - name: "Jerrad Christian"
+            resume:
+              - "Grew up in poverty in Appalachian Ohio"
+              - "U.S. Navy: flight deck fueler on an aircraft carrier during Iraq and Afghanistan operations (2 years), then meteorologist and oceanographer (3 years)"
+              - "Outdoor education teacher for a nonprofit"
+              - "Used the GI Bill to attend Ohio University"
+              - "About four years as a factory janitor while studying at a tech school"
+              - "Software engineer"
+            resume_sources:
+              - title: "Christian campaign: About"
+                url: "https://www.christianforohio.com/about"
             website: "https://www.christianforohio.com/"
             priorities:
               - "Get money out of politics: end Citizens United, cap campaign spending, restrict lobbying"
@@ -424,6 +520,25 @@ sections:
         debate_note: "Acton declined to debate Ramaswamy, calling him a 'chronic liar.'"
         candidates:
           - name: "Amy Acton / David Pepper (Lt. Gov.)"
+            resume:
+              - "Acton: Born in Youngstown; physician and public-health researcher; associate professor of practice in public health, Ohio State University"
+              - "Acton: Grants manager at the Columbus Foundation and director of Project LOVE (Love Our kids, Vaccinate Early)"
+              - "Acton: 2019-2020: Director, Ohio Department of Health (first woman in the post); led the state's early COVID-19 response under Gov. DeWine"
+              - "Acton: 2022-2023: President and CEO, RAPID 5 (Franklin County parks access nonprofit)"
+              - "Pepper: Cincinnati City Council (elected 2001; chaired Law and Public Safety); lost the 2005 mayoral race"
+              - "Pepper: Hamilton County Commissioner (elected 2006); lost the 2014 race for Attorney General"
+              - "Pepper: 2015-2020: Chair, Ohio Democratic Party; author of political novels and Laboratories of Autocracy (2021); taught voting rights at UC Law"
+            track_record:
+              - "Pepper, as county commissioner: his campaign cites a foreclosure-prevention program, a prescription drug discount program, an earned income tax credit initiative, and a balanced budget"
+              - "Pepper, as Cincinnati councilmember: chaired the Law and Public Safety Committee"
+              - "Acton has not held elected office; as Health Director she advised Gov. DeWine on closing schools and limiting gatherings in March 2020, early in the pandemic"
+            resume_sources:
+              - title: "Wikipedia: Amy Acton"
+                url: "https://en.wikipedia.org/wiki/Amy_Acton"
+              - title: "Wikipedia: David Pepper"
+                url: "https://en.wikipedia.org/wiki/David_Pepper_(politician)"
+              - title: "The Ballot Brief: Amy Acton"
+                url: "https://theballotbrief.com/candidate/amy-acton-oh"
             website: "https://actonforgovernor.com/"
             priorities:
               - "Reduce costs for families: Working Families Tax Cut, including an earned income credit and child tax credit"
@@ -486,6 +601,26 @@ sections:
               - { title: "Ironton Tribune: Two polls show Acton lead grows over Ramaswamy", url: "https://irontontribune.com/2026/10/06/two-polls-show-acton-lead-grows-over-ramaswamy/" }
               - { title: "Mediaite: Acton won't debate 'chronic liar' Ramaswamy", url: "https://www.mediaite.com/media/news/ohio-dem-refuses-to-debate-chronic-liar-ramaswamy-in-whats-being-called-the-ugliest-race-in-the-country/" }
           - name: "Vivek Ramaswamy / Robert A. McColley (Lt. Gov.)"
+            resume:
+              - "Ramaswamy: Valedictorian, St. Xavier High School (2003); Harvard biology degree (2007); Yale Law JD (2013)"
+              - "Ramaswamy: 2007-2014: QVT Financial hedge fund, biotech investing (partner)"
+              - "Ramaswamy: 2014-2021: Founded Roivant Sciences and served as CEO; 2022: co-founded Strive Asset Management"
+              - "Ramaswamy: Author of Woke, Inc. (2021); ran for the 2024 Republican presidential nomination"
+              - "Ramaswamy: Named co-lead of the proposed Department of Government Efficiency in Nov. 2024; left on Inauguration Day to focus on a governor run"
+              - "McColley: Ohio State BS in business administration (finance), University of Toledo JD (2010); Henry County Community Improvement Corporation"
+              - "McColley: Ohio House (81st District, 2015-2019); Ohio Senate (1st District) since 2019; Senate President"
+            track_record:
+              - "McColley, as state senator: chaired the Energy and Public Utilities Committee; opposed House Bill 6 (2019) on free-market grounds, one of few Republican senators to do so"
+              - "McColley co-sponsored the 2019 'Heartbeat Bill' (SB 23), signed into law April 2019; the 2023 abortion-rights amendment later superseded it"
+              - "McColley rose to Senate President and House leadership (assistant majority whip)"
+              - "Ramaswamy has not held elected office"
+            resume_sources:
+              - title: "Wikipedia: Vivek Ramaswamy"
+                url: "https://en.wikipedia.org/wiki/Vivek_Ramaswamy"
+              - title: "Wikipedia: Rob McColley"
+                url: "https://en.wikipedia.org/wiki/Rob_McColley"
+              - title: "The Ballot Brief: Vivek Ramaswamy"
+                url: "https://theballotbrief.com/candidate/vivek-ramaswamy-oh"
             website: "https://vivekforohio.com/"
             priorities:
               - "Cut property taxes immediately and phase out the state income tax, starting with capital gains"
@@ -528,6 +663,15 @@ sections:
               - { title: "Newsweek: Ramaswamy vs. Acton poll shows decline in support", url: "https://www.newsweek.com/vivek-ramaswamy-vs-amy-acton-poll-decline-support-12452312" }
               - { title: "Mediaite: Acton won't debate Ramaswamy", url: "https://www.mediaite.com/media/news/ohio-dem-refuses-to-debate-chronic-liar-ramaswamy-in-whats-being-called-the-ugliest-race-in-the-country/" }
           - name: "Don Kissick / James L. Mills (Lt. Gov.)"
+            resume:
+              - "Kissick: U.S. Navy, six years, including deployments in Desert Storm/Desert Shield and Southern Watch"
+              - "Kissick: Moved to Ohio in 2007; lives in Ottawa, Ohio, with his family"
+              - "Mills: Business owner and nonprofit leader; helps families with financial planning and supports small business development"
+            resume_sources:
+              - title: "Kissick campaign: About Don & James"
+                url: "https://donkissick.com/about-don-%26-james"
+              - title: "The Ballot Brief: Don Kissick"
+                url: "https://theballotbrief.com/candidate/don-kissick-oh"
             website: "https://donkissick.com/"
             priorities:
               - "Data centers: halt new projects, citing power and water use, farmland and tax incentives"
@@ -580,6 +724,25 @@ sections:
         events: ["Debate: Oct. 19 at Youngstown State University"]
         candidates:
           - name: "Keith Faber"
+            resume:
+              - "Oakland University BS (1988); Ohio State Moritz College of Law JD (1991)"
+              - "Founded Faber & Associates, a civil litigation and mediation firm in Celina"
+              - "2001-2007: Ohio House of Representatives (84th District)"
+              - "2007-2016: Ohio Senate (12th District); Senate President, 2013-2016"
+              - "2017-2018: Ohio House again (84th District)"
+              - "2019-present: Ohio Auditor of State; member of the Ohio Redistricting Commission"
+            track_record:
+              - "As Senate President, priorities included reducing regulatory filings, cutting the state income tax, lowering the small-business tax rate, and creating the Ohio Higher Education Challenge"
+              - "As auditor, his Special Investigations Unit reports about 165-170 convictions on roughly 380-390 criminal charges against public officials and about $29 million in findings for recovery (campaign and Wikipedia figures differ slightly)"
+              - "Auditor's office was among the first to examine unemployment-compensation fraud; his campaign cites about $6.9 billion in fraud and overpayments identified"
+              - "Won statewide election as auditor in 2018 and again in 2022"
+            resume_sources:
+              - title: "Wikipedia: Keith Faber"
+                url: "https://en.wikipedia.org/wiki/Keith_Faber"
+              - title: "Faber campaign: His Record"
+                url: "https://www.keithfaber.org/his-record"
+              - title: "The Ballot Brief: Keith Faber"
+                url: "https://theballotbrief.com/candidate/keith-faber-oh"
             website: "https://www.keithfaber.org/"
             priorities:
               - "Defend the Constitution and religious liberty, and push back on federal overreach"
@@ -613,6 +776,22 @@ sections:
             sources:
               - { title: "Signal Cleveland: Keith Faber and John Kulewicz, Ohio's next attorney general", url: "https://signalcleveland.org/election-2026-keith-faber-and-john-kulewicz-ohio-next-attorney-general/" }
           - name: "John J. Kulewicz"
+            resume:
+              - "Born and raised in Columbus; Ohio State BA in American history; Yale Law School JD (editor of the Yale Law Journal)"
+              - "Clerked for a federal judge for one year"
+              - "1981-: Litigator at Vorys, Sater, Seymour and Pease; head of the appellate division; partner from 1987; about 44 years at the firm"
+              - "1984: Ohio campaign manager for Gary Hart's presidential campaign"
+              - "2020-present: Upper Arlington City Council"
+              - "Argued before the U.S. Supreme Court in 2022 (Marietta Memorial Hospital Employee Health Benefit Plan v. DaVita)"
+              - "Author of An Ohioan's Odyssey (memoir); board service includes the Columbus Zoo and Ohio Bicentennial Commission"
+            track_record:
+              - "First elected to Upper Arlington City Council in 2019 and reelected in 2023; his campaign says he was the top vote-getter both times and won more votes than any contested council candidate since the city charter"
+              - "Has won cases at the U.S. Supreme Court, the Ohio Supreme Court, and other courts (campaign claim)"
+            resume_sources:
+              - title: "Wikipedia: John Kulewicz"
+                url: "https://en.wikipedia.org/wiki/John_Kulewicz"
+              - title: "Kulewicz campaign: Meet John"
+                url: "https://john4ohioag.com/meet-john-j-kulewicz"
             website: "https://john4ohioag.com/"
             priorities:
               - "Take on corrupt politicians and restore transparency and accountability"
@@ -658,6 +837,23 @@ sections:
         what_the_office_does: "Audits every public office in Ohio and investigates waste, fraud, and abuse of public money."
         candidates:
           - name: "Frank LaRose"
+            resume:
+              - "U.S. Army: youngest sergeant in the 101st Airborne; deployed to the southern border and led a NATO peacekeeping mission in Kosovo; Green Beret (2003); Bronze Star for service in Iraq; later Army National Guard"
+              - "2011-2019: Ohio Senate (27th District)"
+              - "2019-present: Ohio Secretary of State"
+              - "2024: ran in the Republican U.S. Senate primary (finished third)"
+              - "2026: Republican nominee for Auditor of State"
+            track_record:
+              - "In the Ohio Senate, chaired the Transportation Committee, the Commerce and Workforce Committee, and others; Governing magazine named him a 'legislator to watch' in 2014"
+              - "Won Secretary of State in 2018 and reelected in 2022; his campaign says he won more votes than anyone in the office's history"
+              - "His campaign cites Ohio as a national leader in election administration and says record numbers of businesses opened during his tenure"
+            resume_sources:
+              - title: "Wikipedia: Frank LaRose"
+                url: "https://en.wikipedia.org/wiki/Frank_LaRose"
+              - title: "LaRose campaign: About Frank"
+                url: "https://www.franklarose.com/about-frank/"
+              - title: "The Ballot Brief: Frank LaRose"
+                url: "https://theballotbrief.com/candidate/frank-larose-oh"
             website: "https://www.franklarose.com/"
             priorities:
               - "Transparency, efficiency and accountability in how state and local governments manage tax dollars"
@@ -680,6 +876,19 @@ sections:
             sources:
               - { title: "WOSU: Ohio 2026 election guide", url: "https://www.wosu.org/2026-10-06/ohio-2026-election-guide-what-voters-need-to-know-about-their-ballots" }
           - name: "Annette Blackwell"
+            resume:
+              - "Born in Selma, Alabama; raised in Ohio"
+              - "Banking and health care: KeyBank and University Hospitals"
+              - "16 years specializing in property tax at Deloitte and Ryan"
+              - "About 10 years: Mayor and Safety Director of Maple Heights"
+            track_record:
+              - "As mayor, wrote the five-year recovery plan that took Maple Heights out of fiscal emergency and off the state's fiscal watch list (her campaign's account)"
+              - "Maple Heights has since received multiple Clean Audit Awards (campaign claim)"
+            resume_sources:
+              - title: "Blackwell campaign: Meet Annette"
+                url: "https://www.blackwellforohio.com/meetannetteblackwell"
+              - title: "The Ballot Brief: Annette Blackwell"
+                url: "https://theballotbrief.com/candidate/annette-blackwell-oh"
             website: "https://blackwellforohio.com/"
             priorities:
               - "Protect working families"
@@ -721,6 +930,24 @@ sections:
         what_the_office_does: "Ohio's chief elections officer. Oversees the 88 county boards of elections and handles business filings. Matters for how Issue 3 and future election laws are carried out."
         candidates:
           - name: "Robert Sprague"
+            resume:
+              - "Engineer by training; Findlay, Ohio native"
+              - "City auditor and treasurer of Findlay"
+              - "2011-2017: Ohio House of Representatives (83rd District; appointed 2011, elected 2012, 2014, 2016)"
+              - "2019-present: Ohio Treasurer of State"
+              - "Jan.-Feb. 2025: briefly ran for governor, then switched to the Secretary of State race"
+            track_record:
+              - "In the Ohio House, served on Finance and Criminal Justice committees and chaired the Health and Human Services finance subcommittee, whose budget included developmental disabilities provisions"
+              - "As treasurer, launched ResultsOHIO, a pay-for-success program for social and public-health challenges"
+              - "Elected treasurer in 2018 (53%-47%)"
+              - "Campaign cites investing taxpayer dollars wisely and modernizing state financial systems"
+            resume_sources:
+              - title: "Wikipedia: Robert Sprague"
+                url: "https://en.wikipedia.org/wiki/Robert_Sprague"
+              - title: "Sprague campaign: Robert's Story"
+                url: "https://www.spragueforohio.com/roberts-story"
+              - title: "The Ballot Brief: Robert Sprague"
+                url: "https://theballotbrief.com/candidate/robert-sprague-oh"
             website: "https://www.spragueforohio.com/"
             priorities:
               - "Only U.S. citizens vote: verify citizenship when people register, using federal data"
@@ -757,6 +984,22 @@ sections:
             sources:
               - { title: "Ideastream: Secretary of State race", url: "https://www.ideastream.org/secretary-of-state" }
           - name: "Allison Russo"
+            resume:
+              - "Doctor of Public Health (health policy), George Washington University; MPH (epidemiology), University of Alabama at Birmingham"
+              - "20+ years in health care policy, advising federal agencies and health systems on care for seniors, veterans, military families and vulnerable communities"
+              - "Senior director at a federally qualified small business"
+              - "2019-present: Ohio House of Representatives (four terms); former House Minority Leader"
+              - "Committees: Health, Finance, Medicaid Oversight, Constitutional Resolutions, and the Ohio Redistricting Commission"
+              - "Founded Girls Who Lead"
+            track_record:
+              - "First Democrat in a decade to flip a central-Ohio House seat"
+              - "Her campaign says she authored or co-sponsored dozens of bills signed into law, steered bipartisan reforms through a Republican supermajority, and helped build coalitions that defeated the August 2023 Issue 1 and enshrined reproductive freedom in the constitution"
+              - "Cites work on mental-health parity, veteran services, the Fair School Funding Plan, and access to child care"
+            resume_sources:
+              - title: "Russo campaign: Meet Allison"
+                url: "https://allisonrusso.com/meet-allison/"
+              - title: "The Ballot Brief: Allison Russo"
+                url: "https://theballotbrief.com/candidate/allison-russo-oh"
             website: "https://allisonrusso.com/"
             priorities:
               - "Secure elections that are fair and accessible, and protect your vote"
@@ -792,6 +1035,14 @@ sections:
               - { title: "Ideastream: Secretary of State race", url: "https://www.ideastream.org/secretary-of-state" }
               - { title: "Ohio Capital Journal: What is Issue 3?", url: "https://ohiocapitaljournal.com/2026/07/29/what-is-issue-3-on-the-ohio-ballot/" }
           - name: "Tom Pruss"
+            resume:
+              - "Libertarian candidate for U.S. House, Ohio's 9th District (2024)"
+              - "Little else was found: he has no campaign website and his GoodParty.org profile is unclaimed"
+            resume_sources:
+              - title: "GoodParty.org: Tom Pruss"
+                url: "https://goodparty.org/candidate/tom-pruss/ohio-secretary-of-state"
+              - title: "The Ballot Brief: Tom Pruss"
+                url: "https://theballotbrief.com/candidate/tom-pruss-oh"
             party: "Libertarian"
             incumbent: false
             summary: "Toledo small-business owner, age 59. Running on 'independent, transparent, and nonpartisan' election administration. Notes Issue 3 does not settle absentee-voting questions."
@@ -814,6 +1065,18 @@ sections:
         what_the_office_does: "Collects and invests state money and manages unclaimed funds and debt. Sits on or appoints members to some pension and investment boards."
         candidates:
           - name: "Jay Edwards"
+            resume:
+              - "Native of Nelsonville; Nelsonville-York High School; Ohio University mathematics degree on a football scholarship"
+              - "Ohio House of Representatives, representing Athens, Meigs, Washington, Vinton and Morgan counties (first elected in 2016, at age 27)"
+              - "Chairman, Ohio House Finance Committee"
+            track_record:
+              - "As Finance chair, he wrote and sponsored the state's operating and capital budgets (campaign claim)"
+              - "His campaign says he fought for a billion-dollar increase in public education funding and helped secure nearly $400 million for higher-education capital projects"
+            resume_sources:
+              - title: "Edwards campaign: Home"
+                url: "https://www.edwardsforohio.com/home"
+              - title: "The Ballot Brief: Jay Edwards"
+                url: "https://theballotbrief.com/candidate/jay-edwards-oh"
             website: "https://www.edwardsforohio.com/"
             priorities:
               - "Protect taxpayer dollars with a numbers-first approach, drawing on his time as House Finance chair"
@@ -843,6 +1106,21 @@ sections:
               - { title: "Ideastream: State Treasurer race", url: "https://www.ideastream.org/state-treasurer" }
               - { title: "Wikipedia: 2026 Ohio State Treasurer election", url: "https://en.wikipedia.org/wiki/2026_Ohio_State_Treasurer_election" }
           - name: "Seth Walsh"
+            resume:
+              - "Grew up in St. Joseph, Michigan; moved to Cincinnati in 2009; Xavier University political science (student body president)"
+              - "Launched the Sedamsville Community Development Corporation; led the College Hill Community Urban Redevelopment Corporation"
+              - "Founded the Cincy Soccer League"
+              - "Cincinnati City Council member (fourth year); serves on Budget and Finance, Equitable Growth and Housing, and Climate, Environment and Infrastructure committees"
+              - "Member, Cincinnati Retirement System board of trustees"
+            track_record:
+              - "Campaign says he created economic development tools including the Quick Strike Acquisition Fund and the Economic Development Gap Financing Fund"
+              - "Campaign credits him with helping create the Cincinnati Sports Commission, pushing ODOT to speed repair of the Big Mac bridge, and securing an overhaul of the city's snow removal system"
+              - "At College Hill CURC, his campaign cites 110 housing units (98% affordable), nearly 20 small businesses and more than $85 million in development funding"
+            resume_sources:
+              - title: "Walsh campaign: Meet Seth"
+                url: "https://teamwalshhq.com/meet-seth"
+              - title: "The Ballot Brief: Seth Walsh"
+                url: "https://theballotbrief.com/candidate/seth-walsh-oh"
             website: "https://teamwalshhq.com/"
             priorities:
               - "Put Ohioans first in state investments: no new investments in other countries, reinvest in Ohio community banks"
@@ -899,6 +1177,15 @@ sections:
         what_the_office_does: "Ohio senators write state law, pass the two-year state budget, and set property tax and school-funding policy. Sen. Andrew Brenner (R) is term-limited; open seat."
         candidates:
           - name: "Ryan Rivers"
+            resume:
+              - "Central Ohio business professional with private-sector experience working with employers and entrepreneurs"
+              - "Work in local and county government (his site doesn't name specific offices)"
+              - "Lives in Delaware County with his wife and daughters"
+            resume_sources:
+              - title: "Rivers campaign: About"
+                url: "https://riversforohio.com/about"
+              - title: "The Ballot Brief: Ryan Rivers"
+                url: "https://theballotbrief.com/candidate/ryan-rivers-oh"
             website: "https://riversforohio.com/"
             priorities:
               - "Affordability: lower everyday costs and energy bills, grow high-paying jobs, tax reform"
@@ -937,6 +1224,15 @@ sections:
               - { title: "KnoxPages: Stevens, Rivers claim Republican nominations", url: "https://www.knoxpages.com/2026/05/05/stevens-rivers-claim-republican-nominations-for-statehouse-seats/" }
               - { title: "BallotReady: Ryan Rivers", url: "https://www.ballotready.org/people/ryan-rivers-c0ff55bf-5d36-46bc-9537-4f5c80ebba4c" }
           - name: "Scott Charland"
+            resume:
+              - "Strength and conditioning coach for 25+ years"
+              - "Assistant strength and conditioning coach, Ohio State; head strength and conditioning coach at Saint Louis University, Temple University and Butler University"
+              - "Manager of Human Performance in health care, overseeing 23 strength coaches"
+              - "Orange Township Parks Advisory Committee; volunteer with the Ohio Nature Conservancy, Metro Parks, FLOW and the Red Cross"
+              - "Former national and state champion powerlifter; BA, Florida State; master's in education, UAB"
+            resume_sources:
+              - title: "Charland campaign: About"
+                url: "https://www.strongwithscott.com/about"
             website: "https://www.strongwithscott.com/"
             priorities:
               - "Strong public education: opposes school vouchers"
@@ -989,6 +1285,24 @@ sections:
         what_the_office_does: "House members write state law and the state budget."
         candidates:
           - name: "Brian Lorenz"
+            resume:
+              - "City and regional planner by profession; member of the American Institute of Certified Planners"
+              - "Six years on Powell's Planning and Zoning Commission"
+              - "2010-2023: Powell City Council; mayor of Powell, 2016-2017"
+              - "Olentangy School District facilities committee (from 2015)"
+              - "2023-present: Ohio House of Representatives, 60th District (appointed May 2023, elected 2024)"
+              - "Education: University of Toledo, Ohio State master's"
+            track_record:
+              - "His campaign says he chairs the House Economic and Workforce Development Committee (Wikipedia lists him as vice chair of the House Development Committee)"
+              - "His campaign cites two bills passed with near-unanimous bipartisan support and nearly $10 million in capital budget funds for Delaware County"
+              - "Co-sponsored a statewide regulatory sandbox program that passed the House in March 2026 and sponsored legislation to raise the homestead exemption"
+            resume_sources:
+              - title: "Wikipedia: Brian Lorenz"
+                url: "https://en.wikipedia.org/wiki/Brian_Lorenz"
+              - title: "Lorenz campaign"
+                url: "https://lorenzforohio.com/"
+              - title: "The Ballot Brief: Brian Lorenz"
+                url: "https://theballotbrief.com/candidate/brian-lorenz-oh"
             website: "https://lorenzforohio.com/"
             priority_details:
               - title: "Record he cites"
@@ -1014,6 +1328,17 @@ sections:
               - { title: "Wikipedia: Brian Lorenz", url: "https://en.wikipedia.org/wiki/Brian_Lorenz" }
               - { title: "HB 776 testimony (Lorenz), Ohio Legislature", url: "https://search-prod.lis.state.oh.us/api/v2/general_assembly_136/committees/cmte_h_trans_1/meetings/cmte_h_trans_1_2026-05-19-0330_1299/testimony/17663/hb776testimonylorenz.pdf" }
           - name: "Shelby Kimball"
+            resume:
+              - "U.S. Marine Corps: maintenance management specialist, later platoon sergeant"
+              - "Army National Guard: patient administration specialist"
+              - "Background in criminology and public policy"
+              - "State advocate, National Foundation for Ectodermal Dysplasias"
+              - "School volunteer and youth soccer coach; mother of four, Dublin resident"
+            resume_sources:
+              - title: "Kimball campaign"
+                url: "https://kimballforohio.com/"
+              - title: "The Ballot Brief: Shelby Kimball"
+                url: "https://theballotbrief.com/candidate/shelby-kimball-oh"
             website: "https://kimballforohio.com/"
             priorities:
               - "Strong public schools, fully funded"
@@ -1068,6 +1393,22 @@ sections:
         what_the_office_does: "The state's highest court: final word on Ohio law and the Ohio Constitution, disciplines lawyers and judges, hears death-penalty appeals. Court is now 6-1 Republican; Republicans winning both seats makes it 7-0, Democrats winning both makes it 5-2."
         candidates:
           - name: "Daniel R. Hawkins"
+            resume:
+              - "Bowling Green State University BS in criminal justice; Ohio State law degree"
+              - "2001-2013: Assistant prosecuting attorney, Franklin County; Director of the Special Victims Unit (last decade)"
+              - "2013-2019: Judge, Franklin County Municipal Court Environmental Division"
+              - "2019-2024: Judge, Franklin County Court of Common Pleas"
+              - "2024-present: Ohio Supreme Court Justice (won the 2024 election by more than 540,000 votes)"
+            track_record:
+              - "Took more than 100 cases to trial as a prosecutor"
+              - "On the Environmental Court, created a neighborhood clean-up program using court-ordered community service"
+              - "Earned high ratings from the Columbus Bar Association as a Common Pleas judge"
+              - "Elected to the Ohio Supreme Court in 2024 with 2.94 million votes (campaign site)"
+            resume_sources:
+              - title: "Wikipedia: Daniel R. Hawkins"
+                url: "https://en.wikipedia.org/wiki/Daniel_R._Hawkins"
+              - title: "Hawkins campaign: Meet Justice Hawkins"
+                url: "https://www.hawkinsforohio.com/meet-judge-hawkins"
             website: "https://www.hawkinsforohio.com/"
             priority_details:
               - title: "Background he cites"
@@ -1089,6 +1430,23 @@ sections:
               - { title: "NBC4: Who's running for Ohio Supreme Court in 2026?", url: "https://www.nbc4i.com/news/your-local-election-hq/whos-running-for-ohio-supreme-court-in-2026-all-about-the-candidates/" }
               - { title: "WFMJ: Decision 2026, two races for Ohio Supreme Court", url: "https://www.wfmj.com/news/local-news/decision-2026-two-races-for-ohio-supreme-court-justice/article_e0615892-0f8f-471a-8e21-31cd56f904ea.html" }
           - name: "Marilyn Zayas"
+            resume:
+              - "Raised by a mother who migrated from Puerto Rico; commuted four hours a day to finish college"
+              - "Began career as an IT manager at Procter & Gamble; law degree, University of Cincinnati"
+              - "Private and public-sector attorney; built her own law firm"
+              - "2016-present: Judge, First District Court of Appeals (Hamilton County); reelected 2018"
+              - "Selected by Ohio's Chief Justice to sit on the Ohio Supreme Court and on four other districts' appeals courts"
+            track_record:
+              - "First person of Latino heritage elected to an Ohio court of appeals (2016)"
+              - "Created Educating Tomorrow's Leaders (2016), a program connecting students with judges and attorneys"
+              - "National Bar Association Latina Judge of the Year (campaign claim)"
+              - "Cleveland Metropolitan Bar Association 'excellent' rating (2022); led initiatives to reduce court costs and broaden access (campaign claim)"
+              - "Chief Justice appointed her to sit on the Supreme Court three times in 40 days in 2025 (campaign)"
+            resume_sources:
+              - title: "Wikipedia: Marilyn Zayas"
+                url: "https://en.wikipedia.org/wiki/Marilyn_Zayas"
+              - title: "Zayas campaign: Meet Judge Zayas"
+                url: "https://judgemarilynzayas.com/meet-judge-zayas"
             website: "https://judgemarilynzayas.com/"
             priorities:
               - "Judicial independence and impartiality: rule on the law and facts, 'leave politics at the door'"
@@ -1132,6 +1490,20 @@ sections:
         what_the_office_does: "See Supreme Court seat 1."
         candidates:
           - name: "Jennifer Brunner"
+            resume:
+              - "Attorney since 1983; 17 years in private practice, starting her own firm; native of Springfield, Ohio; Miami University graduate"
+              - "Judge, Franklin County Court of Common Pleas, about five years"
+              - "Ohio Secretary of State (the state's first woman in the post)"
+              - "Judge, Tenth District Court of Appeals, six years"
+              - "2021-present: Ohio Supreme Court Justice (elected 2020)"
+              - "Has worked with USAID and the State Department on anti-corruption and election integrity in Serbia, Egypt and Benin; Ph.D. studies at the University of York"
+            track_record:
+              - "Founded Franklin County's adult felony drug court in 2004, still operating"
+              - "Awarded the JFK Library's Profile in Courage Award in 2008 for her work as Secretary of State"
+              - "First Democratic woman elected to two Ohio statewide offices (Secretary of State and Supreme Court Justice), per her campaign"
+            resume_sources:
+              - title: "Brunner campaign: About"
+                url: "https://justicebrunner.com/about"
             website: "https://justicebrunner.com/"
             priorities:
               - "Fair elections and equal weight for every vote, including fairly drawn districts"
@@ -1166,6 +1538,20 @@ sections:
               - { title: "NBC4: Who's running for Ohio Supreme Court in 2026?", url: "https://www.nbc4i.com/news/your-local-election-hq/whos-running-for-ohio-supreme-court-in-2026-all-about-the-candidates/" }
               - { title: "Mahoning Matters: Overview of Ohio's 2026 statewide and Supreme Court races", url: "https://www.mahoningmatters.com/news/state/article314605422.html" }
           - name: "Colleen O'Donnell"
+            resume:
+              - "Clerked in federal court"
+              - "Private practice representing manufacturers and business clients"
+              - "Assistant Attorney General, State of Ohio"
+              - "Public Utilities Commission of Ohio"
+              - "Judge, Franklin County Common Pleas Court, nearly a decade"
+              - "Most recently: U.S. Immigration Judge in Laredo, Texas"
+              - "Daughter of retired Ohio Supreme Court Justice Terrence O'Donnell"
+            track_record:
+              - "Her campaign says she held violent offenders accountable on the Common Pleas bench"
+              - "Her campaign says as an immigration judge she enforced the law as written and never granted asylum"
+            resume_sources:
+              - title: "O'Donnell campaign: Home"
+                url: "https://www.odonnellforohio.com/"
             website: "https://www.odonnellforohio.com/"
             priorities:
               - "Uphold the rule of law"
@@ -1214,6 +1600,20 @@ sections:
         what_the_office_does: "Hears appeals from trial courts in 15 counties, including Delaware."
         candidates:
           - name: "Matthew George"
+            resume:
+              - "Ashland University BA (2002; John M. Ashbrook Scholar); Washington and Lee law JD (2007; Federalist Society chapter president)"
+              - "Magistrate, Licking County Common Pleas and Domestic Relations courts"
+              - "2020-present: Judge, Licking County Municipal Court"
+              - "18+ years of judicial experience"
+              - "Board of Directors, Heartbeats crisis pregnancy centers (Newark and Zanesville)"
+            track_record:
+              - "Won election to the Licking County Municipal Court in 2020"
+              - "Campaign cites more than 18 years deciding cases as a judge and magistrate"
+            resume_sources:
+              - title: "George campaign"
+                url: "https://matthewgeorge.org/"
+              - title: "The Ballot Brief: Matthew George"
+                url: "https://theballotbrief.com/candidate/matthew-george-oh"
             website: "https://matthewgeorge.org/"
             priorities:
               - "Uphold the Constitution: apply the law as written (originalism)"
@@ -1253,6 +1653,19 @@ sections:
         what_the_office_does: "Delaware County's main trial court: felonies, major civil suits, divorces."
         candidates:
           - name: "Marianne T. Hemmeter"
+            resume:
+              - "Trinity College BA in history (1994); Ohio State Moritz College of Law JD (1997)"
+              - "Deputy director, Economic Crimes Unit, Ohio Attorney General's Office"
+              - "2003: Interim Delaware County prosecuting attorney"
+              - "About 2015-2025: Judge, Delaware Municipal Court"
+              - "Feb. 2025-present: Judge, Delaware County Common Pleas Court, General Division (appointed by Gov. DeWine)"
+            track_record:
+              - "Judge on the Delaware Municipal Court for nearly a decade before her 2025 appointment to Common Pleas; no specific accomplishments were found in the sources checked"
+            resume_sources:
+              - title: "The Ballot Brief: Marianne T. Hemmeter"
+                url: "https://theballotbrief.com/candidate/marianne-t-hemmeter-oh"
+              - title: "Court News Ohio: Hemmeter appointed"
+                url: "https://courtnewsohio.gov/bench/2024/HemmeterAppt_120624.asp"
             party: "Nonpartisan ballot"
             incumbent: true
             summary: "Appointed by Gov. DeWine in February 2025. Nearly ten years as a Delaware Municipal Court judge. Former deputy director of the AG's Economic Crimes Unit; interim county prosecutor in 2003. Ohio State law graduate."
@@ -1272,6 +1685,17 @@ sections:
         background: "Seat opened when Judge James Schuck retired in June 2026 amid allegations by a former assistant county prosecutor that he sexually assaulted and stalked her. Candidates filed as Republican (McCoy) and Democrat (Mirles-Jones) petition candidates, but no party labels appear on the ballot."
         candidates:
           - name: "Nickolas K. McCoy"
+            resume:
+              - "Ohio University BS in industrial technology; Capital University Law School JD; admitted to the bar in November 2009"
+              - "Before law: project engineer (automotive), mechanical designer (food processing equipment), mechanical engineer (aerospace and defense)"
+              - "About 16 years in private practice: estate planning, elder law, guardianships, domestic relations, real estate; court-appointed guardian and guardian ad litem"
+              - "Two-term president, Delaware County Bar Association; 12 years on the Delaware County District Library board; four years on the Public Defender Commission; Orange Township Board of Zoning Appeals"
+              - "Current: Magistrate, Delaware County Common Pleas Court, Juvenile and Probate Division"
+            resume_sources:
+              - title: "McCoy campaign"
+                url: "https://voteformccoy.com/"
+              - title: "The Ballot Brief: Nickolas K. McCoy"
+                url: "https://theballotbrief.com/candidate/nickolas-k-mccoy-oh"
             website: "https://voteformccoy.com/"
             priority_details:
               - title: "Experience he cites"
@@ -1289,6 +1713,17 @@ sections:
               - { title: "The Ballot Brief: Common Pleas General Division, unexpired term", url: "https://theballotbrief.com/state/ohio/delaware-county/judge-delaware-county-court-of-common-pleas-general-division-unexpired-term-ending-12-31-2030" }
               - { title: "The Ballot Brief: Delaware County", url: "https://theballotbrief.com/state/ohio/delaware-county" }
           - name: "Emma Mirles-Jones"
+            resume:
+              - "Brown University BA; Case Western Reserve University JD and MBA (dual degree)"
+              - "16 years practicing law: court-appointed counsel and public defender in Franklin, Delaware and Morrow counties; juvenile, municipal and felony defense"
+              - "Guardian ad litem for abused, neglected and dependent children; parent representation in child welfare cases; appellate work"
+              - "Supreme Court of Ohio-qualified mediator; domestic relations and business formation work; tax preparation"
+              - "Earlier roles in commercial banking, real estate development and a high-tech firm"
+            resume_sources:
+              - title: "Mirles-Jones campaign: About"
+                url: "https://votemirlesjones.com/about"
+              - title: "The Ballot Brief: Emma Mirles-Jones"
+                url: "https://theballotbrief.com/candidate/emma-mirles-jones-oh"
             website: "https://votemirlesjones.com/"
             priority_details:
               - title: "Experience she cites"
@@ -1326,6 +1761,17 @@ sections:
         what_the_office_does: "Handles estates, guardianships, adoptions, marriage licenses, and juvenile delinquency and abuse cases."
         candidates:
           - name: "David Hejmanowski"
+            resume:
+              - "Hiram College BS in political science (1996); Ohio State Moritz College of Law JD (1999)"
+              - "2003-2015: Magistrate, Delaware County Probate/Juvenile Court"
+              - "2015-present: Judge, Delaware County Probate/Juvenile Court"
+              - "Serves on the Ohio Supreme Court's Judicial College board"
+            track_record:
+              - "Moved from magistrate to judge of the same court in 2015; no specific accomplishments were found in the sources checked"
+              - "Serves on the Judicial College board, which oversees judicial education (per the court's biography)"
+            resume_sources:
+              - title: "The Ballot Brief: David Hejmanowski"
+                url: "https://theballotbrief.com/candidate/david-hejmanowski-oh"
             party: "Nonpartisan ballot"
             incumbent: true
             summary: "Judge since February 2015; magistrate at the same court 2003-2015. Ohio State law graduate. Serves on the Ohio Judicial College board."
@@ -1351,6 +1797,19 @@ sections:
         what_the_office_does: "The three commissioners are the county's executive and legislative body. They set the budget (the 2026 general fund relies on about $99.9 million in sales tax), handle roads and sewers, zoning coordination, and county facilities, and place levies on the ballot. Barb Lewis (R) is retiring after serving since 2015."
         candidates:
           - name: "Reneé Vaughan"
+            resume:
+              - "Educator for 15 years working with students and families in Indiana and Pennsylvania; former special education teacher"
+              - "Degrees from the University of Cincinnati, University of Pittsburgh and Slippery Rock University"
+              - "Genoa Township Trustee since 2020 (first elected 2019)"
+              - "President, Delaware County Township Association; director, Ohio Township Association board"
+            track_record:
+              - "As trustee, her campaign cites hands-on work with roads, infrastructure, zoning, public safety, budgets, annexation and development"
+              - "Holds leadership roles in county and state township associations (campaign)"
+            resume_sources:
+              - title: "Vaughan campaign: Home"
+                url: "https://www.vaughanfordelaware.com/"
+              - title: "The Ballot Brief: Reneé Vaughan"
+                url: "https://theballotbrief.com/candidate/renee-vaughan-oh"
             website: "https://www.vaughanfordelaware.com/"
             priorities:
               - "Responsible growth: plan roads, utilities and services alongside development"
@@ -1392,6 +1851,17 @@ sections:
               - { title: "Delaware Gazette: St. John, Vaughan vie for commissioner seat", url: "https://www.delgazette.com/2026/04/08/st-john-vaughan-vie-for-commissioner-seat/" }
               - { title: "Vaughan campaign: Issues", url: "https://www.vaughanfordelaware.com/issues" }
           - name: "Ryan Grissinger"
+            resume:
+              - "2025-present: Fractional CTO and technology consultant, Polaris Pixels (AI consulting for home services companies)"
+              - "2017-2025: Co-founder and Chief Technology Officer, Roof Maxx (franchise roofing services, grew to 350+ dealers)"
+              - "Earlier: operations and marketing automation at Feazel Roofing"
+              - "30 years in sales, management, operations and technology"
+              - "Genoa Township resident with five children"
+            resume_sources:
+              - title: "Grissinger campaign: About"
+                url: "https://ryangrissinger.com/about"
+              - title: "The Ballot Brief: Ryan Grissinger"
+                url: "https://theballotbrief.com/candidate/ryan-grissinger-oh"
             website: "https://ryangrissinger.com/"
             priorities:
               - "Growth: publish a public 10-Year Growth Impact Forecast every year"
@@ -1451,6 +1921,17 @@ sections:
         what_the_office_does: "Appraises property for taxes, calculates levy costs (including the per-$100,000 figures on this ballot), and serves as the county's chief fiscal officer."
         candidates:
           - name: "George Kaitsa"
+            resume:
+              - "Kenyon College economics degree; Ohio State MBA"
+              - "First chief financial officer of the Ohio Department of Development"
+              - "Deputy director, Ohio Department of Administrative Services"
+              - "2009-present: Delaware County Auditor (appointed 2009, elected to a full term in 2010)"
+            track_record:
+              - "Elected county auditor in 2010 and has served since 2009"
+              - "Won the 2026 Republican primary over Don Rankey Jr. (per the research guide)"
+            resume_sources:
+              - title: "The Ballot Brief: George Kaitsa"
+                url: "https://theballotbrief.com/candidate/george-kaitsa-oh"
             party: "Republican"
             incumbent: true
             summary: "Auditor since his 2009 appointment; elected in 2010. Former first CFO of the Ohio Department of Development. Kenyon economics graduate with an MBA from Ohio State. Beat Don Rankey Jr. in the primary. No Democrat filed."

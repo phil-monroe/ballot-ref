@@ -156,6 +156,8 @@ details[open] > summary::before { transform: rotate(90deg); }
 .compare-bar select { flex: 1; min-width: 0; min-height: 44px; padding: 0 10px; font: inherit; font-weight: 600; color: var(--fg); background: var(--bg); border: 1px solid var(--accent); border-radius: 8px; }
 .compare .sec { display: none; }
 .compare[data-view='summary'] .sec[data-sec='summary'],
+.compare[data-view='resume'] .sec[data-sec='resume'],
+.compare[data-view='track'] .sec[data-sec='track'],
 .compare[data-view='priorities'] .sec[data-sec='priorities'],
 .compare[data-view='positions'] .sec[data-sec='positions'],
 .compare[data-view='money'] .sec[data-sec='money'],
