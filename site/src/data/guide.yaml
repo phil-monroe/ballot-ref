@@ -9,6 +9,8 @@
 #       candidates[] (races): name, party, incumbent, summary, key_points, money, endorsements, support, oppose, sources
 #       issue fields (issues): ballot_language, cost, supporters, opponents, arguments_for, arguments_against
 #       sources[]: {title, url} - links used for that item
+#       website: official URL (candidate: campaign site; contest: office or issue page). Omitted when none
+#                was found; the site then shows a "No website" badge.
 #
 # Neutrality: support/oppose lists are arguments made by supporters/critics, not Claude's recommendations.
 # Items marked verification: "unverified" or "campaign_claim" should be labeled as such on the site.
@@ -119,6 +121,7 @@ sections:
           - { pollster: "BGSU", dates: "earlier", population: "n/a", result: "Brown 49%, Husted 48%" }
         candidates:
           - name: "Jon Husted"
+            website: "https://jonhustedforsenate.com/"
             party: "Republican"
             incumbent: true
             summary: "Appointed to the seat by Gov. DeWine in January 2025. Previously 20+ years as a state lawmaker and statewide officeholder, most recently Lieutenant Governor."
@@ -140,6 +143,7 @@ sections:
               - { title: "Legis1: The Money Race Shaping Ohio's 2026 Senate Election (secondary)", url: "https://legis1.com/news/ohio-2026-senate-election-the-money-race-shaping" }
               - { title: "NBC4: Husted, Brown set stage for Ohio's 2026 U.S. Senate race", url: "https://www.nbc4i.com/news/your-local-election-hq/husted-brown-set-stage-for-ohios-2026-u-s-senate-race/" }
           - name: "Sherrod Brown"
+            website: "https://www.sherrodbrown.com/"
             party: "Democratic"
             incumbent: false
             summary: "U.S. Senator 2007-2025; lost in 2024 to Bernie Moreno."
@@ -160,6 +164,7 @@ sections:
               - { title: "PBS NewsHour: Sherrod Brown expected to seek his return to the Senate in 2026", url: "https://www.pbs.org/newshour/politics/sherrod-brown-expected-to-seek-his-return-to-the-senate-in-2026" }
               - { title: "Ohio Capital Journal: Brown outraises Husted", url: "https://ohiocapitaljournal.com/2026/07/29/sherrod-brown-comfortably-outraises-jon-husted-as-outside-groups-enter-ohios-u-s-senate-race/" }
           - name: "William B. Redpath"
+            website: "https://billredpath.com/"
             party: "Libertarian"
             incumbent: false
             summary: "On the ballot. Almost no coverage found; platform not verified. Libertarian candidates generally run on smaller government and civil liberties."
@@ -167,6 +172,7 @@ sections:
             sources:
               - { title: "Ballot (official)", url: "https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X" }
           - name: "Greg Levy"
+            website: "https://www.greg4senate.com/"
             party: "Other party (as printed on ballot)"
             incumbent: false
             summary: "On the ballot. Almost no coverage found; platform not verified."
@@ -191,6 +197,7 @@ sections:
         race_status: "Cook Political Report: Solid Republican."
         candidates:
           - name: "Troy Balderson"
+            website: "https://baldersonforcongress.com/"
             party: "Republican"
             incumbent: true
             summary: "In Congress since a 2018 special election. Former state senator and representative. Third-generation auto dealer from Zanesville."
@@ -208,6 +215,7 @@ sections:
               - { title: "Smarter.vote: Ohio's 12th Congressional District 2026", url: "https://smarter.vote/races/oh-house-12-2026/" }
               - { title: "End Dark Money: OH-12 Congressional Race", url: "https://enddarkmoney.us/oh-12-congressional-race/" }
           - name: "Jerrad Christian"
+            website: "https://www.christianforohio.com/"
             party: "Democratic"
             incumbent: false
             summary: "Navy veteran and software engineer. Lost to Balderson in 2024. Won a three-way 2026 primary with 46.4% districtwide and 48.95% in Delaware County."
@@ -252,6 +260,7 @@ sections:
         debate_note: "Acton declined to debate Ramaswamy, calling him a 'chronic liar.'"
         candidates:
           - name: "Amy Acton / David Pepper (Lt. Gov.)"
+            website: "https://actonforgovernor.com/"
             party: "Democratic"
             incumbent: false
             summary: "Acton was Ohio Department of Health director during the early COVID-19 pandemic. Pepper is a former Ohio Democratic Party chair."
@@ -267,6 +276,7 @@ sections:
               - { title: "Ironton Tribune: Two polls show Acton lead grows over Ramaswamy", url: "https://irontontribune.com/2026/10/06/two-polls-show-acton-lead-grows-over-ramaswamy/" }
               - { title: "Mediaite: Acton won't debate 'chronic liar' Ramaswamy", url: "https://www.mediaite.com/media/news/ohio-dem-refuses-to-debate-chronic-liar-ramaswamy-in-whats-being-called-the-ugliest-race-in-the-country/" }
           - name: "Vivek Ramaswamy / Robert A. McColley (Lt. Gov.)"
+            website: "https://vivekforohio.com/"
             party: "Republican"
             incumbent: false
             summary: "Ramaswamy is a biotech entrepreneur and billionaire, 2024 presidential candidate, and former Trump administration official. McColley is Ohio Senate President."
@@ -284,6 +294,7 @@ sections:
               - { title: "Newsweek: Ramaswamy vs. Acton poll shows decline in support", url: "https://www.newsweek.com/vivek-ramaswamy-vs-amy-acton-poll-decline-support-12452312" }
               - { title: "Mediaite: Acton won't debate Ramaswamy", url: "https://www.mediaite.com/media/news/ohio-dem-refuses-to-debate-chronic-liar-ramaswamy-in-whats-being-called-the-ugliest-race-in-the-country/" }
           - name: "Don Kissick / James L. Mills (Lt. Gov.)"
+            website: "https://donkissick.com/"
             party: "Libertarian"
             incumbent: false
             summary: "Kissick has sought a spot in debates. Platform beyond general Libertarian positions not verified."
@@ -300,6 +311,7 @@ sections:
 
       - id: "attorney-general"
         type: "candidate_race"
+        website: "https://www.ohioattorneygeneral.gov/"
         ballot_order: 2
         office: "Attorney General"
         term: "Four years"
@@ -308,6 +320,7 @@ sections:
         events: ["Debate: Oct. 19 at Youngstown State University"]
         candidates:
           - name: "Keith Faber"
+            website: "https://www.keithfaber.org/"
             party: "Republican"
             incumbent: false
             summary: "Ohio Auditor of State, finishing his second and final term. Former member of the Ohio House and Senate. Campaign says focus is 'protecting Ohio families, supporting law enforcement and defending our Constitution.'"
@@ -320,6 +333,7 @@ sections:
             sources:
               - { title: "Signal Cleveland: Keith Faber and John Kulewicz, Ohio's next attorney general", url: "https://signalcleveland.org/election-2026-keith-faber-and-john-kulewicz-ohio-next-attorney-general/" }
           - name: "John J. Kulewicz"
+            website: "https://john4ohioag.com/"
             party: "Democratic"
             incumbent: false
             summary: "Upper Arlington City Council member since 2020. Retired in 2025 after 44 years at Vorys, Sater, Seymour and Pease. Yale graduate. 'Transparency Tour' campaign."
@@ -339,6 +353,7 @@ sections:
 
       - id: "auditor-of-state"
         type: "candidate_race"
+        website: "https://ohioauditor.gov/"
         ballot_order: 3
         office: "Auditor of State"
         term: "Four years"
@@ -346,6 +361,7 @@ sections:
         what_the_office_does: "Audits every public office in Ohio and investigates waste, fraud, and abuse of public money."
         candidates:
           - name: "Frank LaRose"
+            website: "https://www.franklarose.com/"
             party: "Republican"
             incumbent: false
             summary: "Two-term Secretary of State, term-limited. Former state senator and Army veteran."
@@ -356,6 +372,7 @@ sections:
             sources:
               - { title: "WOSU: Ohio 2026 election guide", url: "https://www.wosu.org/2026-10-06/ohio-2026-election-guide-what-voters-need-to-know-about-their-ballots" }
           - name: "Annette Blackwell"
+            website: "https://blackwellforohio.com/"
             party: "Democratic"
             incumbent: false
             summary: "Mayor of Maple Heights."
@@ -370,6 +387,7 @@ sections:
 
       - id: "secretary-of-state"
         type: "candidate_race"
+        website: "https://www.ohiosos.gov/"
         ballot_order: 4
         office: "Secretary of State"
         term: "Four years"
@@ -377,6 +395,7 @@ sections:
         what_the_office_does: "Ohio's chief elections officer. Oversees the 88 county boards of elections and handles business filings. Matters for how Issue 3 and future election laws are carried out."
         candidates:
           - name: "Robert Sprague"
+            website: "https://www.spragueforohio.com/"
             party: "Republican"
             incumbent: false
             summary: "Current State Treasurer. Strongly backs Issue 3 and supports the federal SAVE Act. Quote: 'I would like to see us go back to in-person voting - that way everybody has to show their photo ID.'"
@@ -388,6 +407,7 @@ sections:
             sources:
               - { title: "Ideastream: Secretary of State race", url: "https://www.ideastream.org/secretary-of-state" }
           - name: "Allison Russo"
+            website: "https://allisonrusso.com/"
             party: "Democratic"
             incumbent: false
             summary: "Former Ohio House Minority Leader. Supports photo ID but calls Issue 3 a waste of time because current photo ID requirements are 'the strictest in the country.'"
@@ -414,6 +434,7 @@ sections:
 
       - id: "treasurer-of-state"
         type: "candidate_race"
+        website: "https://tos.ohio.gov/"
         ballot_order: 5
         office: "Treasurer of State"
         term: "Four years"
@@ -421,6 +442,7 @@ sections:
         what_the_office_does: "Collects and invests state money and manages unclaimed funds and debt. Sits on or appoints members to some pension and investment boards."
         candidates:
           - name: "Jay Edwards"
+            website: "https://www.edwardsforohio.com/"
             party: "Republican"
             incumbent: false
             summary: "Former state representative. Won the GOP primary with 53.1% over Kristina Roegner."
@@ -432,6 +454,7 @@ sections:
               - { title: "Ideastream: State Treasurer race", url: "https://www.ideastream.org/state-treasurer" }
               - { title: "Wikipedia: 2026 Ohio State Treasurer election", url: "https://en.wikipedia.org/wiki/2026_Ohio_State_Treasurer_election" }
           - name: "Seth Walsh"
+            website: "https://teamwalshhq.com/"
             party: "Democratic"
             incumbent: false
             summary: "Cincinnati City Council member. Promises to name 'qualified, independent individuals to the pension boards,' invest in infrastructure and housing, and return unclaimed funds."
@@ -452,6 +475,7 @@ sections:
 
       - id: "state-senate-19"
         type: "candidate_race"
+        website: "https://ohiosenate.gov/"
         ballot_order: 10
         office: "State Senator, 19th District"
         term: "Four years"
@@ -460,6 +484,7 @@ sections:
         what_the_office_does: "Ohio senators write state law, pass the two-year state budget, and set property tax and school-funding policy. Sen. Andrew Brenner (R) is term-limited; open seat."
         candidates:
           - name: "Ryan Rivers"
+            website: "https://riversforohio.com/"
             party: "Republican"
             incumbent: false
             summary: "Former Orange Township trustee and past president of the Ohio Township Association. Founding director of The Rivers Companies; BallotReady lists him as a Delaware County bond-program project manager. Ohio University graduate. Beat state Rep. Beth Lear 51.84% to 48.16% in the primary, carrying all four counties."
@@ -477,6 +502,7 @@ sections:
               - { title: "KnoxPages: Stevens, Rivers claim Republican nominations", url: "https://www.knoxpages.com/2026/05/05/stevens-rivers-claim-republican-nominations-for-statehouse-seats/" }
               - { title: "BallotReady: Ryan Rivers", url: "https://www.ballotready.org/people/ryan-rivers-c0ff55bf-5d36-46bc-9537-4f5c80ebba4c" }
           - name: "Scott Charland"
+            website: "https://www.strongwithscott.com/"
             party: "Democratic"
             incumbent: false
             verification: "unverified"
@@ -503,6 +529,7 @@ sections:
 
       - id: "state-house-60"
         type: "candidate_race"
+        website: "https://ohiohouse.gov/"
         ballot_order: 11
         office: "State Representative, 60th District"
         term: "Two years"
@@ -511,6 +538,7 @@ sections:
         what_the_office_does: "House members write state law and the state budget."
         candidates:
           - name: "Brian Lorenz"
+            website: "https://lorenzforohio.com/"
             party: "Republican"
             incumbent: true
             summary: "Appointed in 2023 after Rep. Kris Jordan died; won a full term in 2024 with 54.3% over Rachael Morocco. Powell City Council 2010-2023, including time as Mayor. Senior Director of Planning at WD Partners. Master's in city planning from Ohio State. Chairs the House Economic & Workforce Development Committee; sponsored a 'regulatory sandbox' bill and HB 776 (motorcycle lane filtering). Won the 2026 primary with 77.19% over Peggy Guzzo."
@@ -529,6 +557,7 @@ sections:
               - { title: "Wikipedia: Brian Lorenz", url: "https://en.wikipedia.org/wiki/Brian_Lorenz" }
               - { title: "HB 776 testimony (Lorenz), Ohio Legislature", url: "https://search-prod.lis.state.oh.us/api/v2/general_assembly_136/committees/cmte_h_trans_1/meetings/cmte_h_trans_1_2026-05-19-0330_1299/testimony/17663/hb776testimonylorenz.pdf" }
           - name: "Shelby Kimball"
+            website: "https://kimballforohio.com/"
             party: "Democratic"
             incumbent: false
             summary: "Marine Corps veteran and Dublin resident. Beat Eli Wenzel 52.95% to 47.05% in the primary."
@@ -556,6 +585,7 @@ sections:
 
       - id: "ohio-supreme-court-seat-1"
         type: "candidate_race"
+        website: "https://www.supremecourt.ohio.gov/"
         ballot_order: 6
         office: "Ohio Supreme Court Justice"
         term: "Six years, beginning Jan. 1, 2027"
@@ -563,6 +593,7 @@ sections:
         what_the_office_does: "The state's highest court: final word on Ohio law and the Ohio Constitution, disciplines lawyers and judges, hears death-penalty appeals. Court is now 6-1 Republican; Republicans winning both seats makes it 7-0, Democrats winning both makes it 5-2."
         candidates:
           - name: "Daniel R. Hawkins"
+            website: "https://www.hawkinsforohio.com/"
             party: "Republican"
             incumbent: true
             summary: "Elected in 2024. Former Franklin County prosecutor. Calls himself a 'strong conservative' who is tough on crime."
@@ -577,6 +608,7 @@ sections:
               - { title: "NBC4: Who's running for Ohio Supreme Court in 2026?", url: "https://www.nbc4i.com/news/your-local-election-hq/whos-running-for-ohio-supreme-court-in-2026-all-about-the-candidates/" }
               - { title: "WFMJ: Decision 2026, two races for Ohio Supreme Court", url: "https://www.wfmj.com/news/local-news/decision-2026-two-races-for-ohio-supreme-court-justice/article_e0615892-0f8f-471a-8e21-31cd56f904ea.html" }
           - name: "Marilyn Zayas"
+            website: "https://judgemarilynzayas.com/"
             party: "Democratic"
             incumbent: false
             summary: "Judge on the First District Court of Appeals (Cincinnati) for nearly a decade. Born in East Harlem; Ohio resident since 1988. Says 'politics has no place in our Ohio Supreme Court.'"
@@ -596,6 +628,7 @@ sections:
 
       - id: "ohio-supreme-court-seat-2"
         type: "candidate_race"
+        website: "https://www.supremecourt.ohio.gov/"
         ballot_order: 7
         office: "Ohio Supreme Court Justice"
         term: "Six years, beginning Jan. 2, 2027"
@@ -603,6 +636,7 @@ sections:
         what_the_office_does: "See Supreme Court seat 1."
         candidates:
           - name: "Jennifer Brunner"
+            website: "https://justicebrunner.com/"
             party: "Democratic"
             incumbent: true
             summary: "On the court since 2021. Tenth District Court of Appeals 2014-2020. Ohio Secretary of State 2007-2011. The only Democrat now holding a statewide elected office in Ohio."
@@ -617,6 +651,7 @@ sections:
               - { title: "NBC4: Who's running for Ohio Supreme Court in 2026?", url: "https://www.nbc4i.com/news/your-local-election-hq/whos-running-for-ohio-supreme-court-in-2026-all-about-the-candidates/" }
               - { title: "Mahoning Matters: Overview of Ohio's 2026 statewide and Supreme Court races", url: "https://www.mahoningmatters.com/news/state/article314605422.html" }
           - name: "Colleen O'Donnell"
+            website: "https://www.odonnellforohio.com/"
             party: "Republican"
             incumbent: false
             summary: "Franklin County Common Pleas judge 2013-2023 (lost re-election), then a federal immigration judge in Laredo, Texas; her campaign says she 'never once granted asylum.' Calls herself a 'constitutional conservative' and originalist. Daughter of former Justice Terrence O'Donnell. Won a four-way GOP primary with 32%."
@@ -644,6 +679,7 @@ sections:
 
       - id: "court-of-appeals-5th"
         type: "candidate_race"
+        website: "https://fifthdistrictohcoa.gov/"
         ballot_order: 12
         office: "Judge, 5th District Court of Appeals"
         term: "Beginning Feb. 9, 2027"
@@ -651,6 +687,7 @@ sections:
         what_the_office_does: "Hears appeals from trial courts in 15 counties, including Delaware."
         candidates:
           - name: "Matthew George"
+            website: "https://matthewgeorge.org/"
             party: "Republican"
             incumbent: false
             summary: "Licking County Municipal Court judge since 2020 and former magistrate; 18 years of judicial experience. Ashland University and Washington and Lee Law graduate. Won a three-way GOP primary. Promises to 'apply the law as written' and oppose 'judicial activism.'"
@@ -688,6 +725,7 @@ sections:
         background: "Seat opened when Judge James Schuck retired in June 2026 amid allegations by a former assistant county prosecutor that he sexually assaulted and stalked her. Candidates filed as Republican (McCoy) and Democrat (Mirles-Jones) petition candidates, but no party labels appear on the ballot."
         candidates:
           - name: "Nickolas K. McCoy"
+            website: "https://voteformccoy.com/"
             party: "Nonpartisan ballot (filed as Republican)"
             incumbent: false
             summary: "Magistrate in the county's Juvenile and Probate Division. Admitted to practice in 2009. Nearly 16 years in estate planning, elder law, guardianship, and domestic relations. Two-term president of the Delaware County Bar Association."
@@ -700,6 +738,7 @@ sections:
               - { title: "The Ballot Brief: Common Pleas General Division, unexpired term", url: "https://theballotbrief.com/state/ohio/delaware-county/judge-delaware-county-court-of-common-pleas-general-division-unexpired-term-ending-12-31-2030" }
               - { title: "The Ballot Brief: Delaware County", url: "https://theballotbrief.com/state/ohio/delaware-county" }
           - name: "Emma Mirles-Jones"
+            website: "https://votemirlesjones.com/"
             party: "Nonpartisan ballot (filed as Democrat)"
             incumbent: false
             summary: "16 years as court-appointed counsel and public defender in Franklin, Delaware, and Morrow counties. Guardian ad litem and Supreme Court-qualified mediator. JD/MBA from Case Western Reserve. Campaign says she is 'the only candidate' with General Division (criminal and civil) experience (campaign claim). Says Delaware County Fair officials and a deputy interfered with her campaigning on Sept. 20; fair officials dispute her account."
@@ -744,6 +783,7 @@ sections:
 
       - id: "county-commissioner"
         type: "candidate_race"
+        website: "https://co.delaware.oh.us/commissioners/"
         ballot_order: 16
         office: "County Commissioner"
         term: "Beginning Jan. 1, 2027"
@@ -752,6 +792,7 @@ sections:
         what_the_office_does: "The three commissioners are the county's executive and legislative body. They set the budget (the 2026 general fund relies on about $99.9 million in sales tax), handle roads and sewers, zoning coordination, and county facilities, and place levies on the ballot. Barb Lewis (R) is retiring after serving since 2015."
         candidates:
           - name: "Reneé Vaughan"
+            website: "https://www.vaughanfordelaware.com/"
             party: "Republican"
             incumbent: false
             summary: "Genoa Township trustee since January 2020. President of the Delaware County Township Association; member of the Ohio Township Association board. Former special-education teacher with degrees from Cincinnati, Pittsburgh, and Slippery Rock. Endorsed by the county GOP. Beat Sunbury Mayor Joe St. John in the primary."
@@ -768,6 +809,7 @@ sections:
               - { title: "Delaware Gazette: St. John, Vaughan vie for commissioner seat", url: "https://www.delgazette.com/2026/04/08/st-john-vaughan-vie-for-commissioner-seat/" }
               - { title: "Vaughan campaign: Issues", url: "https://www.vaughanfordelaware.com/issues" }
           - name: "Ryan Grissinger"
+            website: "https://ryangrissinger.com/"
             party: "Democratic"
             incumbent: false
             summary: "Genoa Township resident running for office for the first time. Founder and CEO of AI consulting firm Polaris Pixels. Nearly ten years as CTO of Roof Maxx, which grew to 350 franchise locations."
@@ -786,6 +828,7 @@ sections:
 
       - id: "county-auditor"
         type: "candidate_race"
+        website: "https://auditor.co.delaware.oh.us/"
         ballot_order: 17
         office: "County Auditor"
         term: "Standard term"
@@ -853,6 +896,7 @@ sections:
 
       - id: "career-center-levy"
         type: "ballot_issue"
+        website: "https://www.delawareareacc.org/"
         ballot_order: 19
         title: "Delaware Area Career Center - Tax Levy (Renewal and Decrease)"
         jurisdiction: "Delaware Area Career Center district"
@@ -885,6 +929,7 @@ sections:
 
       - id: "transit-sales-tax"
         type: "ballot_issue"
+        website: "https://www.delcotransit.com/levy/"
         ballot_order: 20
         title: "Delaware County Regional Transit Authority - 0.2% Sales and Use Tax (Continuing)"
         jurisdiction: "Delaware County (excluding portions already in COTA's 1% area)"
@@ -934,6 +979,7 @@ sections:
 
       - id: "developmental-disabilities-levy"
         type: "ballot_issue"
+        website: "https://www.dcbdd.org/levy/"
         ballot_order: 21
         title: "Delaware County Board of Developmental Disabilities - Tax Levy (Additional)"
         jurisdiction: "Delaware County"
@@ -984,6 +1030,7 @@ sections:
 
       - id: "mental-health-levy"
         type: "ballot_issue"
+        website: "https://dmmhrsb.org/levy"
         ballot_order: 22
         title: "Delaware-Morrow Mental Health & Recovery Services Board - Tax Levy (Renewal and Increase)"
         jurisdiction: "Delaware and Morrow counties"

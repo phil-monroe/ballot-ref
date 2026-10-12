@@ -11,6 +11,11 @@ const { c } = Astro.props;
     {c.incumbent && <span class="badge">Incumbent</span>}
     {c.verification && <span class="badge badge--warn">{VERIFICATION[c.verification] ?? c.verification}</span>}
   </h4>
+  <p class="site">
+    {c.website
+      ? <a href={c.website} rel="noopener noreferrer">Campaign website &nearr;</a>
+      : <span class="badge badge--none">No website found</span>}
+  </p>
   {c.summary && <p>{c.summary}</p>}
   {c.verification_note && <p class="small">{c.verification_note}</p>}
   <Bullets title="Stated positions" items={c.positions} />

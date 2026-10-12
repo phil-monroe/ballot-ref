@@ -15,6 +15,12 @@ const rev = c.revenue_estimate;
     {c.open_seat && <span class="badge">Open seat</span>}
   </p>
 
+  <p class="site">
+    {c.website
+      ? <a href={c.website} rel="noopener noreferrer">{isIssue ? 'Official issue page' : 'Official office website'} &nearr;</a>
+      : <span class="badge badge--none">No website found</span>}
+  </p>
+
   {c.what_the_office_does && <p>{c.what_the_office_does}</p>}
   {c.background && <p>{c.background}</p>}
   {c.race_status && <p class="status"><strong>Race status:</strong> {c.race_status}</p>}
