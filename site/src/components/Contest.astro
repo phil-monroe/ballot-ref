@@ -3,6 +3,7 @@ import Bullets from './Bullets.astro';
 import Candidate from './Candidate.astro';
 import Links from './Links.astro';
 import PfItems from './PfItems.astro';
+import Documents from './Documents.astro';
 import { VERIFICATION, list, politifactLinks } from '../lib';
 const { c } = Astro.props;
 const isIssue = c.type === 'ballot_issue';
@@ -53,6 +54,8 @@ const rev = c.revenue_estimate;
       </div>
     </>
   )}
+
+  {isIssue && <Documents docs={c.documents} />}
 
   {isIssue && (
     <div class="pf-block">

@@ -68,10 +68,15 @@ meta:
     - id: "property-tax-stat"
       text: "The claim that Delaware County has Ohio's highest median property tax bill ($6,896 vs. $2,396 state median, 2023) was attributed to Realtor.com/Tax Foundation data as reported by 1808 Delaware. No source link was retained; verify before publishing."
       verification: "unverified"
+    - id: "issue-verification"
+      text: "Ballot wording, dollar figures and levy history for the five issues were checked on Oct. 12, 2026 against the Board of Elections sample ballot, the certified Issue 3 booklet, and prior-levy ballot language (copies under Official documents). The county auditor's estimates and the boards' own resolutions were not found online; other claims (for example client counts, ridership figures and quotes) come from each agency's own pages or local news and are attributed as such."
     - id: "politifact"
       text: "PolitiFact items were collected from PolitiFact's own search and profile pages on Oct. 12, 2026 and are not exhaustive. Only items clearly about a candidate, their claims, or the issue are listed; many candidates have none, and most local candidates and levies have no PolitiFact coverage. Ratings are PolitiFact's, not ours."
     - id: "secondary-sources"
       text: "Some aggregators (The Ballot Brief, Legis1, Newsweek poll roundups, Wikipedia) are secondary sources. Treat their claims accordingly."
+  documents:
+    - { title: "Delaware County Board of Elections: May 5, 2026 primary results by race (county)", file: "boe-2026-05-primary-results-by-race.pdf", source: "https://vote.delawarecountyohio.gov/wp-content/uploads/2026/05/418_PALL_Election_SummaryWriteIn.pdf", note: "Source for primary percentages cited for county-level races" }
+    - { title: "Delaware County Board of Elections sample ballot, precinct 154/1", file: "delaware-boe-sample-ballot-precinct-154-1.pdf", source: "https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X" }
   global_sources:
     - title: "Delaware County Board of Elections sample ballot, precinct 154___1"
       url: "https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X"
@@ -1955,6 +1960,11 @@ sections:
 
       - id: "state-issue-3"
         type: "ballot_issue"
+        documents:
+          - { title: "Ohio Secretary of State: certified Issue 3 (ballot language, explanation, arguments for and against, full text of Substitute SJR 10), certified Aug. 3, 2026", file: "issue-3-sos-certification-2026-08-03.pdf", source: "https://www.ohiosos.gov/assets/2026-11-statewide-issue-3-report.pdf", note: "Copy retrieved from the Internet Archive snapshot of Oct. 9, 2026, because ohiosos.gov blocks automated downloads" }
+          - { title: "Ohio Legislative Service Commission: S.J.R. 10 resolution analysis (as reported by House General Government), June 10, 2026", file: "lsc-sjr10-resolution-analysis-2026-06-10.pdf", source: "https://www.legislature.ohio.gov/download?key=28698" }
+          - { title: "Ohio Legislative Service Commission: S.J.R. 10 fiscal note, June 3, 2026", file: "lsc-sjr10-fiscal-note-2026-06-03.pdf", source: "https://www.legislature.ohio.gov/download?key=28305" }
+          - { title: "Delaware County Board of Elections sample ballot, precinct 154/1 (all issues, official ballot language)", file: "delaware-boe-sample-ballot-precinct-154-1.pdf", source: "https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X", note: "Official certified wording for all five issues" }
         politifact_query: "Ohio voter ID"
         politifact_items:
           - { kind: "fact_check", title: "Valid IDs are not required for voting.", date: "Mar. 20, 2024", rating: "Mostly False", url: "https://politifact.com/factchecks/2024/mar/20/facebook-posts/no-id-required-to-vote-thats-not-the-case-for-most/", note: "Background on voter ID rules by state; lists Ohio among ten states with 'strict' photo ID laws (before this amendment)" }
@@ -1969,9 +1979,9 @@ sections:
           - "Requires voters who don't vote in person to provide photo ID, unless the law authorizes them to vote by providing a signature and at least one other specified unique identifier."
           - "Approved IDs: unexpired Ohio driver's license or state ID card, U.S. passport or passport card, or a U.S. military, Ohio National Guard, or VA ID card."
           - "Takes effect immediately."
-        what_it_does: "Photo ID has been required to vote in person in Ohio since a 2023 law (HB 458); absentee voters currently provide a copy of a photo ID, a driver's license number, or the last four digits of their Social Security number, and voters with a religious objection to being photographed can sign an affidavit. Issue 3 would write a photo ID requirement into the constitution: in person, photo ID; for absentee voters, photo ID unless the legislature authorizes a signature plus one other unique identifier. Future legislatures could then change it only through another statewide vote."
-        how_it_got_on_ballot: "Passed by the Republican-controlled General Assembly with a three-fifths supermajority in June 2026."
-        cost: "No direct fiscal impact identified."
+        what_it_does: "Photo ID has been required to vote in person in Ohio since a 2023 law (HB 458); absentee voters currently provide a copy of a photo ID, a driver's license number, or the last four digits of their Social Security number, and voters with a religious objection to being photographed can sign an affidavit. Issue 3 would write a photo ID requirement into the constitution: in person, photo ID; for absentee voters, photo ID unless the legislature authorizes a signature plus one other unique identifier. The Legislative Service Commission says it would not require any change to current voter ID statutes, but it would limit how far the legislature could loosen them: in-person photo ID could not be dropped (apart from a religious-objection alternative), and voters using other methods would at minimum need photo ID or, if the legislature allows it, a signature plus another unique identifier. Changing the constitutional minimums would take another statewide vote."
+        how_it_got_on_ballot: "Substitute Senate Joint Resolution 10, passed by the Republican-controlled General Assembly with the required three-fifths vote; the House approved it 61-27 on June 10, 2026. The Ohio Ballot Board approved the ballot language 4-1, and the Secretary of State certified the issue on Aug. 3, 2026."
+        cost: "No change to voters' taxes. The Legislative Service Commission says the only direct cost is statewide ballot advertising paid by the Secretary of State (about $405,000 for Issue 1 in Nov. 2024 and $358,000 for Issue 2 in May 2025, its comparison figures)."
         supporters:
           - "Official ballot argument for: Sens. Jane Timken and Theresa Gavarone and Reps. Adam Bird and Heidi Workman"
           - "Both major-party candidates for governor; Sec. of State candidate Robert Sprague"
@@ -1981,12 +1991,13 @@ sections:
           - "ACLU of Ohio"
           - "Allison Russo (calls it a waste of time); Tom Pruss (says the absentee-voting language is unclear)"
         arguments_for:
-          - "Photo ID is a proven method to protect Ohio's elections and improve voter confidence. Official argument by Timken and Gavarone: 'If you can show an ID to drive a car, you can show an ID to decide the future of our state.'"
-          - "Timken argues AI can easily fake utility bills and bank statements, so photo ID should be locked in."
+          - "Official argument for (Reps. Bird and Workman, Sens. Gavarone and Timken): photo ID 'helps verify a voter's identity and ensures that only legal votes are counted,' and 'If you can show an ID to drive a car, you can show an ID to decide the future of our state and our country.'"
+          - "The official argument says the amendment would not burden voters because photo ID is already in state law, free state ID cards are available to voting-age residents, and a religious-objection alternative remains. It also says constitutional protection gives stability, citing states without it that have repealed photo ID laws, and that photo ID 'repeatedly poll[s] with over 80% support' (the authors' claims)."
           - "Supporters say it adds protection if the law is challenged in court, and that a future legislature could otherwise repeal the rule."
         arguments_against:
           - "Unnecessary because the rule is already law (Russo: 'a waste of time')."
-          - "Putting specific ID types in the constitution could stop Ohio from adopting digital or biometric IDs later."
+          - "Official argument against (Sen. DeMora, Reps. Tims and Upchurch): photo ID is already the law, so the amendment 'locks in voter burden with no voter protections'; it says voter impersonation is 'essentially nonexistent.'"
+          - "Listing specific ID types in the constitution could block county-issued veterans IDs and digital military IDs now in use, and future technology such as a digital wallet (official argument against)."
           - "Some Democrats argue its main purpose is to energize Republican voters; a political scientist quoted by Signal Cleveland says supporters may also see the issue as important and want certainty it won't be reversed."
           - "Pruss warns the absentee-voting language leaves unclear what a future legislature might require."
           - "Opponents note that documented voter fraud in Ohio is rare, and that ID rules can burden voters who lack the listed IDs."
@@ -2002,6 +2013,11 @@ sections:
 
       - id: "career-center-levy"
         type: "ballot_issue"
+        documents:
+          - { title: "Delaware County Board of Elections sample ballot, precinct 154/1 (all issues, official ballot language)", file: "delaware-boe-sample-ballot-precinct-154-1.pdf", source: "https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X", note: "Official certified wording for all five issues" }
+          - { title: "BOE: Nov. 2015 renewal ballot language (1.7 mills, the levy now up for renewal)", file: "boe-dacc-2015-11-ballot-language.pdf", source: "https://vote.delawarecountyohio.gov/wp-content/uploads/2021/02/DACC-11-2015.pdf", note: "Prior levy" }
+          - { title: "BOE: Nov. 2005 renewal ballot language", file: "boe-dacc-2005-11-ballot-language.pdf", source: "https://vote.delawarecountyohio.gov/wp-content/uploads/sites/13/2018/07/DACC-11-2005.pdf", note: "Prior levy" }
+          - { title: "BOE: May 2001 original levy ballot language (Delaware Joint Vocational School District)", file: "boe-dacc-2001-05-ballot-language.pdf", source: "https://vote.delawarecountyohio.gov/wp-content/uploads/sites/13/2018/07/DACC-05-2001.pdf", note: "Prior levy" }
         politifact_query: "Delaware Area Career Center levy"
         website: "https://www.delawareareacc.org/"
         ballot_order: 19
@@ -2012,7 +2028,7 @@ sections:
           - "A renewal of part of an existing levy, being a reduction of 0.95 mill, for school buildings/facilities (not exceeding 0.40 mill) and current expenses (not exceeding 0.35 mill)."
           - "County auditor estimates $5,773,576 collected annually at a combined rate not exceeding 0.75 mill."
           - "$18 per $100,000 of county auditor's market value; 10 years, commencing 2026, first due in calendar year 2027."
-        cost: "$18 per $100,000 per year. Renews a 1.7-mill levy (first passed 2001, renewed 2005 and 2015) at 0.75 mill, so homeowners would pay less than they pay for this levy today. DACC's only other levy is a 1.5-mill continuing levy from 1972."
+        cost: "$18 per $100,000 per year. Renews a 1.7-mill levy (first approved May 2001 as an additional 5-year levy, renewed Nov. 2005 for 10 years and Nov. 2015 for 9 years, per BOE ballot language) at 0.75 mill, so homeowners would pay less than they pay for this levy today. DACC's only other levy is a 1.5-mill continuing levy from 1972."
         supporters:
           - "DACC Board and Superintendent Jay Poroda"
           - "Delaware County Democratic Party (unanimous)"
@@ -2036,6 +2052,8 @@ sections:
 
       - id: "transit-sales-tax"
         type: "ballot_issue"
+        documents:
+          - { title: "Delaware County Board of Elections sample ballot, precinct 154/1 (all issues, official ballot language)", file: "delaware-boe-sample-ballot-precinct-154-1.pdf", source: "https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X", note: "Official certified wording for all five issues" }
         politifact_query: "Delaware County transit sales tax"
         website: "https://www.delcotransit.com/levy/"
         ballot_order: 20
@@ -2087,6 +2105,11 @@ sections:
 
       - id: "developmental-disabilities-levy"
         type: "ballot_issue"
+        documents:
+          - { title: "Delaware County Board of Elections sample ballot, precinct 154/1 (all issues, official ballot language)", file: "delaware-boe-sample-ballot-precinct-154-1.pdf", source: "https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X", note: "Official certified wording for all five issues" }
+          - { title: "BOE: May 5, 2026 primary results summary (scanned), including the failed 2.7-mill DCBDD levy", file: "boe-2026-05-primary-summary-results-scanned.pdf", source: "https://vote.delawarecountyohio.gov/wp-content/uploads/2026/05/SKM_C550i_M26051911100.pdf", note: "DCBDD levy: 19,699 for, 20,251 against" }
+          - { title: "BOE: Nov. 2021 renewal-and-decrease ballot language (2.0 mills)", file: "boe-dcbdd-2021-11-ballot-language.pdf", source: "https://vote.delawarecountyohio.gov/wp-content/uploads/2021/11/DelCoBoardDD-11-2021.pdf", note: "Prior levy" }
+          - { title: "BOE: May 2011 replacement levy ballot language (2.1 mills)", file: "boe-dcbdd-2011-05-ballot-language.pdf", source: "https://vote.delawarecountyohio.gov/wp-content/uploads/sites/13/2018/07/DelcoBoardDD-05-2011.pdf", note: "Prior levy" }
         politifact_query: "Delaware County developmental disabilities levy"
         website: "https://www.dcbdd.org/levy/"
         ballot_order: 21
@@ -2099,14 +2122,14 @@ sections:
           - "$63 per $100,000 of county auditor's market value; 5 years, commencing 2026, first due in calendar year 2027."
         cost: "$63 per $100,000 per year."
         cost_context:
-          - "The board's 2.0-mill levy (passed 2011) expired Dec. 31, 2025; last collections end Dec. 31, 2026."
+          - "The board's previous levy (a 2.1-mill replacement approved May 2011, renewed at 2.0 mills in Nov. 2021 for collections in 2022-2026) expired Dec. 31, 2025; last collections end Dec. 31, 2026 (BOE ballot language, DCBDD)."
           - "Delaware Gazette reported the expiring levy cost about $35.09 per $100,000, so this is roughly a $28 per $100,000 increase (own calculation)."
           - "As a new levy it probably does not get the 12.5% homeowner rollback that renewals keep (based on DACC treasurer's explanation of current law)."
         history:
           - "May 2026: a 2.7-mill renewal-plus-increase ($27.1 million a year, $65 per $100,000) failed 19,699 to 20,251 (552 votes, about 1.4%). First DCBDD levy ever to fail."
           - "This 1.8-mill request is smaller."
         supporters:
-          - "DCBDD (serves 2,300+ children and adults); Board President Louis Borowicz says early intervention and other services would be cut if it fails"
+          - "DCBDD (says it serves over 2,400 children and adults); Board President Louis Borowicz says early intervention and other services would be cut if it fails"
           - "Focus on Abilities campaign committee (co-chairs Patricia Hollingsworth, Howard Heffelfinger)"
           - "Delaware County Democratic Party (unanimous)"
           - "Superintendent Kristine Hodge: costs are driven by the shift toward serving adults (79% of clients were children in 2016; 68% now), not enrollment growth"
@@ -2139,6 +2162,11 @@ sections:
 
       - id: "mental-health-levy"
         type: "ballot_issue"
+        documents:
+          - { title: "Delaware County Board of Elections sample ballot, precinct 154/1 (all issues, official ballot language)", file: "delaware-boe-sample-ballot-precinct-154-1.pdf", source: "https://lookup.boe.ohio.gov/vtrapp/delaware/getballot.aspx?elect=20261103g_webeix0&prsid=154___1&bpty=X", note: "Official certified wording for all five issues" }
+          - { title: "BOE: Nov. 2021 renewal-and-increase ballot language (1 mill renewed plus 0.5 mill, 1.5 mills total)", file: "boe-mental-health-2021-11-ballot-language.pdf", source: "https://vote.delawarecountyohio.gov/wp-content/uploads/2021/11/DelCoMH-11-2021.pdf", note: "Prior levy" }
+          - { title: "BOE: Nov. 2, 2021 general election summary results (levy passed 26,711 to 20,559)", file: "boe-2021-11-general-election-summary-results.pdf", source: "https://vote.delawarecountyohio.gov/wp-content/uploads/2021/11/2021.general.summary.pdf" }
+          - { title: "BOE: Nov. 2016 renewal ballot language (1 mill)", file: "boe-mental-health-2016-11-ballot-language.pdf", source: "https://vote.delawarecountyohio.gov/wp-content/uploads/sites/13/2018/07/DelCoMH-11-2016.pdf", note: "Prior levy" }
         politifact_query: "Delaware-Morrow mental health levy"
         website: "https://dmmhrsb.org/levy"
         ballot_order: 22

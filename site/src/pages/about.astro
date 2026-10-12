@@ -3,7 +3,8 @@ import Base from '../layouts/Base.astro';
 import Bullets from '../components/Bullets.astro';
 import Links from '../components/Links.astro';
 import AskClaude from '../components/AskClaude.astro';
-import { VERIFICATION, guide } from '../lib';
+import Documents from '../components/Documents.astro';
+import { VERIFICATION, guide, contests, label } from '../lib';
 const { meta } = guide;
 const compiled = new Date(`${meta.guide_compiled}T12:00:00`).toLocaleDateString('en-US', { dateStyle: 'long' });
 ---
@@ -28,6 +29,10 @@ const compiled = new Date(`${meta.guide_compiled}T12:00:00`).toLocaleDateString(
       </li>
     ))}
   </ul>
+  <h2 id="documents">Official documents</h2>
+  <p class="small">Copies of official ballot language and related records, hosted here so they stay available. Each links to its original source.</p>
+  <Documents docs={meta.documents} heading="General" />
+  {contests.filter((c: any) => c.documents).map((c: any) => <Documents docs={c.documents} heading={label(c)} />)}
   <h2 id="claude">Use this guide with Claude or another AI chat</h2>
   <p>
     The whole guide is available as one plain-text file you can paste or upload into a chat, so you can ask questions like

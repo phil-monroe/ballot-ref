@@ -60,6 +60,7 @@ export const contest = (c: any): string => {
     ];
     for (const [t, v] of parts) out.push(block(t, v, '###'));
     out.push('### PolitiFact\n' + [...politifactLinks(c).map((l) => `- [${l.label}](${l.url})`), ...(c.politifact_items ?? []).map((i: any) => `- [${i.title}](${i.url}) (${i.kind === 'fact_check' ? 'fact-check' : 'article'}, ${i.date}${i.rating ? `, rated ${i.rating}` : ''})${i.note ? `: ${i.note}` : ''}`)].join('\n') + '\n');
+    if (c.documents?.length) out.push('### Official documents (hosted copies)\n' + c.documents.map((d: any) => `- ${d.title}: /docs/${d.file} (original: ${d.source})`).join('\n') + '\n');
     out.push(links(c.sources));
     return out.filter(Boolean).join('\n');
   }

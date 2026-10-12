@@ -1,0 +1,17 @@
+---
+const { docs = [], heading = 'Official documents' } = Astro.props;
+---
+{docs.length > 0 && (
+  <div class="docs-block">
+    <h5 class="sec-title">{heading}</h5>
+    <ul class="docs">
+      {docs.map((d: any) => (
+        <li>
+          <a href={`/docs/${d.file}`} target="_blank" rel="noopener noreferrer">{d.title} (PDF) &nearr;</a>
+          {d.note && <span class="small"> {d.note}.</span>}
+          <span class="small"> <a href={d.source} target="_blank" rel="noopener noreferrer">Original source</a></span>
+        </li>
+      ))}
+    </ul>
+  </div>
+)}
