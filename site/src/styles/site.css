@@ -149,3 +149,22 @@ details[open] > summary::before { transform: rotate(90deg); }
 
 .picker { flex-direction: column; flex-wrap: nowrap; }
 .pick { flex: none; width: 100%; }
+
+/* candidate comparison */
+.compare-bar { position: sticky; top: 49px; z-index: 5; display: flex; align-items: center; gap: 10px; padding: 8px 0; background: var(--bg); border-bottom: 1px solid var(--line); }
+.compare-bar label { font-size: 0.85rem; color: var(--muted); flex: none; }
+.compare-bar select { flex: 1; min-width: 0; min-height: 44px; padding: 0 10px; font: inherit; font-weight: 600; color: var(--fg); background: var(--bg); border: 1px solid var(--accent); border-radius: 8px; }
+.compare .sec { display: none; }
+.compare[data-view='summary'] .sec[data-sec='summary'],
+.compare[data-view='priorities'] .sec[data-sec='priorities'],
+.compare[data-view='positions'] .sec[data-sec='positions'],
+.compare[data-view='money'] .sec[data-sec='money'],
+.compare[data-view='arguments'] .sec[data-sec='arguments'] { display: block; }
+.sec-title { margin: 8px 0 4px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }
+.empty { color: var(--muted); font-style: italic; }
+.card h4 { margin-bottom: 2px; }
+@media print { .compare-bar { display: none; } .compare .sec { display: block; } }
+
+.compare[data-view='all'] .sec { display: block; }
+.bottom-nav { grid-template-columns: 1fr 1.5fr 1fr; }
+.bottom-nav a { white-space: nowrap; padding: 0 8px; }

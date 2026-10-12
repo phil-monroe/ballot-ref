@@ -72,3 +72,28 @@ window.addEventListener('storage', () => {
   render();
 });
 render();
+
+// Candidate comparison: one select switches which section every candidate card shows.
+const compare = document.querySelector<HTMLElement>('.compare');
+const select = document.querySelector<HTMLSelectElement>('[data-compare]');
+if (compare && select) {
+  const VIEW_KEY = 'ballot-ref:compare-view';
+  const apply = (v: string) => {
+    compare.dataset.view = v;
+    select.value = v;
+  };
+  try {
+    const saved = localStorage.getItem(VIEW_KEY);
+    if (saved && [...select.options].some((o) => o.value === saved)) apply(saved);
+  } catch {
+    /* storage unavailable: start on Summary */
+  }
+  select.addEventListener('change', () => {
+    apply(select.value);
+    try {
+      localStorage.setItem(VIEW_KEY, select.value);
+    } catch {
+      /* ignore */
+    }
+  });
+}

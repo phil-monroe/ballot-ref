@@ -1,9 +1,9 @@
 ---
 import Bullets from './Bullets.astro';
 import Links from './Links.astro';
-import { VERIFICATION } from '../lib';
+import { VERIFICATION, list } from '../lib';
 const { c } = Astro.props;
-const hasMore = ['positions', 'money', 'endorsements', 'support', 'oppose'].some((k) => c[k]?.length);
+const has = (...keys: string[]) => keys.some((k) => list(c[k]).length > 0);
 ---
 <article class="card">
   <h4>
@@ -17,38 +17,52 @@ const hasMore = ['positions', 'money', 'endorsements', 'support', 'oppose'].some
       ? <a href={c.website} rel="noopener noreferrer">Campaign website &nearr;</a>
       : <span class="badge badge--none">No website found</span>}
   </p>
-  {c.summary && <p>{c.summary}</p>}
-  {c.verification_note && <p class="small">{c.verification_note}</p>}
-  {c.website && (
-    <>
-      <Bullets title="Top priorities (per campaign site)" items={c.priorities} />
-      {c.priority_details?.length > 0 && (
-        <details class="sources">
-          <summary>Full list from the campaign site ({c.priority_details.length})</summary>
-          <dl class="prio">
-            {c.priority_details.map((d: { title: string; summary: string }) => (
-              <>
-                <dt>{d.title}</dt>
-                <dd>{d.summary}</dd>
-              </>
-            ))}
-          </dl>
-        </details>
-      )}
-      {c.priorities_note && <p class="small">{c.priorities_note}</p>}
-    </>
-  )}
-  {hasMore && (
-    <details class="more-info">
-      <summary>Positions, money, endorsements &amp; arguments</summary>
-      <Bullets title="Stated positions" items={c.positions} />
-      <Bullets title="Money" items={c.money} />
-      <Bullets title="Endorsements" items={c.endorsements} />
-      <div class="pair">
-        <Bullets title="Supporters say" items={c.support} class="for" />
-        <Bullets title="Critics say" items={c.oppose} class="against" />
-      </div>
-    </details>
-  )}
-  <Links sources={c.sources} />
+
+  <div class="sec" data-sec="summary">
+    <h5 class="sec-title">Summary</h5>
+    {c.summary ? <p>{c.summary}</p> : <p class="empty">No summary listed.</p>}
+    {c.verification_note && <p class="small">{c.verification_note}</p>}
+    <Links sources={c.sources} />
+  </div>
+
+  <div class="sec" data-sec="priorities">
+    <h5 class="sec-title">Stated priorities (per campaign site)</h5>
+    {has('priorities') ? (
+      <ul>{list(c.priorities).map((p) => <li>{p}</li>)}</ul>
+    ) : (
+      <p class="empty">{c.website ? 'The campaign site lists no priorities.' : 'No campaign website, so no priorities to summarize.'}</p>
+    )}
+    {c.priority_details?.length > 0 && (
+      <details class="sources">
+        <summary>{has('priorities') ? 'Full list' : 'Background'} from the campaign site ({c.priority_details.length})</summary>
+        <dl class="prio">
+          {c.priority_details.map((d: { title: string; summary: string }) => (
+            <>
+              <dt>{d.title}</dt>
+              <dd>{d.summary}</dd>
+            </>
+          ))}
+        </dl>
+      </details>
+    )}
+    {c.priorities_note && <p class="small">{c.priorities_note}</p>}
+  </div>
+
+  <div class="sec" data-sec="positions">
+    <h5 class="sec-title">Positions</h5>
+    {has('positions') ? <ul>{list(c.positions).map((p) => <li>{p}</li>)}</ul> : <p class="empty">None listed.</p>}
+  </div>
+
+  <div class="sec" data-sec="money">
+    <h5 class="sec-title">Money</h5>
+    {has('money') ? <ul>{list(c.money).map((p) => <li>{p}</li>)}</ul> : <p class="empty">None listed.</p>}
+  </div>
+
+  <div class="sec" data-sec="arguments">
+    <h5 class="sec-title">Endorsements &amp; arguments</h5>
+    {!has('endorsements', 'support', 'oppose') && <p class="empty">None listed.</p>}
+    <Bullets title="Endorsements" items={c.endorsements} />
+    <Bullets title="Supporters say" items={c.support} class="for" />
+    <Bullets title="Critics say" items={c.oppose} class="against" />
+  </div>
 </article>

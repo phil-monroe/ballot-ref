@@ -69,8 +69,22 @@ const rev = c.revenue_estimate;
   )}
 
   {list(c.candidates).length > 0 && (
-    <div class="choices">
-      {c.candidates.map((cand: any) => <Candidate c={cand} />)}
+    <div class="compare" data-view={c.candidates.length > 1 ? 'summary' : 'all'}>
+      {c.candidates.length > 1 && (
+      <div class="compare-bar">
+        <label for="compare-select">Compare by</label>
+        <select id="compare-select" data-compare>
+          <option value="summary">Summary</option>
+          <option value="priorities">Stated priorities</option>
+          <option value="positions">Positions</option>
+          <option value="money">Money</option>
+          <option value="arguments">Endorsements + arguments</option>
+        </select>
+      </div>
+      )}
+      <div class="choices">
+        {c.candidates.map((cand: any) => <Candidate c={cand} />)}
+      </div>
     </div>
   )}
   <Links sources={c.sources} label="Race sources" />
