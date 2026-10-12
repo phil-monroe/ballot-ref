@@ -21,6 +21,19 @@ const { c } = Astro.props;
   {c.website && (
     <>
       <Bullets title="Top priorities (per campaign site)" items={c.priorities} />
+      {c.priority_details?.length > 0 && (
+        <details class="sources">
+          <summary>Full list from the campaign site ({c.priority_details.length})</summary>
+          <dl class="prio">
+            {c.priority_details.map((d: { title: string; summary: string }) => (
+              <>
+                <dt>{d.title}</dt>
+                <dd>{d.summary}</dd>
+              </>
+            ))}
+          </dl>
+        </details>
+      )}
       {c.priorities_note && <p class="small">{c.priorities_note}</p>}
     </>
   )}
