@@ -1,5 +1,6 @@
 ---
 import '../styles/site.css';
+import { PICKS_KEY } from '../lib';
 interface Props {
   title: string;
   description?: string;
@@ -7,7 +8,7 @@ interface Props {
 const { title, description = 'Voter guide for a specific Ohio ballot.' } = Astro.props;
 ---
 <!doctype html>
-<html lang="en">
+<html lang="en" data-picks-key={PICKS_KEY}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -16,8 +17,13 @@ const { title, description = 'Voter guide for a specific Ohio ballot.' } = Astro
     <title>{title}</title>
   </head>
   <body>
+    <header class="top">
+      <a href="/">My ballot</a>
+      <a href="/about/">About &amp; caveats</a>
+    </header>
     <main>
       <slot />
     </main>
+    <script>import '../scripts';</script>
   </body>
 </html>

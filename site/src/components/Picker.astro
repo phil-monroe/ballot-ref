@@ -1,0 +1,16 @@
+---
+import { choices } from '../lib';
+const { c } = Astro.props;
+const byName = new Map((c.candidates ?? []).map((x: any) => [x.name, x]));
+---
+<div class="picker" role="group" aria-label={`Your choice for ${c.office ?? c.title}`}>
+  {choices(c).map((name) => {
+    const cand: any = byName.get(name);
+    return (
+      <button type="button" class="pick" data-contest={c.id} data-choice={name} aria-pressed="false">
+        <span class="pick-name">{name}</span>
+        {cand?.party && <span class="pick-party">{cand.party}{cand.incumbent ? ' · incumbent' : ''}</span>}
+      </button>
+    );
+  })}
+</div>

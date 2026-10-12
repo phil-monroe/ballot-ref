@@ -5,12 +5,10 @@ import Links from './Links.astro';
 import { VERIFICATION, list } from '../lib';
 const { c } = Astro.props;
 const isIssue = c.type === 'ballot_issue';
-const heading = isIssue ? c.title : c.office;
 const meta = [c.term, c.districts_note, c.jurisdiction, c.levy_type, c.threshold && `Needs: ${c.threshold}`].filter(Boolean);
 const rev = c.revenue_estimate;
 ---
 <section class="contest" id={c.id}>
-  <h3><a class="anchor" href={`#${c.id}`}><span class="order">{c.ballot_order}.</span> {heading}</a></h3>
   <p class="small">
     {meta.join(' · ')}
     {c.contested === false && <span class="badge">Uncontested</span>}

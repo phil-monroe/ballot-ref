@@ -1,0 +1,31 @@
+---
+import Base from '../layouts/Base.astro';
+import Bullets from '../components/Bullets.astro';
+import Links from '../components/Links.astro';
+import { VERIFICATION, guide } from '../lib';
+const { meta } = guide;
+const compiled = new Date(`${meta.guide_compiled}T12:00:00`).toLocaleDateString('en-US', { dateStyle: 'long' });
+---
+<Base title="About this guide">
+  <h1>About this guide</h1>
+  <p class="small">Compiled {compiled}. {meta.jurisdiction}, precinct {meta.precinct}.</p>
+  <p class="notice">
+    “Supporters say” and “critics say” lists are claims made by backers and critics, not recommendations.
+    Items marked <span class="badge badge--warn">Unverified</span> or
+    <span class="badge badge--warn">Campaign claim</span> have not been independently confirmed.
+  </p>
+  <h2>The short version</h2>
+  <ul>{meta.tldr.map((t: string) => <li>{t}</li>)}</ul>
+  <Bullets title="Not on this ballot" items={meta.not_on_this_ballot} />
+  <Bullets title="Notes" items={meta.notes} />
+  <h2 id="caveats">Caveats</h2>
+  <ul class="caveats">
+    {meta.caveats.map((c: any) => (
+      <li id={c.id}>
+        {c.verification && <span class="badge badge--warn">{VERIFICATION[c.verification] ?? c.verification}</span>}
+        {c.text}
+      </li>
+    ))}
+  </ul>
+  <Links sources={meta.global_sources} label="General sources" />
+</Base>

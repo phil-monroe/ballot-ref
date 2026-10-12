@@ -1,0 +1,33 @@
+---
+import Base from '../../layouts/Base.astro';
+import Contest from '../../components/Contest.astro';
+import Picker from '../../components/Picker.astro';
+import { contests, label } from '../../lib';
+
+export function getStaticPaths() {
+  return contests.map((c, i) => ({
+    params: { id: c.id },
+    props: { c, prev: contests[i - 1], next: contests[i + 1] },
+  }));
+}
+const { c, prev, next } = Astro.props;
+---
+<Base title={label(c)}>
+  <nav class="pager">
+    <a href="/">&larr; All contests</a>
+    <span>
+      {prev && <a href={`/race/${prev.id}/`}>&lsaquo; Previous</a>}
+      {next && <a href={`/race/${next.id}/`}>Next &rsaquo;</a>}
+    </span>
+  </nav>
+  <h1>{label(c)}</h1>
+  <div data-row={c.id}>
+    <h2 class="your">Your choice</h2>
+    <Picker c={c} />
+    <label class="note-label">
+      Notes
+      <textarea data-note={c.id} rows="2" placeholder="Private notes, saved on this device"></textarea>
+    </label>
+  </div>
+  <Contest c={c} />
+</Base>

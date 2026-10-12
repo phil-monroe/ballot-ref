@@ -1,60 +1,33 @@
 ---
 import Base from '../layouts/Base.astro';
-import Bullets from '../components/Bullets.astro';
-import Contest from '../components/Contest.astro';
-import Links from '../components/Links.astro';
-import { VERIFICATION, guide } from '../lib';
-const { meta, quick_reference: quick, sections } = guide;
-const compiled = new Date(`${meta.guide_compiled}T12:00:00`).toLocaleDateString('en-US', { dateStyle: 'long' });
+import Picker from '../components/Picker.astro';
+import { contests, guide, label } from '../lib';
+const { meta } = guide;
 ---
-<Base title={meta.title} description={`${meta.jurisdiction}, precinct ${meta.precinct}`}>
+<Base title="My Ballot" description={`${meta.jurisdiction}, precinct ${meta.precinct}`}>
   <h1>{meta.title}</h1>
   <p class="small">
-    {meta.jurisdiction} · Precinct {meta.precinct} · Compiled {compiled} ·
+    {meta.jurisdiction} · Precinct {meta.precinct} ·
     <a href={meta.ballot_source.url} rel="noopener noreferrer">Official sample ballot</a>
   </p>
-  <p class="notice">
-    Arguments listed as “supporters say” and “critics say” are claims made by backers and critics, not
-    recommendations. Items marked <span class="badge badge--warn">Unverified</span> or
-    <span class="badge badge--warn">Campaign claim</span> have not been independently confirmed.
+  <p class="small">
+    Tap a name to mark your choice (tap again to clear). Choices and notes stay on this device only.
+    <strong data-progress></strong> · <button type="button" class="link" data-reset>Reset</button>
   </p>
 
-  <h2>The short version</h2>
-  <ul>{meta.tldr.map((t: string) => <li>{t}</li>)}</ul>
-
-  <h2 id="ballot">On your ballot</h2>
-  <table class="quick">
-    <thead><tr><th>#</th><th>Contest</th><th>On the ballot</th></tr></thead>
-    <tbody>
-      {quick.map((q: any) => (
-        <tr>
-          <td>{q.order}</td>
-          <td>{sections.flatMap((s: any) => s.contests).find((c: any) => c.ballot_order === q.order) ? <a href={`#${sections.flatMap((s: any) => s.contests).find((c: any) => c.ballot_order === q.order).id}`}>{q.contest}</a> : q.contest}</td>
-          <td>{q.candidates}{q.contested === false && <span class="badge">Uncontested</span>}</td>
-        </tr>
-      ))}
-    </tbody>
-  </table>
-  <Bullets title="Not on this ballot" items={meta.not_on_this_ballot} />
-  <Bullets title="Notes" items={meta.notes} />
-
-  {sections.map((s: any) => (
+  {contests.map((c, i) => (
     <>
-      <h2 id={s.id}>{s.title}</h2>
-      <Bullets title="" items={s.notes} />
-      {s.contests.map((c: any) => <Contest c={c} />)}
+      {c.section !== contests[i - 1]?.section && <h2>{c.section}</h2>}
+      <section class="row" data-row={c.id}>
+        <h3>
+          <a href={`/race/${c.id}/`}><span class="order">{c.ballot_order}.</span> {label(c)}</a>
+          {c.contested === false && <span class="badge">Uncontested</span>}
+        </h3>
+        {c.term && <p class="small">{c.term}</p>}
+        <Picker c={c} />
+        <p class="note-view" data-note-view hidden></p>
+        <a class="more" href={`/race/${c.id}/`}>Details &rarr;</a>
+      </section>
     </>
   ))}
-
-  <h2 id="caveats">Caveats</h2>
-  <ul class="caveats">
-    {meta.caveats.map((c: any) => (
-      <li id={c.id}>
-        {c.verification && <span class="badge badge--warn">{VERIFICATION[c.verification] ?? c.verification}</span>}
-        {c.text}
-      </li>
-    ))}
-  </ul>
-
-  <Links sources={meta.global_sources} label="General sources" />
 </Base>
