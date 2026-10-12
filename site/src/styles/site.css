@@ -146,3 +146,6 @@ details[open] > summary::before { transform: rotate(90deg); }
 @media print { .details-icon { display: none; } }
 
 .choices { grid-template-columns: 1fr; }
+
+.picker { flex-direction: column; flex-wrap: nowrap; }
+.pick { flex: none; width: 100%; }
